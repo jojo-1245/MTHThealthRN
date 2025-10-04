@@ -1,6 +1,7 @@
 import { Ionicons } from '@expo/vector-icons';
 import { Image } from 'expo-image';
 import { LinearGradient } from 'expo-linear-gradient';
+import { router } from 'expo-router';
 import React, { useState } from 'react';
 import {
     Dimensions,
@@ -114,8 +115,81 @@ export default function HomeScreen() {
               <Text style={styles.contentText}>{content.content}</Text>
             </View>
           ))}
+
+          {/* 내 건강상태 알아보기 섹션 */}
+          <View style={styles.healthSection}>
+            <Text style={styles.sectionTitle}>내 건강상태 알아보기</Text>
+            <View style={styles.healthLevelCard}>
+              <View style={styles.healthLevelLeft}>
+                <Text style={styles.healthLevelLabel}>건강레벨</Text>
+                <View style={styles.progressCircle}>
+                  <Text style={styles.progressText}>?/10</Text>
+                </View>
+              </View>
+              <View style={styles.healthLevelRight}>
+                <Text style={styles.levelText}>Level ? ? 단계</Text>
+                <Text style={styles.levelSubText}>나의 건강레벨은?</Text>
+              </View>
+            </View>
+          </View>
+
+          {/* 무엇부터 관리하지 섹션 */}
+          <View style={styles.managementSection}>
+            <Text style={styles.sectionTitle}>무엇부터 관리하지?</Text>
+            <View style={styles.addInfoCard}>
+              <View style={styles.addIconContainer}>
+                <Ionicons name="add" size={40} color="#9CA3AF" />
+              </View>
+              <Text style={styles.addInfoText}>나의 건강정보를 추가하시면</Text>
+              <Text style={styles.addInfoSubText}>힌트 AI가 맞춤 영양 솔루션을 추천해줘요</Text>
+            </View>
+          </View>
+
+          {/* 건강정보 추가해 볼까 섹션 */}
+          <View style={styles.addHealthSection}>
+            <Text style={styles.sectionTitle}>건강정보 추가해 볼까?</Text>
+            <View style={styles.healthCardsContainer}>
+              {/* 자가진단 카드 */}
+              <TouchableOpacity 
+                style={styles.healthCard}
+                onPress={() => router.push('/self-diagnosis-add')}
+              >
+                <View style={styles.cardBadge}>
+                  <Text style={styles.badgeText}>약 1분 소요</Text>
+                </View>
+                <View style={styles.cardIcon}>
+                  <Ionicons name="analytics" size={24} color="#3B82F6" />
+                </View>
+                <Text style={styles.cardTitle}>자가진단</Text>
+              </TouchableOpacity>
+
+              {/* 건강검진결과 카드 */}
+              <View style={styles.healthCard}>
+                <View style={[styles.cardBadge, { backgroundColor: '#EF4444' }]}>
+                  <Text style={styles.badgeText}>약 30초 소요</Text>
+                </View>
+                <View style={styles.cardIcon}>
+                  <Ionicons name="medical" size={24} color="#3B82F6" />
+                </View>
+                <Text style={styles.cardTitle}>건강검진결과</Text>
+              </View>
+
+              {/* 기타 정밀분석 카드 */}
+              <View style={styles.healthCard}>
+                <View style={styles.cardIcon}>
+                  <Ionicons name="document-text" size={24} color="#3B82F6" />
+                </View>
+                <Text style={styles.cardTitle}>기타 정밀분석</Text>
+              </View>
+            </View>
+          </View>
         </View>
       </ScrollView>
+
+      {/* 플로팅 액션 버튼 */}
+      <TouchableOpacity style={styles.floatingActionButton}>
+        <Text style={styles.fabText}>Q</Text>
+      </TouchableOpacity>
 
       {/* 하단 내비게이션 바 */}
       <View style={styles.bottomNavigation}>
@@ -324,5 +398,185 @@ const styles = StyleSheet.create({
     fontSize: 12,
     marginTop: 4,
     fontWeight: '500',
+  },
+  // 새로운 섹션 스타일들
+  healthSection: {
+    marginTop: 30,
+    marginBottom: 20,
+  },
+  sectionTitle: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#1F2937',
+    marginBottom: 16,
+  },
+  healthLevelCard: {
+    backgroundColor: '#fff',
+    borderRadius: 16,
+    padding: 20,
+    flexDirection: 'row',
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 3,
+  },
+  healthLevelLeft: {
+    alignItems: 'center',
+    marginRight: 20,
+  },
+  healthLevelLabel: {
+    fontSize: 14,
+    color: '#6B7280',
+    marginBottom: 8,
+  },
+  progressCircle: {
+    width: 60,
+    height: 60,
+    borderRadius: 30,
+    backgroundColor: '#F3F4F6',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderWidth: 3,
+    borderColor: '#8B5CF6',
+  },
+  progressText: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: '#8B5CF6',
+  },
+  healthLevelRight: {
+    flex: 1,
+  },
+  levelText: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#1F2937',
+    marginBottom: 4,
+  },
+  levelSubText: {
+    fontSize: 14,
+    color: '#6B7280',
+  },
+  managementSection: {
+    marginBottom: 20,
+  },
+  addInfoCard: {
+    backgroundColor: '#fff',
+    borderRadius: 16,
+    padding: 40,
+    alignItems: 'center',
+    borderWidth: 2,
+    borderColor: '#E5E7EB',
+    borderStyle: 'dashed',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.05,
+    shadowRadius: 4,
+    elevation: 2,
+  },
+  addIconContainer: {
+    width: 80,
+    height: 80,
+    borderRadius: 40,
+    backgroundColor: '#F9FAFB',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 20,
+  },
+  addInfoText: {
+    fontSize: 16,
+    color: '#374151',
+    textAlign: 'center',
+    marginBottom: 8,
+  },
+  addInfoSubText: {
+    fontSize: 14,
+    color: '#6B7280',
+    textAlign: 'center',
+  },
+  addHealthSection: {
+    marginBottom: 20,
+  },
+  healthCardsContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    gap: 12,
+  },
+  healthCard: {
+    flex: 1,
+    backgroundColor: '#fff',
+    borderRadius: 12,
+    padding: 16,
+    alignItems: 'center',
+    position: 'relative',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 3,
+  },
+  cardBadge: {
+    position: 'absolute',
+    top: -8,
+    right: -8,
+    backgroundColor: '#3B82F6',
+    borderRadius: 12,
+    paddingHorizontal: 8,
+    paddingVertical: 4,
+  },
+  badgeText: {
+    fontSize: 10,
+    color: '#fff',
+    fontWeight: '500',
+  },
+  cardIcon: {
+    width: 48,
+    height: 48,
+    borderRadius: 24,
+    backgroundColor: '#F0F9FF',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 12,
+  },
+  cardTitle: {
+    fontSize: 14,
+    fontWeight: '500',
+    color: '#374151',
+    textAlign: 'center',
+  },
+  floatingActionButton: {
+    position: 'absolute',
+    bottom: 100,
+    right: 20,
+    width: 56,
+    height: 56,
+    borderRadius: 28,
+    backgroundColor: '#8B5CF6',
+    justifyContent: 'center',
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+    shadowOpacity: 0.3,
+    shadowRadius: 8,
+    elevation: 8,
+  },
+  fabText: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#fff',
   },
 });
