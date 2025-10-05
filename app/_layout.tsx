@@ -35,6 +35,8 @@ export default function RootLayout() {
         <Stack.Screen name="modal" options={{ presentation: 'modal', title: 'Modal' }} />
         <Stack.Screen name="self-diagnosis-add" options={{ headerShown: false }} />
         <Stack.Screen name="askings-1" options={{ headerShown: false }} />
+        <Stack.Screen name="askings-2" options={{ headerShown: false }} />
+        <Stack.Screen name="askings-3" options={{ headerShown: false }} />
       </Stack>
       <StatusBar style="auto" />
     </ThemeProvider>
