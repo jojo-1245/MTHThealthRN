@@ -175,12 +175,15 @@ export default function HomeScreen() {
               </View>
 
               {/* 기타 정밀분석 카드 */}
-              <View style={styles.healthCard}>
+              <TouchableOpacity 
+                style={styles.healthCard}
+                onPress={() => router.push('/askings-1')}
+              >
                 <View style={styles.cardIcon}>
                   <Ionicons name="document-text" size={24} color="#3B82F6" />
                 </View>
                 <Text style={styles.cardTitle}>기타 정밀분석</Text>
-              </View>
+              </TouchableOpacity>
             </View>
           </View>
         </View>
