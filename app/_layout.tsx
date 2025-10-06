@@ -44,6 +44,8 @@ export default function RootLayout() {
         <Stack.Screen name="askings-8" options={{ headerShown: false }} />
         <Stack.Screen name="askings-9" options={{ headerShown: false }} />
         <Stack.Screen name="askings-10" options={{ headerShown: false }} />
+        <Stack.Screen name="askings-11" options={{ headerShown: false }} />
+        <Stack.Screen name="askings-12" options={{ headerShown: false }} />
       </Stack>
       <StatusBar style="auto" />
     </ThemeProvider>
