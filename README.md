@@ -1,50 +1,45 @@
-# Welcome to your Expo app 👋
+# Metahint: The AI Health Compass in Your Hand
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+> **Metahint** is more than just a symptom search app. It's a personalized healthcare partner that uses AI to **comprehensively analyze scattered health meta-data**—from your skin condition and lifestyle habits to subtle bodily changes—to help you **discover meaningful hints** from your body and proactively manage your health.
 
-## Get started
+---
 
-1. Install dependencies
+## Key Features in Detail
 
-   ```bash
-   npm install
-   ```
+### 1. AI Smart Skin Analysis & Personalized Survey
+We go beyond simple questionnaires to offer optimal solutions by directly analyzing your skin.
 
-2. Start the app
+* **Camera-Based AI Analysis:** Take a photo of your face with your smartphone, and our AI will precisely analyze your current skin condition, including wrinkles, pores, pigmentation, and oil-water balance.
+* **In-depth Lifestyle Survey:** We identify root causes through multi-faceted questions about factors affecting your skin, such as sleep hours, diet, stress levels, and cosmetic products you use.
+* **Personalized Solution Report:** By combining analysis and survey results, we provide detailed recommendations for a skincare routine, key ingredients, habits to avoid, and product types that are perfect for you.
 
-   ```bash
-   npx expo start
-   ```
+### 2. Symptom-Based Smart Checker
+When you feel something is wrong with your body, stop relying on inaccurate information. Metahint's systematic question flow helps you understand your condition.
 
-In the output, you'll find options to open the app in a
+* **Interactive Q&A System:** Starting with a simple question like "What's bothering you?", it narrows down potential causes through a series of follow-up questions to specify your symptoms.
+* **Provides Reliable Information:** Based on the symptoms you input, it provides potential causes and related health information from a medical database.
+* **Clear Actionable Guidance:** Depending on the severity of symptoms, it suggests clear actions like "Get plenty of rest and hydration," "Recommend visiting a nearby clinic," or "Emergency room visit needed" to guide your initial response.
+    > **※ Important:** This feature is not a substitute for professional medical diagnosis. It should be used for reference only, and you must consult a doctor for an accurate diagnosis.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### 3. My Personal Health Diary & Reports
+Consistently track your health status and see the changes at a glance.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+* **Daily Condition Log:** Easily record your mood, areas of pain, sleep satisfaction, and medications taken with simple icons and memos.
+* **Data Visualization:** See trends in your skin condition, the frequency of specific symptoms, and overall wellness visualized in graphs and charts.
+* **Monthly/Quarterly Health Reports:** It analyzes your accumulated data to provide insights into your health patterns you might not have noticed, such as "You experienced more skin trouble when your stress levels were high."
 
-## Get a fresh project
+### 4. Meta Magazine: Vetted Health Content
+In a flood of information, we curate and deliver reliable health content you can trust.
 
-When you're ready, run:
+* **Expert Columns:** Read in-depth health columns written by experts like doctors, pharmacists, nutritionists, and fitness trainers, updated weekly.
+* **Seasonal Health Topics:** Get timely health information, such as skincare for changing seasons, preventing food poisoning in summer, and boosting immunity in winter.
+* **Ingredient Dictionary:** We explain the complex ingredients found in cosmetics and supplements in simple, easy-to-understand terms.
 
-```bash
-npm run reset-project
-```
+---
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## The Value Metahint Offers
 
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+* **Preventive-First Healthcare:** Helps you maintain a healthy lifestyle by catching the small signals before they become illnesses.
+* **Saves Time and Money:** Reduces time wasted on searching for unreliable information and enables efficient health management by finding the right products and care methods for you.
+* **Self-Directed Health Management:** Empowers you to become the owner of your health data, allowing you to understand your condition and manage it proactively.
+  
