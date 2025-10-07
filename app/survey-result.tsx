@@ -15,8 +15,8 @@ const { width, height } = Dimensions.get('window');
 export default function SurveyResultScreen() {
   const handleSave = () => {
     console.log('설문 결과 저장 완료');
-    // 메인 페이지로 이동
-    router.push('/(tabs)');
+    // 자가진단 마무리 페이지로 이동
+    router.push('/self-diagnosis-complete');
   };
 
   const handleBack = () => {
