@@ -19,31 +19,31 @@ interface AnswerOption {
   image: string;
 }
 
-export default function Asking11Screen() {
-  const [selectedAnswer, setSelectedAnswer] = useState<string | null>('normal');
-  const currentPage = 11;
+export default function Asking14Screen() {
+  const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
+  const currentPage = 14;
   const totalPages = 35;
 
   const answerOptions: AnswerOption[] = [
     {
       id: 'very_much',
-      label: '매우 그렇다',
-      image: 'skin_severe_pigmentation',
+      label: '매우 많다',
+      image: 'pores_severe',
     },
     {
       id: 'agree',
-      label: '그렇다',
-      image: 'skin_moderate_pigmentation',
+      label: '많다',
+      image: 'pores_moderate',
     },
     {
       id: 'normal',
       label: '보통이다',
-      image: 'skin_light_pigmentation',
+      image: 'pores_light',
     },
     {
       id: 'disagree',
-      label: '아니다',
-      image: 'skin_no_pigmentation',
+      label: '없다',
+      image: 'pores_none',
     },
   ];
 
@@ -54,8 +54,8 @@ export default function Asking11Screen() {
   const handleNext = () => {
     if (selectedAnswer) {
       console.log('선택된 답변:', selectedAnswer);
-      // 다음 페이지로 이동 (askings-12.tsx)
-      router.push('/askings-12');
+      // 다음 페이지로 이동 (askings-15.tsx)
+      router.push('/askings-15');
     }
   };
 
@@ -123,7 +123,7 @@ export default function Asking11Screen() {
         <View style={styles.questionImageContainer}>
           <View style={styles.questionImagePlaceholder}>
             <Ionicons name="person" size={120} color="#9CA3AF" />
-            <Text style={styles.imageDescription}>트러블 부위 색소 침착 이미지</Text>
+            <Text style={styles.imageDescription}>U존 부위 모공 상태 이미지</Text>
           </View>
         </View>
 
@@ -134,7 +134,7 @@ export default function Asking11Screen() {
               <Text style={styles.qText}>Q</Text>
             </View>
             <Text style={styles.questionText}>
-              트러블이 있던 부위에 색소가 남는다
+              U존 부위에 모공이 어느 정도 있나요?
             </Text>
           </View>
         </View>
@@ -391,4 +391,3 @@ const styles = StyleSheet.create({
     color: '#9CA3AF',
   },
 });
-
