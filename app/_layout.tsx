@@ -70,6 +70,8 @@ export default function RootLayout() {
         <Stack.Screen name="askings-34" options={{ headerShown: false }} />
         <Stack.Screen name="askings-35" options={{ headerShown: false }} />
         <Stack.Screen name="survey-result" options={{ headerShown: false }} />
+        <Stack.Screen name="self-diagnosis-complete" options={{ headerShown: false }} />
+        <Stack.Screen name="self-diagnosis-detail" options={{ headerShown: false }} />
       </Stack>
       <StatusBar style="auto" />
     </ThemeProvider>
