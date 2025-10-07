@@ -51,6 +51,25 @@ export default function RootLayout() {
         <Stack.Screen name="askings-15" options={{ headerShown: false }} />
         <Stack.Screen name="askings-16" options={{ headerShown: false }} />
         <Stack.Screen name="askings-17" options={{ headerShown: false }} />
+        <Stack.Screen name="askings-18" options={{ headerShown: false }} />
+        <Stack.Screen name="askings-19" options={{ headerShown: false }} />
+        <Stack.Screen name="askings-20" options={{ headerShown: false }} />
+        <Stack.Screen name="askings-21" options={{ headerShown: false }} />
+        <Stack.Screen name="askings-22" options={{ headerShown: false }} />
+        <Stack.Screen name="askings-23" options={{ headerShown: false }} />
+        <Stack.Screen name="askings-24" options={{ headerShown: false }} />
+        <Stack.Screen name="askings-25" options={{ headerShown: false }} />
+        <Stack.Screen name="askings-26" options={{ headerShown: false }} />
+        <Stack.Screen name="askings-27" options={{ headerShown: false }} />
+        <Stack.Screen name="askings-28" options={{ headerShown: false }} />
+        <Stack.Screen name="askings-29" options={{ headerShown: false }} />
+        <Stack.Screen name="askings-30" options={{ headerShown: false }} />
+        <Stack.Screen name="askings-31" options={{ headerShown: false }} />
+        <Stack.Screen name="askings-32" options={{ headerShown: false }} />
+        <Stack.Screen name="askings-33" options={{ headerShown: false }} />
+        <Stack.Screen name="askings-34" options={{ headerShown: false }} />
+        <Stack.Screen name="askings-35" options={{ headerShown: false }} />
+        <Stack.Screen name="survey-result" options={{ headerShown: false }} />
       </Stack>
       <StatusBar style="auto" />
     </ThemeProvider>
