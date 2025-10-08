@@ -2,13 +2,13 @@ import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React, { useState } from 'react';
 import {
-    Dimensions,
-    ScrollView,
-    StatusBar,
-    StyleSheet,
-    Text,
-    TouchableOpacity,
-    View,
+  Dimensions,
+  ScrollView,
+  StatusBar,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
 } from 'react-native';
 
 const { width, height } = Dimensions.get('window');
@@ -168,7 +168,7 @@ const styles = StyleSheet.create({
   },
   header: {
     backgroundColor: '#8B5CF6',
-    paddingTop: 50,
+    paddingTop: 52,
     paddingBottom: 20,
     paddingHorizontal: 20,
     flexDirection: 'row',
