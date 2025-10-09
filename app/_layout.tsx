@@ -72,6 +72,12 @@ export default function RootLayout() {
         <Stack.Screen name="survey-result" options={{ headerShown: false }} />
         <Stack.Screen name="self-diagnosis-complete" options={{ headerShown: false }} />
         <Stack.Screen name="self-diagnosis-detail" options={{ headerShown: false }} />
+        <Stack.Screen name="profile-edit" options={{ headerShown: false }} />
+        <Stack.Screen name="medication-record" options={{ headerShown: false }} />
+        <Stack.Screen name="medication-add" options={{ headerShown: false }} />
+        <Stack.Screen name="medication-search" options={{ headerShown: false }} />
+        <Stack.Screen name="medication-detail" options={{ headerShown: false }} />
+        <Stack.Screen name="nutrition-search" options={{ headerShown: false }} />
       </Stack>
       <StatusBar style="auto" />
     </ThemeProvider>

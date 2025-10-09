@@ -27,17 +27,40 @@ export default function HomeScreen() {
     { id: '더보기', label: '더보기', icon: 'menu', isActive: false },
   ];
 
-  const dailyContents = [
-    {
-      id: 1,
-      title: '오늘의 스킨케어 팁',
-      content: '수분 크림을 바르기 전에 토너로 피부를 충분히 촉촉하게 만들어보세요.',
-    },
-    {
-      id: 2,
-      title: '건강한 아침 루틴',
-      content: '아침에 물 한 잔과 함께 간단한 스트레칭으로 하루를 시작해보세요.',
-    },
+  // 매일매일 간편하게 섹션 데이터
+  const dailyItems = [
+    { id: 'medication', label: '의약품', icon: 'medical', color: '#8B5CF6' },
+    { id: 'nutrition', label: '영양제', icon: 'nutrition', color: '#8B5CF6' },
+    { id: 'food', label: '음식품', icon: 'restaurant', color: '#8B5CF6' },
+  ];
+
+  // 활력징후 측정 데이터
+  const vitalSigns = [
+    { id: 'stress', label: '스트레스', subtitle: '오늘의 스트레스 지수는?', icon: 'heart', color: '#EF4444' },
+    { id: 'heartrate', label: '심박수', subtitle: '나는 1분에 몇 회 뛸까?', icon: 'pulse', color: '#EF4444' },
+    { id: 'breathing', label: '호흡', subtitle: '신호음으로 잠시 쉬이 가기', icon: 'leaf', color: '#10B981' },
+    { id: 'cardiovascular', label: '심혈관 건강', subtitle: '나의 심혈관 건강 상태는?', icon: 'heart-circle', color: '#EF4444' },
+    { id: 'bmi', label: 'BMI', subtitle: '31.1', status: '위험', color: '#EF4444' },
+    { id: 'fatigue', label: '피로도', subtitle: '오늘 나의 피로도는?', icon: 'battery-half', color: '#F59E0B' },
+  ];
+
+  // 건강정보 추가 섹션 데이터
+  const healthInfoItems = [
+    { id: 'self-diagnosis', label: '자가진단', subtitle: '약 1분 소요', icon: 'analytics', color: '#3B82F6' },
+    { id: 'health-check', label: '건강검진결과', subtitle: '약 30초 소요', icon: 'medical', color: '#3B82F6' },
+    { id: 'detailed-analysis', label: '기타 정밀분석', subtitle: '', icon: 'document-text', color: '#3B82F6' },
+  ];
+
+  // 가족 건강 섹션 데이터
+  const familyItems = [
+    { id: 'family-accept', label: '패밀리 수락', icon: 'people', color: '#8B5CF6' },
+    { id: 'care-gift', label: '케어 기프트', icon: 'gift', color: '#8B5CF6' },
+  ];
+
+  // 건강 습관 만들기 데이터
+  const habitItems = [
+    { id: 'recruiting', label: '모집중 위드', subtitle: '무료로 참여하고 리워드 받기', status: 'recruiting', color: '#10B981' },
+    { id: 'ended', label: '종료된 위드', subtitle: '결과 확인하고 리워드 받기', status: 'ended', color: '#EF4444' },
   ];
 
   return (
@@ -101,89 +124,154 @@ export default function HomeScreen() {
 
         {/* 하단 콘텐츠 영역 */}
         <View style={styles.bottomContent}>
-          <View style={styles.dailySection}>
-            <Text style={styles.dailyTitle}>매일매일 간편하게 ~</Text>
-            <TouchableOpacity style={styles.qButton}>
-              <Ionicons name="help-circle" size={24} color="#fff" />
+          {/* 매일매일 간편하게 섹션 */}
+          <View style={styles.section}>
+            <Text style={styles.sectionTitle}>매일매일 간편하게~</Text>
+            <Text style={styles.sectionSubtitle}>먹기 전에 확인하자!</Text>
+            <View style={styles.dailyItemsContainer}>
+              {dailyItems.map((item) => (
+                <TouchableOpacity
+                  key={item.id}
+                  style={styles.dailyItem}
+                  onPress={() => {
+                    if (item.id === 'medication') router.push('/medication-record');
+                    if (item.id === 'nutrition') router.push('/nutrition-search');
+                  }}
+                >
+                  <View style={[styles.dailyItemIcon, { backgroundColor: item.color }]}>
+                    <Ionicons name={item.icon as any} size={24} color="#fff" />
+                  </View>
+                  <Text style={styles.dailyItemLabel}>{item.label}</Text>
+                </TouchableOpacity>
+              ))}
+            </View>
+          </View>
+
+          {/* 활력징후 측정하자 섹션 */}
+          <View style={styles.section}>
+            <Text style={styles.sectionTitle}>활력징후 측정하자!</Text>
+            <View style={styles.vitalSignsGrid}>
+              {vitalSigns.map((item) => (
+                <TouchableOpacity key={item.id} style={styles.vitalSignCard}>
+                  <View style={styles.vitalSignIconContainer}>
+                    <Ionicons name={item.icon as any} size={20} color={item.color} />
+                  </View>
+                  <Text style={styles.vitalSignLabel}>{item.label}</Text>
+                  <Text style={styles.vitalSignSubtitle}>{item.subtitle}</Text>
+                  {item.status && (
+                    <View style={[styles.statusBadge, { backgroundColor: item.color }]}>
+                      <Text style={styles.statusText}>{item.status}</Text>
+                    </View>
+                  )}
+                </TouchableOpacity>
+              ))}
+            </View>
+            <TouchableOpacity style={styles.periodCheckButton}>
+              <Text style={styles.periodCheckText}>활력징후 주이 확인하기</Text>
+              <Ionicons name="bar-chart" size={16} color="#8B5CF6" />
             </TouchableOpacity>
           </View>
 
-          {/* 일일 콘텐츠 */}
-          {dailyContents.map((content) => (
-            <View key={content.id} style={styles.contentCard}>
-              <Text style={styles.contentTitle}>{content.title}</Text>
-              <Text style={styles.contentText}>{content.content}</Text>
-            </View>
-          ))}
-
           {/* 내 건강상태 알아보기 섹션 */}
-          <View style={styles.healthSection}>
+          <View style={styles.section}>
             <Text style={styles.sectionTitle}>내 건강상태 알아보기</Text>
+            <Text style={styles.sectionSubtitle}>Ted님의 건강레벨</Text>
             <View style={styles.healthLevelCard}>
               <View style={styles.healthLevelLeft}>
                 <Text style={styles.healthLevelLabel}>건강레벨</Text>
                 <View style={styles.progressCircle}>
-                  <Text style={styles.progressText}>?/10</Text>
+                  <Text style={styles.progressText}>9/10</Text>
                 </View>
               </View>
               <View style={styles.healthLevelRight}>
-                <Text style={styles.levelText}>Level ? ? 단계</Text>
-                <Text style={styles.levelSubText}>나의 건강레벨은?</Text>
+                <Text style={styles.levelText}>Level 9 양호단계</Text>
+                <Text style={styles.levelSubText}>상태 유지를 위한 지속적 관리 필요</Text>
               </View>
             </View>
           </View>
 
           {/* 무엇부터 관리하지 섹션 */}
-          <View style={styles.managementSection}>
+          <View style={styles.section}>
             <Text style={styles.sectionTitle}>무엇부터 관리하지?</Text>
-            <View style={styles.addInfoCard}>
-              <View style={styles.addIconContainer}>
-                <Ionicons name="add" size={40} color="#9CA3AF" />
+            <View style={styles.managementCardsContainer}>
+              <View style={styles.managementCard}>
+                <View style={styles.managementIconContainer}>
+                  <Ionicons name="warning" size={20} color="#F59E0B" />
+                </View>
+                <Text style={styles.managementLabel}>피지과다</Text>
+                <Text style={styles.managementStatus}>주의</Text>
               </View>
-              <Text style={styles.addInfoText}>나의 건강정보를 추가하시면</Text>
-              <Text style={styles.addInfoSubText}>힌트 AI가 맞춤 영양 솔루션을 추천해줘요</Text>
+              <TouchableOpacity style={styles.addManagementCard}>
+                <Ionicons name="add" size={24} color="#9CA3AF" />
+                <Text style={styles.addManagementText}>진단추가</Text>
+              </TouchableOpacity>
             </View>
           </View>
 
           {/* 건강정보 추가해 볼까 섹션 */}
-          <View style={styles.addHealthSection}>
+          <View style={styles.section}>
             <Text style={styles.sectionTitle}>건강정보 추가해 볼까?</Text>
             <View style={styles.healthCardsContainer}>
-              {/* 자가진단 카드 */}
-              <TouchableOpacity 
-                style={styles.healthCard}
-                onPress={() => router.push('/self-diagnosis-add')}
-              >
-                <View style={styles.cardBadge}>
-                  <Text style={styles.badgeText}>약 1분 소요</Text>
-                </View>
-                <View style={styles.cardIcon}>
-                  <Ionicons name="analytics" size={24} color="#3B82F6" />
-                </View>
-                <Text style={styles.cardTitle}>자가진단</Text>
-              </TouchableOpacity>
+              {healthInfoItems.map((item) => (
+                <TouchableOpacity
+                  key={item.id}
+                  style={styles.healthCard}
+                  onPress={() => {
+                    if (item.id === 'self-diagnosis') router.push('/self-diagnosis-add');
+                    if (item.id === 'detailed-analysis') router.push('/askings-1');
+                  }}
+                >
+                  {item.subtitle && (
+                    <View style={styles.cardBadge}>
+                      <Text style={styles.badgeText}>{item.subtitle}</Text>
+                    </View>
+                  )}
+                  <View style={styles.cardIcon}>
+                    <Ionicons name={item.icon as any} size={24} color={item.color} />
+                  </View>
+                  <Text style={styles.cardTitle}>{item.label}</Text>
+                </TouchableOpacity>
+              ))}
+            </View>
+          </View>
 
-              {/* 건강검진결과 카드 */}
-              <View style={styles.healthCard}>
-                <View style={[styles.cardBadge, { backgroundColor: '#EF4444' }]}>
-                  <Text style={styles.badgeText}>약 30초 소요</Text>
-                </View>
-                <View style={styles.cardIcon}>
-                  <Ionicons name="medical" size={24} color="#3B82F6" />
-                </View>
-                <Text style={styles.cardTitle}>건강검진결과</Text>
-              </View>
-
-              {/* 기타 정밀분석 카드 */}
-              <TouchableOpacity 
-                style={styles.healthCard}
-                onPress={() => router.push('/askings-1')}
-              >
-                <View style={styles.cardIcon}>
-                  <Ionicons name="document-text" size={24} color="#3B82F6" />
-                </View>
-                <Text style={styles.cardTitle}>기타 정밀분석</Text>
+          {/* 내 가족 건강도 챙겨보기 섹션 */}
+          <View style={styles.section}>
+            <Text style={styles.sectionTitle}>내 가족 건강도 챙겨보기</Text>
+            <View style={styles.familyButtonsContainer}>
+              {familyItems.map((item) => (
+                <TouchableOpacity key={item.id} style={styles.familyButton}>
+                  <Ionicons name={item.icon as any} size={20} color={item.color} />
+                  <Text style={styles.familyButtonText}>{item.label}</Text>
+                </TouchableOpacity>
+              ))}
+            </View>
+            <View style={styles.familyEmptyState}>
+              <Text style={styles.familyEmptyText}>아직 추가된 패밀리가 없어요</Text>
+              <TouchableOpacity style={styles.addFamilyButton}>
+                <Ionicons name="add" size={20} color="#8B5CF6" />
+                <Text style={styles.addFamilyText}>패밀리 추가</Text>
               </TouchableOpacity>
+            </View>
+          </View>
+
+          {/* 건강 습관 만들기 섹션 */}
+          <View style={styles.section}>
+            <Text style={styles.sectionTitle}>건강 습관 만들기</Text>
+            <Text style={styles.habitDescription}>
+              위드 (with)는 건강습관 만들기 도전 이벤트입니다
+            </Text>
+            <View style={styles.habitItemsContainer}>
+              {habitItems.map((item) => (
+                <TouchableOpacity key={item.id} style={styles.habitItem}>
+                  <View style={[styles.habitStatusDot, { backgroundColor: item.color }]} />
+                  <View style={styles.habitContent}>
+                    <Text style={styles.habitLabel}>{item.label}</Text>
+                    <Text style={styles.habitSubtitle}>{item.subtitle}</Text>
+                  </View>
+                  <Ionicons name="chevron-forward" size={16} color="#9CA3AF" />
+                </TouchableOpacity>
+              ))}
             </View>
           </View>
         </View>
@@ -332,44 +420,249 @@ const styles = StyleSheet.create({
     paddingTop: 20,
     paddingBottom: 120, // 하단 네비게이션 공간 확보 (안드로이드 네비게이션 바 고려)
   },
-  dailySection: {
+  section: {
+    marginBottom: 30,
+  },
+  sectionTitle: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#1F2937',
+    marginBottom: 8,
+  },
+  sectionSubtitle: {
+    fontSize: 16,
+    color: '#6B7280',
+    marginBottom: 16,
+  },
+  // 매일매일 간편하게 섹션
+  dailyItemsContainer: {
     flexDirection: 'row',
+    justifyContent: 'space-around',
+    marginTop: 16,
+  },
+  dailyItem: {
     alignItems: 'center',
-    justifyContent: 'space-between',
-    marginBottom: 20,
+    flex: 1,
   },
-  dailyTitle: {
-    fontSize: 18,
-    fontWeight: '600',
+  dailyItemIcon: {
+    width: 60,
+    height: 60,
+    borderRadius: 30,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 8,
+  },
+  dailyItemLabel: {
+    fontSize: 14,
+    fontWeight: '500',
     color: '#374151',
+    textAlign: 'center',
   },
-  qButton: {
+  // 활력징후 측정 섹션
+  vitalSignsGrid: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+    marginTop: 16,
+  },
+  vitalSignCard: {
+    width: '48%',
+    backgroundColor: '#fff',
+    borderRadius: 12,
+    padding: 16,
+    marginBottom: 12,
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 3,
+  },
+  vitalSignIconContainer: {
     width: 40,
     height: 40,
     borderRadius: 20,
-    backgroundColor: '#8B5CF6',
+    backgroundColor: '#F9FAFB',
     justifyContent: 'center',
     alignItems: 'center',
-    marginLeft: 20,
+    marginBottom: 8,
   },
-  contentCard: {
-    backgroundColor: '#F9FAFB',
-    padding: 16,
+  vitalSignLabel: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: '#374151',
+    marginBottom: 4,
+    textAlign: 'center',
+  },
+  vitalSignSubtitle: {
+    fontSize: 12,
+    color: '#6B7280',
+    textAlign: 'center',
+    marginBottom: 8,
+  },
+  statusBadge: {
+    paddingHorizontal: 8,
+    paddingVertical: 4,
     borderRadius: 12,
-    marginBottom: 12,
-    borderLeftWidth: 4,
-    borderLeftColor: '#8B5CF6',
   },
-  contentTitle: {
+  statusText: {
+    fontSize: 10,
+    color: '#fff',
+    fontWeight: '600',
+  },
+  periodCheckButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 16,
+    paddingVertical: 12,
+  },
+  periodCheckText: {
+    fontSize: 14,
+    color: '#8B5CF6',
+    marginRight: 8,
+  },
+  // 무엇부터 관리하지 섹션
+  managementCardsContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginTop: 16,
+  },
+  managementCard: {
+    flex: 1,
+    backgroundColor: '#fff',
+    borderRadius: 12,
+    padding: 16,
+    alignItems: 'center',
+    marginRight: 8,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 3,
+  },
+  managementIconContainer: {
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    backgroundColor: '#FEF3C7',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 8,
+  },
+  managementLabel: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: '#374151',
+    marginBottom: 4,
+  },
+  managementStatus: {
+    fontSize: 12,
+    color: '#F59E0B',
+    fontWeight: '500',
+  },
+  addManagementCard: {
+    flex: 1,
+    backgroundColor: '#F9FAFB',
+    borderRadius: 12,
+    padding: 16,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderWidth: 2,
+    borderColor: '#E5E7EB',
+    borderStyle: 'dashed',
+    marginLeft: 8,
+  },
+  addManagementText: {
+    fontSize: 12,
+    color: '#9CA3AF',
+    marginTop: 4,
+  },
+  // 가족 건강 섹션
+  familyButtonsContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    marginTop: 16,
+    marginBottom: 20,
+  },
+  familyButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#F3F4F6',
+    paddingHorizontal: 16,
+    paddingVertical: 12,
+    borderRadius: 20,
+  },
+  familyButtonText: {
+    fontSize: 14,
+    color: '#8B5CF6',
+    marginLeft: 8,
+    fontWeight: '500',
+  },
+  familyEmptyState: {
+    alignItems: 'center',
+    paddingVertical: 20,
+  },
+  familyEmptyText: {
+    fontSize: 14,
+    color: '#6B7280',
+    marginBottom: 16,
+  },
+  addFamilyButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#F3F4F6',
+    paddingHorizontal: 16,
+    paddingVertical: 12,
+    borderRadius: 20,
+  },
+  addFamilyText: {
+    fontSize: 14,
+    color: '#8B5CF6',
+    marginLeft: 8,
+    fontWeight: '500',
+  },
+  // 건강 습관 만들기 섹션
+  habitDescription: {
+    fontSize: 14,
+    color: '#6B7280',
+    marginBottom: 16,
+    lineHeight: 20,
+  },
+  habitItemsContainer: {
+    marginTop: 16,
+  },
+  habitItem: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#fff',
+    borderRadius: 12,
+    padding: 16,
+    marginBottom: 12,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 3,
+  },
+  habitStatusDot: {
+    width: 8,
+    height: 8,
+    borderRadius: 4,
+    marginRight: 12,
+  },
+  habitContent: {
+    flex: 1,
+  },
+  habitLabel: {
     fontSize: 16,
     fontWeight: '600',
     color: '#374151',
-    marginBottom: 8,
+    marginBottom: 4,
   },
-  contentText: {
+  habitSubtitle: {
     fontSize: 14,
     color: '#6B7280',
-    lineHeight: 20,
   },
   bottomNavigation: {
     position: 'absolute',
@@ -402,23 +695,14 @@ const styles = StyleSheet.create({
     marginTop: 4,
     fontWeight: '500',
   },
-  // 새로운 섹션 스타일들
-  healthSection: {
-    marginTop: 30,
-    marginBottom: 20,
-  },
-  sectionTitle: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    color: '#1F2937',
-    marginBottom: 16,
-  },
+  // 건강레벨 카드 스타일
   healthLevelCard: {
     backgroundColor: '#fff',
     borderRadius: 16,
     padding: 20,
     flexDirection: 'row',
     alignItems: 'center',
+    marginTop: 16,
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
@@ -464,49 +748,6 @@ const styles = StyleSheet.create({
   levelSubText: {
     fontSize: 14,
     color: '#6B7280',
-  },
-  managementSection: {
-    marginBottom: 20,
-  },
-  addInfoCard: {
-    backgroundColor: '#fff',
-    borderRadius: 16,
-    padding: 40,
-    alignItems: 'center',
-    borderWidth: 2,
-    borderColor: '#E5E7EB',
-    borderStyle: 'dashed',
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.05,
-    shadowRadius: 4,
-    elevation: 2,
-  },
-  addIconContainer: {
-    width: 80,
-    height: 80,
-    borderRadius: 40,
-    backgroundColor: '#F9FAFB',
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginBottom: 20,
-  },
-  addInfoText: {
-    fontSize: 16,
-    color: '#374151',
-    textAlign: 'center',
-    marginBottom: 8,
-  },
-  addInfoSubText: {
-    fontSize: 14,
-    color: '#6B7280',
-    textAlign: 'center',
-  },
-  addHealthSection: {
-    marginBottom: 20,
   },
   healthCardsContainer: {
     flexDirection: 'row',
