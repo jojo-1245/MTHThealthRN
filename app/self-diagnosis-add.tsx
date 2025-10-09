@@ -69,6 +69,51 @@ export default function SelfDiagnosisAddScreen() {
     },
   ];
 
+    const diagnosisCards2: DiagnosisCard2[] = [
+    {
+      id: '기초건강',
+      title: '기초건강',
+      description: '기초건강상태부터 알아볼래요',
+      duration: '약 30초 소요',
+      durationColor: '#3B82F6',
+    },
+    {
+      id: '만성질환',
+      title: '만성질환',
+      description: '현재 질환이 있어 약 복용 중 (관리중)이에요',
+      duration: '약 15초 소요',
+      durationColor: '#EF4444',
+    },
+    {
+      id: '식/생활습관',
+      title: '식/생활습관',
+      description: '현재 식/생활습관 상태가 궁금해요',
+      duration: '약 2분 30초 소요',
+      durationColor: '#3B82F6',
+    },
+    {
+      id: '자각증상',
+      title: '자각증상',
+      description: '현재 느끼고 있는 자각증상이 있어요',
+      duration: '약 5분 소요',
+      durationColor: '#6B7280',
+    },
+    {
+      id: '피부건강',
+      title: '피부건강',
+      description: '현재 피부상태가 궁금해요',
+      duration: '약 3분 소요',
+      durationColor: '#6B7280',
+    },
+    {
+      id: '두피건강',
+      title: '두피건강',
+      description: '현재 두피상태가 궁금해요',
+      duration: '약 2분 소요',
+      durationColor: '#6B7280',
+    },
+  ];
+
   const handleCardToggle = (cardId: string) => {
     setSelectedCards(prev => 
       prev.includes(cardId) 
@@ -249,12 +294,21 @@ const styles = StyleSheet.create({
     paddingVertical: 6,
     borderRadius: 16,
   },
+  durationBadge2: {
+    alignSelf: 'flex-ends',
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    borderRadius: 11,
+  },
   durationText: {
     fontSize: 12,
     color: '#fff',
     fontWeight: '500',
   },
   cardRight: {
+    alignItems: 'center',
+  },
+  cardRight2: {
     alignItems: 'center',
   },
   checkbox: {
@@ -266,9 +320,22 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  checkbox2: {
+    width: 22,
+    height: 24,
+    borderRadius: 12,
+    borderWidth: 2,
+    borderColor: '#DDD',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   checkboxSelected: {
     backgroundColor: '#8B5CF6',
     borderColor: '#8B5CF6',
+  },
+  checkboxSelected2: {
+    backgroundColor: '#85F',
+    borderColor: '#85F',
   },
   bottomButtonContainer: {
     paddingHorizontal: 20,
