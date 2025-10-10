@@ -78,6 +78,22 @@ export default function RootLayout() {
         <Stack.Screen name="medication-search" options={{ headerShown: false }} />
         <Stack.Screen name="medication-detail" options={{ headerShown: false }} />
         <Stack.Screen name="nutrition-search" options={{ headerShown: false }} />
+        <Stack.Screen name="product-search" options={{ headerShown: false }} />
+        <Stack.Screen name="product-scan" options={{ headerShown: false }} />
+        <Stack.Screen name="custom-search-result" options={{ headerShown: false }} />
+        <Stack.Screen name="custom-search-detail" options={{ headerShown: false }} />
+        <Stack.Screen name="custom-care-info" options={{ headerShown: false }} />
+        <Stack.Screen name="previous-result" options={{ headerShown: false }} />
+        <Stack.Screen name="food-search" options={{ headerShown: false }} />
+        <Stack.Screen name="food-search-result" options={{ headerShown: false }} />
+        <Stack.Screen name="food-nutrition-detail" options={{ headerShown: false }} />
+        <Stack.Screen name="food-nutrition-compare" options={{ headerShown: false }} />
+        <Stack.Screen name="stress-heartrate" options={{ headerShown: false }} />
+        <Stack.Screen name="stress-measurement-prep" options={{ headerShown: false }} />
+        <Stack.Screen name="stress-measurement-guide" options={{ headerShown: false }} />
+        <Stack.Screen name="stress-measurement-active" options={{ headerShown: false }} />
+        <Stack.Screen name="stress-measurement-result" options={{ headerShown: false }} />
+        <Stack.Screen name="stress-heartrate-statistics" options={{ headerShown: false }} />
       </Stack>
       <StatusBar style="auto" />
     </ThemeProvider>

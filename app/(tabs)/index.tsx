@@ -136,6 +136,7 @@ export default function HomeScreen() {
                   onPress={() => {
                     if (item.id === 'medication') router.push('/medication-record');
                     if (item.id === 'nutrition') router.push('/nutrition-search');
+                    if (item.id === 'food') router.push('/food-search');
                   }}
                 >
                   <View style={[styles.dailyItemIcon, { backgroundColor: item.color }]}>
@@ -152,7 +153,13 @@ export default function HomeScreen() {
             <Text style={styles.sectionTitle}>활력징후 측정하자!</Text>
             <View style={styles.vitalSignsGrid}>
               {vitalSigns.map((item) => (
-                <TouchableOpacity key={item.id} style={styles.vitalSignCard}>
+                <TouchableOpacity 
+                  key={item.id} 
+                  style={styles.vitalSignCard}
+                  onPress={() => {
+                    if (item.id === 'stress') router.push('/stress-heartrate');
+                  }}
+                >
                   <View style={styles.vitalSignIconContainer}>
                     <Ionicons name={item.icon as any} size={20} color={item.color} />
                   </View>
