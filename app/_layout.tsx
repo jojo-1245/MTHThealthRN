@@ -94,6 +94,13 @@ export default function RootLayout() {
         <Stack.Screen name="stress-measurement-active" options={{ headerShown: false }} />
         <Stack.Screen name="stress-measurement-result" options={{ headerShown: false }} />
         <Stack.Screen name="stress-heartrate-statistics" options={{ headerShown: false }} />
+        <Stack.Screen name="face-measurement" options={{ headerShown: false }} />
+        <Stack.Screen name="breathing" options={{ headerShown: false }} />
+        <Stack.Screen name="breathing-measurement-prep" options={{ headerShown: false }} />
+        <Stack.Screen name="breathing-measurement-guide" options={{ headerShown: false }} />
+        <Stack.Screen name="breathing-measurement-active" options={{ headerShown: false }} />
+        <Stack.Screen name="breathing-measurement-result" options={{ headerShown: false }} />
+        <Stack.Screen name="breathing-statistics" options={{ headerShown: false }} />
       </Stack>
       <StatusBar style="auto" />
     </ThemeProvider>

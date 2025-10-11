@@ -9,7 +9,7 @@ import {
     View,
 } from 'react-native';
 
-export default function StressHeartrate() {
+export default function Breathing() {
   const [currentDate, setCurrentDate] = useState(new Date());
   const [selectedDate, setSelectedDate] = useState(9); // 선택된 날짜
 
@@ -77,19 +77,14 @@ export default function StressHeartrate() {
     setSelectedDate(date);
   };
 
-  const handleFingerMeasurement = () => {
-    // 손가락 측정으로 이동
-    router.push('/stress-measurement-prep');
-  };
-
-  const handleFaceMeasurement = () => {
-    // 얼굴 측정으로 이동
-    router.push('/face-measurement');
+  const handleStartBreathing = () => {
+    // 호흡 측정 준비 페이지로 이동
+    router.push('/breathing-measurement-prep');
   };
 
   const handleStatistics = () => {
     // 통계 페이지로 이동
-    router.push('/stress-heartrate-statistics');
+    router.push('/breathing-statistics');
   };
 
   const getSelectedDateInfo = () => {
@@ -104,7 +99,7 @@ export default function StressHeartrate() {
         <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>스트레스 / 심박수</Text>
+        <Text style={styles.headerTitle}>호흡</Text>
         <TouchableOpacity onPress={handleStatistics} style={styles.statsButton}>
           <Ionicons name="stats-chart" size={24} color="#000" />
         </TouchableOpacity>
@@ -188,16 +183,11 @@ export default function StressHeartrate() {
         </View>
       </ScrollView>
 
-      {/* 하단 측정 버튼들 */}
+      {/* 하단 측정 버튼 */}
       <View style={styles.bottomButtonContainer}>
-        <TouchableOpacity style={styles.fingerButton} onPress={handleFingerMeasurement}>
-          <Ionicons name="finger-print" size={24} color="#fff" style={styles.buttonIcon} />
-          <Text style={styles.fingerButtonText}>손가락 측정</Text>
-        </TouchableOpacity>
-        
-        <TouchableOpacity style={styles.faceButton} onPress={handleFaceMeasurement}>
-          <Ionicons name="camera" size={24} color="#8B5CF6" style={styles.buttonIcon} />
-          <Text style={styles.faceButtonText}>얼굴 측정</Text>
+        <TouchableOpacity style={styles.measureButton} onPress={handleStartBreathing}>
+          <Ionicons name="leaf" size={24} color="#fff" style={styles.buttonIcon} />
+          <Text style={styles.measureButtonText}>호흡 측정</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -303,7 +293,7 @@ const styles = StyleSheet.create({
     fontWeight: '600',
   },
   todayText: {
-    color: '#8B5CF6',
+    color: '#10B981',
     fontWeight: '600',
   },
   selectedDateSection: {
@@ -313,7 +303,7 @@ const styles = StyleSheet.create({
   selectedDateText: {
     fontSize: 18,
     fontWeight: '600',
-    color: '#8B5CF6',
+    color: '#10B981',
     marginBottom: 20,
   },
   recordArea: {
@@ -336,36 +326,19 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 20,
     paddingBottom: 40,
-    gap: 12,
   },
-  fingerButton: {
-    backgroundColor: '#8B5CF6',
+  measureButton: {
+    backgroundColor: '#10B981',
     paddingVertical: 16,
     borderRadius: 12,
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'row',
   },
-  fingerButtonText: {
+  measureButtonText: {
     fontSize: 16,
     fontWeight: '600',
     color: '#fff',
-    marginLeft: 8,
-  },
-  faceButton: {
-    backgroundColor: '#fff',
-    borderWidth: 1,
-    borderColor: '#8B5CF6',
-    paddingVertical: 16,
-    borderRadius: 12,
-    alignItems: 'center',
-    justifyContent: 'center',
-    flexDirection: 'row',
-  },
-  faceButtonText: {
-    fontSize: 16,
-    fontWeight: '600',
-    color: '#8B5CF6',
     marginLeft: 8,
   },
   buttonIcon: {

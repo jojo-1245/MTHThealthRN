@@ -158,6 +158,7 @@ export default function HomeScreen() {
                   style={styles.vitalSignCard}
                   onPress={() => {
                     if (item.id === 'stress') router.push('/stress-heartrate');
+                    if (item.id === 'breathing') router.push('/breathing');
                   }}
                 >
                   <View style={styles.vitalSignIconContainer}>
