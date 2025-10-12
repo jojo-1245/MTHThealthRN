@@ -1,195 +1,103 @@
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
-import React, { useState } from 'react';
+import React from 'react';
 import {
+    Dimensions,
     ScrollView,
+    StatusBar,
     StyleSheet,
     Text,
     TouchableOpacity,
     View,
 } from 'react-native';
 
-export default function Breathing() {
-  const [currentDate, setCurrentDate] = useState(new Date());
-  const [selectedDate, setSelectedDate] = useState(9); // 선택된 날짜
+const { width, height } = Dimensions.get('window');
 
-  // 현재 월의 날짜들을 생성하는 함수
-  const getDaysInMonth = (date: Date) => {
-    const year = date.getFullYear();
-    const month = date.getMonth();
-    const firstDay = new Date(year, month, 1);
-    const lastDay = new Date(year, month + 1, 0);
-    const daysInMonth = lastDay.getDate();
-    const startingDayOfWeek = firstDay.getDay();
-
-    const days = [];
-    
-    // 이전 달의 날짜들 (빈 칸 채우기)
-    for (let i = startingDayOfWeek - 1; i >= 0; i--) {
-      const prevDate = new Date(year, month, -i);
-      days.push({
-        date: prevDate.getDate(),
-        isCurrentMonth: false,
-        isToday: false,
-      });
-    }
-
-    // 현재 달의 날짜들
-    for (let day = 1; day <= daysInMonth; day++) {
-      const today = new Date();
-      days.push({
-        date: day,
-        isCurrentMonth: true,
-        isToday: day === today.getDate() && month === today.getMonth() && year === today.getFullYear(),
-      });
-    }
-
-    // 다음 달의 날짜들 (빈 칸 채우기)
-    const remainingCells = 42 - days.length; // 6주 * 7일 = 42
-    for (let day = 1; day <= remainingCells; day++) {
-      days.push({
-        date: day,
-        isCurrentMonth: false,
-        isToday: false,
-      });
-    }
-
-    return days;
+export default function BreathingScreen() {
+  const handleBack = () => {
+    router.back();
   };
 
-  const days = getDaysInMonth(currentDate);
-  const monthNames = [
-    '1월', '2월', '3월', '4월', '5월', '6월',
-    '7월', '8월', '9월', '10월', '11월', '12월'
-  ];
-  const dayNames = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
-  const dayNamesKorean = ['일', '월', '화', '수', '목', '금', '토'];
-
-  const goToPreviousMonth = () => {
-    setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() - 1, 1));
+  const handleStartMeasurement = () => {
+    router.push('/breathing-measurement-guide');
   };
 
-  const goToNextMonth = () => {
-    setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 1));
-  };
-
-  const handleDateSelect = (date: number) => {
-    setSelectedDate(date);
-  };
-
-  const handleStartBreathing = () => {
-    // 호흡 측정 준비 페이지로 이동
-    router.push('/breathing-measurement-prep');
-  };
-
-  const handleStatistics = () => {
-    // 통계 페이지로 이동
+  const handleViewStatistics = () => {
     router.push('/breathing-statistics');
-  };
-
-  const getSelectedDateInfo = () => {
-    const selectedDayIndex = new Date(currentDate.getFullYear(), currentDate.getMonth(), selectedDate).getDay();
-    return `${selectedDate}일(${dayNamesKorean[selectedDayIndex]})`;
   };
 
   return (
     <View style={styles.container}>
+      <StatusBar barStyle="dark-content" backgroundColor="#fff" />
+      
       {/* 헤더 */}
       <View style={styles.header}>
-        <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
+        <TouchableOpacity style={styles.backButton} onPress={handleBack}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>호흡</Text>
-        <TouchableOpacity onPress={handleStatistics} style={styles.statsButton}>
-          <Ionicons name="stats-chart" size={24} color="#000" />
-        </TouchableOpacity>
+        <Text style={styles.headerTitle}>호흡 측정</Text>
+        <View style={styles.headerRight} />
       </View>
 
+      {/* 메인 콘텐츠 */}
       <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
-        {/* 달력 섹션 */}
-        <View style={styles.calendarSection}>
-          {/* 월 네비게이션 */}
-          <View style={styles.monthNavigation}>
-            <TouchableOpacity onPress={goToPreviousMonth} style={styles.monthButton}>
-              <Ionicons name="chevron-back" size={20} color="#666" />
-            </TouchableOpacity>
-            <Text style={styles.monthText}>
-              {currentDate.getFullYear()}년 {monthNames[currentDate.getMonth()]}
-            </Text>
-            <TouchableOpacity onPress={goToNextMonth} style={styles.monthButton}>
-              <Ionicons name="chevron-forward" size={20} color="#666" />
-            </TouchableOpacity>
+        {/* 호흡 측정 소개 */}
+        <View style={styles.introSection}>
+          <View style={styles.introIcon}>
+            <Ionicons name="pulse" size={60} color="#8B5CF6" />
           </View>
-
-          {/* 요일 헤더 */}
-          <View style={styles.dayHeader}>
-            {dayNames.map((day, index) => (
-              <View key={index} style={styles.dayHeaderItem}>
-                <Text style={[
-                  styles.dayHeaderText,
-                  index === 0 && styles.sundayText,
-                  index === 6 && styles.saturdayText
-                ]}>
-                  {day}
-                </Text>
-              </View>
-            ))}
-          </View>
-
-          {/* 달력 그리드 */}
-          <View style={styles.calendarGrid}>
-            {days.map((day, index) => (
-              <TouchableOpacity
-                key={index}
-                style={[
-                  styles.calendarDay,
-                  day.isCurrentMonth && styles.currentMonthDay,
-                  day.date === selectedDate && day.isCurrentMonth && styles.selectedDay,
-                  day.isToday && styles.todayDay,
-                ]}
-                onPress={() => day.isCurrentMonth && handleDateSelect(day.date)}
-              >
-                <Text style={[
-                  styles.calendarDayText,
-                  !day.isCurrentMonth && styles.otherMonthText,
-                  day.date === selectedDate && day.isCurrentMonth && styles.selectedDayText,
-                  day.isToday && styles.todayText,
-                ]}>
-                  {day.date}
-                </Text>
-              </TouchableOpacity>
-            ))}
-          </View>
+          <Text style={styles.introTitle}>호흡수 측정</Text>
+          <Text style={styles.introDescription}>
+            얼굴 인식을 통해 정확한 호흡수를 측정하고{'\n'}
+            건강한 호흡 패턴을 관리해보세요
+          </Text>
         </View>
 
-        {/* 선택된 날짜 정보 섹션 */}
-        <View style={styles.selectedDateSection}>
-          <Text style={styles.selectedDateText}>{getSelectedDateInfo()}</Text>
-          
-          {/* 측정 기록 표시 영역 */}
-          <View style={styles.recordArea}>
-            {selectedDate === 9 ? (
-              <View style={styles.noRecordState}>
-                <Ionicons name="warning" size={48} color="#ccc" />
-                <Text style={styles.noRecordText}>아직 기록 전이에요.</Text>
-              </View>
-            ) : (
-              <View style={styles.noRecordState}>
-                <Ionicons name="warning" size={48} color="#ccc" />
-                <Text style={styles.noRecordText}>아직 기록 전이에요.</Text>
-              </View>
-            )}
+        {/* 기능 카드들 */}
+        <View style={styles.cardsContainer}>
+          {/* 측정 시작 카드 */}
+          <TouchableOpacity style={styles.card} onPress={handleStartMeasurement}>
+            <View style={styles.cardHeader}>
+              <Ionicons name="play-circle" size={32} color="#8B5CF6" />
+              <Text style={styles.cardTitle}>호흡 측정 시작</Text>
+            </View>
+            <Text style={styles.cardDescription}>
+              얼굴을 인식하여 실시간으로 호흡수를 측정합니다
+            </Text>
+            <View style={styles.cardArrow}>
+              <Ionicons name="chevron-forward" size={20} color="#9CA3AF" />
+            </View>
+          </TouchableOpacity>
+
+          {/* 통계 보기 카드 */}
+          <TouchableOpacity style={styles.card} onPress={handleViewStatistics}>
+            <View style={styles.cardHeader}>
+              <Ionicons name="bar-chart" size={32} color="#8B5CF6" />
+              <Text style={styles.cardTitle}>호흡 통계</Text>
+            </View>
+            <Text style={styles.cardDescription}>
+              일간, 주간, 월간 호흡 패턴을 확인하고 분석합니다
+            </Text>
+            <View style={styles.cardArrow}>
+              <Ionicons name="chevron-forward" size={20} color="#9CA3AF" />
+            </View>
+          </TouchableOpacity>
+        </View>
+
+        {/* 주의사항 */}
+        <View style={styles.warningSection}>
+          <View style={styles.warningHeader}>
+            <Ionicons name="information-circle" size={20} color="#3B82F6" />
+            <Text style={styles.warningTitle}>측정 시 주의사항</Text>
+          </View>
+          <View style={styles.warningList}>
+            <Text style={styles.warningItem}>• 측정 중에는 움직임을 자제해주세요</Text>
+            <Text style={styles.warningItem}>• 밝은 곳에서 측정해주세요</Text>
+            <Text style={styles.warningItem}>• 카메라와 얼굴 사이의 거리를 적절히 유지해주세요</Text>
+            <Text style={styles.warningItem}>• 이 서비스는 의료기기가 아닙니다</Text>
           </View>
         </View>
       </ScrollView>
-
-      {/* 하단 측정 버튼 */}
-      <View style={styles.bottomButtonContainer}>
-        <TouchableOpacity style={styles.measureButton} onPress={handleStartBreathing}>
-          <Ionicons name="leaf" size={24} color="#fff" style={styles.buttonIcon} />
-          <Text style={styles.measureButtonText}>호흡 측정</Text>
-        </TouchableOpacity>
-      </View>
     </View>
   );
 }
@@ -200,148 +108,120 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   header: {
+    backgroundColor: '#fff',
+    paddingTop: 50,
+    paddingBottom: 20,
+    paddingHorizontal: 20,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    paddingHorizontal: 20,
-    paddingTop: 60,
-    paddingBottom: 20,
     borderBottomWidth: 1,
-    borderBottomColor: '#f0f0f0',
+    borderBottomColor: '#E5E7EB',
   },
   backButton: {
-    padding: 5,
+    padding: 8,
   },
   headerTitle: {
     fontSize: 18,
-    fontWeight: '600',
+    fontWeight: 'bold',
     color: '#000',
   },
-  statsButton: {
-    padding: 5,
+  headerRight: {
+    width: 40,
   },
   content: {
     flex: 1,
-  },
-  calendarSection: {
     paddingHorizontal: 20,
-    paddingVertical: 20,
+    paddingTop: 20,
   },
-  monthNavigation: {
-    flexDirection: 'row',
+  introSection: {
     alignItems: 'center',
-    justifyContent: 'space-between',
+    paddingVertical: 40,
     marginBottom: 20,
   },
-  monthButton: {
-    padding: 10,
-  },
-  monthText: {
-    fontSize: 18,
-    fontWeight: '600',
-    color: '#000',
-  },
-  dayHeader: {
-    flexDirection: 'row',
-    marginBottom: 10,
-  },
-  dayHeaderItem: {
-    flex: 1,
-    alignItems: 'center',
-    paddingVertical: 10,
-  },
-  dayHeaderText: {
-    fontSize: 12,
-    fontWeight: '500',
-    color: '#666',
-  },
-  sundayText: {
-    color: '#ff6b6b',
-  },
-  saturdayText: {
-    color: '#4dabf7',
-  },
-  calendarGrid: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-  },
-  calendarDay: {
-    width: '14.28%',
-    aspectRatio: 1,
+  introIcon: {
+    width: 100,
+    height: 100,
+    borderRadius: 50,
+    backgroundColor: '#F3E8FF',
     alignItems: 'center',
     justifyContent: 'center',
-    marginBottom: 5,
-  },
-  currentMonthDay: {
-    // 현재 달 날짜 스타일
-  },
-  selectedDay: {
-    backgroundColor: '#e0e0e0',
-    borderRadius: 20,
-  },
-  todayDay: {
-    // 오늘 날짜 스타일 (필요시 추가)
-  },
-  calendarDayText: {
-    fontSize: 16,
-    color: '#000',
-  },
-  otherMonthText: {
-    color: '#ccc',
-  },
-  selectedDayText: {
-    fontWeight: '600',
-  },
-  todayText: {
-    color: '#10B981',
-    fontWeight: '600',
-  },
-  selectedDateSection: {
-    paddingHorizontal: 20,
-    paddingVertical: 20,
-  },
-  selectedDateText: {
-    fontSize: 18,
-    fontWeight: '600',
-    color: '#10B981',
     marginBottom: 20,
   },
-  recordArea: {
-    minHeight: 200,
-    backgroundColor: '#f9f9f9',
-    borderRadius: 12,
-    alignItems: 'center',
-    justifyContent: 'center',
+  introTitle: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#000',
+    marginBottom: 12,
   },
-  noRecordState: {
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  noRecordText: {
+  introDescription: {
     fontSize: 16,
-    color: '#999',
-    marginTop: 10,
+    color: '#6B7280',
+    textAlign: 'center',
+    lineHeight: 24,
   },
-  bottomButtonContainer: {
-    paddingHorizontal: 20,
-    paddingVertical: 20,
-    paddingBottom: 40,
+  cardsContainer: {
+    gap: 16,
+    marginBottom: 30,
   },
-  measureButton: {
-    backgroundColor: '#10B981',
-    paddingVertical: 16,
+  card: {
+    backgroundColor: '#fff',
     borderRadius: 12,
-    alignItems: 'center',
-    justifyContent: 'center',
+    padding: 20,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.1,
+    shadowRadius: 8,
+    elevation: 4,
+    borderWidth: 1,
+    borderColor: '#E5E7EB',
+  },
+  cardHeader: {
     flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 12,
   },
-  measureButtonText: {
+  cardTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#000',
+    marginLeft: 12,
+  },
+  cardDescription: {
+    fontSize: 14,
+    color: '#6B7280',
+    lineHeight: 20,
+    marginBottom: 16,
+  },
+  cardArrow: {
+    alignSelf: 'flex-end',
+  },
+  warningSection: {
+    backgroundColor: '#F8FAFC',
+    borderRadius: 12,
+    padding: 20,
+    marginBottom: 20,
+  },
+  warningHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 16,
+  },
+  warningTitle: {
     fontSize: 16,
-    fontWeight: '600',
-    color: '#fff',
+    fontWeight: 'bold',
+    color: '#000',
     marginLeft: 8,
   },
-  buttonIcon: {
-    // 아이콘 스타일
+  warningList: {
+    gap: 8,
+  },
+  warningItem: {
+    fontSize: 14,
+    color: '#6B7280',
+    lineHeight: 20,
   },
 });

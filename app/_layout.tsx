@@ -101,6 +101,11 @@ export default function RootLayout() {
         <Stack.Screen name="breathing-measurement-active" options={{ headerShown: false }} />
         <Stack.Screen name="breathing-measurement-result" options={{ headerShown: false }} />
         <Stack.Screen name="breathing-statistics" options={{ headerShown: false }} />
+        <Stack.Screen name="cardiovascular-risk" options={{ headerShown: false }} />
+        <Stack.Screen name="cardiovascular-diagnosis-1" options={{ headerShown: false }} />
+        <Stack.Screen name="cardiovascular-diagnosis-2" options={{ headerShown: false }} />
+        <Stack.Screen name="cardiovascular-diagnosis-3" options={{ headerShown: false }} />
+        <Stack.Screen name="cardiovascular-complete" options={{ headerShown: false }} />
       </Stack>
       <StatusBar style="auto" />
     </ThemeProvider>

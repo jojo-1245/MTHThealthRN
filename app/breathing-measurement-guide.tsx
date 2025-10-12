@@ -2,170 +2,83 @@ import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React, { useState } from 'react';
 import {
+    Dimensions,
+    StatusBar,
     StyleSheet,
     Text,
     TouchableOpacity,
     View,
 } from 'react-native';
 
-export default function BreathingMeasurementGuide() {
-  const [currentStep, setCurrentStep] = useState(1);
+const { width, height } = Dimensions.get('window');
 
-  const handleNext = () => {
-    if (currentStep < 3) {
-      setCurrentStep(currentStep + 1);
-    } else {
-      // 실제 측정 페이지로 이동
-      router.push('/breathing-measurement-active');
-    }
+export default function BreathingMeasurementGuideScreen() {
+  const [showAgain, setShowAgain] = useState(true);
+
+  const handleClose = () => {
+    router.back();
   };
 
-  const handleBack = () => {
-    if (currentStep > 1) {
-      setCurrentStep(currentStep - 1);
-    } else {
-      router.back();
-    }
+  const handleDontShowAgain = () => {
+    setShowAgain(false);
+    router.back();
   };
 
-  const renderStep1 = () => (
-    <View style={styles.stepContainer}>
-      <View style={styles.illustrationContainer}>
-        <View style={styles.facePositionIllustration}>
-          {/* 얼굴 위치 일러스트레이션 */}
-          <View style={styles.personHead}>
-            <View style={styles.personFace}>
-              <View style={styles.personEyes}>
-                <View style={styles.personEye} />
-                <View style={styles.personEye} />
-              </View>
-              <View style={styles.personMouth} />
-            </View>
-          </View>
-          <View style={styles.phoneFrame}>
-            <View style={styles.phoneScreen}>
-              <View style={styles.cameraFrame}>
-                <View style={styles.cameraCircle} />
-                <Text style={styles.cameraText}>📱</Text>
-              </View>
-            </View>
-          </View>
-          <View style={styles.positionIndicator}>
-            <Ionicons name="leaf" size={20} color="#10B981" />
-            <View style={styles.positionArrow} />
-          </View>
-        </View>
-      </View>
-      
-      <View style={styles.instructionContainer}>
-        <Text style={styles.mainInstruction}>얼굴을 원 안에 위치시키기</Text>
-        <Text style={styles.subInstruction}>
-          얼굴을 원 안에 위치시키고 측정을 시작해주세요
-        </Text>
-      </View>
-    </View>
-  );
-
-  const renderStep2 = () => (
-    <View style={styles.stepContainer}>
-      <View style={styles.illustrationContainer}>
-        <View style={styles.breathingIllustration}>
-          {/* 호흡 일러스트레이션 */}
-          <View style={styles.personHead}>
-            <View style={styles.personFace}>
-              <View style={styles.personEyes}>
-                <View style={styles.personEye} />
-                <View style={styles.personEye} />
-              </View>
-              <View style={styles.personMouth} />
-            </View>
-          </View>
-          <View style={styles.breathingCircles}>
-            <View style={[styles.breathingCircle, styles.breathingCircle1]} />
-            <View style={[styles.breathingCircle, styles.breathingCircle2]} />
-            <View style={[styles.breathingCircle, styles.breathingCircle3]} />
-          </View>
-        </View>
-      </View>
-      
-      <View style={styles.instructionContainer}>
-        <Text style={styles.mainInstruction}>자연스럽게 호흡하기</Text>
-        <Text style={styles.subInstruction}>
-          자연스럽게 호흡하고 측정을 시작해주세요
-        </Text>
-      </View>
-    </View>
-  );
-
-  const renderStep3 = () => (
-    <View style={styles.stepContainer}>
-      <View style={styles.illustrationContainer}>
-        <View style={styles.measurementIllustration}>
-          {/* 측정 일러스트레이션 */}
-          <View style={styles.personHead}>
-            <View style={styles.personFace}>
-              <View style={styles.personEyes}>
-                <View style={styles.personEye} />
-                <View style={styles.personEye} />
-              </View>
-              <View style={styles.personMouth} />
-            </View>
-          </View>
-          <View style={styles.measurementWaves}>
-            <View style={styles.wave} />
-            <View style={styles.wave} />
-            <View style={styles.wave} />
-          </View>
-          <View style={styles.measurementIndicator}>
-            <Ionicons name="leaf" size={24} color="#10B981" />
-            <Text style={styles.measurementText}>측정 중</Text>
-          </View>
-        </View>
-      </View>
-      
-      <View style={styles.instructionContainer}>
-        <Text style={styles.mainInstruction}>측정이 완료될 때까지 기다리기</Text>
-        <Text style={styles.subInstruction}>
-          측정이 완료될 때까지 기다려주세요
-        </Text>
-      </View>
-    </View>
-  );
+  const handleStartMeasurement = () => {
+    router.push('/breathing-measurement-active');
+  };
 
   return (
     <View style={styles.container}>
+      <StatusBar barStyle="dark-content" backgroundColor="#fff" />
+      
       {/* 헤더 */}
       <View style={styles.header}>
-        <TouchableOpacity onPress={handleBack} style={styles.backButton}>
+        <TouchableOpacity style={styles.backButton} onPress={handleClose}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>호흡 측정</Text>
+        <Text style={styles.headerTitle}>호흡수 측정</Text>
         <View style={styles.headerRight} />
-      </View>
-
-      {/* 진행률 인디케이터 */}
-      <View style={styles.progressContainer}>
-        <View style={styles.progressDots}>
-          <View style={[styles.progressDot, currentStep >= 1 && styles.progressDotActive]} />
-          <View style={[styles.progressDot, currentStep >= 2 && styles.progressDotActive]} />
-          <View style={[styles.progressDot, currentStep >= 3 && styles.progressDotActive]} />
-        </View>
       </View>
 
       {/* 메인 콘텐츠 */}
       <View style={styles.content}>
-        {currentStep === 1 ? renderStep1() : 
-         currentStep === 2 ? renderStep2() : renderStep3()}
+        {/* 안내 텍스트 */}
+        <View style={styles.guideContainer}>
+          <Text style={styles.guideTitle}>측정 시 움직임 자제하기</Text>
+          <Text style={styles.guideSubtitle}>
+            원 영역 안에 얼굴을 위치시키고{'\n'}밝은 곳에서 측정 해주세요
+          </Text>
+        </View>
+
+        {/* 얼굴 위치 가이드 */}
+        <View style={styles.faceGuideContainer}>
+          <View style={styles.faceFrame}>
+            <Ionicons name="person" size={80} color="#8B5CF6" />
+          </View>
+        </View>
+
+        {/* 주의사항 */}
+        <View style={styles.warningContainer}>
+          <Ionicons name="warning" size={20} color="#F59E0B" />
+          <Text style={styles.warningText}>
+            카메라와 얼굴이 너무 가까우면 측정 되지 않을 수 있어요
+          </Text>
+        </View>
+
+        {/* 측정 시작 버튼 */}
+        <TouchableOpacity style={styles.startButton} onPress={handleStartMeasurement}>
+          <Text style={styles.startButtonText}>측정 시작</Text>
+        </TouchableOpacity>
       </View>
 
       {/* 하단 버튼들 */}
-      <View style={styles.bottomButtonContainer}>
-        <TouchableOpacity style={styles.skipButton} onPress={() => router.push('/breathing-measurement-active')}>
-          <Text style={styles.skipButtonText}>건너뛰기</Text>
+      <View style={styles.bottomButtons}>
+        <TouchableOpacity style={styles.dontShowButton} onPress={handleDontShowAgain}>
+          <Text style={styles.dontShowText}>다시 보지 않기</Text>
         </TouchableOpacity>
-        
-        <TouchableOpacity style={styles.nextButton} onPress={handleNext}>
-          <Text style={styles.nextButtonText}>다음</Text>
+        <TouchableOpacity style={styles.closeButton} onPress={handleClose}>
+          <Text style={styles.closeText}>닫기</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -178,247 +91,121 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   header: {
+    backgroundColor: '#fff',
+    paddingTop: 50,
+    paddingBottom: 20,
+    paddingHorizontal: 20,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    paddingHorizontal: 20,
-    paddingTop: 60,
-    paddingBottom: 20,
     borderBottomWidth: 1,
-    borderBottomColor: '#f0f0f0',
+    borderBottomColor: '#E5E7EB',
   },
   backButton: {
-    padding: 5,
+    padding: 8,
   },
   headerTitle: {
     fontSize: 18,
-    fontWeight: '600',
+    fontWeight: 'bold',
     color: '#000',
   },
   headerRight: {
-    width: 34,
-  },
-  progressContainer: {
-    alignItems: 'center',
-    paddingVertical: 20,
-  },
-  progressDots: {
-    flexDirection: 'row',
-    gap: 8,
-  },
-  progressDot: {
-    width: 8,
-    height: 8,
-    borderRadius: 4,
-    backgroundColor: '#e0e0e0',
-  },
-  progressDotActive: {
-    backgroundColor: '#10B981',
+    width: 40,
   },
   content: {
     flex: 1,
     paddingHorizontal: 20,
+    paddingTop: 40,
     alignItems: 'center',
-    justifyContent: 'center',
   },
-  stepContainer: {
-    flex: 1,
+  guideContainer: {
     alignItems: 'center',
-    justifyContent: 'center',
-  },
-  illustrationContainer: {
     marginBottom: 40,
   },
-  facePositionIllustration: {
-    width: 200,
-    height: 200,
-    alignItems: 'center',
-    justifyContent: 'center',
-    position: 'relative',
-  },
-  personHead: {
-    width: 60,
-    height: 60,
-    borderRadius: 30,
-    backgroundColor: '#10B981',
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginBottom: 20,
-  },
-  personFace: {
-    alignItems: 'center',
-  },
-  personEyes: {
-    flexDirection: 'row',
-    gap: 8,
-    marginBottom: 4,
-  },
-  personEye: {
-    width: 8,
-    height: 8,
-    borderRadius: 4,
-    backgroundColor: '#333',
-  },
-  personMouth: {
-    width: 16,
-    height: 8,
-    borderRadius: 8,
-    backgroundColor: '#333',
-  },
-  phoneFrame: {
-    position: 'absolute',
-    bottom: 20,
-    width: 80,
-    height: 120,
-    backgroundColor: '#333',
-    borderRadius: 12,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  phoneScreen: {
-    width: 70,
-    height: 100,
-    backgroundColor: '#000',
-    borderRadius: 8,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  cameraFrame: {
-    width: 50,
-    height: 50,
-    borderRadius: 25,
-    borderWidth: 2,
-    borderColor: '#10B981',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  cameraCircle: {
-    width: 40,
-    height: 40,
-    borderRadius: 20,
-    backgroundColor: '#10B981',
-    opacity: 0.3,
-  },
-  cameraText: {
-    position: 'absolute',
-    fontSize: 16,
-  },
-  positionIndicator: {
-    position: 'absolute',
-    top: 20,
-    right: 20,
-    alignItems: 'center',
-  },
-  positionArrow: {
-    width: 2,
-    height: 20,
-    backgroundColor: '#10B981',
-    marginTop: 5,
-  },
-  breathingIllustration: {
-    width: 200,
-    height: 200,
-    alignItems: 'center',
-    justifyContent: 'center',
-    position: 'relative',
-  },
-  breathingCircles: {
-    position: 'absolute',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  breathingCircle: {
-    position: 'absolute',
-    borderRadius: 50,
-    borderWidth: 2,
-    borderColor: '#10B981',
-  },
-  breathingCircle1: {
-    width: 100,
-    height: 100,
-    opacity: 0.3,
-  },
-  breathingCircle2: {
-    width: 120,
-    height: 120,
-    opacity: 0.2,
-  },
-  breathingCircle3: {
-    width: 140,
-    height: 140,
-    opacity: 0.1,
-  },
-  measurementIllustration: {
-    width: 200,
-    height: 200,
-    alignItems: 'center',
-    justifyContent: 'center',
-    position: 'relative',
-  },
-  measurementWaves: {
-    position: 'absolute',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  wave: {
-    width: 80,
-    height: 2,
-    backgroundColor: '#10B981',
-    marginVertical: 4,
-    borderRadius: 1,
-  },
-  measurementIndicator: {
-    position: 'absolute',
-    bottom: 20,
-    alignItems: 'center',
-  },
-  measurementText: {
-    fontSize: 12,
-    color: '#10B981',
-    marginTop: 4,
-  },
-  instructionContainer: {
-    alignItems: 'center',
-    paddingHorizontal: 40,
-  },
-  mainInstruction: {
-    fontSize: 24,
-    fontWeight: '700',
+  guideTitle: {
+    fontSize: 20,
+    fontWeight: 'bold',
     color: '#000',
-    marginBottom: 16,
-    textAlign: 'center',
+    marginBottom: 12,
   },
-  subInstruction: {
+  guideSubtitle: {
     fontSize: 16,
-    color: '#666',
+    color: '#6B7280',
     textAlign: 'center',
     lineHeight: 24,
   },
-  bottomButtonContainer: {
+  faceGuideContainer: {
+    alignItems: 'center',
+    marginBottom: 40,
+  },
+  faceFrame: {
+    width: 200,
+    height: 200,
+    borderRadius: 100,
+    borderWidth: 3,
+    borderColor: '#8B5CF6',
+    borderStyle: 'dashed',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#F8FAFC',
+  },
+  warningContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#FEF3C7',
+    paddingHorizontal: 16,
+    paddingVertical: 12,
+    borderRadius: 8,
+    marginBottom: 40,
+    maxWidth: width - 40,
+  },
+  warningText: {
+    fontSize: 14,
+    color: '#92400E',
+    marginLeft: 8,
+    flex: 1,
+  },
+  startButton: {
+    backgroundColor: '#8B5CF6',
+    paddingVertical: 16,
+    paddingHorizontal: 40,
+    borderRadius: 12,
+    marginBottom: 40,
+  },
+  startButtonText: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: '#fff',
+    textAlign: 'center',
+  },
+  bottomButtons: {
     flexDirection: 'row',
     paddingHorizontal: 20,
-    paddingVertical: 20,
     paddingBottom: 40,
+    gap: 12,
   },
-  skipButton: {
+  dontShowButton: {
     flex: 1,
-    paddingVertical: 12,
-    alignItems: 'center',
-  },
-  skipButtonText: {
-    fontSize: 16,
-    color: '#666',
-  },
-  nextButton: {
-    flex: 1,
-    backgroundColor: '#10B981',
-    paddingVertical: 12,
+    backgroundColor: '#F3F4F6',
+    paddingVertical: 14,
     borderRadius: 8,
     alignItems: 'center',
   },
-  nextButtonText: {
-    fontSize: 16,
-    fontWeight: '600',
+  dontShowText: {
+    fontSize: 14,
+    fontWeight: '500',
+    color: '#6B7280',
+  },
+  closeButton: {
+    flex: 1,
+    backgroundColor: '#8B5CF6',
+    paddingVertical: 14,
+    borderRadius: 8,
+    alignItems: 'center',
+  },
+  closeText: {
+    fontSize: 14,
+    fontWeight: '500',
     color: '#fff',
   },
 });

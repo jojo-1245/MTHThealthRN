@@ -2,126 +2,120 @@ import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React from 'react';
 import {
+    Dimensions,
     ScrollView,
+    StatusBar,
     StyleSheet,
     Text,
     TouchableOpacity,
     View,
 } from 'react-native';
 
-export default function BreathingMeasurementResult() {
-  const handleSave = () => {
-    // 호흡 메인 페이지로 이동
-    router.push('/breathing');
-  };
+const { width, height } = Dimensions.get('window');
+
+export default function BreathingMeasurementResultScreen() {
+  const breathingRate = 18; // 측정된 호흡수 (예시)
+  const targetRate = 16; // 목표 호흡수 (예시)
 
   const handleBack = () => {
     router.back();
   };
 
+  const handleViewStatistics = () => {
+    router.push('/breathing-statistics');
+  };
+
+  const handleComplete = () => {
+    router.push('/breathing-statistics');
+  };
+
   return (
     <View style={styles.container}>
+      <StatusBar barStyle="dark-content" backgroundColor="#fff" />
+      
       {/* 헤더 */}
       <View style={styles.header}>
-        <TouchableOpacity onPress={handleBack} style={styles.backButton}>
+        <TouchableOpacity style={styles.backButton} onPress={handleBack}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>호흡 측정</Text>
+        <Text style={styles.headerTitle}>호흡 운동 결과</Text>
         <View style={styles.headerRight} />
       </View>
 
+      {/* 메인 콘텐츠 */}
       <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
-        {/* 측정 완료 섹션 */}
-        <View style={styles.completionSection}>
-          <View style={styles.checkIconContainer}>
-            <Ionicons name="checkmark-circle" size={80} color="#10B981" />
+        {/* 그래프 섹션 */}
+        <View style={styles.graphSection}>
+          <Text style={styles.graphTitle}>얼마나 잘 따라했을까요?</Text>
+          
+          {/* 간단한 그래프 시뮬레이션 */}
+          <View style={styles.graphContainer}>
+            <View style={styles.graphArea}>
+              {/* 목표 호흡선 (노란색) */}
+              <View style={styles.targetLine} />
+              {/* 실제 호흡선 (파란색) */}
+              <View style={styles.actualLine} />
+            </View>
+            <View style={styles.graphLegend}>
+              <View style={styles.legendItem}>
+                <View style={[styles.legendColor, { backgroundColor: '#3B82F6' }]} />
+                <Text style={styles.legendText}>나의 호흡</Text>
+              </View>
+              <View style={styles.legendItem}>
+                <View style={[styles.legendColor, { backgroundColor: '#F59E0B' }]} />
+                <Text style={styles.legendText}>목표 호흡</Text>
+              </View>
+            </View>
           </View>
-          <Text style={styles.completionTitle}>호흡 체크가 완료되었습니다</Text>
         </View>
 
-        {/* 호흡 상태 결과 섹션 */}
-        <View style={styles.resultSection}>
-          <View style={styles.resultHeader}>
-            <Text style={styles.resultTitle}>호흡 상태</Text>
-            <View style={styles.resultBadge}>
-              <Text style={styles.resultBadgeText}>양호</Text>
-            </View>
+        {/* 효과 목록 섹션 */}
+        <View style={styles.effectsSection}>
+          <View style={styles.effectsHeader}>
+            <Ionicons name="person" size={24} color="#8B5CF6" />
+            <Text style={styles.effectsTitle}>지속적인 호흡 관리의 효과</Text>
           </View>
           
-          <View style={styles.resultDetails}>
-            <View style={styles.resultItem}>
-              <Text style={styles.resultItemLabel}>호흡수</Text>
-              <Text style={styles.resultItemValue}>16회/분</Text>
+          <View style={styles.effectsList}>
+            <View style={styles.effectItem}>
+              <Ionicons name="checkmark-circle" size={20} color="#10B981" />
+              <Text style={styles.effectText}>긴장 완화</Text>
             </View>
-            <View style={styles.resultItem}>
-              <Text style={styles.resultItemLabel}>정상 범위</Text>
-              <Text style={styles.resultItemValue}>12-20회/분</Text>
+            <View style={styles.effectItem}>
+              <Ionicons name="checkmark-circle" size={20} color="#10B981" />
+              <Text style={styles.effectText}>심장 기능 향상</Text>
+            </View>
+            <View style={styles.effectItem}>
+              <Ionicons name="checkmark-circle" size={20} color="#10B981" />
+              <Text style={styles.effectText}>호흡기 건강 향상</Text>
+            </View>
+            <View style={styles.effectItem}>
+              <Ionicons name="checkmark-circle" size={20} color="#10B981" />
+              <Text style={styles.effectText}>과호흡 예방</Text>
+            </View>
+            <View style={styles.effectItem}>
+              <Ionicons name="checkmark-circle" size={20} color="#10B981" />
+              <Text style={styles.effectText}>스트레스 감소</Text>
             </View>
           </View>
         </View>
 
-        {/* 호흡 증상 섹션 */}
-        <View style={styles.symptomsSection}>
-          <Text style={styles.sectionTitle}>호흡 증상</Text>
-          <View style={styles.symptomsList}>
-            <View style={styles.symptomItem}>
-              <Ionicons name="checkmark-circle" size={20} color="#10B981" />
-              <Text style={styles.symptomText}>호흡이 편안함</Text>
-            </View>
-            <View style={styles.symptomItem}>
-              <Ionicons name="checkmark-circle" size={20} color="#10B981" />
-              <Text style={styles.symptomText}>가슴 답답함 없음</Text>
-            </View>
-            <View style={styles.symptomItem}>
-              <Ionicons name="checkmark-circle" size={20} color="#10B981" />
-              <Text style={styles.symptomText}>숨이 차지 않음</Text>
-            </View>
-            <View style={styles.symptomItem}>
-              <Ionicons name="checkmark-circle" size={20} color="#10B981" />
-              <Text style={styles.symptomText}>기침이 없음</Text>
-            </View>
-            <View style={styles.symptomItem}>
-              <Ionicons name="checkmark-circle" size={20} color="#10B981" />
-              <Text style={styles.symptomText}>가래가 없음</Text>
-            </View>
-            <View style={styles.symptomItem}>
-              <Ionicons name="checkmark-circle" size={20} color="#10B981" />
-              <Text style={styles.symptomText}>흉통이 없음</Text>
-            </View>
-            <View style={styles.symptomItem}>
-              <Ionicons name="checkmark-circle" size={20} color="#10B981" />
-              <Text style={styles.symptomText}>호흡곤란이 없음</Text>
-            </View>
-          </View>
-        </View>
-
-        {/* 전문가 상담 안내 섹션 */}
-        <View style={styles.consultationSection}>
-          <View style={styles.consultationHeader}>
-            <Ionicons name="medical" size={24} color="#10B981" />
-            <Text style={styles.consultationTitle}>전문가 상담 안내</Text>
-          </View>
-          <Text style={styles.consultationText}>
-            위 증상이 지속적으로 나타난다면 전문가와 상담해보세요
-          </Text>
-        </View>
-
-        {/* 정확도 정보 섹션 */}
-        <View style={styles.accuracySection}>
-          <Text style={styles.accuracyTitle}>정확도</Text>
-          <Text style={styles.accuracyText}>
-            딥메디 KCL/KTL 인증
+        {/* 측정 결과 정보 */}
+        <View style={styles.infoSection}>
+          <Text style={styles.infoText}>
+            측정 결과가 딥메디를 통해 95% 이상의 정확도로 분석되었으며{'\n'}
+            KCL 공인시험 성적을 받았습니다.
           </Text>
           <Text style={styles.disclaimerText}>
-            본 측정 결과는 참고용이며, 의료기기가 아닙니다. 진단이나 치료 목적으로 사용할 수 없습니다.
+            ※ 이 서비스는 의료기기가 아니며 질병의 진단, 치료, 예방 목적이 아닙니다.
           </Text>
         </View>
       </ScrollView>
 
-      {/* 하단 저장 버튼 */}
-      <View style={styles.bottomButtonContainer}>
-        <TouchableOpacity style={styles.saveButton} onPress={handleSave}>
-          <Text style={styles.saveButtonText}>저장하기</Text>
+      {/* 하단 버튼 */}
+      <View style={styles.bottomContainer}>
+        <TouchableOpacity style={styles.completeButton} onPress={handleComplete}>
+          <Text style={styles.completeButtonText}>분석 완료</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -134,171 +128,172 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   header: {
+    backgroundColor: '#fff',
+    paddingTop: 50,
+    paddingBottom: 20,
+    paddingHorizontal: 20,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    paddingHorizontal: 20,
-    paddingTop: 60,
-    paddingBottom: 20,
     borderBottomWidth: 1,
-    borderBottomColor: '#f0f0f0',
+    borderBottomColor: '#E5E7EB',
   },
   backButton: {
-    padding: 5,
+    padding: 8,
   },
   headerTitle: {
     fontSize: 18,
-    fontWeight: '600',
+    fontWeight: 'bold',
     color: '#000',
   },
   headerRight: {
-    width: 34,
+    width: 40,
   },
   content: {
     flex: 1,
+    paddingHorizontal: 20,
+    paddingTop: 20,
   },
-  completionSection: {
-    alignItems: 'center',
-    paddingVertical: 40,
-  },
-  checkIconContainer: {
+  graphSection: {
+    backgroundColor: '#fff',
+    borderRadius: 12,
+    padding: 20,
     marginBottom: 20,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.1,
+    shadowRadius: 8,
+    elevation: 4,
+    borderWidth: 1,
+    borderColor: '#E5E7EB',
   },
-  completionTitle: {
-    fontSize: 20,
-    fontWeight: '600',
+  graphTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
     color: '#000',
+    marginBottom: 20,
     textAlign: 'center',
   },
-  resultSection: {
-    margin: 20,
-    padding: 20,
-    backgroundColor: '#f9f9f9',
-    borderRadius: 12,
-  },
-  resultHeader: {
-    flexDirection: 'row',
+  graphContainer: {
     alignItems: 'center',
-    justifyContent: 'space-between',
+  },
+  graphArea: {
+    width: width - 80,
+    height: 200,
+    backgroundColor: '#F8FAFC',
+    borderRadius: 8,
     marginBottom: 16,
+    position: 'relative',
   },
-  resultTitle: {
+  targetLine: {
+    position: 'absolute',
+    top: '50%',
+    left: 0,
+    right: 0,
+    height: 2,
+    backgroundColor: '#F59E0B',
+    transform: [{ translateY: -1 }],
+  },
+  actualLine: {
+    position: 'absolute',
+    top: '45%',
+    left: 0,
+    right: 0,
+    height: 2,
+    backgroundColor: '#3B82F6',
+    transform: [{ translateY: -1 }],
+  },
+  graphLegend: {
+    flexDirection: 'row',
+    gap: 20,
+  },
+  legendItem: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  legendColor: {
+    width: 12,
+    height: 12,
+    borderRadius: 6,
+    marginRight: 8,
+  },
+  legendText: {
+    fontSize: 14,
+    color: '#6B7280',
+  },
+  effectsSection: {
+    backgroundColor: '#fff',
+    borderRadius: 12,
+    padding: 20,
+    marginBottom: 20,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.1,
+    shadowRadius: 8,
+    elevation: 4,
+    borderWidth: 1,
+    borderColor: '#E5E7EB',
+  },
+  effectsHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 20,
+  },
+  effectsTitle: {
     fontSize: 18,
-    fontWeight: '600',
+    fontWeight: 'bold',
     color: '#000',
+    marginLeft: 12,
   },
-  resultBadge: {
-    backgroundColor: '#10B981',
-    paddingHorizontal: 12,
-    paddingVertical: 6,
-    borderRadius: 16,
-  },
-  resultBadgeText: {
-    fontSize: 14,
-    fontWeight: '600',
-    color: '#fff',
-  },
-  resultDetails: {
+  effectsList: {
     gap: 12,
   },
-  resultItem: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-  },
-  resultItemLabel: {
-    fontSize: 16,
-    color: '#666',
-  },
-  resultItemValue: {
-    fontSize: 16,
-    fontWeight: '600',
-    color: '#000',
-  },
-  symptomsSection: {
-    margin: 20,
-    padding: 20,
-    backgroundColor: '#f9f9f9',
-    borderRadius: 12,
-  },
-  sectionTitle: {
-    fontSize: 18,
-    fontWeight: '600',
-    color: '#000',
-    marginBottom: 16,
-  },
-  symptomsList: {
-    gap: 12,
-  },
-  symptomItem: {
+  effectItem: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 12,
   },
-  symptomText: {
+  effectText: {
     fontSize: 16,
-    color: '#000',
+    color: '#374151',
+    marginLeft: 12,
   },
-  consultationSection: {
-    margin: 20,
-    padding: 20,
-    backgroundColor: '#f0f9ff',
-    borderRadius: 12,
-    borderLeftWidth: 4,
-    borderLeftColor: '#10B981',
+  infoSection: {
+    backgroundColor: '#F8FAFC',
+    borderRadius: 8,
+    padding: 16,
+    marginBottom: 20,
   },
-  consultationHeader: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
+  infoText: {
+    fontSize: 12,
+    color: '#6B7280',
+    lineHeight: 18,
     marginBottom: 8,
-  },
-  consultationTitle: {
-    fontSize: 16,
-    fontWeight: '600',
-    color: '#000',
-  },
-  consultationText: {
-    fontSize: 14,
-    color: '#666',
-    lineHeight: 20,
-  },
-  accuracySection: {
-    margin: 20,
-    padding: 20,
-    backgroundColor: '#f9f9f9',
-    borderRadius: 12,
-  },
-  accuracyTitle: {
-    fontSize: 16,
-    fontWeight: '600',
-    color: '#000',
-    marginBottom: 8,
-  },
-  accuracyText: {
-    fontSize: 14,
-    color: '#10B981',
-    marginBottom: 12,
   },
   disclaimerText: {
     fontSize: 12,
-    color: '#999',
-    lineHeight: 16,
+    color: '#9CA3AF',
+    lineHeight: 18,
   },
-  bottomButtonContainer: {
+  bottomContainer: {
     paddingHorizontal: 20,
-    paddingVertical: 20,
     paddingBottom: 40,
+    paddingTop: 20,
   },
-  saveButton: {
-    backgroundColor: '#10B981',
+  completeButton: {
+    backgroundColor: '#8B5CF6',
     paddingVertical: 16,
     borderRadius: 12,
     alignItems: 'center',
   },
-  saveButtonText: {
+  completeButtonText: {
     fontSize: 16,
-    fontWeight: '600',
+    fontWeight: 'bold',
     color: '#fff',
   },
 });

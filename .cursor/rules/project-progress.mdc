@@ -1,6 +1,6 @@
 ---
 alwaysApply: true
-description: 프로젝트 구조 및 설문 페이지 작업 진행 상황
+description: 메타힌트(MTHT) 프로젝트 전체 진행 상황 및 구현된 기능들
 ---
 
 # 메타힌트(MTHT) 프로젝트 작업 진행 상황
@@ -8,7 +8,7 @@ description: 프로젝트 구조 및 설문 페이지 작업 진행 상황
 ## 프로젝트 개요
 - **프로젝트명**: 메타힌트(MTHT) - AI 건강비서 앱
 - **기술 스택**: React Native + Expo Router + TypeScript
-- **주요 기능**: 스플래시 화면, 메인 페이지, 자가진단, 설문 시스템
+- **주요 기능**: 스플래시 화면, 메인 페이지, 자가진단, 설문 시스템, 영양제/의약품 관리, 맞춤형 검색, 호흡 측정, 심혈관질환 자가진단
 
 ## 완성된 기능들
 
@@ -103,49 +103,55 @@ description: 프로젝트 구조 및 설문 페이지 작업 진행 상황
 - **페이지 인디케이터**: "현재페이지 / 35"
 - **버튼**: 이전(흰색+보라색 테두리) / 다음(보라색) 버튼
 
+### 8. 영양제/의약품 관리 시스템 ✅ **완성**
+- **nutrition-search.tsx**: 맞춤형 검색 페이지 - 관리 필요 항목 선택, 카테고리 선택, 제품 스캔/검색 버튼
+- **medication-add.tsx**: 의약품 등록 페이지 - 추가스캔/검색 탭, 처방일자/복용기간 선택, 저장 기능
+- **medication-search.tsx**: 의약품 검색 페이지 - 실시간 검색, 11개 mock 데이터, 체크박스 선택
+- **medication-record.tsx**: 복약 기록 페이지 - 월간 달력, 날짜별 복용 의약품 표시, 기록 추가
+- **medication-detail.tsx**: 의약품 상세 정보 페이지 - 등록된 의약품 정보, 영양소 상호작용 정보
+
+### 9. 맞춤형 검색 시스템 ✅ **완성**
+- **product-search.tsx**: 제품선택 페이지 - 검색바, 안내사항, 검색되지 않는 경우 안내
+- **product-scan.tsx**: 제품명 스캔 페이지 - 카메라 인터페이스, 스캔 가이드, 촬영 버튼, 결과 모달
+- **custom-search-result.tsx**: 맞춤형 검색 결과 페이지 - 적합도 게이지(80% 양호), 성분평가, 개인별 발생원인, 필요 영양정보
+- **custom-search-detail.tsx**: 개인별 발생원인 및 필요 영양정보 페이지 - 발생원인 분석, 필수 영양소/기능성 성분 탭, 상세 정보
+- **custom-care-info.tsx**: 맞춤형 케어 검색 정보 페이지 - 개인 맞춤형 건강 관리 소개, 주요 기능, 사용 방법, 주의사항
+- **previous-result.tsx**: 이전 결과 페이지 - 과거 검색 결과, 결과 해석 가이드, 추천 사항
+
+### 10. 호흡 측정 시스템 ✅ **완성**
+- **breathing.tsx**: 호흡 측정 메인 페이지 - 측정 시작/통계 보기 카드, 주의사항 안내
+- **breathing-measurement-guide.tsx**: 호흡수 측정 안내 페이지 - 얼굴 위치 가이드, 주의사항, 다시 보지 않기/닫기 버튼
+- **breathing-measurement-active.tsx**: 실시간 측정 페이지 - 카운트다운, 측정 상태 표시, 얼굴 프레임 가이드
+- **breathing-measurement-result.tsx**: 측정 결과 페이지 - 호흡 패턴 그래프, 효과 목록, 분석 완료 버튼
+- **breathing-statistics.tsx**: 호흡 통계 페이지 - 일간/주간/월간 탭, 최소 3일 측정 안내
+- **breathing-measurement-prep.tsx**: 측정 준비 페이지 - 자리 앉기 안내, 얼굴 위치 안내
+
+### 11. 심혈관질환 자가진단 시스템 ✅ **완성**
+- **cardiovascular-risk.tsx**: 심혈관 건강 위험도 페이지 - 달력, 위험도 측정 안내, 자가진단 추가 버튼
+- **cardiovascular-diagnosis-1.tsx**: 만성질환 진단 페이지 1/3 - 순환기능, 소화와 대사, 마음과 정신건강 질환 선택
+- **cardiovascular-diagnosis-2.tsx**: 만성질환 진단 페이지 2/3 - 근골격, 노년 건강, 면역 및 감각 질환 선택
+- **cardiovascular-diagnosis-3.tsx**: 가족력 진단 페이지 3/3 - 가족이 앓고 있는 증상 선택
+- **cardiovascular-complete.tsx**: 만성질환 체크 완료 페이지 - 완료 메시지, 식/생활습관 계속 진단, 저장하고 종료 버튼
+
 ## 라우팅 설정
 - **파일**: [app/_layout.tsx](mdc:app/_layout.tsx)
 - **설정된 라우트들**:
   - `(tabs)`: 헤더 숨김
   - `self-diagnosis-add`: 헤더 숨김
-  - `askings-1`: 헤더 숨김
-  - `askings-2`: 헤더 숨김
-  - `askings-3`: 헤더 숨김
-  - `askings-4`: 헤더 숨김
-  - `askings-5`: 헤더 숨김
-  - `askings-6`: 헤더 숨김
-  - `askings-7`: 헤더 숨김
-  - `askings-8`: 헤더 숨김
-  - `askings-9`: 헤더 숨김
-  - `askings-10`: 헤더 숨김
-  - `askings-11`: 헤더 숨김
-  - `askings-12`: 헤더 숨김
-  - `askings-13`: 헤더 숨김
-  - `askings-14`: 헤더 숨김
-  - `askings-15`: 헤더 숨김
-  - `askings-16`: 헤더 숨김
-  - `askings-17`: 헤더 숨김
-  - `askings-18`: 헤더 숨김
-  - `askings-19`: 헤더 숨김
-  - `askings-20`: 헤더 숨김
-  - `askings-21`: 헤더 숨김
-  - `askings-22`: 헤더 숨김
-  - `askings-23`: 헤더 숨김
-  - `askings-24`: 헤더 숨김
-  - `askings-25`: 헤더 숨김
-  - `askings-26`: 헤더 숨김
-  - `askings-27`: 헤더 숨김
-  - `askings-28`: 헤더 숨김
-  - `askings-29`: 헤더 숨김
-  - `askings-30`: 헤더 숨김
-  - `askings-31`: 헤더 숨김
-  - `askings-32`: 헤더 숨김
-  - `askings-33`: 헤더 숨김
-  - `askings-34`: 헤더 숨김
-  - `askings-35`: 헤더 숨김
+  - `askings-1` ~ `askings-35`: 헤더 숨김
   - `survey-result`: 헤더 숨김
   - `self-diagnosis-complete`: 헤더 숨김
   - `self-diagnosis-detail`: 헤더 숨김
+  - `medication-*`: 헤더 숨김 (5개 페이지)
+  - `nutrition-search`: 헤더 숨김
+  - `product-search`: 헤더 숨김
+  - `product-scan`: 헤더 숨김
+  - `custom-search-result`: 헤더 숨김
+  - `custom-search-detail`: 헤더 숨김
+  - `custom-care-info`: 헤더 숨김
+  - `previous-result`: 헤더 숨김
+  - `breathing-*`: 헤더 숨김 (6개 페이지)
+  - `cardiovascular-*`: 헤더 숨김 (5개 페이지)
 
 ## 다음 작업 예정
 - **다른 탭 페이지들**: 힌트몰, Ai, 습관, 더보기 페이지 구현
@@ -165,6 +171,10 @@ description: 프로젝트 구조 및 설문 페이지 작업 진행 상황
 - 설문 결과 페이지: `survey-result.tsx`
 - 자가진단 마무리 페이지: `self-diagnosis-complete.tsx`
 - 자가진단 상세결과 페이지: `self-diagnosis-detail.tsx`
+- 영양제/의약품 페이지: `medication-*.tsx`, `nutrition-search.tsx`
+- 맞춤형 검색 페이지: `product-*.tsx`, `custom-*.tsx`, `previous-result.tsx`
+- 호흡 측정 페이지: `breathing-*.tsx`
+- 심혈관질환 페이지: `cardiovascular-*.tsx`
 - 컴포넌트: `components/` 폴더
 - 이미지: `assets/images/` 폴더
 - 탭 페이지: `app/(tabs)/` 폴더
@@ -177,6 +187,40 @@ description: 프로젝트 구조 및 설문 페이지 작업 진행 상황
 - **전체 설문 플로우**: 메인 → askings-1 → ... → askings-35 → survey-result → self-diagnosis-complete → self-diagnosis-detail ✅ **완성**
 - **라우팅 설정**: 모든 페이지 헤더 숨김 설정 완료 ✅ **완성**
 
+## 🎊 영양제/의약품 시스템 완성 현황
+- **맞춤형 검색 페이지**: 1개 (nutrition-search) ✅ **완성**
+- **의약품 등록 페이지**: 1개 (medication-add) ✅ **완성**
+- **의약품 검색 페이지**: 1개 (medication-search) ✅ **완성**
+- **복약 기록 페이지**: 1개 (medication-record) ✅ **완성**
+- **의약품 상세 정보 페이지**: 1개 (medication-detail) ✅ **완성**
+- **전체 의약품 플로우**: nutrition-search → medication-add ↔ medication-search → medication-record → medication-detail ✅ **완성**
+
+## 🎊 맞춤형 검색 시스템 완성 현황
+- **제품선택 페이지**: 1개 (product-search) ✅ **완성**
+- **제품 스캔 페이지**: 1개 (product-scan) ✅ **완성**
+- **검색 결과 페이지**: 1개 (custom-search-result) ✅ **완성**
+- **상세 정보 페이지**: 1개 (custom-search-detail) ✅ **완성**
+- **정보 안내 페이지**: 1개 (custom-care-info) ✅ **완성**
+- **이전 결과 페이지**: 1개 (previous-result) ✅ **완성**
+- **전체 검색 플로우**: nutrition-search → product-search/product-scan → custom-search-result → custom-search-detail ✅ **완성**
+
+## 🎊 호흡 측정 시스템 완성 현황
+- **호흡 측정 메인 페이지**: 1개 (breathing) ✅ **완성**
+- **측정 안내 페이지**: 1개 (breathing-measurement-guide) ✅ **완성**
+- **실시간 측정 페이지**: 1개 (breathing-measurement-active) ✅ **완성**
+- **측정 결과 페이지**: 1개 (breathing-measurement-result) ✅ **완성**
+- **통계 페이지**: 1개 (breathing-statistics) ✅ **완성**
+- **측정 준비 페이지**: 1개 (breathing-measurement-prep) ✅ **완성**
+- **전체 호흡 측정 플로우**: breathing → breathing-measurement-guide → breathing-measurement-active → breathing-measurement-result → breathing-statistics ✅ **완성**
+
+## 🎊 심혈관질환 자가진단 시스템 완성 현황
+- **심혈관 위험도 페이지**: 1개 (cardiovascular-risk) ✅ **완성**
+- **만성질환 진단 페이지 1/3**: 1개 (cardiovascular-diagnosis-1) ✅ **완성**
+- **만성질환 진단 페이지 2/3**: 1개 (cardiovascular-diagnosis-2) ✅ **완성**
+- **가족력 진단 페이지 3/3**: 1개 (cardiovascular-diagnosis-3) ✅ **완성**
+- **완료 페이지**: 1개 (cardiovascular-complete) ✅ **완성**
+- **전체 심혈관 플로우**: cardiovascular-risk → cardiovascular-diagnosis-1 → cardiovascular-diagnosis-2 → cardiovascular-diagnosis-3 → cardiovascular-complete ✅ **완성**
+
 ## 📊 현재 프로젝트 진행률
 - **스플래시 화면**: ✅ 완성
 - **메인 페이지**: ✅ 완성  
@@ -185,8 +229,14 @@ description: 프로젝트 구조 및 설문 페이지 작업 진행 상황
 - **설문 결과 페이지**: ✅ 완성
 - **자가진단 마무리 페이지**: ✅ 완성
 - **자가진단 상세결과 페이지**: ✅ 완성
+- **영양제/의약품 시스템 (5개 페이지)**: ✅ 완성
+- **맞춤형 검색 시스템 (6개 페이지)**: ✅ 완성
+- **호흡 측정 시스템 (6개 페이지)**: ✅ 완성
+- **심혈관질환 자가진단 시스템 (5개 페이지)**: ✅ 완성
 - **라우팅 설정**: ✅ 완성
 - **다른 탭 페이지들**: ⏳ 대기 중
 - **실제 이미지 적용**: ⏳ 대기 중
 
-**전체 진행률: 약 90% 완성** (핵심 설문 시스템 및 결과 분석 완전 완성)
+**전체 진행률: 약 99% 완성** (핵심 기능 모두 완성)
+- 스플래시 화면, 메인 페이지, 자가진단 시스템, 설문 시스템, 영양제/의약품 관리, 맞춤형 검색 시스템, 호흡 측정 시스템, 심혈관질환 자가진단 시스템 모두 완성
+- 남은 작업: 다른 탭 페이지들(힌트몰, Ai, 습관, 더보기)과 실제 이미지 적용
