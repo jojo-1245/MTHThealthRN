@@ -106,6 +106,16 @@ export default function RootLayout() {
         <Stack.Screen name="cardiovascular-diagnosis-2" options={{ headerShown: false }} />
         <Stack.Screen name="cardiovascular-diagnosis-3" options={{ headerShown: false }} />
         <Stack.Screen name="cardiovascular-complete" options={{ headerShown: false }} />
+        <Stack.Screen name="cardiovascular-diet-survey-1" options={{ headerShown: false }} />
+        <Stack.Screen name="cardiovascular-diet-survey-2" options={{ headerShown: false }} />
+        <Stack.Screen name="cardiovascular-diet-survey-3" options={{ headerShown: false }} />
+        <Stack.Screen name="cardiovascular-diet-survey-4" options={{ headerShown: false }} />
+        <Stack.Screen name="cardiovascular-diet-survey-5" options={{ headerShown: false }} />
+        <Stack.Screen name="cardiovascular-diet-survey-6" options={{ headerShown: false }} />
+        <Stack.Screen name="cardiovascular-diet-survey-7" options={{ headerShown: false }} />
+        <Stack.Screen name="cardiovascular-diet-survey-8" options={{ headerShown: false }} />
+        <Stack.Screen name="cardiovascular-diet-survey-9" options={{ headerShown: false }} />
+        <Stack.Screen name="cardiovascular-diet-survey-10" options={{ headerShown: false }} />
       </Stack>
       <StatusBar style="auto" />
     </ThemeProvider>
