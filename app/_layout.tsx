@@ -116,6 +116,30 @@ export default function RootLayout() {
         <Stack.Screen name="cardiovascular-diet-survey-8" options={{ headerShown: false }} />
         <Stack.Screen name="cardiovascular-diet-survey-9" options={{ headerShown: false }} />
         <Stack.Screen name="cardiovascular-diet-survey-10" options={{ headerShown: false }} />
+        <Stack.Screen name="cardiovascular-diet-survey-11" options={{ headerShown: false }} />
+        <Stack.Screen name="cardiovascular-diet-survey-12" options={{ headerShown: false }} />
+        <Stack.Screen name="cardiovascular-diet-survey-13" options={{ headerShown: false }} />
+        <Stack.Screen name="cardiovascular-diet-survey-14" options={{ headerShown: false }} />
+        <Stack.Screen name="cardiovascular-diet-survey-15" options={{ headerShown: false }} />
+        <Stack.Screen name="cardiovascular-diet-survey-16" options={{ headerShown: false }} />
+        <Stack.Screen name="cardiovascular-diet-survey-17" options={{ headerShown: false }} />
+        <Stack.Screen name="cardiovascular-diet-survey-18" options={{ headerShown: false }} />
+        <Stack.Screen name="cardiovascular-diet-survey-19" options={{ headerShown: false }} />
+        <Stack.Screen name="cardiovascular-diet-survey-20" options={{ headerShown: false }} />
+        <Stack.Screen name="cardiovascular-diet-survey-21" options={{ headerShown: false }} />
+        <Stack.Screen name="cardiovascular-diet-survey-22" options={{ headerShown: false }} />
+        <Stack.Screen name="cardiovascular-diet-survey-23" options={{ headerShown: false }} />
+        <Stack.Screen name="cardiovascular-diet-survey-24" options={{ headerShown: false }} />
+        <Stack.Screen name="cardiovascular-diet-survey-25" options={{ headerShown: false }} />
+        <Stack.Screen name="cardiovascular-diet-survey-26" options={{ headerShown: false }} />
+        <Stack.Screen name="cardiovascular-diet-survey-27" options={{ headerShown: false }} />
+        <Stack.Screen name="cardiovascular-diet-survey-28" options={{ headerShown: false }} />
+        <Stack.Screen name="cardiovascular-diet-survey-29" options={{ headerShown: false }} />
+        <Stack.Screen name="cardiovascular-diet-survey-30" options={{ headerShown: false }} />
+        <Stack.Screen name="cardiovascular-diet-survey-31" options={{ headerShown: false }} />
+        <Stack.Screen name="cardiovascular-diet-survey-32" options={{ headerShown: false }} />
+        <Stack.Screen name="cardiovascular-diet-survey-33" options={{ headerShown: false }} />
+        <Stack.Screen name="cardiovascular-diet-survey-complete" options={{ headerShown: false }} />
       </Stack>
       <StatusBar style="auto" />
     </ThemeProvider>
