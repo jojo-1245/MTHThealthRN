@@ -140,6 +140,10 @@ export default function RootLayout() {
         <Stack.Screen name="cardiovascular-diet-survey-32" options={{ headerShown: false }} />
         <Stack.Screen name="cardiovascular-diet-survey-33" options={{ headerShown: false }} />
         <Stack.Screen name="cardiovascular-diet-survey-complete" options={{ headerShown: false }} />
+        <Stack.Screen name="weight-main" options={{ headerShown: false }} />
+        <Stack.Screen name="weight-measurement" options={{ headerShown: false }} />
+        <Stack.Screen name="weight-detail-record" options={{ headerShown: false }} />
+        <Stack.Screen name="weight-statistics" options={{ headerShown: false }} />
       </Stack>
       <StatusBar style="auto" />
     </ThemeProvider>
