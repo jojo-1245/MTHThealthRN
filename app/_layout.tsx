@@ -144,6 +144,9 @@ export default function RootLayout() {
         <Stack.Screen name="weight-measurement" options={{ headerShown: false }} />
         <Stack.Screen name="weight-detail-record" options={{ headerShown: false }} />
         <Stack.Screen name="weight-statistics" options={{ headerShown: false }} />
+        <Stack.Screen name="fatigue-main" options={{ headerShown: false }} />
+        <Stack.Screen name="fatigue-measurement-prep" options={{ headerShown: false }} />
+        <Stack.Screen name="fatigue-measurement-result" options={{ headerShown: false }} />
       </Stack>
       <StatusBar style="auto" />
     </ThemeProvider>
