@@ -147,6 +147,8 @@ export default function RootLayout() {
         <Stack.Screen name="fatigue-main" options={{ headerShown: false }} />
         <Stack.Screen name="fatigue-measurement-prep" options={{ headerShown: false }} />
         <Stack.Screen name="fatigue-measurement-result" options={{ headerShown: false }} />
+        <Stack.Screen name="health-status-main" options={{ headerShown: false }} />
+        <Stack.Screen name="health-status-results" options={{ headerShown: false }} />
       </Stack>
       <StatusBar style="auto" />
     </ThemeProvider>
