@@ -19,14 +19,11 @@ export default function SelfDiagnosisCompleteScreen() {
   };
 
   const handleAddModify = () => {
-    console.log('추가 및 수정 버튼 클릭');
-    // 추가 및 수정 기능 구현 예정
+    router.push('/self-diagnosis-add-modify');
   };
 
   const handleDetailedResults = () => {
-    console.log('상세결과 버튼 클릭');
-    // 상세결과 페이지로 이동
-    router.push('/self-diagnosis-detail');
+    router.push('/self-diagnosis-results');
   };
 
   const handleMonthChange = () => {
@@ -74,8 +71,8 @@ export default function SelfDiagnosisCompleteScreen() {
 
           {/* 진단 항목 */}
           <View style={styles.infoRow}>
-            <Text style={styles.infoLabel}>진단 항목</Text>
-            <Text style={styles.diagnosisItem}>피부건강</Text>
+            <Text style={styles.infoLabel}>진단항목</Text>
+            <Text style={styles.diagnosisItem}>만성질환, 식/생활습관, 피부건강</Text>
           </View>
 
           {/* 상세결과 버튼 */}
