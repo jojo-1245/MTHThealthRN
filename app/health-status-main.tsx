@@ -31,7 +31,7 @@ export default function HealthStatusMainScreen() {
       // 자가진단 완료 페이지로 이동 (진단 요약)
       router.push('/self-diagnosis-complete');
     } else if (type === 'health-checkup') {
-      console.log('건강검진결과 추가');
+      router.push('/health-checkup-load');
     } else if (type === 'detailed-analysis') {
       router.push('/askings-1');
     }
