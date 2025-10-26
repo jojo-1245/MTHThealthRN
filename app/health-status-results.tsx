@@ -19,7 +19,7 @@ export default function HealthStatusResultsScreen() {
   };
 
   const handleStatistics = () => {
-    console.log('통계 보기');
+    router.push('/result-comparison');
   };
 
   const handleServiceDetail = () => {
