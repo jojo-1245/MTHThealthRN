@@ -28,7 +28,8 @@ export default function HealthStatusMainScreen() {
 
   const handleAddHealthInfo = (type: string) => {
     if (type === 'self-diagnosis') {
-      router.push('/self-diagnosis-add');
+      // 자가진단 결과 페이지로 이동 (이미 완료된 경우)
+      router.push('/self-diagnosis-results');
     } else if (type === 'health-checkup') {
       console.log('건강검진결과 추가');
     } else if (type === 'detailed-analysis') {
