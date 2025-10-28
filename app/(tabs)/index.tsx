@@ -244,7 +244,10 @@ export default function HomeScreen() {
           </View>
 
           {/* 내 가족 건강도 챙겨보기 섹션 */}
-          <View style={styles.section}>
+          <TouchableOpacity 
+            style={styles.section}
+            onPress={() => router.push('/family-health-main')}
+          >
             <Text style={styles.sectionTitle}>내 가족 건강도 챙겨보기</Text>
             <View style={styles.familyButtonsContainer}>
               {familyItems.map((item) => (
@@ -261,7 +264,7 @@ export default function HomeScreen() {
                 <Text style={styles.addFamilyText}>패밀리 추가</Text>
               </TouchableOpacity>
             </View>
-          </View>
+          </TouchableOpacity>
 
           {/* 건강 습관 만들기 섹션 */}
           <View style={styles.section}>

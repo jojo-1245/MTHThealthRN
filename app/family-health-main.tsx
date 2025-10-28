@@ -75,7 +75,9 @@ export default function FamilyHealthMainScreen() {
           <Text style={styles.emptyText}>아직 추가된 패밀리가 없어요</Text>
           
           <TouchableOpacity style={styles.addFamilyButton} onPress={handleAddFamily}>
-            <Ionicons name="add" size={48} color="#8B5CF6" />
+            <View style={styles.addFamilyCircle}>
+              <Ionicons name="add" size={48} color="#8B5CF6" />
+            </View>
             <Text style={styles.addFamilyText}>패밀리추가</Text>
           </TouchableOpacity>
         </View>
