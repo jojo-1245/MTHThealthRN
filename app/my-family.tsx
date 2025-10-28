@@ -21,8 +21,7 @@ export default function MyFamilyScreen() {
   };
 
   const handleAddFamily = () => {
-    console.log('패밀리 추가');
-    // 패밀리 추가 로직
+    router.push('/family-add');
   };
 
   return (
