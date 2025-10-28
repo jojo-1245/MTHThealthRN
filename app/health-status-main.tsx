@@ -33,7 +33,7 @@ export default function HealthStatusMainScreen() {
     } else if (type === 'health-checkup') {
       router.push('/health-checkup-load');
     } else if (type === 'detailed-analysis') {
-      router.push('/askings-1');
+      router.push('/analysis-service');
     }
   };
 

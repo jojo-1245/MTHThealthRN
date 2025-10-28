@@ -149,6 +149,13 @@ export default function RootLayout() {
         <Stack.Screen name="fatigue-measurement-result" options={{ headerShown: false }} />
         <Stack.Screen name="health-status-main" options={{ headerShown: false }} />
         <Stack.Screen name="health-status-results" options={{ headerShown: false }} />
+        <Stack.Screen name="result-comparison" options={{ headerShown: false }} />
+        <Stack.Screen name="self-diagnosis-results" options={{ headerShown: false }} />
+        <Stack.Screen name="self-diagnosis-add-modify" options={{ headerShown: false }} />
+        <Stack.Screen name="health-checkup-load" options={{ headerShown: false }} />
+        <Stack.Screen name="health-checkup-auth" options={{ headerShown: false }} />
+        <Stack.Screen name="analysis-service" options={{ headerShown: false }} />
+        <Stack.Screen name="genetic-test" options={{ headerShown: false }} />
       </Stack>
       <StatusBar style="auto" />
     </ThemeProvider>
