@@ -156,6 +156,11 @@ export default function RootLayout() {
         <Stack.Screen name="health-checkup-auth" options={{ headerShown: false }} />
         <Stack.Screen name="analysis-service" options={{ headerShown: false }} />
         <Stack.Screen name="genetic-test" options={{ headerShown: false }} />
+        <Stack.Screen name="family-health-main" options={{ headerShown: false }} />
+        <Stack.Screen name="family-health-access" options={{ headerShown: false }} />
+        <Stack.Screen name="my-family" options={{ headerShown: false }} />
+        <Stack.Screen name="family-add" options={{ headerShown: false }} />
+        <Stack.Screen name="with-event" options={{ headerShown: false }} />
       </Stack>
       <StatusBar style="auto" />
     </ThemeProvider>

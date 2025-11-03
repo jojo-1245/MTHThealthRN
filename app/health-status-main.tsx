@@ -162,6 +162,38 @@ export default function HealthStatusMainScreen() {
             </TouchableOpacity>
           </View>
         </View>
+
+        {/* 건강 습관 만들기 섹션 */}
+        <View style={styles.section}>
+          <Text style={styles.sectionTitle}>건강 습관 만들기</Text>
+          <Text style={styles.habitDescription}>
+            위드 (with)는 건강습관 만들기 도전 이벤트입니다
+          </Text>
+          <View style={styles.habitItemsContainer}>
+            <TouchableOpacity 
+              style={styles.habitItem}
+              onPress={() => router.push('/with-event')}
+            >
+              <View style={[styles.habitStatusDot, { backgroundColor: '#10B981' }]} />
+              <View style={styles.habitContent}>
+                <Text style={styles.habitLabel}>모집중 위드</Text>
+                <Text style={styles.habitSubtitle}>무료로 참여하고 리워드 받기</Text>
+              </View>
+              <Ionicons name="chevron-forward" size={16} color="#9CA3AF" />
+            </TouchableOpacity>
+            <TouchableOpacity 
+              style={styles.habitItem}
+              onPress={() => router.push('/with-event')}
+            >
+              <View style={[styles.habitStatusDot, { backgroundColor: '#EF4444' }]} />
+              <View style={styles.habitContent}>
+                <Text style={styles.habitLabel}>종료된 위드</Text>
+                <Text style={styles.habitSubtitle}>결과 확인하고 리워드 받기</Text>
+              </View>
+              <Ionicons name="chevron-forward" size={16} color="#9CA3AF" />
+            </TouchableOpacity>
+          </View>
+        </View>
       </ScrollView>
     </View>
   );
@@ -359,5 +391,44 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     color: '#000',
     textAlign: 'center',
+  },
+  // 건강 습관 만들기 섹션
+  habitDescription: {
+    fontSize: 14,
+    color: '#6B7280',
+    marginBottom: 16,
+    lineHeight: 20,
+  },
+  habitItemsContainer: {
+    marginTop: 16,
+  },
+  habitItem: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#fff',
+    borderRadius: 12,
+    padding: 16,
+    marginBottom: 12,
+    borderWidth: 1,
+    borderColor: '#E5E7EB',
+  },
+  habitStatusDot: {
+    width: 8,
+    height: 8,
+    borderRadius: 4,
+    marginRight: 12,
+  },
+  habitContent: {
+    flex: 1,
+  },
+  habitLabel: {
+    fontSize: 16,
+    fontWeight: '600',
+    color: '#374151',
+    marginBottom: 4,
+  },
+  habitSubtitle: {
+    fontSize: 14,
+    color: '#6B7280',
   },
 });
