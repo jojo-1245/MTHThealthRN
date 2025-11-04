@@ -274,7 +274,11 @@ export default function HomeScreen() {
             </Text>
             <View style={styles.habitItemsContainer}>
               {habitItems.map((item) => (
-                <TouchableOpacity key={item.id} style={styles.habitItem}>
+                <TouchableOpacity 
+                  key={item.id} 
+                  style={styles.habitItem}
+                  onPress={() => router.push('/with-event')}
+                >
                   <View style={[styles.habitStatusDot, { backgroundColor: item.color }]} />
                   <View style={styles.habitContent}>
                     <Text style={styles.habitLabel}>{item.label}</Text>
