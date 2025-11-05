@@ -6,6 +6,7 @@ import 'react-native-reanimated';
 
 import SplashScreen from '@/components/splash-screen';
 import { useColorScheme } from '@/hooks/use-color-scheme';
+import '@/i18n/config'; // Initialize i18n
 
 export const unstable_settings = {
   anchor: '(tabs)',

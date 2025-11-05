@@ -1,0 +1,30 @@
+{
+  "common": {
+    "ok": "확인",
+    "cancel": "취소",
+    "save": "저장",
+    "delete": "삭제",
+    "edit": "수정",
+    "back": "뒤로",
+    "next": "다음",
+    "previous": "이전",
+    "complete": "완료",
+    "loading": "로딩 중...",
+    "error": "오류가 발생했습니다"
+  },
+  "navigation": {
+    "home": "홈",
+    "explore": "탐색",
+    "habit": "습관",
+    "more": "더보기"
+  },
+  "splash": {
+    "title": "메타힌트"
+  },
+  "main": {
+    "title": "메인",
+    "search": "검색",
+    "selfDiagnosis": "자가진단"
+  }
+}
+

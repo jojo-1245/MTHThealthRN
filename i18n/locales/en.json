@@ -1,0 +1,30 @@
+{
+  "common": {
+    "ok": "OK",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "complete": "Complete",
+    "loading": "Loading...",
+    "error": "An error occurred"
+  },
+  "navigation": {
+    "home": "Home",
+    "explore": "Explore",
+    "habit": "Habit",
+    "more": "More"
+  },
+  "splash": {
+    "title": "MetaHint"
+  },
+  "main": {
+    "title": "Main",
+    "search": "Search",
+    "selfDiagnosis": "Self Diagnosis"
+  }
+}
+

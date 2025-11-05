@@ -1,0 +1,30 @@
+{
+  "common": {
+    "ok": "OK",
+    "cancel": "Batal",
+    "save": "Simpan",
+    "delete": "Hapus",
+    "edit": "Edit",
+    "back": "Kembali",
+    "next": "Selanjutnya",
+    "previous": "Sebelumnya",
+    "complete": "Selesai",
+    "loading": "Memuat...",
+    "error": "Terjadi kesalahan"
+  },
+  "navigation": {
+    "home": "Beranda",
+    "explore": "Jelajahi",
+    "habit": "Kebiasaan",
+    "more": "Lainnya"
+  },
+  "splash": {
+    "title": "MetaHint"
+  },
+  "main": {
+    "title": "Utama",
+    "search": "Cari",
+    "selfDiagnosis": "Diagnosis Mandiri"
+  }
+}
+
