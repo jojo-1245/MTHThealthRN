@@ -10,6 +10,7 @@ import {
     TouchableOpacity,
     View,
 } from 'react-native';
+import { useTranslation } from '@/i18n';
 
 const { width, height } = Dimensions.get('window');
 
@@ -20,6 +21,7 @@ interface AnswerOption {
 }
 
 export default function Asking7Screen() {
+  const { t } = useTranslation();
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>('normal');
   const currentPage = 7;
   const totalPages = 35;
@@ -27,22 +29,22 @@ export default function Asking7Screen() {
   const answerOptions: AnswerOption[] = [
     {
       id: 'very_much',
-      label: '매우 그렇다',
+      label: t('askings.answers.veryMuch'),
       image: 'skin_severe_bumpy',
     },
     {
       id: 'agree',
-      label: '그렇다',
+      label: t('askings.answers.agree'),
       image: 'skin_moderate_bumpy',
     },
     {
       id: 'normal',
-      label: '보통이다',
+      label: t('askings.answers.normal'),
       image: 'skin_light_bumpy',
     },
     {
       id: 'disagree',
-      label: '아니다',
+      label: t('askings.answers.disagree'),
       image: 'skin_smooth',
     },
   ];
@@ -113,7 +115,7 @@ export default function Asking7Screen() {
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
           <Ionicons name="arrow-back" size={24} color="#fff" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>진단하기</Text>
+        <Text style={styles.headerTitle}>{t('askings.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
@@ -134,7 +136,7 @@ export default function Asking7Screen() {
               <Text style={styles.qText}>Q</Text>
             </View>
             <Text style={styles.questionText}>
-              피부표면이 얇아지고 울긋불긋하여 거친 느낌이 있다
+              {t('askings.questions.7')}
             </Text>
           </View>
         </View>
@@ -160,7 +162,7 @@ export default function Asking7Screen() {
             style={styles.previousButton}
             onPress={handlePrevious}
           >
-            <Text style={styles.previousButtonText}>이전</Text>
+            <Text style={styles.previousButtonText}>{t('common.previous')}</Text>
           </TouchableOpacity>
 
           <TouchableOpacity 
@@ -175,7 +177,7 @@ export default function Asking7Screen() {
               styles.nextButtonText,
               selectedAnswer ? styles.nextButtonTextActive : styles.nextButtonTextInactive
             ]}>
-              다음
+              {t('common.next')}
             </Text>
           </TouchableOpacity>
         </View>
