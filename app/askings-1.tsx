@@ -10,6 +10,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
+import { useTranslation } from '@/i18n';
 
 const { width, height } = Dimensions.get('window');
 
@@ -20,6 +21,7 @@ interface AnswerOption {
 }
 
 export default function Asking1Screen() {
+  const { t } = useTranslation();
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const currentPage = 1;
   const totalPages = 35;
@@ -27,22 +29,22 @@ export default function Asking1Screen() {
   const answerOptions: AnswerOption[] = [
     {
       id: 'very_much',
-      label: '매우 그렇다',
+      label: t('askings.answers.veryMuch'),
       image: 'woman_face_very_wrinkled',
     },
     {
       id: 'agree',
-      label: '그렇다',
+      label: t('askings.answers.agree'),
       image: 'woman_face_wrinkled',
     },
     {
       id: 'normal',
-      label: '보통이다',
+      label: t('askings.answers.normal'),
       image: 'woman_face_some_wrinkles',
     },
     {
       id: 'disagree',
-      label: '아니다',
+      label: t('askings.answers.disagree'),
       image: 'woman_face_smooth',
     },
   ];
@@ -104,7 +106,7 @@ export default function Asking1Screen() {
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
           <Ionicons name="arrow-back" size={24} color="#fff" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>진단하기</Text>
+        <Text style={styles.headerTitle}>{t('askings.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
@@ -121,7 +123,7 @@ export default function Asking1Screen() {
         {/* 질문 텍스트 */}
         <View style={styles.questionContainer}>
           <Text style={styles.questionText}>
-            Q 피부가 얇아지고 잔주름이 보인다
+            Q {t('askings.questions.1')}
           </Text>
         </View>
 
@@ -153,7 +155,7 @@ export default function Asking1Screen() {
             styles.nextButtonText,
             selectedAnswer ? styles.nextButtonTextActive : styles.nextButtonTextInactive
           ]}>
-            다음
+            {t('common.next')}
           </Text>
         </TouchableOpacity>
       </View>
