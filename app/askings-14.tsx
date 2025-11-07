@@ -10,6 +10,7 @@ import {
     TouchableOpacity,
     View,
 } from 'react-native';
+import { useTranslation } from '@/i18n';
 
 const { width, height } = Dimensions.get('window');
 
@@ -20,6 +21,7 @@ interface AnswerOption {
 }
 
 export default function Asking14Screen() {
+  const { t } = useTranslation();
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const currentPage = 14;
   const totalPages = 35;
@@ -27,22 +29,22 @@ export default function Asking14Screen() {
   const answerOptions: AnswerOption[] = [
     {
       id: 'very_much',
-      label: '매우 많다',
+      label: t('askings.answers.veryMany'),
       image: 'pores_severe',
     },
     {
       id: 'agree',
-      label: '많다',
+      label: t('askings.answers.many'),
       image: 'pores_moderate',
     },
     {
       id: 'normal',
-      label: '보통이다',
+      label: t('askings.answers.normal'),
       image: 'pores_light',
     },
     {
       id: 'disagree',
-      label: '없다',
+      label: t('askings.answers.none'),
       image: 'pores_none',
     },
   ];
@@ -113,7 +115,7 @@ export default function Asking14Screen() {
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
           <Ionicons name="arrow-back" size={24} color="#fff" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>진단하기</Text>
+        <Text style={styles.headerTitle}>{t('askings.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
@@ -134,7 +136,7 @@ export default function Asking14Screen() {
               <Text style={styles.qText}>Q</Text>
             </View>
             <Text style={styles.questionText}>
-              U존 부위에 모공이 어느 정도 있나요?
+              {t('askings.questions.14')}
             </Text>
           </View>
         </View>
@@ -160,7 +162,7 @@ export default function Asking14Screen() {
             style={styles.previousButton}
             onPress={handlePrevious}
           >
-            <Text style={styles.previousButtonText}>이전</Text>
+            <Text style={styles.previousButtonText}>{t('common.previous')}</Text>
           </TouchableOpacity>
 
           <TouchableOpacity 
@@ -175,7 +177,7 @@ export default function Asking14Screen() {
               styles.nextButtonText,
               selectedAnswer ? styles.nextButtonTextActive : styles.nextButtonTextInactive
             ]}>
-              다음
+              {t('common.next')}
             </Text>
           </TouchableOpacity>
         </View>
