@@ -10,6 +10,7 @@ import {
     TouchableOpacity,
     View,
 } from 'react-native';
+import { useTranslation } from '@/i18n';
 
 const { width, height } = Dimensions.get('window');
 
@@ -20,6 +21,7 @@ interface AnswerOption {
 }
 
 export default function Asking22Screen() {
+  const { t } = useTranslation();
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>('disagree');
   const currentPage = 22;
   const totalPages = 35;
@@ -27,12 +29,12 @@ export default function Asking22Screen() {
   const answerOptions: AnswerOption[] = [
     {
       id: 'agree',
-      label: '그렇다',
+      label: t('askings.answers.agree'),
       image: 'uv_pigmentation',
     },
     {
       id: 'disagree',
-      label: '아니다',
+      label: t('askings.answers.disagree'),
       image: 'uv_no_pigmentation',
     },
   ];
@@ -103,7 +105,7 @@ export default function Asking22Screen() {
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
           <Ionicons name="arrow-back" size={24} color="#fff" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>진단하기</Text>
+        <Text style={styles.headerTitle}>{t('askings.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
@@ -124,10 +126,10 @@ export default function Asking22Screen() {
               <Text style={styles.qText}>Q</Text>
             </View>
             <Text style={styles.questionText}>
-              자외선 노출되는 부위에 색소가 많이 보인다
+              {t('askings.questions.22')}
             </Text>
           </View>
-          <Text style={styles.questionSubtext}>*얼굴, 목, 가슴, 팔, 손등</Text>
+          <Text style={styles.questionSubtext}>{t('askings.subtexts.22')}</Text>
         </View>
 
         {/* 답변 옵션들 */}
@@ -151,7 +153,7 @@ export default function Asking22Screen() {
             style={styles.previousButton}
             onPress={handlePrevious}
           >
-            <Text style={styles.previousButtonText}>이전</Text>
+            <Text style={styles.previousButtonText}>{t('common.previous')}</Text>
           </TouchableOpacity>
 
           <TouchableOpacity 
@@ -166,7 +168,7 @@ export default function Asking22Screen() {
               styles.nextButtonText,
               selectedAnswer ? styles.nextButtonTextActive : styles.nextButtonTextInactive
             ]}>
-              다음
+              {t('common.next')}
             </Text>
           </TouchableOpacity>
         </View>
