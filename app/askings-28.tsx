@@ -10,6 +10,7 @@ import {
     TouchableOpacity,
     View,
 } from 'react-native';
+import { useTranslation } from '@/i18n';
 
 const { width, height } = Dimensions.get('window');
 
@@ -20,6 +21,7 @@ interface AnswerOption {
 }
 
 export default function Asking28Screen() {
+  const { t } = useTranslation();
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const currentPage = 28;
   const totalPages = 35;
@@ -27,22 +29,22 @@ export default function Asking28Screen() {
   const answerOptions: AnswerOption[] = [
     {
       id: 'very_much',
-      label: '매우 그렇다',
+      label: t('askings.answers.veryMuch'),
       image: 'skin_indentation_severe',
     },
     {
       id: 'agree',
-      label: '그렇다',
+      label: t('askings.answers.agree'),
       image: 'skin_indentation_moderate',
     },
     {
       id: 'normal',
-      label: '보통이다',
+      label: t('askings.answers.normal'),
       image: 'skin_indentation_light',
     },
     {
       id: 'disagree',
-      label: '아니다',
+      label: t('askings.answers.disagree'),
       image: 'skin_indentation_none',
     },
   ];
@@ -113,7 +115,7 @@ export default function Asking28Screen() {
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
           <Ionicons name="arrow-back" size={24} color="#fff" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>진단하기</Text>
+        <Text style={styles.headerTitle}>{t('askings.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
@@ -134,10 +136,10 @@ export default function Asking28Screen() {
               <Text style={styles.qText}>Q</Text>
             </View>
             <Text style={styles.questionText}>
-              피부에 일시적으로 눌린 자국이 오랫동안 남아 있다
+              {t('askings.questions.28')}
             </Text>
           </View>
-          <Text style={styles.questionSubtext}>*마스크 자국, 모자 자국, 베개 자국 등</Text>
+          <Text style={styles.questionSubtext}>{t('askings.subtexts.28')}</Text>
         </View>
 
         {/* 답변 옵션들 */}
@@ -161,7 +163,7 @@ export default function Asking28Screen() {
             style={styles.previousButton}
             onPress={handlePrevious}
           >
-            <Text style={styles.previousButtonText}>이전</Text>
+            <Text style={styles.previousButtonText}>{t('common.previous')}</Text>
           </TouchableOpacity>
 
           <TouchableOpacity 
@@ -176,7 +178,7 @@ export default function Asking28Screen() {
               styles.nextButtonText,
               selectedAnswer ? styles.nextButtonTextActive : styles.nextButtonTextInactive
             ]}>
-              다음
+              {t('common.next')}
             </Text>
           </TouchableOpacity>
         </View>
