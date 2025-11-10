@@ -10,6 +10,7 @@ import {
     TouchableOpacity,
     View,
 } from 'react-native';
+import { useTranslation } from '@/i18n';
 
 const { width, height } = Dimensions.get('window');
 
@@ -20,6 +21,7 @@ interface AnswerOption {
 }
 
 export default function Asking17Screen() {
+  const { t } = useTranslation();
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const currentPage = 17;
   const totalPages = 35;
@@ -27,12 +29,12 @@ export default function Asking17Screen() {
   const answerOptions: AnswerOption[] = [
     {
       id: 'agree',
-      label: '그렇다',
+      label: t('askings.answers.agree'),
       image: 'nose_blackheads',
     },
     {
       id: 'disagree',
-      label: '아니다',
+      label: t('askings.answers.disagree'),
       image: 'nose_clear',
     },
   ];
@@ -103,7 +105,7 @@ export default function Asking17Screen() {
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
           <Ionicons name="arrow-back" size={24} color="#fff" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>진단하기</Text>
+        <Text style={styles.headerTitle}>{t('askings.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
@@ -124,10 +126,10 @@ export default function Asking17Screen() {
               <Text style={styles.qText}>Q</Text>
             </View>
             <Text style={styles.questionText}>
-              코에 검은 피지가 보인다
+              {t('askings.questions.17')}
             </Text>
           </View>
-          <Text style={styles.questionSubtext}>*블랙헤드</Text>
+          <Text style={styles.questionSubtext}>{t('askings.subtexts.17')}</Text>
         </View>
 
         {/* 답변 옵션들 */}
@@ -151,7 +153,7 @@ export default function Asking17Screen() {
             style={styles.previousButton}
             onPress={handlePrevious}
           >
-            <Text style={styles.previousButtonText}>이전</Text>
+            <Text style={styles.previousButtonText}>{t('common.previous')}</Text>
           </TouchableOpacity>
 
           <TouchableOpacity 
@@ -166,7 +168,7 @@ export default function Asking17Screen() {
               styles.nextButtonText,
               selectedAnswer ? styles.nextButtonTextActive : styles.nextButtonTextInactive
             ]}>
-              다음
+              {t('common.next')}
             </Text>
           </TouchableOpacity>
         </View>
