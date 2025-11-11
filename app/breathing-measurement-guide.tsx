@@ -9,10 +9,12 @@ import {
     TouchableOpacity,
     View,
 } from 'react-native';
+import { useTranslation } from '@/i18n';
 
 const { width, height } = Dimensions.get('window');
 
 export default function BreathingMeasurementGuideScreen() {
+  const { t } = useTranslation();
   const [showAgain, setShowAgain] = useState(true);
 
   const handleClose = () => {
@@ -37,7 +39,7 @@ export default function BreathingMeasurementGuideScreen() {
         <TouchableOpacity style={styles.backButton} onPress={handleClose}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>호흡수 측정</Text>
+        <Text style={styles.headerTitle}>{t('breathing.breathingRateMeasurement')}</Text>
         <View style={styles.headerRight} />
       </View>
 
@@ -45,9 +47,9 @@ export default function BreathingMeasurementGuideScreen() {
       <View style={styles.content}>
         {/* 안내 텍스트 */}
         <View style={styles.guideContainer}>
-          <Text style={styles.guideTitle}>측정 시 움직임 자제하기</Text>
+          <Text style={styles.guideTitle}>{t('breathing.guide.title')}</Text>
           <Text style={styles.guideSubtitle}>
-            원 영역 안에 얼굴을 위치시키고{'\n'}밝은 곳에서 측정 해주세요
+            {t('breathing.guide.subtitle')}
           </Text>
         </View>
 
@@ -62,23 +64,23 @@ export default function BreathingMeasurementGuideScreen() {
         <View style={styles.warningContainer}>
           <Ionicons name="warning" size={20} color="#F59E0B" />
           <Text style={styles.warningText}>
-            카메라와 얼굴이 너무 가까우면 측정 되지 않을 수 있어요
+            {t('breathing.guide.warning')}
           </Text>
         </View>
 
         {/* 측정 시작 버튼 */}
         <TouchableOpacity style={styles.startButton} onPress={handleStartMeasurement}>
-          <Text style={styles.startButtonText}>측정 시작</Text>
+          <Text style={styles.startButtonText}>{t('breathing.guide.startButton')}</Text>
         </TouchableOpacity>
       </View>
 
       {/* 하단 버튼들 */}
       <View style={styles.bottomButtons}>
         <TouchableOpacity style={styles.dontShowButton} onPress={handleDontShowAgain}>
-          <Text style={styles.dontShowText}>다시 보지 않기</Text>
+          <Text style={styles.dontShowText}>{t('breathing.guide.dontShowAgain')}</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.closeButton} onPress={handleClose}>
-          <Text style={styles.closeText}>닫기</Text>
+          <Text style={styles.closeText}>{t('breathing.guide.close')}</Text>
         </TouchableOpacity>
       </View>
     </View>

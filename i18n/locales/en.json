@@ -25,6 +25,82 @@
     "title": "Main",
     "search": "Search",
     "selfDiagnosis": "Self Diagnosis"
+  },
+  "breathing": {
+    "title": "Breathing Measurement",
+    "breathingRateTitle": "Breathing Rate Measurement",
+    "breathingRateMeasurement": "Breathing Rate Measurement",
+    "breathingExerciseResult": "Breathing Exercise Result",
+    "breathingStatistics": "Breathing Statistics",
+    "introDescription": "Measure accurate breathing rate through facial recognition\nand manage healthy breathing patterns",
+    "startMeasurement": "Start Breathing Measurement",
+    "startMeasurementDescription": "Measure breathing rate in real-time by recognizing your face",
+    "viewStatistics": "Breathing Statistics",
+    "viewStatisticsDescription": "Check and analyze daily, weekly, and monthly breathing patterns",
+    "measurementWarnings": {
+      "title": "Precautions During Measurement",
+      "item1": "• Please refrain from moving during measurement",
+      "item2": "• Please measure in a bright place",
+      "item3": "• Please maintain an appropriate distance between the camera and your face",
+      "item4": "• This service is not a medical device"
+    },
+    "guide": {
+      "title": "Refrain from Movement During Measurement",
+      "subtitle": "Position your face within the circular area\nand measure in a bright place",
+      "warning": "If the camera and face are too close, measurement may not work",
+      "startButton": "Start Measurement",
+      "dontShowAgain": "Don't Show Again",
+      "close": "Close"
+    },
+    "active": {
+      "measuring": "Measuring...",
+      "ready": "Ready to Measure",
+      "instruction": "Position your face within the circular frame\nand breathe naturally",
+      "currentRate": "Current Breathing Rate",
+      "perMinute": "times/min",
+      "startButton": "Start Measurement",
+      "stopButton": "Stop Measurement"
+    },
+    "result": {
+      "graphTitle": "How well did you follow?",
+      "myBreathing": "My Breathing",
+      "targetBreathing": "Target Breathing",
+      "effectsTitle": "Effects of Continuous Breathing Management",
+      "effects": {
+        "relaxation": "Tension Relief",
+        "heartFunction": "Improved Heart Function",
+        "respiratoryHealth": "Improved Respiratory Health",
+        "hyperventilationPrevention": "Hyperventilation Prevention",
+        "stressReduction": "Stress Reduction"
+      },
+      "infoText": "The measurement results were analyzed with more than 95% accuracy through DeepMedi\nand received KCL certification test results.",
+      "disclaimer": "※ This service is not a medical device and is not intended for diagnosis, treatment, or prevention of diseases.",
+      "completeButton": "Analysis Complete"
+    },
+    "statistics": {
+      "tabs": {
+        "daily": "Daily",
+        "weekly": "Weekly",
+        "monthly": "Monthly"
+      },
+      "emptyState": {
+        "title": "Please measure breathing for at least 3 days.",
+        "subtitle": "More data is needed for accurate statistics.",
+        "startButton": "Start Measurement"
+      }
+    },
+    "prep": {
+      "step1": {
+        "title": "Sit Down",
+        "description": "Please sit down and measure calmly during measurement"
+      },
+      "step2": {
+        "title": "Position Face in Circle",
+        "description": "Position your face in the circle and start measurement"
+      },
+      "dontShowAgain": "Don't Show Again",
+      "next": "Next"
+    }
   }
 }
 

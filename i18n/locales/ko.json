@@ -81,6 +81,82 @@
       "deep": "깊다",
       "shallow": "얕게 보인다"
     }
+  },
+  "breathing": {
+    "title": "호흡 측정",
+    "breathingRateTitle": "호흡수 측정",
+    "breathingRateMeasurement": "호흡수 측정",
+    "breathingExerciseResult": "호흡 운동 결과",
+    "breathingStatistics": "호흡 통계",
+    "introDescription": "얼굴 인식을 통해 정확한 호흡수를 측정하고\n건강한 호흡 패턴을 관리해보세요",
+    "startMeasurement": "호흡 측정 시작",
+    "startMeasurementDescription": "얼굴을 인식하여 실시간으로 호흡수를 측정합니다",
+    "viewStatistics": "호흡 통계",
+    "viewStatisticsDescription": "일간, 주간, 월간 호흡 패턴을 확인하고 분석합니다",
+    "measurementWarnings": {
+      "title": "측정 시 주의사항",
+      "item1": "• 측정 중에는 움직임을 자제해주세요",
+      "item2": "• 밝은 곳에서 측정해주세요",
+      "item3": "• 카메라와 얼굴 사이의 거리를 적절히 유지해주세요",
+      "item4": "• 이 서비스는 의료기기가 아닙니다"
+    },
+    "guide": {
+      "title": "측정 시 움직임 자제하기",
+      "subtitle": "원 영역 안에 얼굴을 위치시키고\n밝은 곳에서 측정 해주세요",
+      "warning": "카메라와 얼굴이 너무 가까우면 측정 되지 않을 수 있어요",
+      "startButton": "측정 시작",
+      "dontShowAgain": "다시 보지 않기",
+      "close": "닫기"
+    },
+    "active": {
+      "measuring": "측정 중...",
+      "ready": "측정 준비 완료",
+      "instruction": "얼굴을 원형 프레임 안에 맞추고\n자연스럽게 호흡하세요",
+      "currentRate": "현재 호흡수",
+      "perMinute": "회/분",
+      "startButton": "측정 시작",
+      "stopButton": "측정 중지"
+    },
+    "result": {
+      "graphTitle": "얼마나 잘 따라했을까요?",
+      "myBreathing": "나의 호흡",
+      "targetBreathing": "목표 호흡",
+      "effectsTitle": "지속적인 호흡 관리의 효과",
+      "effects": {
+        "relaxation": "긴장 완화",
+        "heartFunction": "심장 기능 향상",
+        "respiratoryHealth": "호흡기 건강 향상",
+        "hyperventilationPrevention": "과호흡 예방",
+        "stressReduction": "스트레스 감소"
+      },
+      "infoText": "측정 결과가 딥메디를 통해 95% 이상의 정확도로 분석되었으며\nKCL 공인시험 성적을 받았습니다.",
+      "disclaimer": "※ 이 서비스는 의료기기가 아니며 질병의 진단, 치료, 예방 목적이 아닙니다.",
+      "completeButton": "분석 완료"
+    },
+    "statistics": {
+      "tabs": {
+        "daily": "일간",
+        "weekly": "주간",
+        "monthly": "월간"
+      },
+      "emptyState": {
+        "title": "최소 3일이상 호흡 측정을 해 주세요.",
+        "subtitle": "정확한 통계를 위해 더 많은 데이터가 필요합니다.",
+        "startButton": "측정 시작하기"
+      }
+    },
+    "prep": {
+      "step1": {
+        "title": "자리에 앉기",
+        "description": "측정하는 동안 자리에 앉아 차분하게 측정 해주세요"
+      },
+      "step2": {
+        "title": "얼굴을 원 안에 위치시키기",
+        "description": "얼굴을 원 안에 위치시키고 측정을 시작해주세요"
+      },
+      "dontShowAgain": "다시 보지 않기",
+      "next": "다음"
+    }
   }
 }
 

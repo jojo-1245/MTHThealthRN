@@ -25,6 +25,82 @@
     "title": "主页",
     "search": "搜索",
     "selfDiagnosis": "自我诊断"
+  },
+  "breathing": {
+    "title": "呼吸测量",
+    "breathingRateTitle": "呼吸频率测量",
+    "breathingRateMeasurement": "呼吸频率测量",
+    "breathingExerciseResult": "呼吸运动结果",
+    "breathingStatistics": "呼吸统计",
+    "introDescription": "通过面部识别测量准确的呼吸频率\n并管理健康的呼吸模式",
+    "startMeasurement": "开始呼吸测量",
+    "startMeasurementDescription": "通过识别面部实时测量呼吸频率",
+    "viewStatistics": "呼吸统计",
+    "viewStatisticsDescription": "查看和分析每日、每周、每月的呼吸模式",
+    "measurementWarnings": {
+      "title": "测量时注意事项",
+      "item1": "• 测量期间请保持静止",
+      "item2": "• 请在明亮的地方测量",
+      "item3": "• 请保持相机和面部之间的适当距离",
+      "item4": "• 此服务不是医疗设备"
+    },
+    "guide": {
+      "title": "测量时保持静止",
+      "subtitle": "将面部放置在圆形区域内\n并在明亮的地方测量",
+      "warning": "如果相机和面部太近，可能无法测量",
+      "startButton": "开始测量",
+      "dontShowAgain": "不再显示",
+      "close": "关闭"
+    },
+    "active": {
+      "measuring": "测量中...",
+      "ready": "准备测量",
+      "instruction": "将面部放在圆形框架内\n自然呼吸",
+      "currentRate": "当前呼吸频率",
+      "perMinute": "次/分钟",
+      "startButton": "开始测量",
+      "stopButton": "停止测量"
+    },
+    "result": {
+      "graphTitle": "您做得有多好？",
+      "myBreathing": "我的呼吸",
+      "targetBreathing": "目标呼吸",
+      "effectsTitle": "持续呼吸管理的效果",
+      "effects": {
+        "relaxation": "缓解紧张",
+        "heartFunction": "改善心脏功能",
+        "respiratoryHealth": "改善呼吸健康",
+        "hyperventilationPrevention": "预防过度换气",
+        "stressReduction": "减轻压力"
+      },
+      "infoText": "测量结果通过DeepMedi以95%以上的准确度进行分析\n并获得了KCL认证测试结果。",
+      "disclaimer": "※ 此服务不是医疗设备，不用于疾病的诊断、治疗或预防。",
+      "completeButton": "分析完成"
+    },
+    "statistics": {
+      "tabs": {
+        "daily": "每日",
+        "weekly": "每周",
+        "monthly": "每月"
+      },
+      "emptyState": {
+        "title": "请至少测量3天的呼吸。",
+        "subtitle": "需要更多数据以获得准确的统计信息。",
+        "startButton": "开始测量"
+      }
+    },
+    "prep": {
+      "step1": {
+        "title": "坐下",
+        "description": "测量期间请坐下并保持平静"
+      },
+      "step2": {
+        "title": "将面部放在圆圈内",
+        "description": "将面部放在圆圈内并开始测量"
+      },
+      "dontShowAgain": "不再显示",
+      "next": "下一步"
+    }
   }
 }
 

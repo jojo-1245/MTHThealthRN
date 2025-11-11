@@ -10,12 +10,14 @@ import {
     TouchableOpacity,
     View,
 } from 'react-native';
+import { useTranslation } from '@/i18n';
 
 const { width, height } = Dimensions.get('window');
 
 type TabType = 'daily' | 'weekly' | 'monthly';
 
 export default function BreathingStatisticsScreen() {
+  const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState<TabType>('daily');
 
   const handleBack = () => {
@@ -48,13 +50,13 @@ export default function BreathingStatisticsScreen() {
           <Ionicons name="warning" size={48} color="#F59E0B" />
         </View>
         <Text style={styles.emptyStateTitle}>
-          최소 3일이상 호흡 측정을 해 주세요.
+          {t('breathing.statistics.emptyState.title')}
         </Text>
         <Text style={styles.emptyStateSubtitle}>
-          정확한 통계를 위해 더 많은 데이터가 필요합니다.
+          {t('breathing.statistics.emptyState.subtitle')}
         </Text>
         <TouchableOpacity style={styles.startMeasurementButton} onPress={handleStartMeasurement}>
-          <Text style={styles.startMeasurementText}>측정 시작하기</Text>
+          <Text style={styles.startMeasurementText}>{t('breathing.statistics.emptyState.startButton')}</Text>
         </TouchableOpacity>
       </View>
     );
@@ -74,15 +76,15 @@ export default function BreathingStatisticsScreen() {
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>호흡 통계</Text>
+        <Text style={styles.headerTitle}>{t('breathing.breathingStatistics')}</Text>
         <View style={styles.headerRight} />
       </View>
 
       {/* 탭 메뉴 */}
       <View style={styles.tabContainer}>
-        {renderTabButton('daily', '일간')}
-        {renderTabButton('weekly', '주간')}
-        {renderTabButton('monthly', '월간')}
+        {renderTabButton('daily', t('breathing.statistics.tabs.daily'))}
+        {renderTabButton('weekly', t('breathing.statistics.tabs.weekly'))}
+        {renderTabButton('monthly', t('breathing.statistics.tabs.monthly'))}
       </View>
 
       {/* 메인 콘텐츠 */}

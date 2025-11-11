@@ -25,6 +25,82 @@
     "title": "メイン",
     "search": "検索",
     "selfDiagnosis": "自己診断"
+  },
+  "breathing": {
+    "title": "呼吸測定",
+    "breathingRateTitle": "呼吸数測定",
+    "breathingRateMeasurement": "呼吸数測定",
+    "breathingExerciseResult": "呼吸運動結果",
+    "breathingStatistics": "呼吸統計",
+    "introDescription": "顔認識を通じて正確な呼吸数を測定し\n健康的な呼吸パターンを管理しましょう",
+    "startMeasurement": "呼吸測定開始",
+    "startMeasurementDescription": "顔を認識してリアルタイムで呼吸数を測定します",
+    "viewStatistics": "呼吸統計",
+    "viewStatisticsDescription": "日間、週間、月間の呼吸パターンを確認して分析します",
+    "measurementWarnings": {
+      "title": "測定時の注意事項",
+      "item1": "• 測定中は動きを控えてください",
+      "item2": "• 明るい場所で測定してください",
+      "item3": "• カメラと顔の間の距離を適切に保ってください",
+      "item4": "• このサービスは医療機器ではありません"
+    },
+    "guide": {
+      "title": "測定時の動きを控える",
+      "subtitle": "円形の領域内に顔を配置し\n明るい場所で測定してください",
+      "warning": "カメラと顔が近すぎると測定できない場合があります",
+      "startButton": "測定開始",
+      "dontShowAgain": "再表示しない",
+      "close": "閉じる"
+    },
+    "active": {
+      "measuring": "測定中...",
+      "ready": "測定準備完了",
+      "instruction": "顔を円形フレーム内に合わせて\n自然に呼吸してください",
+      "currentRate": "現在の呼吸数",
+      "perMinute": "回/分",
+      "startButton": "測定開始",
+      "stopButton": "測定停止"
+    },
+    "result": {
+      "graphTitle": "どれくらい上手に従えましたか？",
+      "myBreathing": "私の呼吸",
+      "targetBreathing": "目標呼吸",
+      "effectsTitle": "継続的な呼吸管理の効果",
+      "effects": {
+        "relaxation": "緊張緩和",
+        "heartFunction": "心臓機能向上",
+        "respiratoryHealth": "呼吸器健康向上",
+        "hyperventilationPrevention": "過呼吸予防",
+        "stressReduction": "ストレス軽減"
+      },
+      "infoText": "測定結果はディープメディを通じて95%以上の精度で分析され\nKCL公認試験成績を受けました。",
+      "disclaimer": "※ このサービスは医療機器ではなく、疾病の診断、治療、予防を目的としていません。",
+      "completeButton": "分析完了"
+    },
+    "statistics": {
+      "tabs": {
+        "daily": "日間",
+        "weekly": "週間",
+        "monthly": "月間"
+      },
+      "emptyState": {
+        "title": "最低3日以上呼吸測定を行ってください。",
+        "subtitle": "正確な統計のために、より多くのデータが必要です。",
+        "startButton": "測定開始"
+      }
+    },
+    "prep": {
+      "step1": {
+        "title": "座る",
+        "description": "測定中は座って落ち着いて測定してください"
+      },
+      "step2": {
+        "title": "顔を円内に配置する",
+        "description": "顔を円内に配置して測定を開始してください"
+      },
+      "dontShowAgain": "再表示しない",
+      "next": "次へ"
+    }
   }
 }
 
