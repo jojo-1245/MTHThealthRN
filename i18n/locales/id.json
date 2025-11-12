@@ -174,6 +174,38 @@
       "message": "Pemeriksaan penyakit kronis selesai",
       "continueButton": "Lanjutkan mendiagnosis item diet/gaya hidup",
       "saveButton": "Simpan dan Keluar"
+    },
+    "dietSurvey": {
+      "options": {
+        "daily": "Setiap hari (4+ hari/minggu)",
+        "often": "Sering (2-3 hari/minggu)",
+        "sometimes": "Kadang-kadang (1 hari/minggu atau kurang)",
+        "notEat": "Tidak makan",
+        "notDrink": "Tidak minum",
+        "almostAll": "Makan hampir semua",
+        "moreThanHalf": "Makan lebih dari setengah",
+        "lessThanHalf": "Makan kurang dari setengah",
+        "notAtAll": "Tidak makan sama sekali",
+        "notEat2": "Tidak makan",
+        "sometimes2": "Kadang-kadang (1-2 kali/minggu)",
+        "often2": "Sering (3-4 kali/minggu)",
+        "daily2": "Setiap hari (5+ kali/minggu)"
+      },
+      "questions": {
+        "1": "Q Seberapa sering Anda makan makanan berbahan tepung?",
+        "1Description": "*Mie, roti, sujebi, pangsit, hamburger, pizza, pasta, ramen, makanan cepat saji, dll.",
+        "2": "Q Seberapa sering Anda makan makanan yang digoreng atau ditumis?",
+        "3": "Q Seberapa sering Anda mengonsumsi makanan tinggi lemak?",
+        "3Description": "*Daging berlemak, jeroan, daging asap, bacon, ham, mentega, minyak sawit, minyak kelapa, dll.",
+        "4": "Q Apakah Anda suka minum minuman berkarbonasi (cola, soda, dll.)?",
+        "4Description": "*Termasuk minuman ion, susu manis, minuman energi, minuman zero, dll.",
+        "5": "Q Berapa banyak makanan berkuah yang biasanya Anda konsumsi?",
+        "5Description": "*Termasuk jjigae, sup, tang, mie lainnya",
+        "6": "Q Seberapa sering Anda mengonsumsi makanan protein?",
+        "6Description": "*Daging tanpa lemak, telur, tahu, kacang, susu, daging merah tanpa lemak, dll.",
+        "7": "Q Apakah Anda sering mengonsumsi hidangan sayuran dan sayuran mentah setiap kali makan?",
+        "7Description": "*Kimchi tidak termasuk"
+      }
     }
   }
 }
