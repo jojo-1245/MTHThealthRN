@@ -157,6 +157,80 @@
       "dontShowAgain": "다시 보지 않기",
       "next": "다음"
     }
+  },
+  "cardiovascular": {
+    "title": "진단하기",
+    "risk": {
+      "title": "심혈관 건강 위험도",
+      "monthYear": "2025년 10월",
+      "weekDays": {
+        "sun": "일",
+        "mon": "월",
+        "tue": "화",
+        "wed": "수",
+        "thu": "목",
+        "fri": "금",
+        "sat": "토"
+      },
+      "message": "심혈관 건강 위험도를 정확히 측정하기 위해\n만성질환과 식/생활습관 항목을 자가진단해주세요",
+      "addDiagnosis": "자가진단 추가"
+    },
+    "diagnosis": {
+      "question1": "현재 3개월이상 약 복용 중이거나 관리 중인 상태는?",
+      "question1Note": "*없으면 하단의 '모두 해당 없음' 버튼을 클릭하세요",
+      "question3": "현재 가족이 앓고 있는 증상이 있나요?",
+      "question3Note": "*직계가족이나 사촌 중 같은 질병을 2명 이상 앓은 경우",
+      "noneOfAbove": "모두 해당 없음",
+      "categories": {
+        "circulation": "순환기능",
+        "digestion": "소화와 대사",
+        "mental": "마음과 정신건강",
+        "musculoskeletal": "근골격",
+        "elderly": "노년 건강",
+        "immune": "면역 및 감각"
+      },
+      "conditions": {
+        "hypertension": "고혈압",
+        "hyperlipidemia": "고지혈증",
+        "atrial_fibrillation": "심방세동(부정맥)",
+        "type2_diabetes": "2형당뇨",
+        "hypothyroidism": "갑상선기능저하증",
+        "hyperthyroidism": "갑상선기능항진증",
+        "pms": "월경전증후군",
+        "chronic_hepatitis": "만성간염(B형, C형)",
+        "fatty_liver": "지방간",
+        "constipation": "변비",
+        "gerd": "위식도역류성질환",
+        "obesity": "비만",
+        "insomnia": "불면증",
+        "stress_panic": "스트레스/공황장애",
+        "mild_cognitive": "경도 인지장애",
+        "osteoarthritis": "(퇴행성)관절염",
+        "rheumatoid_arthritis": "류마티스관절염",
+        "osteoporosis": "골다공증",
+        "sarcopenia": "근감소증",
+        "bph": "전립선비대증",
+        "menopause": "완경(폐경)",
+        "eczema": "습진(아토피)",
+        "allergic_rhinitis": "알러지성비염",
+        "asthma": "천식",
+        "anemia": "빈혈",
+        "glaucoma": "녹내장",
+        "cataract": "백내장",
+        "myocardial_infarction": "심근경색",
+        "stroke": "뇌졸중",
+        "thyroid_disease": "갑상선 질환",
+        "liver_cirrhosis": "간경병증",
+        "ulcerative_colitis": "궤양성대장염",
+        "allergy_asthma": "알레르기 및 천식",
+        "hair_loss": "탈모"
+      }
+    },
+    "complete": {
+      "message": "만성질환 체크가 완료되었어요",
+      "continueButton": "식/생활습관 항목 계속 진단하기",
+      "saveButton": "저장하고 종료하기"
+    }
   }
 }
 

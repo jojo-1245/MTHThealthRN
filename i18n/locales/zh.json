@@ -101,6 +101,80 @@
       "dontShowAgain": "不再显示",
       "next": "下一步"
     }
+  },
+  "cardiovascular": {
+    "title": "诊断",
+    "risk": {
+      "title": "心血管健康风险",
+      "monthYear": "2025年10月",
+      "weekDays": {
+        "sun": "日",
+        "mon": "一",
+        "tue": "二",
+        "wed": "三",
+        "thu": "四",
+        "fri": "五",
+        "sat": "六"
+      },
+      "message": "为了准确测量心血管健康风险，\n请自我诊断慢性疾病和饮食/生活习惯项目",
+      "addDiagnosis": "添加自我诊断"
+    },
+    "diagnosis": {
+      "question1": "您目前正在服用药物或管理超过3个月的状况是什么？",
+      "question1Note": "*如果没有，请点击下方的"全部不适用"按钮",
+      "question3": "您的家人目前是否有患有的症状？",
+      "question3Note": "*如果直系亲属或堂兄弟姐妹中有2人以上患有相同疾病",
+      "noneOfAbove": "全部不适用",
+      "categories": {
+        "circulation": "循环功能",
+        "digestion": "消化与代谢",
+        "mental": "心理与精神健康",
+        "musculoskeletal": "肌肉骨骼",
+        "elderly": "老年健康",
+        "immune": "免疫与感觉"
+      },
+      "conditions": {
+        "hypertension": "高血压",
+        "hyperlipidemia": "高脂血症",
+        "atrial_fibrillation": "心房颤动（心律失常）",
+        "type2_diabetes": "2型糖尿病",
+        "hypothyroidism": "甲状腺功能减退",
+        "hyperthyroidism": "甲状腺功能亢进",
+        "pms": "经前期综合征",
+        "chronic_hepatitis": "慢性肝炎（B型、C型）",
+        "fatty_liver": "脂肪肝",
+        "constipation": "便秘",
+        "gerd": "胃食管反流病",
+        "obesity": "肥胖",
+        "insomnia": "失眠",
+        "stress_panic": "压力/恐慌障碍",
+        "mild_cognitive": "轻度认知障碍",
+        "osteoarthritis": "（退行性）关节炎",
+        "rheumatoid_arthritis": "类风湿性关节炎",
+        "osteoporosis": "骨质疏松症",
+        "sarcopenia": "肌肉减少症",
+        "bph": "良性前列腺增生",
+        "menopause": "更年期（绝经）",
+        "eczema": "湿疹（特应性）",
+        "allergic_rhinitis": "过敏性鼻炎",
+        "asthma": "哮喘",
+        "anemia": "贫血",
+        "glaucoma": "青光眼",
+        "cataract": "白内障",
+        "myocardial_infarction": "心肌梗死",
+        "stroke": "中风",
+        "thyroid_disease": "甲状腺疾病",
+        "liver_cirrhosis": "肝硬化",
+        "ulcerative_colitis": "溃疡性结肠炎",
+        "allergy_asthma": "过敏和哮喘",
+        "hair_loss": "脱发"
+      }
+    },
+    "complete": {
+      "message": "慢性疾病检查已完成",
+      "continueButton": "继续诊断饮食/生活习惯项目",
+      "saveButton": "保存并退出"
+    }
   }
 }
 

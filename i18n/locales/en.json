@@ -101,6 +101,80 @@
       "dontShowAgain": "Don't Show Again",
       "next": "Next"
     }
+  },
+  "cardiovascular": {
+    "title": "Diagnosis",
+    "risk": {
+      "title": "Cardiovascular Health Risk",
+      "monthYear": "October 2025",
+      "weekDays": {
+        "sun": "Sun",
+        "mon": "Mon",
+        "tue": "Tue",
+        "wed": "Wed",
+        "thu": "Thu",
+        "fri": "Fri",
+        "sat": "Sat"
+      },
+      "message": "To accurately measure cardiovascular health risk,\nplease self-diagnose chronic diseases and diet/lifestyle items",
+      "addDiagnosis": "Add Self Diagnosis"
+    },
+    "diagnosis": {
+      "question1": "What conditions are you currently taking medication for or managing for more than 3 months?",
+      "question1Note": "*If none, click the 'None of the above' button below",
+      "question3": "Are there any symptoms that your family is currently suffering from?",
+      "question3Note": "*If 2 or more immediate family members or cousins have the same disease",
+      "noneOfAbove": "None of the above",
+      "categories": {
+        "circulation": "Circulation",
+        "digestion": "Digestion & Metabolism",
+        "mental": "Mental & Mental Health",
+        "musculoskeletal": "Musculoskeletal",
+        "elderly": "Elderly Health",
+        "immune": "Immune & Sensory"
+      },
+      "conditions": {
+        "hypertension": "Hypertension",
+        "hyperlipidemia": "Hyperlipidemia",
+        "atrial_fibrillation": "Atrial Fibrillation (Arrhythmia)",
+        "type2_diabetes": "Type 2 Diabetes",
+        "hypothyroidism": "Hypothyroidism",
+        "hyperthyroidism": "Hyperthyroidism",
+        "pms": "Premenstrual Syndrome",
+        "chronic_hepatitis": "Chronic Hepatitis (B, C)",
+        "fatty_liver": "Fatty Liver",
+        "constipation": "Constipation",
+        "gerd": "Gastroesophageal Reflux Disease",
+        "obesity": "Obesity",
+        "insomnia": "Insomnia",
+        "stress_panic": "Stress/Panic Disorder",
+        "mild_cognitive": "Mild Cognitive Impairment",
+        "osteoarthritis": "(Degenerative) Arthritis",
+        "rheumatoid_arthritis": "Rheumatoid Arthritis",
+        "osteoporosis": "Osteoporosis",
+        "sarcopenia": "Sarcopenia",
+        "bph": "Benign Prostatic Hyperplasia",
+        "menopause": "Menopause",
+        "eczema": "Eczema (Atopy)",
+        "allergic_rhinitis": "Allergic Rhinitis",
+        "asthma": "Asthma",
+        "anemia": "Anemia",
+        "glaucoma": "Glaucoma",
+        "cataract": "Cataract",
+        "myocardial_infarction": "Myocardial Infarction",
+        "stroke": "Stroke",
+        "thyroid_disease": "Thyroid Disease",
+        "liver_cirrhosis": "Liver Cirrhosis",
+        "ulcerative_colitis": "Ulcerative Colitis",
+        "allergy_asthma": "Allergy & Asthma",
+        "hair_loss": "Hair Loss"
+      }
+    },
+    "complete": {
+      "message": "Chronic disease check completed",
+      "continueButton": "Continue diagnosing diet/lifestyle items",
+      "saveButton": "Save and Exit"
+    }
   }
 }
 

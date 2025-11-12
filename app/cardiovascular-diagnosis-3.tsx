@@ -10,6 +10,7 @@ import {
     TouchableOpacity,
     View,
 } from 'react-native';
+import { useTranslation } from '@/i18n';
 
 const { width, height } = Dimensions.get('window');
 
@@ -20,27 +21,28 @@ interface Condition {
 }
 
 export default function CardiovascularDiagnosis3Screen() {
+  const { t } = useTranslation();
   const [selectedConditions, setSelectedConditions] = useState<string[]>([]);
 
   const conditions: Condition[] = [
     // 순환기능
-    { id: 'family_hypertension', name: '고혈압', category: '순환기능' },
-    { id: 'family_myocardial_infarction', name: '심근경색', category: '순환기능' },
-    { id: 'family_stroke', name: '뇌졸중', category: '순환기능' },
-    { id: 'family_hyperlipidemia', name: '고지혈증', category: '순환기능' },
+    { id: 'family_hypertension', name: t('cardiovascular.diagnosis.conditions.hypertension'), category: t('cardiovascular.diagnosis.categories.circulation') },
+    { id: 'family_myocardial_infarction', name: t('cardiovascular.diagnosis.conditions.myocardial_infarction'), category: t('cardiovascular.diagnosis.categories.circulation') },
+    { id: 'family_stroke', name: t('cardiovascular.diagnosis.conditions.stroke'), category: t('cardiovascular.diagnosis.categories.circulation') },
+    { id: 'family_hyperlipidemia', name: t('cardiovascular.diagnosis.conditions.hyperlipidemia'), category: t('cardiovascular.diagnosis.categories.circulation') },
     
     // 소화와 대사
-    { id: 'family_type2_diabetes', name: '2형당뇨', category: '소화와 대사' },
-    { id: 'family_thyroid_disease', name: '갑상선 질환', category: '소화와 대사' },
-    { id: 'family_obesity', name: '비만', category: '소화와 대사' },
-    { id: 'family_fatty_liver', name: '지방간', category: '소화와 대사' },
-    { id: 'family_liver_cirrhosis', name: '간경병증', category: '소화와 대사' },
-    { id: 'family_ulcerative_colitis', name: '궤양성대장염', category: '소화와 대사' },
+    { id: 'family_type2_diabetes', name: t('cardiovascular.diagnosis.conditions.type2_diabetes'), category: t('cardiovascular.diagnosis.categories.digestion') },
+    { id: 'family_thyroid_disease', name: t('cardiovascular.diagnosis.conditions.thyroid_disease'), category: t('cardiovascular.diagnosis.categories.digestion') },
+    { id: 'family_obesity', name: t('cardiovascular.diagnosis.conditions.obesity'), category: t('cardiovascular.diagnosis.categories.digestion') },
+    { id: 'family_fatty_liver', name: t('cardiovascular.diagnosis.conditions.fatty_liver'), category: t('cardiovascular.diagnosis.categories.digestion') },
+    { id: 'family_liver_cirrhosis', name: t('cardiovascular.diagnosis.conditions.liver_cirrhosis'), category: t('cardiovascular.diagnosis.categories.digestion') },
+    { id: 'family_ulcerative_colitis', name: t('cardiovascular.diagnosis.conditions.ulcerative_colitis'), category: t('cardiovascular.diagnosis.categories.digestion') },
     
     // 면역 및 감각
-    { id: 'family_eczema', name: '습진(아토피)', category: '면역 및 감각' },
-    { id: 'family_allergy_asthma', name: '알레르기 및 천식', category: '면역 및 감각' },
-    { id: 'family_hair_loss', name: '탈모', category: '면역 및 감각' },
+    { id: 'family_eczema', name: t('cardiovascular.diagnosis.conditions.eczema'), category: t('cardiovascular.diagnosis.categories.immune') },
+    { id: 'family_allergy_asthma', name: t('cardiovascular.diagnosis.conditions.allergy_asthma'), category: t('cardiovascular.diagnosis.categories.immune') },
+    { id: 'family_hair_loss', name: t('cardiovascular.diagnosis.conditions.hair_loss'), category: t('cardiovascular.diagnosis.categories.immune') },
   ];
 
   const handleBack = () => {
@@ -110,7 +112,7 @@ export default function CardiovascularDiagnosis3Screen() {
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>진단하기</Text>
+        <Text style={styles.headerTitle}>{t('cardiovascular.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
@@ -122,18 +124,18 @@ export default function CardiovascularDiagnosis3Screen() {
             <Ionicons name="home" size={32} color="#8B5CF6" />
           </View>
           <Text style={styles.questionText}>
-            현재 가족이 앓고 있는 증상이 있나요?
+            {t('cardiovascular.diagnosis.question3')}
           </Text>
           <Text style={styles.questionNote}>
-            *직계가족이나 사촌 중 같은 질병을 2명 이상 앓은 경우
+            {t('cardiovascular.diagnosis.question3Note')}
           </Text>
         </View>
 
         {/* 질환 카테고리들 */}
         <View style={styles.categoriesContainer}>
-          {renderCategory('순환기능')}
-          {renderCategory('소화와 대사')}
-          {renderCategory('면역 및 감각')}
+          {renderCategory(t('cardiovascular.diagnosis.categories.circulation'))}
+          {renderCategory(t('cardiovascular.diagnosis.categories.digestion'))}
+          {renderCategory(t('cardiovascular.diagnosis.categories.immune'))}
         </View>
 
         {/* 모두 해당 없음 버튼 */}
@@ -141,14 +143,14 @@ export default function CardiovascularDiagnosis3Screen() {
           style={styles.noneButton} 
           onPress={handleNoneOfAbove}
         >
-          <Text style={styles.noneButtonText}>모두 해당 없음</Text>
+          <Text style={styles.noneButtonText}>{t('cardiovascular.diagnosis.noneOfAbove')}</Text>
         </TouchableOpacity>
       </ScrollView>
 
       {/* 하단 네비게이션 */}
       <View style={styles.bottomContainer}>
         <TouchableOpacity style={styles.prevButton} onPress={handleBack}>
-          <Text style={styles.prevButtonText}>이전</Text>
+          <Text style={styles.prevButtonText}>{t('common.previous')}</Text>
         </TouchableOpacity>
         
         <View style={styles.pageIndicator}>
@@ -156,7 +158,7 @@ export default function CardiovascularDiagnosis3Screen() {
         </View>
         
         <TouchableOpacity style={styles.nextButton} onPress={handleNext}>
-          <Text style={styles.nextButtonText}>다음</Text>
+          <Text style={styles.nextButtonText}>{t('common.next')}</Text>
         </TouchableOpacity>
       </View>
     </View>

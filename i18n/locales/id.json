@@ -101,6 +101,80 @@
       "dontShowAgain": "Jangan Tampilkan Lagi",
       "next": "Selanjutnya"
     }
+  },
+  "cardiovascular": {
+    "title": "Diagnosis",
+    "risk": {
+      "title": "Risiko Kesehatan Kardiovaskular",
+      "monthYear": "Oktober 2025",
+      "weekDays": {
+        "sun": "Min",
+        "mon": "Sen",
+        "tue": "Sel",
+        "wed": "Rab",
+        "thu": "Kam",
+        "fri": "Jum",
+        "sat": "Sab"
+      },
+      "message": "Untuk mengukur risiko kesehatan kardiovaskular secara akurat,\nsilakan lakukan diagnosis mandiri untuk penyakit kronis dan item diet/gaya hidup",
+      "addDiagnosis": "Tambah Diagnosis Mandiri"
+    },
+    "diagnosis": {
+      "question1": "Kondisi apa yang saat ini sedang Anda minum obat atau kelola selama lebih dari 3 bulan?",
+      "question1Note": "*Jika tidak ada, klik tombol 'Tidak ada yang sesuai' di bawah",
+      "question3": "Apakah ada gejala yang sedang diderita keluarga Anda saat ini?",
+      "question3Note": "*Jika 2 atau lebih anggota keluarga langsung atau sepupu menderita penyakit yang sama",
+      "noneOfAbove": "Tidak ada yang sesuai",
+      "categories": {
+        "circulation": "Sirkulasi",
+        "digestion": "Pencernaan & Metabolisme",
+        "mental": "Mental & Kesehatan Mental",
+        "musculoskeletal": "Musculoskeletal",
+        "elderly": "Kesehatan Lansia",
+        "immune": "Imun & Sensorik"
+      },
+      "conditions": {
+        "hypertension": "Hipertensi",
+        "hyperlipidemia": "Hiperlipidemia",
+        "atrial_fibrillation": "Fibrilasi Atrium (Aritmia)",
+        "type2_diabetes": "Diabetes Tipe 2",
+        "hypothyroidism": "Hipotiroidisme",
+        "hyperthyroidism": "Hipertiroidisme",
+        "pms": "Sindrom Pramenstruasi",
+        "chronic_hepatitis": "Hepatitis Kronis (B, C)",
+        "fatty_liver": "Hati Berlemak",
+        "constipation": "Sembelit",
+        "gerd": "Penyakit Refluks Gastroesofagus",
+        "obesity": "Obesitas",
+        "insomnia": "Insomnia",
+        "stress_panic": "Stres/Gangguan Panik",
+        "mild_cognitive": "Gangguan Kognitif Ringan",
+        "osteoarthritis": "(Degeneratif) Artritis",
+        "rheumatoid_arthritis": "Artritis Reumatoid",
+        "osteoporosis": "Osteoporosis",
+        "sarcopenia": "Sarkopenia",
+        "bph": "Hiperplasia Prostat Jinak",
+        "menopause": "Menopause",
+        "eczema": "Eksim (Atopi)",
+        "allergic_rhinitis": "Rinitis Alergi",
+        "asthma": "Asma",
+        "anemia": "Anemia",
+        "glaucoma": "Glaukoma",
+        "cataract": "Katarak",
+        "myocardial_infarction": "Infark Miokard",
+        "stroke": "Stroke",
+        "thyroid_disease": "Penyakit Tiroid",
+        "liver_cirrhosis": "Sirosis Hati",
+        "ulcerative_colitis": "Kolitis Ulseratif",
+        "allergy_asthma": "Alergi & Asma",
+        "hair_loss": "Rambut Rontok"
+      }
+    },
+    "complete": {
+      "message": "Pemeriksaan penyakit kronis selesai",
+      "continueButton": "Lanjutkan mendiagnosis item diet/gaya hidup",
+      "saveButton": "Simpan dan Keluar"
+    }
   }
 }
 

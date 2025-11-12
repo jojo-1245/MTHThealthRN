@@ -101,6 +101,80 @@
       "dontShowAgain": "再表示しない",
       "next": "次へ"
     }
+  },
+  "cardiovascular": {
+    "title": "診断",
+    "risk": {
+      "title": "心血管健康リスク",
+      "monthYear": "2025年10月",
+      "weekDays": {
+        "sun": "日",
+        "mon": "月",
+        "tue": "火",
+        "wed": "水",
+        "thu": "木",
+        "fri": "金",
+        "sat": "土"
+      },
+      "message": "心血管健康リスクを正確に測定するために\n慢性疾患と食事/生活習慣項目を自己診断してください",
+      "addDiagnosis": "自己診断追加"
+    },
+    "diagnosis": {
+      "question1": "現在3ヶ月以上薬を服用中または管理中の状態は？",
+      "question1Note": "*ない場合は下部の「すべて該当なし」ボタンをクリックしてください",
+      "question3": "現在家族が患っている症状はありますか？",
+      "question3Note": "*直系家族やいとこの中で同じ病気を2人以上患った場合",
+      "noneOfAbove": "すべて該当なし",
+      "categories": {
+        "circulation": "循環機能",
+        "digestion": "消化と代謝",
+        "mental": "心と精神健康",
+        "musculoskeletal": "筋骨格",
+        "elderly": "高齢者健康",
+        "immune": "免疫および感覚"
+      },
+      "conditions": {
+        "hypertension": "高血圧",
+        "hyperlipidemia": "高脂血症",
+        "atrial_fibrillation": "心房細動（不整脈）",
+        "type2_diabetes": "2型糖尿病",
+        "hypothyroidism": "甲状腺機能低下症",
+        "hyperthyroidism": "甲状腺機能亢進症",
+        "pms": "月経前症候群",
+        "chronic_hepatitis": "慢性肝炎（B型、C型）",
+        "fatty_liver": "脂肪肝",
+        "constipation": "便秘",
+        "gerd": "胃食道逆流性疾患",
+        "obesity": "肥満",
+        "insomnia": "不眠症",
+        "stress_panic": "ストレス/パニック障害",
+        "mild_cognitive": "軽度認知障害",
+        "osteoarthritis": "（変性性）関節炎",
+        "rheumatoid_arthritis": "関節リウマチ",
+        "osteoporosis": "骨粗鬆症",
+        "sarcopenia": "サルコペニア",
+        "bph": "前立腺肥大症",
+        "menopause": "閉経",
+        "eczema": "湿疹（アトピー）",
+        "allergic_rhinitis": "アレルギー性鼻炎",
+        "asthma": "喘息",
+        "anemia": "貧血",
+        "glaucoma": "緑内障",
+        "cataract": "白内障",
+        "myocardial_infarction": "心筋梗塞",
+        "stroke": "脳卒中",
+        "thyroid_disease": "甲状腺疾患",
+        "liver_cirrhosis": "肝硬変",
+        "ulcerative_colitis": "潰瘍性大腸炎",
+        "allergy_asthma": "アレルギーおよび喘息",
+        "hair_loss": "脱毛"
+      }
+    },
+    "complete": {
+      "message": "慢性疾患チェックが完了しました",
+      "continueButton": "食事/生活習慣項目を続けて診断する",
+      "saveButton": "保存して終了"
+    }
   }
 }
 
