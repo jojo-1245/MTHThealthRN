@@ -9,10 +9,13 @@ import {
     TouchableOpacity,
     View,
 } from 'react-native';
+import { useTranslation } from '@/i18n';
 
 const { width, height } = Dimensions.get('window');
 
 export default function CardiovascularCompleteScreen() {
+  const { t } = useTranslation();
+  
   const handleBack = () => {
     router.back();
   };
@@ -36,7 +39,7 @@ export default function CardiovascularCompleteScreen() {
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>진단하기</Text>
+        <Text style={styles.headerTitle}>{t('cardiovascular.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
@@ -49,7 +52,7 @@ export default function CardiovascularCompleteScreen() {
 
         {/* 완료 메시지 */}
         <Text style={styles.completionText}>
-          만성질환 체크가 완료되었어요
+          {t('cardiovascular.complete.message')}
         </Text>
       </View>
 
@@ -60,7 +63,7 @@ export default function CardiovascularCompleteScreen() {
           onPress={handleContinueDiagnosis}
         >
           <Text style={styles.continueButtonText}>
-            식/생활습관 항목 계속 진단하기
+            {t('cardiovascular.complete.continueButton')}
           </Text>
         </TouchableOpacity>
 
@@ -68,7 +71,7 @@ export default function CardiovascularCompleteScreen() {
           style={styles.saveButton} 
           onPress={handleSaveAndExit}
         >
-          <Text style={styles.saveButtonText}>저장하고 종료하기</Text>
+          <Text style={styles.saveButtonText}>{t('cardiovascular.complete.saveButton')}</Text>
         </TouchableOpacity>
       </View>
     </View>

@@ -9,10 +9,12 @@ import {
     TouchableOpacity,
     View,
 } from 'react-native';
+import { useTranslation } from '@/i18n';
 
 const { width, height } = Dimensions.get('window');
 
 export default function BreathingMeasurementActiveScreen() {
+  const { t } = useTranslation();
   const [isMeasuring, setIsMeasuring] = useState(false);
   const [countdown, setCountdown] = useState(3);
   const [breathingRate, setBreathingRate] = useState(0);
@@ -60,7 +62,7 @@ export default function BreathingMeasurementActiveScreen() {
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>호흡수 측정</Text>
+        <Text style={styles.headerTitle}>{t('breathing.breathingRateMeasurement')}</Text>
         <View style={styles.headerRight} />
       </View>
 
@@ -73,7 +75,7 @@ export default function BreathingMeasurementActiveScreen() {
               <View style={styles.measuringIcon}>
                 <Ionicons name="pulse" size={40} color="#8B5CF6" />
               </View>
-              <Text style={styles.measuringText}>측정 중...</Text>
+              <Text style={styles.measuringText}>{t('breathing.active.measuring')}</Text>
               <Text style={styles.countdownText}>{countdown}</Text>
             </View>
           ) : (
@@ -81,9 +83,9 @@ export default function BreathingMeasurementActiveScreen() {
               <View style={styles.readyIcon}>
                 <Ionicons name="play-circle" size={60} color="#8B5CF6" />
               </View>
-              <Text style={styles.readyText}>측정 준비 완료</Text>
+              <Text style={styles.readyText}>{t('breathing.active.ready')}</Text>
               <Text style={styles.instructionText}>
-                얼굴을 원형 프레임 안에 맞추고{'\n'}자연스럽게 호흡하세요
+                {t('breathing.active.instruction')}
               </Text>
             </View>
           )}
@@ -99,8 +101,8 @@ export default function BreathingMeasurementActiveScreen() {
         {/* 측정 결과 표시 */}
         {breathingRate > 0 && (
           <View style={styles.resultContainer}>
-            <Text style={styles.resultLabel}>현재 호흡수</Text>
-            <Text style={styles.resultValue}>{breathingRate}회/분</Text>
+            <Text style={styles.resultLabel}>{t('breathing.active.currentRate')}</Text>
+            <Text style={styles.resultValue}>{breathingRate}{t('breathing.active.perMinute')}</Text>
           </View>
         )}
 
@@ -108,11 +110,11 @@ export default function BreathingMeasurementActiveScreen() {
         <View style={styles.buttonContainer}>
           {!isMeasuring ? (
             <TouchableOpacity style={styles.startButton} onPress={handleStartMeasurement}>
-              <Text style={styles.startButtonText}>측정 시작</Text>
+              <Text style={styles.startButtonText}>{t('breathing.active.startButton')}</Text>
             </TouchableOpacity>
           ) : (
             <TouchableOpacity style={styles.stopButton} onPress={handleStopMeasurement}>
-              <Text style={styles.stopButtonText}>측정 중지</Text>
+              <Text style={styles.stopButtonText}>{t('breathing.active.stopButton')}</Text>
             </TouchableOpacity>
           )}
         </View>

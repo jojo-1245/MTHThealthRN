@@ -10,17 +10,19 @@ import {
     TouchableOpacity,
     View,
 } from 'react-native';
+import { useTranslation } from '@/i18n';
 
 const { width, height } = Dimensions.get('window');
 
 export default function CardiovascularDietSurvey5Screen() {
-  const [selectedOption, setSelectedOption] = useState('절반 이상 먹음');
+  const { t } = useTranslation();
+  const [selectedOption, setSelectedOption] = useState(t('cardiovascular.dietSurvey.options.moreThanHalf'));
 
   const options = [
-    '거의 다 먹음',
-    '절반 이상 먹음',
-    '절반 미만 먹음',
-    '전혀 먹지 않음',
+    t('cardiovascular.dietSurvey.options.almostAll'),
+    t('cardiovascular.dietSurvey.options.moreThanHalf'),
+    t('cardiovascular.dietSurvey.options.lessThanHalf'),
+    t('cardiovascular.dietSurvey.options.notAtAll'),
   ];
 
   const handleBack = () => {
@@ -44,7 +46,7 @@ export default function CardiovascularDietSurvey5Screen() {
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>진단하기</Text>
+        <Text style={styles.headerTitle}>{t('cardiovascular.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
@@ -61,10 +63,10 @@ export default function CardiovascularDietSurvey5Screen() {
         <View style={styles.questionContainer}>
           <View style={styles.questionBox}>
             <Text style={styles.questionText}>
-              Q 평소 국물 음식은 어느 정도 섭취하나요?
+              {t('cardiovascular.dietSurvey.questions.5')}
             </Text>
             <Text style={styles.questionDescription}>
-              *찌개, 국, 탕, 기타 면 포함
+              {t('cardiovascular.dietSurvey.questions.5Description')}
             </Text>
           </View>
         </View>
@@ -102,10 +104,10 @@ export default function CardiovascularDietSurvey5Screen() {
         
         <View style={styles.buttonContainer}>
           <TouchableOpacity style={styles.previousButton} onPress={handleBack}>
-            <Text style={styles.previousButtonText}>이전</Text>
+            <Text style={styles.previousButtonText}>{t('common.previous')}</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.nextButton} onPress={handleNext}>
-            <Text style={styles.nextButtonText}>다음</Text>
+            <Text style={styles.nextButtonText}>{t('common.next')}</Text>
           </TouchableOpacity>
         </View>
       </View>

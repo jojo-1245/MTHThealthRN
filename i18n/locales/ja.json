@@ -25,6 +25,212 @@
     "title": "メイン",
     "search": "検索",
     "selfDiagnosis": "自己診断"
+  },
+  "breathing": {
+    "title": "呼吸測定",
+    "breathingRateTitle": "呼吸数測定",
+    "breathingRateMeasurement": "呼吸数測定",
+    "breathingExerciseResult": "呼吸運動結果",
+    "breathingStatistics": "呼吸統計",
+    "introDescription": "顔認識を通じて正確な呼吸数を測定し\n健康的な呼吸パターンを管理しましょう",
+    "startMeasurement": "呼吸測定開始",
+    "startMeasurementDescription": "顔を認識してリアルタイムで呼吸数を測定します",
+    "viewStatistics": "呼吸統計",
+    "viewStatisticsDescription": "日間、週間、月間の呼吸パターンを確認して分析します",
+    "measurementWarnings": {
+      "title": "測定時の注意事項",
+      "item1": "• 測定中は動きを控えてください",
+      "item2": "• 明るい場所で測定してください",
+      "item3": "• カメラと顔の間の距離を適切に保ってください",
+      "item4": "• このサービスは医療機器ではありません"
+    },
+    "guide": {
+      "title": "測定時の動きを控える",
+      "subtitle": "円形の領域内に顔を配置し\n明るい場所で測定してください",
+      "warning": "カメラと顔が近すぎると測定できない場合があります",
+      "startButton": "測定開始",
+      "dontShowAgain": "再表示しない",
+      "close": "閉じる"
+    },
+    "active": {
+      "measuring": "測定中...",
+      "ready": "測定準備完了",
+      "instruction": "顔を円形フレーム内に合わせて\n自然に呼吸してください",
+      "currentRate": "現在の呼吸数",
+      "perMinute": "回/分",
+      "startButton": "測定開始",
+      "stopButton": "測定停止"
+    },
+    "result": {
+      "graphTitle": "どれくらい上手に従えましたか？",
+      "myBreathing": "私の呼吸",
+      "targetBreathing": "目標呼吸",
+      "effectsTitle": "継続的な呼吸管理の効果",
+      "effects": {
+        "relaxation": "緊張緩和",
+        "heartFunction": "心臓機能向上",
+        "respiratoryHealth": "呼吸器健康向上",
+        "hyperventilationPrevention": "過呼吸予防",
+        "stressReduction": "ストレス軽減"
+      },
+      "infoText": "測定結果はディープメディを通じて95%以上の精度で分析され\nKCL公認試験成績を受けました。",
+      "disclaimer": "※ このサービスは医療機器ではなく、疾病の診断、治療、予防を目的としていません。",
+      "completeButton": "分析完了"
+    },
+    "statistics": {
+      "tabs": {
+        "daily": "日間",
+        "weekly": "週間",
+        "monthly": "月間"
+      },
+      "emptyState": {
+        "title": "最低3日以上呼吸測定を行ってください。",
+        "subtitle": "正確な統計のために、より多くのデータが必要です。",
+        "startButton": "測定開始"
+      }
+    },
+    "prep": {
+      "step1": {
+        "title": "座る",
+        "description": "測定中は座って落ち着いて測定してください"
+      },
+      "step2": {
+        "title": "顔を円内に配置する",
+        "description": "顔を円内に配置して測定を開始してください"
+      },
+      "dontShowAgain": "再表示しない",
+      "next": "次へ"
+    }
+  },
+  "cardiovascular": {
+    "title": "診断",
+    "risk": {
+      "title": "心血管健康リスク",
+      "monthYear": "2025年10月",
+      "weekDays": {
+        "sun": "日",
+        "mon": "月",
+        "tue": "火",
+        "wed": "水",
+        "thu": "木",
+        "fri": "金",
+        "sat": "土"
+      },
+      "message": "心血管健康リスクを正確に測定するために\n慢性疾患と食事/生活習慣項目を自己診断してください",
+      "addDiagnosis": "自己診断追加"
+    },
+    "diagnosis": {
+      "question1": "現在3ヶ月以上薬を服用中または管理中の状態は？",
+      "question1Note": "*ない場合は下部の「すべて該当なし」ボタンをクリックしてください",
+      "question3": "現在家族が患っている症状はありますか？",
+      "question3Note": "*直系家族やいとこの中で同じ病気を2人以上患った場合",
+      "noneOfAbove": "すべて該当なし",
+      "categories": {
+        "circulation": "循環機能",
+        "digestion": "消化と代謝",
+        "mental": "心と精神健康",
+        "musculoskeletal": "筋骨格",
+        "elderly": "高齢者健康",
+        "immune": "免疫および感覚"
+      },
+      "conditions": {
+        "hypertension": "高血圧",
+        "hyperlipidemia": "高脂血症",
+        "atrial_fibrillation": "心房細動（不整脈）",
+        "type2_diabetes": "2型糖尿病",
+        "hypothyroidism": "甲状腺機能低下症",
+        "hyperthyroidism": "甲状腺機能亢進症",
+        "pms": "月経前症候群",
+        "chronic_hepatitis": "慢性肝炎（B型、C型）",
+        "fatty_liver": "脂肪肝",
+        "constipation": "便秘",
+        "gerd": "胃食道逆流性疾患",
+        "obesity": "肥満",
+        "insomnia": "不眠症",
+        "stress_panic": "ストレス/パニック障害",
+        "mild_cognitive": "軽度認知障害",
+        "osteoarthritis": "（変性性）関節炎",
+        "rheumatoid_arthritis": "関節リウマチ",
+        "osteoporosis": "骨粗鬆症",
+        "sarcopenia": "サルコペニア",
+        "bph": "前立腺肥大症",
+        "menopause": "閉経",
+        "eczema": "湿疹（アトピー）",
+        "allergic_rhinitis": "アレルギー性鼻炎",
+        "asthma": "喘息",
+        "anemia": "貧血",
+        "glaucoma": "緑内障",
+        "cataract": "白内障",
+        "myocardial_infarction": "心筋梗塞",
+        "stroke": "脳卒中",
+        "thyroid_disease": "甲状腺疾患",
+        "liver_cirrhosis": "肝硬変",
+        "ulcerative_colitis": "潰瘍性大腸炎",
+        "allergy_asthma": "アレルギーおよび喘息",
+        "hair_loss": "脱毛"
+      }
+    },
+    "complete": {
+      "message": "慢性疾患チェックが完了しました",
+      "continueButton": "食事/生活習慣項目を続けて診断する",
+      "saveButton": "保存して終了"
+    },
+    "dietSurvey": {
+      "options": {
+        "daily": "毎日（週4日以上）",
+        "often": "よく（週2〜3日）",
+        "sometimes": "たまに（週1日以下）",
+        "notEat": "食べない",
+        "notDrink": "飲まない",
+        "almostAll": "ほとんど全部食べる",
+        "moreThanHalf": "半分以上食べる",
+        "lessThanHalf": "半分未満食べる",
+        "notAtAll": "全く食べない",
+        "notEat2": "食べない",
+        "sometimes2": "たまに（週1〜2回）",
+        "often2": "よく（週3〜4回）",
+        "daily2": "毎日（週5回以上）"
+      },
+      "questions": {
+        "1": "Q 普段、小麦粉食品はどのくらい食べますか？",
+        "1Description": "*麺類、パン、スジェビ、餃子、ハンバーガー、ピザ、パスタ、ラーメンなどのファストフードなど",
+        "2": "Q 油で揚げたり炒めたりした料理はどのくらい頻繁に食べますか？",
+        "3": "Q 脂肪の多い食事はどのくらい摂取しますか？",
+        "3Description": "*脂肪の多い肉類、肉の内臓、燻製肉、ベーコン、ハム、バター、パーム油、ココナッツオイルなど",
+        "4": "Q 炭酸飲料（コーラ、サイダー、ソーダ水など）を好んで飲みますか？",
+        "4Description": "*その他、イオン飲料、加糖牛乳、エナジードリンク、ゼロ飲料を含む",
+        "5": "Q 普段、汁物はどの程度摂取しますか？",
+        "5Description": "*チゲ、スープ、タン、その他の麺類を含む",
+        "6": "Q タンパク質の食事はどのくらい摂取しますか？",
+        "6Description": "*赤身肉、卵、豆腐、豆、牛乳、脂肪のない赤身肉など",
+        "7": "Q 毎食、ナムル類・野菜類（生野菜類）を頻繁に摂取しますか？",
+        "7Description": "*キムチを除く",
+        "8": "Q 必須脂肪酸が豊富な食品をよく食べますか？",
+        "8Description": "*ナッツ類（アーモンド、クルミなど）、青魚（サバ、サーモン、マグロなど）、植物油（エゴマ油、オリーブオイルなど）",
+        "9": "Q 習慣的に夜食を食べる",
+        "9Description": "*食事後の午後8時以降の夜食、遅い夕食",
+        "10": "Q 暴食や過食することがある",
+        "10Description": "*1日の中で1食をまとめて食べる場合も選択",
+        "11": "Q 普段の食事速度は？",
+        "11Description": "普段の食事速度はどのようですか？",
+        "12": "Q 食事後に習慣的に間食を食べる",
+        "12Description": "食事後に習慣的に間食を食べますか？",
+        "12Note": "*ケーキ、パン、お菓子、餅、クッキー、アイスクリーム、甘い飲み物、ミックスコーヒーなど",
+        "13": "Q 食事は毎日決まった時間にする",
+        "13Description": "食事は毎日決まった時間にしますか？"
+      },
+      "additionalOptions": {
+        "none": "なし",
+        "within5min": "5分以内",
+        "within10min": "10分以内",
+        "within15min": "15分以内",
+        "over15min": "15分以上",
+        "notAtAll": "違う",
+        "sometimesTrue": "たまにそう",
+        "oftenTrue": "よくそう",
+        "dailyTrue": "毎日そう"
+      }
+    }
   }
 }
 

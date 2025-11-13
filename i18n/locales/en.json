@@ -25,6 +25,212 @@
     "title": "Main",
     "search": "Search",
     "selfDiagnosis": "Self Diagnosis"
+  },
+  "breathing": {
+    "title": "Breathing Measurement",
+    "breathingRateTitle": "Breathing Rate Measurement",
+    "breathingRateMeasurement": "Breathing Rate Measurement",
+    "breathingExerciseResult": "Breathing Exercise Result",
+    "breathingStatistics": "Breathing Statistics",
+    "introDescription": "Measure accurate breathing rate through facial recognition\nand manage healthy breathing patterns",
+    "startMeasurement": "Start Breathing Measurement",
+    "startMeasurementDescription": "Measure breathing rate in real-time by recognizing your face",
+    "viewStatistics": "Breathing Statistics",
+    "viewStatisticsDescription": "Check and analyze daily, weekly, and monthly breathing patterns",
+    "measurementWarnings": {
+      "title": "Precautions During Measurement",
+      "item1": "• Please refrain from moving during measurement",
+      "item2": "• Please measure in a bright place",
+      "item3": "• Please maintain an appropriate distance between the camera and your face",
+      "item4": "• This service is not a medical device"
+    },
+    "guide": {
+      "title": "Refrain from Movement During Measurement",
+      "subtitle": "Position your face within the circular area\nand measure in a bright place",
+      "warning": "If the camera and face are too close, measurement may not work",
+      "startButton": "Start Measurement",
+      "dontShowAgain": "Don't Show Again",
+      "close": "Close"
+    },
+    "active": {
+      "measuring": "Measuring...",
+      "ready": "Ready to Measure",
+      "instruction": "Position your face within the circular frame\nand breathe naturally",
+      "currentRate": "Current Breathing Rate",
+      "perMinute": "times/min",
+      "startButton": "Start Measurement",
+      "stopButton": "Stop Measurement"
+    },
+    "result": {
+      "graphTitle": "How well did you follow?",
+      "myBreathing": "My Breathing",
+      "targetBreathing": "Target Breathing",
+      "effectsTitle": "Effects of Continuous Breathing Management",
+      "effects": {
+        "relaxation": "Tension Relief",
+        "heartFunction": "Improved Heart Function",
+        "respiratoryHealth": "Improved Respiratory Health",
+        "hyperventilationPrevention": "Hyperventilation Prevention",
+        "stressReduction": "Stress Reduction"
+      },
+      "infoText": "The measurement results were analyzed with more than 95% accuracy through DeepMedi\nand received KCL certification test results.",
+      "disclaimer": "※ This service is not a medical device and is not intended for diagnosis, treatment, or prevention of diseases.",
+      "completeButton": "Analysis Complete"
+    },
+    "statistics": {
+      "tabs": {
+        "daily": "Daily",
+        "weekly": "Weekly",
+        "monthly": "Monthly"
+      },
+      "emptyState": {
+        "title": "Please measure breathing for at least 3 days.",
+        "subtitle": "More data is needed for accurate statistics.",
+        "startButton": "Start Measurement"
+      }
+    },
+    "prep": {
+      "step1": {
+        "title": "Sit Down",
+        "description": "Please sit down and measure calmly during measurement"
+      },
+      "step2": {
+        "title": "Position Face in Circle",
+        "description": "Position your face in the circle and start measurement"
+      },
+      "dontShowAgain": "Don't Show Again",
+      "next": "Next"
+    }
+  },
+  "cardiovascular": {
+    "title": "Diagnosis",
+    "risk": {
+      "title": "Cardiovascular Health Risk",
+      "monthYear": "October 2025",
+      "weekDays": {
+        "sun": "Sun",
+        "mon": "Mon",
+        "tue": "Tue",
+        "wed": "Wed",
+        "thu": "Thu",
+        "fri": "Fri",
+        "sat": "Sat"
+      },
+      "message": "To accurately measure cardiovascular health risk,\nplease self-diagnose chronic diseases and diet/lifestyle items",
+      "addDiagnosis": "Add Self Diagnosis"
+    },
+    "diagnosis": {
+      "question1": "What conditions are you currently taking medication for or managing for more than 3 months?",
+      "question1Note": "*If none, click the 'None of the above' button below",
+      "question3": "Are there any symptoms that your family is currently suffering from?",
+      "question3Note": "*If 2 or more immediate family members or cousins have the same disease",
+      "noneOfAbove": "None of the above",
+      "categories": {
+        "circulation": "Circulation",
+        "digestion": "Digestion & Metabolism",
+        "mental": "Mental & Mental Health",
+        "musculoskeletal": "Musculoskeletal",
+        "elderly": "Elderly Health",
+        "immune": "Immune & Sensory"
+      },
+      "conditions": {
+        "hypertension": "Hypertension",
+        "hyperlipidemia": "Hyperlipidemia",
+        "atrial_fibrillation": "Atrial Fibrillation (Arrhythmia)",
+        "type2_diabetes": "Type 2 Diabetes",
+        "hypothyroidism": "Hypothyroidism",
+        "hyperthyroidism": "Hyperthyroidism",
+        "pms": "Premenstrual Syndrome",
+        "chronic_hepatitis": "Chronic Hepatitis (B, C)",
+        "fatty_liver": "Fatty Liver",
+        "constipation": "Constipation",
+        "gerd": "Gastroesophageal Reflux Disease",
+        "obesity": "Obesity",
+        "insomnia": "Insomnia",
+        "stress_panic": "Stress/Panic Disorder",
+        "mild_cognitive": "Mild Cognitive Impairment",
+        "osteoarthritis": "(Degenerative) Arthritis",
+        "rheumatoid_arthritis": "Rheumatoid Arthritis",
+        "osteoporosis": "Osteoporosis",
+        "sarcopenia": "Sarcopenia",
+        "bph": "Benign Prostatic Hyperplasia",
+        "menopause": "Menopause",
+        "eczema": "Eczema (Atopy)",
+        "allergic_rhinitis": "Allergic Rhinitis",
+        "asthma": "Asthma",
+        "anemia": "Anemia",
+        "glaucoma": "Glaucoma",
+        "cataract": "Cataract",
+        "myocardial_infarction": "Myocardial Infarction",
+        "stroke": "Stroke",
+        "thyroid_disease": "Thyroid Disease",
+        "liver_cirrhosis": "Liver Cirrhosis",
+        "ulcerative_colitis": "Ulcerative Colitis",
+        "allergy_asthma": "Allergy & Asthma",
+        "hair_loss": "Hair Loss"
+      }
+    },
+    "complete": {
+      "message": "Chronic disease check completed",
+      "continueButton": "Continue diagnosing diet/lifestyle items",
+      "saveButton": "Save and Exit"
+    },
+    "dietSurvey": {
+      "options": {
+        "daily": "Daily (4+ days/week)",
+        "often": "Often (2-3 days/week)",
+        "sometimes": "Sometimes (1 day/week or less)",
+        "notEat": "Don't eat",
+        "notDrink": "Don't drink",
+        "almostAll": "Eat almost all",
+        "moreThanHalf": "Eat more than half",
+        "lessThanHalf": "Eat less than half",
+        "notAtAll": "Don't eat at all",
+        "notEat2": "Don't eat",
+        "sometimes2": "Sometimes (1-2 times/week)",
+        "often2": "Often (3-4 times/week)",
+        "daily2": "Daily (5+ times/week)"
+      },
+      "questions": {
+        "1": "Q How often do you eat flour-based foods?",
+        "1Description": "*Noodles, bread, sujebi, dumplings, hamburgers, pizza, pasta, ramen, fast food, etc.",
+        "2": "Q How often do you eat fried or stir-fried dishes?",
+        "3": "Q How often do you consume high-fat meals?",
+        "3Description": "*Fatty meats, organ meats, smoked meats, bacon, ham, butter, palm oil, coconut oil, etc.",
+        "4": "Q Do you enjoy drinking carbonated beverages (cola, cider, soda, etc.)?",
+        "4Description": "*Including ion drinks, sweetened milk, energy drinks, zero drinks, etc.",
+        "5": "Q How much soup-based food do you usually consume?",
+        "5Description": "*Stews, soups, tang, other noodles included",
+        "6": "Q How often do you consume protein meals?",
+        "6Description": "*Lean meats, eggs, tofu, beans, milk, fat-free red meats, etc.",
+        "7": "Q Do you frequently consume vegetable dishes and raw vegetables with every meal?",
+        "7Description": "*Kimchi excluded",
+        "8": "Q Do you often eat foods rich in essential fatty acids?",
+        "8Description": "*Nuts (almonds, walnuts, etc.), oily fish (mackerel, salmon, tuna, etc.), vegetable oils (perilla oil, olive oil, etc.)",
+        "9": "Q Do you habitually eat late-night snacks?",
+        "9Description": "*Late-night snacks after 8 PM after meals, late dinner",
+        "10": "Q Do you sometimes binge eat or overeat?",
+        "10Description": "*Also select if you eat one meal in a concentrated manner during the day",
+        "11": "Q What is your usual eating speed?",
+        "11Description": "What is your usual eating speed?",
+        "12": "Q Do you habitually eat snacks after meals?",
+        "12Description": "Do you habitually eat snacks after meals?",
+        "12Note": "*Cake, bread, cookies, rice cakes, cookies, ice cream, sweet drinks, mix coffee, etc.",
+        "13": "Q Do you eat meals at fixed times every day?",
+        "13Description": "Do you eat meals at fixed times every day?"
+      },
+      "additionalOptions": {
+        "none": "None",
+        "within5min": "Within 5 minutes",
+        "within10min": "Within 10 minutes",
+        "within15min": "Within 15 minutes",
+        "over15min": "Over 15 minutes",
+        "notAtAll": "Not at all",
+        "sometimesTrue": "Sometimes",
+        "oftenTrue": "Often",
+        "dailyTrue": "Daily"
+      }
+    }
   }
 }
 

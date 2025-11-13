@@ -81,6 +81,212 @@
       "deep": "깊다",
       "shallow": "얕게 보인다"
     }
+  },
+  "breathing": {
+    "title": "호흡 측정",
+    "breathingRateTitle": "호흡수 측정",
+    "breathingRateMeasurement": "호흡수 측정",
+    "breathingExerciseResult": "호흡 운동 결과",
+    "breathingStatistics": "호흡 통계",
+    "introDescription": "얼굴 인식을 통해 정확한 호흡수를 측정하고\n건강한 호흡 패턴을 관리해보세요",
+    "startMeasurement": "호흡 측정 시작",
+    "startMeasurementDescription": "얼굴을 인식하여 실시간으로 호흡수를 측정합니다",
+    "viewStatistics": "호흡 통계",
+    "viewStatisticsDescription": "일간, 주간, 월간 호흡 패턴을 확인하고 분석합니다",
+    "measurementWarnings": {
+      "title": "측정 시 주의사항",
+      "item1": "• 측정 중에는 움직임을 자제해주세요",
+      "item2": "• 밝은 곳에서 측정해주세요",
+      "item3": "• 카메라와 얼굴 사이의 거리를 적절히 유지해주세요",
+      "item4": "• 이 서비스는 의료기기가 아닙니다"
+    },
+    "guide": {
+      "title": "측정 시 움직임 자제하기",
+      "subtitle": "원 영역 안에 얼굴을 위치시키고\n밝은 곳에서 측정 해주세요",
+      "warning": "카메라와 얼굴이 너무 가까우면 측정 되지 않을 수 있어요",
+      "startButton": "측정 시작",
+      "dontShowAgain": "다시 보지 않기",
+      "close": "닫기"
+    },
+    "active": {
+      "measuring": "측정 중...",
+      "ready": "측정 준비 완료",
+      "instruction": "얼굴을 원형 프레임 안에 맞추고\n자연스럽게 호흡하세요",
+      "currentRate": "현재 호흡수",
+      "perMinute": "회/분",
+      "startButton": "측정 시작",
+      "stopButton": "측정 중지"
+    },
+    "result": {
+      "graphTitle": "얼마나 잘 따라했을까요?",
+      "myBreathing": "나의 호흡",
+      "targetBreathing": "목표 호흡",
+      "effectsTitle": "지속적인 호흡 관리의 효과",
+      "effects": {
+        "relaxation": "긴장 완화",
+        "heartFunction": "심장 기능 향상",
+        "respiratoryHealth": "호흡기 건강 향상",
+        "hyperventilationPrevention": "과호흡 예방",
+        "stressReduction": "스트레스 감소"
+      },
+      "infoText": "측정 결과가 딥메디를 통해 95% 이상의 정확도로 분석되었으며\nKCL 공인시험 성적을 받았습니다.",
+      "disclaimer": "※ 이 서비스는 의료기기가 아니며 질병의 진단, 치료, 예방 목적이 아닙니다.",
+      "completeButton": "분석 완료"
+    },
+    "statistics": {
+      "tabs": {
+        "daily": "일간",
+        "weekly": "주간",
+        "monthly": "월간"
+      },
+      "emptyState": {
+        "title": "최소 3일이상 호흡 측정을 해 주세요.",
+        "subtitle": "정확한 통계를 위해 더 많은 데이터가 필요합니다.",
+        "startButton": "측정 시작하기"
+      }
+    },
+    "prep": {
+      "step1": {
+        "title": "자리에 앉기",
+        "description": "측정하는 동안 자리에 앉아 차분하게 측정 해주세요"
+      },
+      "step2": {
+        "title": "얼굴을 원 안에 위치시키기",
+        "description": "얼굴을 원 안에 위치시키고 측정을 시작해주세요"
+      },
+      "dontShowAgain": "다시 보지 않기",
+      "next": "다음"
+    }
+  },
+  "cardiovascular": {
+    "title": "진단하기",
+    "risk": {
+      "title": "심혈관 건강 위험도",
+      "monthYear": "2025년 10월",
+      "weekDays": {
+        "sun": "일",
+        "mon": "월",
+        "tue": "화",
+        "wed": "수",
+        "thu": "목",
+        "fri": "금",
+        "sat": "토"
+      },
+      "message": "심혈관 건강 위험도를 정확히 측정하기 위해\n만성질환과 식/생활습관 항목을 자가진단해주세요",
+      "addDiagnosis": "자가진단 추가"
+    },
+    "diagnosis": {
+      "question1": "현재 3개월이상 약 복용 중이거나 관리 중인 상태는?",
+      "question1Note": "*없으면 하단의 '모두 해당 없음' 버튼을 클릭하세요",
+      "question3": "현재 가족이 앓고 있는 증상이 있나요?",
+      "question3Note": "*직계가족이나 사촌 중 같은 질병을 2명 이상 앓은 경우",
+      "noneOfAbove": "모두 해당 없음",
+      "categories": {
+        "circulation": "순환기능",
+        "digestion": "소화와 대사",
+        "mental": "마음과 정신건강",
+        "musculoskeletal": "근골격",
+        "elderly": "노년 건강",
+        "immune": "면역 및 감각"
+      },
+      "conditions": {
+        "hypertension": "고혈압",
+        "hyperlipidemia": "고지혈증",
+        "atrial_fibrillation": "심방세동(부정맥)",
+        "type2_diabetes": "2형당뇨",
+        "hypothyroidism": "갑상선기능저하증",
+        "hyperthyroidism": "갑상선기능항진증",
+        "pms": "월경전증후군",
+        "chronic_hepatitis": "만성간염(B형, C형)",
+        "fatty_liver": "지방간",
+        "constipation": "변비",
+        "gerd": "위식도역류성질환",
+        "obesity": "비만",
+        "insomnia": "불면증",
+        "stress_panic": "스트레스/공황장애",
+        "mild_cognitive": "경도 인지장애",
+        "osteoarthritis": "(퇴행성)관절염",
+        "rheumatoid_arthritis": "류마티스관절염",
+        "osteoporosis": "골다공증",
+        "sarcopenia": "근감소증",
+        "bph": "전립선비대증",
+        "menopause": "완경(폐경)",
+        "eczema": "습진(아토피)",
+        "allergic_rhinitis": "알러지성비염",
+        "asthma": "천식",
+        "anemia": "빈혈",
+        "glaucoma": "녹내장",
+        "cataract": "백내장",
+        "myocardial_infarction": "심근경색",
+        "stroke": "뇌졸중",
+        "thyroid_disease": "갑상선 질환",
+        "liver_cirrhosis": "간경병증",
+        "ulcerative_colitis": "궤양성대장염",
+        "allergy_asthma": "알레르기 및 천식",
+        "hair_loss": "탈모"
+      }
+    },
+    "complete": {
+      "message": "만성질환 체크가 완료되었어요",
+      "continueButton": "식/생활습관 항목 계속 진단하기",
+      "saveButton": "저장하고 종료하기"
+    },
+    "dietSurvey": {
+      "options": {
+        "daily": "매일(주 4일 이상)",
+        "often": "자주(주 2~3일)",
+        "sometimes": "가끔(주 1일 이하)",
+        "notEat": "먹지 않음",
+        "notDrink": "마시지 않음",
+        "almostAll": "거의 다 먹음",
+        "moreThanHalf": "절반 이상 먹음",
+        "lessThanHalf": "절반 미만 먹음",
+        "notAtAll": "전혀 먹지 않음",
+        "notEat2": "먹지 않음",
+        "sometimes2": "가끔(주 1~2회)",
+        "often2": "자주(주 3~4회)",
+        "daily2": "매일(주 5회 이상)"
+      },
+      "questions": {
+        "1": "Q 평소 밀가루 음식은 얼마나 먹나요?",
+        "1Description": "*국수, 빵, 수제비, 만두, 햄버거, 피자, 파스타, 라면 등의 패스트푸드 등",
+        "2": "Q 기름에 튀기거나 볶은 요리는 얼마나 자주 먹나요?",
+        "3": "Q 지방이 많은 식사는 얼마나 섭취하나요?",
+        "3Description": "*지방이 많은 육류, 육류의 내장, 훈제육, 베이컨, 햄, 버터, 팜유, 코코넛 오일 등",
+        "4": "Q 탄산음료(콜라, 사이다, 소다수 등)를 즐겨 마시나요?",
+        "4Description": "*그 외 이온 음료, 가당 우유, 에너지 음료, 제로 음료 포함",
+        "5": "Q 평소 국물 음식은 어느 정도 섭취하나요?",
+        "5Description": "*찌개, 국, 탕, 기타 면 포함",
+        "6": "Q 단백질 식단은 얼마나 섭취하나요?",
+        "6Description": "*살코기 육류, 달걀, 두부, 콩, 우유, 지방이 없는 붉은 육류 등",
+        "7": "Q 매끼마다 나물류·채소류(생 채소류)는 자주 섭취 하나요?",
+        "7Description": "*김치 제외",
+        "8": "Q 필수지방산이 풍부한 식품은 자주 먹나요?",
+        "8Description": "*견과류(아몬드, 호두 등), 등푸른생선(고등어, 연어, 삼치 등), 식물성 기름(들기름, 올리브오일 등)",
+        "9": "Q 습관적으로 야식을 먹는다",
+        "9Description": "*식사 후 저녁 8시 이후의 야식, 늦은 저녁 식사",
+        "10": "Q 폭식이나 과식하는 경우가 있다",
+        "10Description": "*하루 중 한끼를 몰아서 먹는 경우도 선택",
+        "11": "Q 평소 식사 속도는?",
+        "11Description": "평소 식사 속도는 어떠신가요?",
+        "12": "Q 식사 후 습관적으로 간식을 먹는다",
+        "12Description": "식사 후 습관적으로 간식을 드시나요?",
+        "12Note": "*케익, 빵, 과자, 떡, 쿠키, 아이스크림, 달달한 음료, 믹스 커피 등",
+        "13": "Q 식사는 매일 정해진 시간에 한다",
+        "13Description": "식사는 매일 정해진 시간에 하시나요?"
+      },
+      "additionalOptions": {
+        "none": "없음",
+        "within5min": "5분 이내",
+        "within10min": "10분 이내",
+        "within15min": "15분 이내",
+        "over15min": "15분 이상",
+        "notAtAll": "아니다",
+        "sometimesTrue": "가끔 그렇다",
+        "oftenTrue": "자주 그렇다",
+        "dailyTrue": "매일 그렇다"
+      }
+    }
   }
 }
 

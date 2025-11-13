@@ -10,10 +10,12 @@ import {
     TouchableOpacity,
     View,
 } from 'react-native';
+import { useTranslation } from '@/i18n';
 
 const { width, height } = Dimensions.get('window');
 
 export default function BreathingMeasurementResultScreen() {
+  const { t } = useTranslation();
   const breathingRate = 18; // 측정된 호흡수 (예시)
   const targetRate = 16; // 목표 호흡수 (예시)
 
@@ -38,7 +40,7 @@ export default function BreathingMeasurementResultScreen() {
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>호흡 운동 결과</Text>
+        <Text style={styles.headerTitle}>{t('breathing.breathingExerciseResult')}</Text>
         <View style={styles.headerRight} />
       </View>
 
@@ -46,7 +48,7 @@ export default function BreathingMeasurementResultScreen() {
       <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
         {/* 그래프 섹션 */}
         <View style={styles.graphSection}>
-          <Text style={styles.graphTitle}>얼마나 잘 따라했을까요?</Text>
+          <Text style={styles.graphTitle}>{t('breathing.result.graphTitle')}</Text>
           
           {/* 간단한 그래프 시뮬레이션 */}
           <View style={styles.graphContainer}>
@@ -59,11 +61,11 @@ export default function BreathingMeasurementResultScreen() {
             <View style={styles.graphLegend}>
               <View style={styles.legendItem}>
                 <View style={[styles.legendColor, { backgroundColor: '#3B82F6' }]} />
-                <Text style={styles.legendText}>나의 호흡</Text>
+                <Text style={styles.legendText}>{t('breathing.result.myBreathing')}</Text>
               </View>
               <View style={styles.legendItem}>
                 <View style={[styles.legendColor, { backgroundColor: '#F59E0B' }]} />
-                <Text style={styles.legendText}>목표 호흡</Text>
+                <Text style={styles.legendText}>{t('breathing.result.targetBreathing')}</Text>
               </View>
             </View>
           </View>
@@ -73,29 +75,29 @@ export default function BreathingMeasurementResultScreen() {
         <View style={styles.effectsSection}>
           <View style={styles.effectsHeader}>
             <Ionicons name="person" size={24} color="#8B5CF6" />
-            <Text style={styles.effectsTitle}>지속적인 호흡 관리의 효과</Text>
+            <Text style={styles.effectsTitle}>{t('breathing.result.effectsTitle')}</Text>
           </View>
           
           <View style={styles.effectsList}>
             <View style={styles.effectItem}>
               <Ionicons name="checkmark-circle" size={20} color="#10B981" />
-              <Text style={styles.effectText}>긴장 완화</Text>
+              <Text style={styles.effectText}>{t('breathing.result.effects.relaxation')}</Text>
             </View>
             <View style={styles.effectItem}>
               <Ionicons name="checkmark-circle" size={20} color="#10B981" />
-              <Text style={styles.effectText}>심장 기능 향상</Text>
+              <Text style={styles.effectText}>{t('breathing.result.effects.heartFunction')}</Text>
             </View>
             <View style={styles.effectItem}>
               <Ionicons name="checkmark-circle" size={20} color="#10B981" />
-              <Text style={styles.effectText}>호흡기 건강 향상</Text>
+              <Text style={styles.effectText}>{t('breathing.result.effects.respiratoryHealth')}</Text>
             </View>
             <View style={styles.effectItem}>
               <Ionicons name="checkmark-circle" size={20} color="#10B981" />
-              <Text style={styles.effectText}>과호흡 예방</Text>
+              <Text style={styles.effectText}>{t('breathing.result.effects.hyperventilationPrevention')}</Text>
             </View>
             <View style={styles.effectItem}>
               <Ionicons name="checkmark-circle" size={20} color="#10B981" />
-              <Text style={styles.effectText}>스트레스 감소</Text>
+              <Text style={styles.effectText}>{t('breathing.result.effects.stressReduction')}</Text>
             </View>
           </View>
         </View>
@@ -103,11 +105,10 @@ export default function BreathingMeasurementResultScreen() {
         {/* 측정 결과 정보 */}
         <View style={styles.infoSection}>
           <Text style={styles.infoText}>
-            측정 결과가 딥메디를 통해 95% 이상의 정확도로 분석되었으며{'\n'}
-            KCL 공인시험 성적을 받았습니다.
+            {t('breathing.result.infoText')}
           </Text>
           <Text style={styles.disclaimerText}>
-            ※ 이 서비스는 의료기기가 아니며 질병의 진단, 치료, 예방 목적이 아닙니다.
+            {t('breathing.result.disclaimer')}
           </Text>
         </View>
       </ScrollView>
@@ -115,7 +116,7 @@ export default function BreathingMeasurementResultScreen() {
       {/* 하단 버튼 */}
       <View style={styles.bottomContainer}>
         <TouchableOpacity style={styles.completeButton} onPress={handleComplete}>
-          <Text style={styles.completeButtonText}>분석 완료</Text>
+          <Text style={styles.completeButtonText}>{t('breathing.result.completeButton')}</Text>
         </TouchableOpacity>
       </View>
     </View>

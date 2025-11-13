@@ -25,6 +25,212 @@
     "title": "主页",
     "search": "搜索",
     "selfDiagnosis": "自我诊断"
+  },
+  "breathing": {
+    "title": "呼吸测量",
+    "breathingRateTitle": "呼吸频率测量",
+    "breathingRateMeasurement": "呼吸频率测量",
+    "breathingExerciseResult": "呼吸运动结果",
+    "breathingStatistics": "呼吸统计",
+    "introDescription": "通过面部识别测量准确的呼吸频率\n并管理健康的呼吸模式",
+    "startMeasurement": "开始呼吸测量",
+    "startMeasurementDescription": "通过识别面部实时测量呼吸频率",
+    "viewStatistics": "呼吸统计",
+    "viewStatisticsDescription": "查看和分析每日、每周、每月的呼吸模式",
+    "measurementWarnings": {
+      "title": "测量时注意事项",
+      "item1": "• 测量期间请保持静止",
+      "item2": "• 请在明亮的地方测量",
+      "item3": "• 请保持相机和面部之间的适当距离",
+      "item4": "• 此服务不是医疗设备"
+    },
+    "guide": {
+      "title": "测量时保持静止",
+      "subtitle": "将面部放置在圆形区域内\n并在明亮的地方测量",
+      "warning": "如果相机和面部太近，可能无法测量",
+      "startButton": "开始测量",
+      "dontShowAgain": "不再显示",
+      "close": "关闭"
+    },
+    "active": {
+      "measuring": "测量中...",
+      "ready": "准备测量",
+      "instruction": "将面部放在圆形框架内\n自然呼吸",
+      "currentRate": "当前呼吸频率",
+      "perMinute": "次/分钟",
+      "startButton": "开始测量",
+      "stopButton": "停止测量"
+    },
+    "result": {
+      "graphTitle": "您做得有多好？",
+      "myBreathing": "我的呼吸",
+      "targetBreathing": "目标呼吸",
+      "effectsTitle": "持续呼吸管理的效果",
+      "effects": {
+        "relaxation": "缓解紧张",
+        "heartFunction": "改善心脏功能",
+        "respiratoryHealth": "改善呼吸健康",
+        "hyperventilationPrevention": "预防过度换气",
+        "stressReduction": "减轻压力"
+      },
+      "infoText": "测量结果通过DeepMedi以95%以上的准确度进行分析\n并获得了KCL认证测试结果。",
+      "disclaimer": "※ 此服务不是医疗设备，不用于疾病的诊断、治疗或预防。",
+      "completeButton": "分析完成"
+    },
+    "statistics": {
+      "tabs": {
+        "daily": "每日",
+        "weekly": "每周",
+        "monthly": "每月"
+      },
+      "emptyState": {
+        "title": "请至少测量3天的呼吸。",
+        "subtitle": "需要更多数据以获得准确的统计信息。",
+        "startButton": "开始测量"
+      }
+    },
+    "prep": {
+      "step1": {
+        "title": "坐下",
+        "description": "测量期间请坐下并保持平静"
+      },
+      "step2": {
+        "title": "将面部放在圆圈内",
+        "description": "将面部放在圆圈内并开始测量"
+      },
+      "dontShowAgain": "不再显示",
+      "next": "下一步"
+    }
+  },
+  "cardiovascular": {
+    "title": "诊断",
+    "risk": {
+      "title": "心血管健康风险",
+      "monthYear": "2025年10月",
+      "weekDays": {
+        "sun": "日",
+        "mon": "一",
+        "tue": "二",
+        "wed": "三",
+        "thu": "四",
+        "fri": "五",
+        "sat": "六"
+      },
+      "message": "为了准确测量心血管健康风险，\n请自我诊断慢性疾病和饮食/生活习惯项目",
+      "addDiagnosis": "添加自我诊断"
+    },
+    "diagnosis": {
+      "question1": "您目前正在服用药物或管理超过3个月的状况是什么？",
+      "question1Note": "*如果没有，请点击下方的"全部不适用"按钮",
+      "question3": "您的家人目前是否有患有的症状？",
+      "question3Note": "*如果直系亲属或堂兄弟姐妹中有2人以上患有相同疾病",
+      "noneOfAbove": "全部不适用",
+      "categories": {
+        "circulation": "循环功能",
+        "digestion": "消化与代谢",
+        "mental": "心理与精神健康",
+        "musculoskeletal": "肌肉骨骼",
+        "elderly": "老年健康",
+        "immune": "免疫与感觉"
+      },
+      "conditions": {
+        "hypertension": "高血压",
+        "hyperlipidemia": "高脂血症",
+        "atrial_fibrillation": "心房颤动（心律失常）",
+        "type2_diabetes": "2型糖尿病",
+        "hypothyroidism": "甲状腺功能减退",
+        "hyperthyroidism": "甲状腺功能亢进",
+        "pms": "经前期综合征",
+        "chronic_hepatitis": "慢性肝炎（B型、C型）",
+        "fatty_liver": "脂肪肝",
+        "constipation": "便秘",
+        "gerd": "胃食管反流病",
+        "obesity": "肥胖",
+        "insomnia": "失眠",
+        "stress_panic": "压力/恐慌障碍",
+        "mild_cognitive": "轻度认知障碍",
+        "osteoarthritis": "（退行性）关节炎",
+        "rheumatoid_arthritis": "类风湿性关节炎",
+        "osteoporosis": "骨质疏松症",
+        "sarcopenia": "肌肉减少症",
+        "bph": "良性前列腺增生",
+        "menopause": "更年期（绝经）",
+        "eczema": "湿疹（特应性）",
+        "allergic_rhinitis": "过敏性鼻炎",
+        "asthma": "哮喘",
+        "anemia": "贫血",
+        "glaucoma": "青光眼",
+        "cataract": "白内障",
+        "myocardial_infarction": "心肌梗死",
+        "stroke": "中风",
+        "thyroid_disease": "甲状腺疾病",
+        "liver_cirrhosis": "肝硬化",
+        "ulcerative_colitis": "溃疡性结肠炎",
+        "allergy_asthma": "过敏和哮喘",
+        "hair_loss": "脱发"
+      }
+    },
+    "complete": {
+      "message": "慢性疾病检查已完成",
+      "continueButton": "继续诊断饮食/生活习惯项目",
+      "saveButton": "保存并退出"
+    },
+    "dietSurvey": {
+      "options": {
+        "daily": "每天（每周4天以上）",
+        "often": "经常（每周2-3天）",
+        "sometimes": "偶尔（每周1天或更少）",
+        "notEat": "不吃",
+        "notDrink": "不喝",
+        "almostAll": "几乎全吃",
+        "moreThanHalf": "吃一半以上",
+        "lessThanHalf": "吃不到一半",
+        "notAtAll": "完全不吃",
+        "notEat2": "不吃",
+        "sometimes2": "偶尔（每周1-2次）",
+        "often2": "经常（每周3-4次）",
+        "daily2": "每天（每周5次以上）"
+      },
+      "questions": {
+        "1": "Q 您平时吃多少面粉类食物？",
+        "1Description": "*面条、面包、面片、饺子、汉堡、披萨、意大利面、拉面等快餐等",
+        "2": "Q 您多久吃一次油炸或炒制的菜肴？",
+        "3": "Q 您摄入多少高脂肪餐食？",
+        "3Description": "*高脂肪肉类、动物内脏、熏肉、培根、火腿、黄油、棕榈油、椰子油等",
+        "4": "Q 您喜欢喝碳酸饮料（可乐、汽水、苏打水等）吗？",
+        "4Description": "*包括离子饮料、加糖牛奶、能量饮料、零卡饮料等",
+        "5": "Q 您平时摄入多少汤类食物？",
+        "5Description": "*包括炖菜、汤、汤类、其他面条",
+        "6": "Q 您摄入多少蛋白质餐食？",
+        "6Description": "*瘦肉、鸡蛋、豆腐、豆类、牛奶、无脂肪红肉等",
+        "7": "Q 您每餐都经常摄入蔬菜类和生蔬菜类吗？",
+        "7Description": "*不包括泡菜",
+        "8": "Q 您经常吃富含必需脂肪酸的食物吗？",
+        "8Description": "*坚果类（杏仁、核桃等）、深海鱼（鲭鱼、三文鱼、金枪鱼等）、植物油（紫苏油、橄榄油等）",
+        "9": "Q 您习惯性地吃夜宵",
+        "9Description": "*饭后晚上8点后的夜宵、晚餐较晚",
+        "10": "Q 您有时会暴食或过度进食",
+        "10Description": "*如果一天中集中吃一餐的情况也请选择",
+        "11": "Q 您平时的用餐速度是？",
+        "11Description": "您平时的用餐速度如何？",
+        "12": "Q 您饭后习惯性地吃零食",
+        "12Description": "您饭后习惯性地吃零食吗？",
+        "12Note": "*蛋糕、面包、饼干、年糕、曲奇、冰淇淋、甜饮料、混合咖啡等",
+        "13": "Q 您每天在固定时间用餐",
+        "13Description": "您每天在固定时间用餐吗？"
+      },
+      "additionalOptions": {
+        "none": "没有",
+        "within5min": "5分钟以内",
+        "within10min": "10分钟以内",
+        "within15min": "15分钟以内",
+        "over15min": "15分钟以上",
+        "notAtAll": "不是",
+        "sometimesTrue": "偶尔是",
+        "oftenTrue": "经常是",
+        "dailyTrue": "每天是"
+      }
+    }
   }
 }
 

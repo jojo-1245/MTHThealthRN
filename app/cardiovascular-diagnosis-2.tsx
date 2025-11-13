@@ -10,6 +10,7 @@ import {
     TouchableOpacity,
     View,
 } from 'react-native';
+import { useTranslation } from '@/i18n';
 
 const { width, height } = Dimensions.get('window');
 
@@ -20,26 +21,27 @@ interface Condition {
 }
 
 export default function CardiovascularDiagnosis2Screen() {
+  const { t } = useTranslation();
   const [selectedConditions, setSelectedConditions] = useState<string[]>([]);
 
   const conditions: Condition[] = [
     // 근골격
-    { id: 'osteoarthritis', name: '(퇴행성)관절염', category: '근골격' },
-    { id: 'rheumatoid_arthritis', name: '류마티스관절염', category: '근골격' },
-    { id: 'osteoporosis', name: '골다공증', category: '근골격' },
-    { id: 'sarcopenia', name: '근감소증', category: '근골격' },
+    { id: 'osteoarthritis', name: t('cardiovascular.diagnosis.conditions.osteoarthritis'), category: t('cardiovascular.diagnosis.categories.musculoskeletal') },
+    { id: 'rheumatoid_arthritis', name: t('cardiovascular.diagnosis.conditions.rheumatoid_arthritis'), category: t('cardiovascular.diagnosis.categories.musculoskeletal') },
+    { id: 'osteoporosis', name: t('cardiovascular.diagnosis.conditions.osteoporosis'), category: t('cardiovascular.diagnosis.categories.musculoskeletal') },
+    { id: 'sarcopenia', name: t('cardiovascular.diagnosis.conditions.sarcopenia'), category: t('cardiovascular.diagnosis.categories.musculoskeletal') },
     
     // 노년 건강
-    { id: 'bph', name: '전립선비대증', category: '노년 건강' },
-    { id: 'menopause', name: '완경(폐경)', category: '노년 건강' },
+    { id: 'bph', name: t('cardiovascular.diagnosis.conditions.bph'), category: t('cardiovascular.diagnosis.categories.elderly') },
+    { id: 'menopause', name: t('cardiovascular.diagnosis.conditions.menopause'), category: t('cardiovascular.diagnosis.categories.elderly') },
     
     // 면역 및 감각
-    { id: 'eczema', name: '습진(아토피)', category: '면역 및 감각' },
-    { id: 'allergic_rhinitis', name: '알러지성비염', category: '면역 및 감각' },
-    { id: 'asthma', name: '천식', category: '면역 및 감각' },
-    { id: 'anemia', name: '빈혈', category: '면역 및 감각' },
-    { id: 'glaucoma', name: '녹내장', category: '면역 및 감각' },
-    { id: 'cataract', name: '백내장', category: '면역 및 감각' },
+    { id: 'eczema', name: t('cardiovascular.diagnosis.conditions.eczema'), category: t('cardiovascular.diagnosis.categories.immune') },
+    { id: 'allergic_rhinitis', name: t('cardiovascular.diagnosis.conditions.allergic_rhinitis'), category: t('cardiovascular.diagnosis.categories.immune') },
+    { id: 'asthma', name: t('cardiovascular.diagnosis.conditions.asthma'), category: t('cardiovascular.diagnosis.categories.immune') },
+    { id: 'anemia', name: t('cardiovascular.diagnosis.conditions.anemia'), category: t('cardiovascular.diagnosis.categories.immune') },
+    { id: 'glaucoma', name: t('cardiovascular.diagnosis.conditions.glaucoma'), category: t('cardiovascular.diagnosis.categories.immune') },
+    { id: 'cataract', name: t('cardiovascular.diagnosis.conditions.cataract'), category: t('cardiovascular.diagnosis.categories.immune') },
   ];
 
   const handleBack = () => {
@@ -109,7 +111,7 @@ export default function CardiovascularDiagnosis2Screen() {
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>진단하기</Text>
+        <Text style={styles.headerTitle}>{t('cardiovascular.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
@@ -121,18 +123,18 @@ export default function CardiovascularDiagnosis2Screen() {
             <Ionicons name="medical" size={32} color="#8B5CF6" />
           </View>
           <Text style={styles.questionText}>
-            현재 3개월이상 약 복용 중이거나 관리 중인 상태는?
+            {t('cardiovascular.diagnosis.question1')}
           </Text>
           <Text style={styles.questionNote}>
-            *없으면 하단의 '모두 해당 없음' 버튼을 클릭하세요
+            {t('cardiovascular.diagnosis.question1Note')}
           </Text>
         </View>
 
         {/* 질환 카테고리들 */}
         <View style={styles.categoriesContainer}>
-          {renderCategory('근골격')}
-          {renderCategory('노년 건강')}
-          {renderCategory('면역 및 감각')}
+          {renderCategory(t('cardiovascular.diagnosis.categories.musculoskeletal'))}
+          {renderCategory(t('cardiovascular.diagnosis.categories.elderly'))}
+          {renderCategory(t('cardiovascular.diagnosis.categories.immune'))}
         </View>
 
         {/* 모두 해당 없음 버튼 */}
@@ -140,14 +142,14 @@ export default function CardiovascularDiagnosis2Screen() {
           style={styles.noneButton} 
           onPress={handleNoneOfAbove}
         >
-          <Text style={styles.noneButtonText}>모두 해당 없음</Text>
+          <Text style={styles.noneButtonText}>{t('cardiovascular.diagnosis.noneOfAbove')}</Text>
         </TouchableOpacity>
       </ScrollView>
 
       {/* 하단 네비게이션 */}
       <View style={styles.bottomContainer}>
         <TouchableOpacity style={styles.prevButton} onPress={handleBack}>
-          <Text style={styles.prevButtonText}>이전</Text>
+          <Text style={styles.prevButtonText}>{t('common.previous')}</Text>
         </TouchableOpacity>
         
         <View style={styles.pageIndicator}>
@@ -155,7 +157,7 @@ export default function CardiovascularDiagnosis2Screen() {
         </View>
         
         <TouchableOpacity style={styles.nextButton} onPress={handleNext}>
-          <Text style={styles.nextButtonText}>다음</Text>
+          <Text style={styles.nextButtonText}>{t('common.next')}</Text>
         </TouchableOpacity>
       </View>
     </View>

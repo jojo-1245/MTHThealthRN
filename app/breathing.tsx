@@ -10,10 +10,13 @@ import {
     TouchableOpacity,
     View,
 } from 'react-native';
+import { useTranslation } from '@/i18n';
 
 const { width, height } = Dimensions.get('window');
 
 export default function BreathingScreen() {
+  const { t } = useTranslation();
+  
   const handleBack = () => {
     router.back();
   };
@@ -35,7 +38,7 @@ export default function BreathingScreen() {
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>호흡 측정</Text>
+        <Text style={styles.headerTitle}>{t('breathing.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
@@ -46,10 +49,9 @@ export default function BreathingScreen() {
           <View style={styles.introIcon}>
             <Ionicons name="pulse" size={60} color="#8B5CF6" />
           </View>
-          <Text style={styles.introTitle}>호흡수 측정</Text>
+          <Text style={styles.introTitle}>{t('breathing.breathingRateTitle')}</Text>
           <Text style={styles.introDescription}>
-            얼굴 인식을 통해 정확한 호흡수를 측정하고{'\n'}
-            건강한 호흡 패턴을 관리해보세요
+            {t('breathing.introDescription')}
           </Text>
         </View>
 
@@ -59,10 +61,10 @@ export default function BreathingScreen() {
           <TouchableOpacity style={styles.card} onPress={handleStartMeasurement}>
             <View style={styles.cardHeader}>
               <Ionicons name="play-circle" size={32} color="#8B5CF6" />
-              <Text style={styles.cardTitle}>호흡 측정 시작</Text>
+              <Text style={styles.cardTitle}>{t('breathing.startMeasurement')}</Text>
             </View>
             <Text style={styles.cardDescription}>
-              얼굴을 인식하여 실시간으로 호흡수를 측정합니다
+              {t('breathing.startMeasurementDescription')}
             </Text>
             <View style={styles.cardArrow}>
               <Ionicons name="chevron-forward" size={20} color="#9CA3AF" />
@@ -73,10 +75,10 @@ export default function BreathingScreen() {
           <TouchableOpacity style={styles.card} onPress={handleViewStatistics}>
             <View style={styles.cardHeader}>
               <Ionicons name="bar-chart" size={32} color="#8B5CF6" />
-              <Text style={styles.cardTitle}>호흡 통계</Text>
+              <Text style={styles.cardTitle}>{t('breathing.viewStatistics')}</Text>
             </View>
             <Text style={styles.cardDescription}>
-              일간, 주간, 월간 호흡 패턴을 확인하고 분석합니다
+              {t('breathing.viewStatisticsDescription')}
             </Text>
             <View style={styles.cardArrow}>
               <Ionicons name="chevron-forward" size={20} color="#9CA3AF" />
@@ -88,13 +90,13 @@ export default function BreathingScreen() {
         <View style={styles.warningSection}>
           <View style={styles.warningHeader}>
             <Ionicons name="information-circle" size={20} color="#3B82F6" />
-            <Text style={styles.warningTitle}>측정 시 주의사항</Text>
+            <Text style={styles.warningTitle}>{t('breathing.measurementWarnings.title')}</Text>
           </View>
           <View style={styles.warningList}>
-            <Text style={styles.warningItem}>• 측정 중에는 움직임을 자제해주세요</Text>
-            <Text style={styles.warningItem}>• 밝은 곳에서 측정해주세요</Text>
-            <Text style={styles.warningItem}>• 카메라와 얼굴 사이의 거리를 적절히 유지해주세요</Text>
-            <Text style={styles.warningItem}>• 이 서비스는 의료기기가 아닙니다</Text>
+            <Text style={styles.warningItem}>{t('breathing.measurementWarnings.item1')}</Text>
+            <Text style={styles.warningItem}>{t('breathing.measurementWarnings.item2')}</Text>
+            <Text style={styles.warningItem}>{t('breathing.measurementWarnings.item3')}</Text>
+            <Text style={styles.warningItem}>{t('breathing.measurementWarnings.item4')}</Text>
           </View>
         </View>
       </ScrollView>

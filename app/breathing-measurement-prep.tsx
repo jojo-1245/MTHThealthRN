@@ -7,8 +7,10 @@ import {
     TouchableOpacity,
     View,
 } from 'react-native';
+import { useTranslation } from '@/i18n';
 
 export default function BreathingMeasurementPrep() {
+  const { t } = useTranslation();
   const [currentStep, setCurrentStep] = useState(1);
   const [dontShowAgain, setDontShowAgain] = useState(false);
 
@@ -57,9 +59,9 @@ export default function BreathingMeasurementPrep() {
       </View>
       
       <View style={styles.instructionContainer}>
-        <Text style={styles.mainInstruction}>자리에 앉기</Text>
+        <Text style={styles.mainInstruction}>{t('breathing.prep.step1.title')}</Text>
         <Text style={styles.subInstruction}>
-          측정하는 동안 자리에 앉아 차분하게 측정 해주세요
+          {t('breathing.prep.step1.description')}
         </Text>
       </View>
     </View>
@@ -92,9 +94,9 @@ export default function BreathingMeasurementPrep() {
       </View>
       
       <View style={styles.instructionContainer}>
-        <Text style={styles.mainInstruction}>얼굴을 원 안에 위치시키기</Text>
+        <Text style={styles.mainInstruction}>{t('breathing.prep.step2.title')}</Text>
         <Text style={styles.subInstruction}>
-          얼굴을 원 안에 위치시키고 측정을 시작해주세요
+          {t('breathing.prep.step2.description')}
         </Text>
       </View>
     </View>
@@ -107,7 +109,7 @@ export default function BreathingMeasurementPrep() {
         <TouchableOpacity onPress={handleBack} style={styles.backButton}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>호흡 측정</Text>
+        <Text style={styles.headerTitle}>{t('breathing.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
@@ -127,11 +129,11 @@ export default function BreathingMeasurementPrep() {
       {/* 하단 버튼들 */}
       <View style={styles.bottomButtonContainer}>
         <TouchableOpacity style={styles.dontShowButton} onPress={handleDontShowAgain}>
-          <Text style={styles.dontShowButtonText}>다시 보지 않기</Text>
+          <Text style={styles.dontShowButtonText}>{t('breathing.prep.dontShowAgain')}</Text>
         </TouchableOpacity>
         
         <TouchableOpacity style={styles.nextButton} onPress={handleNext}>
-          <Text style={styles.nextButtonText}>다음</Text>
+          <Text style={styles.nextButtonText}>{t('breathing.prep.next')}</Text>
         </TouchableOpacity>
       </View>
     </View>

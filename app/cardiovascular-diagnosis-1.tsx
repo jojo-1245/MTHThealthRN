@@ -10,6 +10,7 @@ import {
     TouchableOpacity,
     View,
 } from 'react-native';
+import { useTranslation } from '@/i18n';
 
 const { width, height } = Dimensions.get('window');
 
@@ -20,29 +21,30 @@ interface Condition {
 }
 
 export default function CardiovascularDiagnosis1Screen() {
+  const { t } = useTranslation();
   const [selectedConditions, setSelectedConditions] = useState<string[]>([]);
 
   const conditions: Condition[] = [
     // 순환기능
-    { id: 'hypertension', name: '고혈압', category: '순환기능' },
-    { id: 'hyperlipidemia', name: '고지혈증', category: '순환기능' },
-    { id: 'atrial_fibrillation', name: '심방세동(부정맥)', category: '순환기능' },
+    { id: 'hypertension', name: t('cardiovascular.diagnosis.conditions.hypertension'), category: t('cardiovascular.diagnosis.categories.circulation') },
+    { id: 'hyperlipidemia', name: t('cardiovascular.diagnosis.conditions.hyperlipidemia'), category: t('cardiovascular.diagnosis.categories.circulation') },
+    { id: 'atrial_fibrillation', name: t('cardiovascular.diagnosis.conditions.atrial_fibrillation'), category: t('cardiovascular.diagnosis.categories.circulation') },
     
     // 소화와 대사
-    { id: 'type2_diabetes', name: '2형당뇨', category: '소화와 대사' },
-    { id: 'hypothyroidism', name: '갑상선기능저하증', category: '소화와 대사' },
-    { id: 'hyperthyroidism', name: '갑상선기능항진증', category: '소화와 대사' },
-    { id: 'pms', name: '월경전증후군', category: '소화와 대사' },
-    { id: 'chronic_hepatitis', name: '만성간염(B형, C형)', category: '소화와 대사' },
-    { id: 'fatty_liver', name: '지방간', category: '소화와 대사' },
-    { id: 'constipation', name: '변비', category: '소화와 대사' },
-    { id: 'gerd', name: '위식도역류성질환', category: '소화와 대사' },
-    { id: 'obesity', name: '비만', category: '소화와 대사' },
+    { id: 'type2_diabetes', name: t('cardiovascular.diagnosis.conditions.type2_diabetes'), category: t('cardiovascular.diagnosis.categories.digestion') },
+    { id: 'hypothyroidism', name: t('cardiovascular.diagnosis.conditions.hypothyroidism'), category: t('cardiovascular.diagnosis.categories.digestion') },
+    { id: 'hyperthyroidism', name: t('cardiovascular.diagnosis.conditions.hyperthyroidism'), category: t('cardiovascular.diagnosis.categories.digestion') },
+    { id: 'pms', name: t('cardiovascular.diagnosis.conditions.pms'), category: t('cardiovascular.diagnosis.categories.digestion') },
+    { id: 'chronic_hepatitis', name: t('cardiovascular.diagnosis.conditions.chronic_hepatitis'), category: t('cardiovascular.diagnosis.categories.digestion') },
+    { id: 'fatty_liver', name: t('cardiovascular.diagnosis.conditions.fatty_liver'), category: t('cardiovascular.diagnosis.categories.digestion') },
+    { id: 'constipation', name: t('cardiovascular.diagnosis.conditions.constipation'), category: t('cardiovascular.diagnosis.categories.digestion') },
+    { id: 'gerd', name: t('cardiovascular.diagnosis.conditions.gerd'), category: t('cardiovascular.diagnosis.categories.digestion') },
+    { id: 'obesity', name: t('cardiovascular.diagnosis.conditions.obesity'), category: t('cardiovascular.diagnosis.categories.digestion') },
     
     // 마음과 정신건강
-    { id: 'insomnia', name: '불면증', category: '마음과 정신건강' },
-    { id: 'stress_panic', name: '스트레스/공황장애', category: '마음과 정신건강' },
-    { id: 'mild_cognitive', name: '경도 인지장애', category: '마음과 정신건강' },
+    { id: 'insomnia', name: t('cardiovascular.diagnosis.conditions.insomnia'), category: t('cardiovascular.diagnosis.categories.mental') },
+    { id: 'stress_panic', name: t('cardiovascular.diagnosis.conditions.stress_panic'), category: t('cardiovascular.diagnosis.categories.mental') },
+    { id: 'mild_cognitive', name: t('cardiovascular.diagnosis.conditions.mild_cognitive'), category: t('cardiovascular.diagnosis.categories.mental') },
   ];
 
   const handleBack = () => {
@@ -112,7 +114,7 @@ export default function CardiovascularDiagnosis1Screen() {
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>진단하기</Text>
+        <Text style={styles.headerTitle}>{t('cardiovascular.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
@@ -124,18 +126,18 @@ export default function CardiovascularDiagnosis1Screen() {
             <Ionicons name="medical" size={32} color="#8B5CF6" />
           </View>
           <Text style={styles.questionText}>
-            현재 3개월이상 약 복용 중이거나 관리 중인 상태는?
+            {t('cardiovascular.diagnosis.question1')}
           </Text>
           <Text style={styles.questionNote}>
-            *없으면 하단의 '모두 해당 없음' 버튼을 클릭하세요
+            {t('cardiovascular.diagnosis.question1Note')}
           </Text>
         </View>
 
         {/* 질환 카테고리들 */}
         <View style={styles.categoriesContainer}>
-          {renderCategory('순환기능')}
-          {renderCategory('소화와 대사')}
-          {renderCategory('마음과 정신건강')}
+          {renderCategory(t('cardiovascular.diagnosis.categories.circulation'))}
+          {renderCategory(t('cardiovascular.diagnosis.categories.digestion'))}
+          {renderCategory(t('cardiovascular.diagnosis.categories.mental'))}
         </View>
 
         {/* 모두 해당 없음 버튼 */}
@@ -143,7 +145,7 @@ export default function CardiovascularDiagnosis1Screen() {
           style={styles.noneButton} 
           onPress={handleNoneOfAbove}
         >
-          <Text style={styles.noneButtonText}>모두 해당 없음</Text>
+          <Text style={styles.noneButtonText}>{t('cardiovascular.diagnosis.noneOfAbove')}</Text>
         </TouchableOpacity>
       </ScrollView>
 
@@ -153,7 +155,7 @@ export default function CardiovascularDiagnosis1Screen() {
           <Text style={styles.pageText}>1/3</Text>
         </View>
         <TouchableOpacity style={styles.nextButton} onPress={handleNext}>
-          <Text style={styles.nextButtonText}>다음</Text>
+          <Text style={styles.nextButtonText}>{t('common.next')}</Text>
         </TouchableOpacity>
       </View>
     </View>

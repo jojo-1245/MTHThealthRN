@@ -10,17 +10,19 @@ import {
     TouchableOpacity,
     View,
 } from 'react-native';
+import { useTranslation } from '@/i18n';
 
 const { width, height } = Dimensions.get('window');
 
 export default function CardiovascularDietSurvey11Screen() {
-  const [selectedOption, setSelectedOption] = useState('10분 이내');
+  const { t } = useTranslation();
+  const [selectedOption, setSelectedOption] = useState(t('cardiovascular.dietSurvey.additionalOptions.within10min'));
 
   const options = [
-    '5분 이내',
-    '10분 이내',
-    '15분 이내',
-    '15분 이상',
+    t('cardiovascular.dietSurvey.additionalOptions.within5min'),
+    t('cardiovascular.dietSurvey.additionalOptions.within10min'),
+    t('cardiovascular.dietSurvey.additionalOptions.within15min'),
+    t('cardiovascular.dietSurvey.additionalOptions.over15min'),
   ];
 
   const handleBack = () => {
@@ -44,7 +46,7 @@ export default function CardiovascularDietSurvey11Screen() {
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>진단하기</Text>
+        <Text style={styles.headerTitle}>{t('cardiovascular.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
@@ -61,10 +63,10 @@ export default function CardiovascularDietSurvey11Screen() {
         <View style={styles.questionContainer}>
           <View style={styles.questionBox}>
             <Text style={styles.questionText}>
-              Q 평소 식사 속도는?
+              {t('cardiovascular.dietSurvey.questions.11')}
             </Text>
             <Text style={styles.questionDescription}>
-              평소 식사 속도는 어떠신가요?
+              {t('cardiovascular.dietSurvey.questions.11Description')}
             </Text>
           </View>
         </View>
@@ -102,10 +104,10 @@ export default function CardiovascularDietSurvey11Screen() {
         
         <View style={styles.buttonContainer}>
           <TouchableOpacity style={styles.previousButton} onPress={handleBack}>
-            <Text style={styles.previousButtonText}>이전</Text>
+            <Text style={styles.previousButtonText}>{t('common.previous')}</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.nextButton} onPress={handleNext}>
-            <Text style={styles.nextButtonText}>다음</Text>
+            <Text style={styles.nextButtonText}>{t('common.next')}</Text>
           </TouchableOpacity>
         </View>
       </View>

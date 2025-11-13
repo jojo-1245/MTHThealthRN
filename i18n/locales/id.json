@@ -25,6 +25,212 @@
     "title": "Utama",
     "search": "Cari",
     "selfDiagnosis": "Diagnosis Mandiri"
+  },
+  "breathing": {
+    "title": "Pengukuran Pernapasan",
+    "breathingRateTitle": "Pengukuran Laju Pernapasan",
+    "breathingRateMeasurement": "Pengukuran Laju Pernapasan",
+    "breathingExerciseResult": "Hasil Latihan Pernapasan",
+    "breathingStatistics": "Statistik Pernapasan",
+    "introDescription": "Ukur laju pernapasan yang akurat melalui pengenalan wajah\ndan kelola pola pernapasan yang sehat",
+    "startMeasurement": "Mulai Pengukuran Pernapasan",
+    "startMeasurementDescription": "Ukur laju pernapasan secara real-time dengan mengenali wajah Anda",
+    "viewStatistics": "Statistik Pernapasan",
+    "viewStatisticsDescription": "Periksa dan analisis pola pernapasan harian, mingguan, dan bulanan",
+    "measurementWarnings": {
+      "title": "Peringatan Saat Pengukuran",
+      "item1": "• Harap hindari gerakan selama pengukuran",
+      "item2": "• Harap ukur di tempat yang terang",
+      "item3": "• Harap pertahankan jarak yang tepat antara kamera dan wajah",
+      "item4": "• Layanan ini bukan perangkat medis"
+    },
+    "guide": {
+      "title": "Hindari Gerakan Saat Pengukuran",
+      "subtitle": "Posisikan wajah Anda dalam area melingkar\ndan ukur di tempat yang terang",
+      "warning": "Jika kamera dan wajah terlalu dekat, pengukuran mungkin tidak berfungsi",
+      "startButton": "Mulai Pengukuran",
+      "dontShowAgain": "Jangan Tampilkan Lagi",
+      "close": "Tutup"
+    },
+    "active": {
+      "measuring": "Mengukur...",
+      "ready": "Siap Mengukur",
+      "instruction": "Posisikan wajah Anda dalam bingkai melingkar\ndan bernapaslah secara alami",
+      "currentRate": "Laju Pernapasan Saat Ini",
+      "perMinute": "kali/menit",
+      "startButton": "Mulai Pengukuran",
+      "stopButton": "Hentikan Pengukuran"
+    },
+    "result": {
+      "graphTitle": "Seberapa baik Anda mengikuti?",
+      "myBreathing": "Pernapasan Saya",
+      "targetBreathing": "Pernapasan Target",
+      "effectsTitle": "Efek Manajemen Pernapasan Berkelanjutan",
+      "effects": {
+        "relaxation": "Meredakan Ketegangan",
+        "heartFunction": "Peningkatan Fungsi Jantung",
+        "respiratoryHealth": "Peningkatan Kesehatan Pernapasan",
+        "hyperventilationPrevention": "Pencegahan Hiperventilasi",
+        "stressReduction": "Pengurangan Stres"
+      },
+      "infoText": "Hasil pengukuran dianalisis dengan akurasi lebih dari 95% melalui DeepMedi\ndan menerima hasil uji sertifikasi KCL.",
+      "disclaimer": "※ Layanan ini bukan perangkat medis dan tidak dimaksudkan untuk diagnosis, pengobatan, atau pencegahan penyakit.",
+      "completeButton": "Analisis Selesai"
+    },
+    "statistics": {
+      "tabs": {
+        "daily": "Harian",
+        "weekly": "Mingguan",
+        "monthly": "Bulanan"
+      },
+      "emptyState": {
+        "title": "Harap ukur pernapasan setidaknya selama 3 hari.",
+        "subtitle": "Lebih banyak data diperlukan untuk statistik yang akurat.",
+        "startButton": "Mulai Pengukuran"
+      }
+    },
+    "prep": {
+      "step1": {
+        "title": "Duduk",
+        "description": "Harap duduk dan ukur dengan tenang selama pengukuran"
+      },
+      "step2": {
+        "title": "Posisikan Wajah dalam Lingkaran",
+        "description": "Posisikan wajah Anda dalam lingkaran dan mulai pengukuran"
+      },
+      "dontShowAgain": "Jangan Tampilkan Lagi",
+      "next": "Selanjutnya"
+    }
+  },
+  "cardiovascular": {
+    "title": "Diagnosis",
+    "risk": {
+      "title": "Risiko Kesehatan Kardiovaskular",
+      "monthYear": "Oktober 2025",
+      "weekDays": {
+        "sun": "Min",
+        "mon": "Sen",
+        "tue": "Sel",
+        "wed": "Rab",
+        "thu": "Kam",
+        "fri": "Jum",
+        "sat": "Sab"
+      },
+      "message": "Untuk mengukur risiko kesehatan kardiovaskular secara akurat,\nsilakan lakukan diagnosis mandiri untuk penyakit kronis dan item diet/gaya hidup",
+      "addDiagnosis": "Tambah Diagnosis Mandiri"
+    },
+    "diagnosis": {
+      "question1": "Kondisi apa yang saat ini sedang Anda minum obat atau kelola selama lebih dari 3 bulan?",
+      "question1Note": "*Jika tidak ada, klik tombol 'Tidak ada yang sesuai' di bawah",
+      "question3": "Apakah ada gejala yang sedang diderita keluarga Anda saat ini?",
+      "question3Note": "*Jika 2 atau lebih anggota keluarga langsung atau sepupu menderita penyakit yang sama",
+      "noneOfAbove": "Tidak ada yang sesuai",
+      "categories": {
+        "circulation": "Sirkulasi",
+        "digestion": "Pencernaan & Metabolisme",
+        "mental": "Mental & Kesehatan Mental",
+        "musculoskeletal": "Musculoskeletal",
+        "elderly": "Kesehatan Lansia",
+        "immune": "Imun & Sensorik"
+      },
+      "conditions": {
+        "hypertension": "Hipertensi",
+        "hyperlipidemia": "Hiperlipidemia",
+        "atrial_fibrillation": "Fibrilasi Atrium (Aritmia)",
+        "type2_diabetes": "Diabetes Tipe 2",
+        "hypothyroidism": "Hipotiroidisme",
+        "hyperthyroidism": "Hipertiroidisme",
+        "pms": "Sindrom Pramenstruasi",
+        "chronic_hepatitis": "Hepatitis Kronis (B, C)",
+        "fatty_liver": "Hati Berlemak",
+        "constipation": "Sembelit",
+        "gerd": "Penyakit Refluks Gastroesofagus",
+        "obesity": "Obesitas",
+        "insomnia": "Insomnia",
+        "stress_panic": "Stres/Gangguan Panik",
+        "mild_cognitive": "Gangguan Kognitif Ringan",
+        "osteoarthritis": "(Degeneratif) Artritis",
+        "rheumatoid_arthritis": "Artritis Reumatoid",
+        "osteoporosis": "Osteoporosis",
+        "sarcopenia": "Sarkopenia",
+        "bph": "Hiperplasia Prostat Jinak",
+        "menopause": "Menopause",
+        "eczema": "Eksim (Atopi)",
+        "allergic_rhinitis": "Rinitis Alergi",
+        "asthma": "Asma",
+        "anemia": "Anemia",
+        "glaucoma": "Glaukoma",
+        "cataract": "Katarak",
+        "myocardial_infarction": "Infark Miokard",
+        "stroke": "Stroke",
+        "thyroid_disease": "Penyakit Tiroid",
+        "liver_cirrhosis": "Sirosis Hati",
+        "ulcerative_colitis": "Kolitis Ulseratif",
+        "allergy_asthma": "Alergi & Asma",
+        "hair_loss": "Rambut Rontok"
+      }
+    },
+    "complete": {
+      "message": "Pemeriksaan penyakit kronis selesai",
+      "continueButton": "Lanjutkan mendiagnosis item diet/gaya hidup",
+      "saveButton": "Simpan dan Keluar"
+    },
+    "dietSurvey": {
+      "options": {
+        "daily": "Setiap hari (4+ hari/minggu)",
+        "often": "Sering (2-3 hari/minggu)",
+        "sometimes": "Kadang-kadang (1 hari/minggu atau kurang)",
+        "notEat": "Tidak makan",
+        "notDrink": "Tidak minum",
+        "almostAll": "Makan hampir semua",
+        "moreThanHalf": "Makan lebih dari setengah",
+        "lessThanHalf": "Makan kurang dari setengah",
+        "notAtAll": "Tidak makan sama sekali",
+        "notEat2": "Tidak makan",
+        "sometimes2": "Kadang-kadang (1-2 kali/minggu)",
+        "often2": "Sering (3-4 kali/minggu)",
+        "daily2": "Setiap hari (5+ kali/minggu)"
+      },
+      "questions": {
+        "1": "Q Seberapa sering Anda makan makanan berbahan tepung?",
+        "1Description": "*Mie, roti, sujebi, pangsit, hamburger, pizza, pasta, ramen, makanan cepat saji, dll.",
+        "2": "Q Seberapa sering Anda makan makanan yang digoreng atau ditumis?",
+        "3": "Q Seberapa sering Anda mengonsumsi makanan tinggi lemak?",
+        "3Description": "*Daging berlemak, jeroan, daging asap, bacon, ham, mentega, minyak sawit, minyak kelapa, dll.",
+        "4": "Q Apakah Anda suka minum minuman berkarbonasi (cola, soda, dll.)?",
+        "4Description": "*Termasuk minuman ion, susu manis, minuman energi, minuman zero, dll.",
+        "5": "Q Berapa banyak makanan berkuah yang biasanya Anda konsumsi?",
+        "5Description": "*Termasuk jjigae, sup, tang, mie lainnya",
+        "6": "Q Seberapa sering Anda mengonsumsi makanan protein?",
+        "6Description": "*Daging tanpa lemak, telur, tahu, kacang, susu, daging merah tanpa lemak, dll.",
+        "7": "Q Apakah Anda sering mengonsumsi hidangan sayuran dan sayuran mentah setiap kali makan?",
+        "7Description": "*Kimchi tidak termasuk",
+        "8": "Q Apakah Anda sering makan makanan kaya akan asam lemak esensial?",
+        "8Description": "*Kacang-kacangan (almond, kenari, dll.), ikan berminyak (makarel, salmon, tuna, dll.), minyak nabati (minyak perilla, minyak zaitun, dll.)",
+        "9": "Q Apakah Anda secara kebiasaan makan makanan larut malam?",
+        "9Description": "*Makanan larut malam setelah jam 8 malam setelah makan, makan malam yang terlambat",
+        "10": "Q Apakah Anda kadang-kadang makan berlebihan atau makan terlalu banyak?",
+        "10Description": "*Juga pilih jika Anda makan satu kali makan secara terkonsentrasi dalam sehari",
+        "11": "Q Berapa kecepatan makan Anda biasanya?",
+        "11Description": "Berapa kecepatan makan Anda biasanya?",
+        "12": "Q Apakah Anda secara kebiasaan makan camilan setelah makan?",
+        "12Description": "Apakah Anda secara kebiasaan makan camilan setelah makan?",
+        "12Note": "*Kue, roti, kue kering, kue beras, kue, es krim, minuman manis, kopi campuran, dll.",
+        "13": "Q Apakah Anda makan pada waktu yang tetap setiap hari?",
+        "13Description": "Apakah Anda makan pada waktu yang tetap setiap hari?"
+      },
+      "additionalOptions": {
+        "none": "Tidak ada",
+        "within5min": "Dalam 5 menit",
+        "within10min": "Dalam 10 menit",
+        "within15min": "Dalam 15 menit",
+        "over15min": "Lebih dari 15 menit",
+        "notAtAll": "Tidak sama sekali",
+        "sometimesTrue": "Kadang-kadang",
+        "oftenTrue": "Sering",
+        "dailyTrue": "Setiap hari"
+      }
+    }
   }
 }
 
