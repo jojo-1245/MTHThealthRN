@@ -204,7 +204,31 @@
         "6": "Q Seberapa sering Anda mengonsumsi makanan protein?",
         "6Description": "*Daging tanpa lemak, telur, tahu, kacang, susu, daging merah tanpa lemak, dll.",
         "7": "Q Apakah Anda sering mengonsumsi hidangan sayuran dan sayuran mentah setiap kali makan?",
-        "7Description": "*Kimchi tidak termasuk"
+        "7Description": "*Kimchi tidak termasuk",
+        "8": "Q Apakah Anda sering makan makanan kaya akan asam lemak esensial?",
+        "8Description": "*Kacang-kacangan (almond, kenari, dll.), ikan berminyak (makarel, salmon, tuna, dll.), minyak nabati (minyak perilla, minyak zaitun, dll.)",
+        "9": "Q Apakah Anda secara kebiasaan makan makanan larut malam?",
+        "9Description": "*Makanan larut malam setelah jam 8 malam setelah makan, makan malam yang terlambat",
+        "10": "Q Apakah Anda kadang-kadang makan berlebihan atau makan terlalu banyak?",
+        "10Description": "*Juga pilih jika Anda makan satu kali makan secara terkonsentrasi dalam sehari",
+        "11": "Q Berapa kecepatan makan Anda biasanya?",
+        "11Description": "Berapa kecepatan makan Anda biasanya?",
+        "12": "Q Apakah Anda secara kebiasaan makan camilan setelah makan?",
+        "12Description": "Apakah Anda secara kebiasaan makan camilan setelah makan?",
+        "12Note": "*Kue, roti, kue kering, kue beras, kue, es krim, minuman manis, kopi campuran, dll.",
+        "13": "Q Apakah Anda makan pada waktu yang tetap setiap hari?",
+        "13Description": "Apakah Anda makan pada waktu yang tetap setiap hari?"
+      },
+      "additionalOptions": {
+        "none": "Tidak ada",
+        "within5min": "Dalam 5 menit",
+        "within10min": "Dalam 10 menit",
+        "within15min": "Dalam 15 menit",
+        "over15min": "Lebih dari 15 menit",
+        "notAtAll": "Tidak sama sekali",
+        "sometimesTrue": "Kadang-kadang",
+        "oftenTrue": "Sering",
+        "dailyTrue": "Setiap hari"
       }
     }
   }

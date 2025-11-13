@@ -10,17 +10,19 @@ import {
     TouchableOpacity,
     View,
 } from 'react-native';
+import { useTranslation } from '@/i18n';
 
 const { width, height } = Dimensions.get('window');
 
 export default function CardiovascularDietSurvey12Screen() {
-  const [selectedOption, setSelectedOption] = useState('자주(주 2~3일)');
+  const { t } = useTranslation();
+  const [selectedOption, setSelectedOption] = useState(t('cardiovascular.dietSurvey.options.often'));
 
   const options = [
-    '매일(주 4일 이상)',
-    '자주(주 2~3일)',
-    '가끔(주 1일 이하)',
-    '먹지 않음',
+    t('cardiovascular.dietSurvey.options.daily'),
+    t('cardiovascular.dietSurvey.options.often'),
+    t('cardiovascular.dietSurvey.options.sometimes'),
+    t('cardiovascular.dietSurvey.options.notEat'),
   ];
 
   const handleBack = () => {
@@ -44,7 +46,7 @@ export default function CardiovascularDietSurvey12Screen() {
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>진단하기</Text>
+        <Text style={styles.headerTitle}>{t('cardiovascular.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
@@ -61,13 +63,13 @@ export default function CardiovascularDietSurvey12Screen() {
         <View style={styles.questionContainer}>
           <View style={styles.questionBox}>
             <Text style={styles.questionText}>
-              Q 식사 후 습관적으로 간식을 먹는다
+              {t('cardiovascular.dietSurvey.questions.12')}
             </Text>
             <Text style={styles.questionDescription}>
-              식사 후 습관적으로 간식을 드시나요?
+              {t('cardiovascular.dietSurvey.questions.12Description')}
             </Text>
             <Text style={styles.questionNote}>
-              *케익, 빵, 과자, 떡, 쿠키, 아이스크림, 달달한 음료, 믹스 커피 등
+              {t('cardiovascular.dietSurvey.questions.12Note')}
             </Text>
           </View>
         </View>
@@ -105,10 +107,10 @@ export default function CardiovascularDietSurvey12Screen() {
         
         <View style={styles.buttonContainer}>
           <TouchableOpacity style={styles.previousButton} onPress={handleBack}>
-            <Text style={styles.previousButtonText}>이전</Text>
+            <Text style={styles.previousButtonText}>{t('common.previous')}</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.nextButton} onPress={handleNext}>
-            <Text style={styles.nextButtonText}>다음</Text>
+            <Text style={styles.nextButtonText}>{t('common.next')}</Text>
           </TouchableOpacity>
         </View>
       </View>

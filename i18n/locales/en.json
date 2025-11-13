@@ -204,7 +204,31 @@
         "6": "Q How often do you consume protein meals?",
         "6Description": "*Lean meats, eggs, tofu, beans, milk, fat-free red meats, etc.",
         "7": "Q Do you frequently consume vegetable dishes and raw vegetables with every meal?",
-        "7Description": "*Kimchi excluded"
+        "7Description": "*Kimchi excluded",
+        "8": "Q Do you often eat foods rich in essential fatty acids?",
+        "8Description": "*Nuts (almonds, walnuts, etc.), oily fish (mackerel, salmon, tuna, etc.), vegetable oils (perilla oil, olive oil, etc.)",
+        "9": "Q Do you habitually eat late-night snacks?",
+        "9Description": "*Late-night snacks after 8 PM after meals, late dinner",
+        "10": "Q Do you sometimes binge eat or overeat?",
+        "10Description": "*Also select if you eat one meal in a concentrated manner during the day",
+        "11": "Q What is your usual eating speed?",
+        "11Description": "What is your usual eating speed?",
+        "12": "Q Do you habitually eat snacks after meals?",
+        "12Description": "Do you habitually eat snacks after meals?",
+        "12Note": "*Cake, bread, cookies, rice cakes, cookies, ice cream, sweet drinks, mix coffee, etc.",
+        "13": "Q Do you eat meals at fixed times every day?",
+        "13Description": "Do you eat meals at fixed times every day?"
+      },
+      "additionalOptions": {
+        "none": "None",
+        "within5min": "Within 5 minutes",
+        "within10min": "Within 10 minutes",
+        "within15min": "Within 15 minutes",
+        "over15min": "Over 15 minutes",
+        "notAtAll": "Not at all",
+        "sometimesTrue": "Sometimes",
+        "oftenTrue": "Often",
+        "dailyTrue": "Daily"
       }
     }
   }
