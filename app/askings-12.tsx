@@ -48,7 +48,28 @@ export default function Asking12Screen() {
       image: 'skin_smooth',
     },
   ];
-
+ const answerOptions2: AnswerOption2[] = [
+    {
+      id: 'very_much',
+      label: '매우 그렇다',
+      image: 'skin_severe_dry_bumps',
+    },
+    {
+      id: 'agree',
+      label: '그렇다',
+      image: 'skin_moderate_dry_bumps',
+    },
+    {
+      id: 'normal',
+      label: '보통이다',
+      image: 'skin_light_dry_bumps',
+    },
+    {
+      id: 'disagree',
+      label: '아니다',
+      image: 'skin_smooth',
+    },
+  ];
   const handleAnswerSelect = (answerId: string) => {
     setSelectedAnswer(answerId);
   };
@@ -230,6 +251,16 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: '#E5E7EB',
   },
+    questionImagePlaceholder2: {
+    width: 200,
+    height: 200,
+    backgroundColor: '#F9FAFB',
+    borderRadius: 100,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderWidth: 2,
+    borderColor: '#E5E7EB',
+  },
   imageDescription: {
     fontSize: 12,
     color: '#9CA3AF',
@@ -253,6 +284,14 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     marginRight: 12,
+  },qCircle2: {
+    width: 32,
+    height: 32,
+    borderRadius: 16,
+    backgroundColor: '#8B5CF6',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginRight: 10,
   },
   qText: {
     fontSize: 16,
