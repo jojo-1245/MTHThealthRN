@@ -226,3 +226,29 @@
 - 실제 앱처럼 깔끔한 UI 구현에 집중 ✅
 
 이 규칙을 통해 불필요한 목업 요소들을 제거하고 실제 앱에 적합한 깔끔한 UI를 구현합니다.
+
+## 🌐 심혈관 식습관 설문 시스템 번역 작업 진행 상황
+
+### 번역 완료된 파일 (1-27번) ✅
+- **cardiovascular-diet-survey-1.tsx** ~ **cardiovascular-diet-survey-27.tsx** (27개 파일)
+- **번역 키 사용**: `cardiovascular.dietSurvey.questions.1` ~ `27`
+- **옵션 번역 키**: `cardiovascular.dietSurvey.options.*`, `cardiovascular.dietSurvey.additionalOptions.*`
+- **공통 번역**: `cardiovascular.title`, `common.previous`, `common.next`
+- **번역 파일**: `i18n/locales/ko.json`에 모든 번역 키 정의 완료
+
+### 번역 미완료 파일 (28-33번 + complete) ⏳
+- **cardiovascular-diet-survey-28.tsx** ~ **cardiovascular-diet-survey-33.tsx** (6개 파일)
+- **cardiovascular-diet-survey-complete.tsx** (1개 파일)
+- **상태**: 하드코딩된 한국어 텍스트 사용 중, 번역 시스템 미적용
+
+### 번역 키 구조
+- **질문**: `cardiovascular.dietSurvey.questions.{번호}`
+- **질문 설명**: `cardiovascular.dietSurvey.questions.{번호}Description`
+- **질문 노트**: `cardiovascular.dietSurvey.questions.{번호}Note`
+- **옵션**: `cardiovascular.dietSurvey.options.*` (기본 옵션)
+- **추가 옵션**: `cardiovascular.dietSurvey.additionalOptions.*` (운동, 수면, 취침시각, 커피, 수분, 술, 흡연 등)
+
+### 현재 번역 진행률
+- **완료**: 27개 파일 (82%)
+- **미완료**: 7개 파일 (18%)
+- **전체 진행률**: 약 82% 완성

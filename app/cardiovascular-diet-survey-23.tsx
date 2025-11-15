@@ -1,3 +1,4 @@
+import { useTranslation } from '@/i18n';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React, { useState } from 'react';
@@ -14,11 +15,12 @@ import {
 const { width, height } = Dimensions.get('window');
 
 export default function CardiovascularDietSurvey23Screen() {
+  const { t } = useTranslation();
   const [selectedOption, setSelectedOption] = useState('');
 
   const options = [
-    '그렇다',
-    '아니다',
+    t('cardiovascular.dietSurvey.additionalOptions.yes'),
+    t('cardiovascular.dietSurvey.additionalOptions.notAtAll'),
   ];
 
   const handleBack = () => {
@@ -42,7 +44,7 @@ export default function CardiovascularDietSurvey23Screen() {
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>진단하기</Text>
+        <Text style={styles.headerTitle}>{t('cardiovascular.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
@@ -59,13 +61,13 @@ export default function CardiovascularDietSurvey23Screen() {
         <View style={styles.questionContainer}>
           <View style={styles.questionBox}>
             <Text style={styles.questionText}>
-              Q 현재 업무 특성상 야간근무교대를 한다
+              {t('cardiovascular.dietSurvey.questions.23')}
             </Text>
             <Text style={styles.questionDescription}>
-              현재 업무 특성상 야간근무교대를 하시나요?
+              {t('cardiovascular.dietSurvey.questions.23Description')}
             </Text>
             <Text style={styles.questionNote}>
-              *자정부터 새벽 5시까지를 포함하여 최소 7시간 연속 근무하는 경우
+              {t('cardiovascular.dietSurvey.questions.23Note')}
             </Text>
           </View>
         </View>
@@ -103,14 +105,14 @@ export default function CardiovascularDietSurvey23Screen() {
         
         <View style={styles.buttonContainer}>
           <TouchableOpacity style={styles.previousButton} onPress={handleBack}>
-            <Text style={styles.previousButtonText}>이전</Text>
+            <Text style={styles.previousButtonText}>{t('common.previous')}</Text>
           </TouchableOpacity>
           <TouchableOpacity 
             style={[styles.nextButton, !selectedOption && styles.disabledButton]} 
             onPress={handleNext}
             disabled={!selectedOption}
           >
-            <Text style={[styles.nextButtonText, !selectedOption && styles.disabledButtonText]}>다음</Text>
+            <Text style={[styles.nextButtonText, !selectedOption && styles.disabledButtonText]}>{t('common.next')}</Text>
           </TouchableOpacity>
         </View>
       </View>

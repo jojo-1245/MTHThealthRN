@@ -1,3 +1,4 @@
+import { useTranslation } from '@/i18n';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React, { useState } from 'react';
@@ -14,13 +15,14 @@ import {
 const { width, height } = Dimensions.get('window');
 
 export default function CardiovascularDietSurvey22Screen() {
+  const { t } = useTranslation();
   const [selectedOption, setSelectedOption] = useState('');
 
   const options = [
-    '매일 그렇다',
-    '자주 그렇다',
-    '가끔 그렇다',
-    '아니다',
+    t('cardiovascular.dietSurvey.additionalOptions.dailyTrue'),
+    t('cardiovascular.dietSurvey.additionalOptions.oftenTrue'),
+    t('cardiovascular.dietSurvey.additionalOptions.sometimesTrue'),
+    t('cardiovascular.dietSurvey.additionalOptions.notAtAll'),
   ];
 
   const handleBack = () => {
@@ -44,7 +46,7 @@ export default function CardiovascularDietSurvey22Screen() {
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>진단하기</Text>
+        <Text style={styles.headerTitle}>{t('cardiovascular.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
@@ -61,13 +63,13 @@ export default function CardiovascularDietSurvey22Screen() {
         <View style={styles.questionContainer}>
           <View style={styles.questionBox}>
             <Text style={styles.questionText}>
-              Q 잠자리에 들기 전 어두운 공간에서 전자기기를 사용한다
+              {t('cardiovascular.dietSurvey.questions.22')}
             </Text>
             <Text style={styles.questionDescription}>
-              잠자리에 들기 전 어두운 공간에서 전자기기를 사용하시나요?
+              {t('cardiovascular.dietSurvey.questions.22Description')}
             </Text>
             <Text style={styles.questionNote}>
-              *최소 30분 동안 사용
+              {t('cardiovascular.dietSurvey.questions.22Note')}
             </Text>
           </View>
         </View>
@@ -105,14 +107,14 @@ export default function CardiovascularDietSurvey22Screen() {
         
         <View style={styles.buttonContainer}>
           <TouchableOpacity style={styles.previousButton} onPress={handleBack}>
-            <Text style={styles.previousButtonText}>이전</Text>
+            <Text style={styles.previousButtonText}>{t('common.previous')}</Text>
           </TouchableOpacity>
           <TouchableOpacity 
             style={[styles.nextButton, !selectedOption && styles.disabledButton]} 
             onPress={handleNext}
             disabled={!selectedOption}
           >
-            <Text style={[styles.nextButtonText, !selectedOption && styles.disabledButtonText]}>다음</Text>
+            <Text style={[styles.nextButtonText, !selectedOption && styles.disabledButtonText]}>{t('common.next')}</Text>
           </TouchableOpacity>
         </View>
       </View>
