@@ -273,7 +273,27 @@
         "12Description": "식사 후 습관적으로 간식을 드시나요?",
         "12Note": "*케익, 빵, 과자, 떡, 쿠키, 아이스크림, 달달한 음료, 믹스 커피 등",
         "13": "Q 식사는 매일 정해진 시간에 한다",
-        "13Description": "식사는 매일 정해진 시간에 하시나요?"
+        "13Description": "식사는 매일 정해진 시간에 하시나요?",
+        "14": "Q 칼로리를 제한하고 굶는 다이어트를 한다",
+        "14Description": "Q Do you diet by restricting calories and starving yourself?",
+        "14Note": "*하루 1,000kcal 미만 섭취",
+        "15": "Q 편의점 음식 및 냉동식, 간편식으로 식사를 한다",
+        "15Description": "Q Do you eat convenience store food, frozen food, or instant food?",
+        "15Note": "*간편식 : 즉석 식품, 반조리·완전 조리 식품",
+        "16": "Q 일주일동안 운동하는 횟수는?",
+        "16Description": "Q How many times do you exercise per week?",
+        "16Note": "*유산소, 근력 운동 등 1회 운동시간 30분 이상",
+        "17": "Q 식사 후에 바로 누워있거나 잠을 잔다",
+        "17Description": "식사 후에 바로 누워있거나 잠을 자시나요?",
+        "17Note": "*식후 30분~2시간 이내",
+        "18": "Q 하루종일 앉아서 일을 한다",
+        "18Description": "하루종일 앉아서 일을 하시나요?",
+        "18Note": "*장시간 운전, 사무직 등 활동량이 적은 업무",
+        "19": "Q 평균적으로 하루 수면시간은?",
+        "19Description": "평균적으로 하루 수면시간은 얼마나 되시나요?",
+        "19Note": "*깊이 잠든 상태에서의 수면시간",
+        "20": "Q 평소 취침하는 시각은?",
+        "20Description": "평소 취침하는 시각은 언제인가요?"
       },
       "additionalOptions": {
         "none": "없음",
@@ -284,7 +304,21 @@
         "notAtAll": "아니다",
         "sometimesTrue": "가끔 그렇다",
         "oftenTrue": "자주 그렇다",
-        "dailyTrue": "매일 그렇다"
+        "dailyTrue": "매일 그렇다",
+        "yes": "그렇다",
+        "exerciseNever": "전혀 안함",
+        "exercise1to2": "주 1~2회",
+        "exercise3to4": "주 3~4회",
+        "exercise5plus": "주 5회 이상",
+        "sleep4or10plus": "4시간 이내 또는 10시간 이상",
+        "sleep4to5or9": "4~5시간 또는 9시간",
+        "sleep6to7": "6~7시간",
+        "sleep7to8": "7~8시간",
+        "bedtimeAfter3am": "새벽 3시 이후 또는 야간근무로 낮에 취침",
+        "bedtime2to3am": "새벽 2~3시 사이",
+        "bedtime12to1am": "자정 12~1시 사이",
+        "bedtime11to12pm": "오후 11~12시 사이",
+        "bedtimeBefore11pm": "오후 11시 이전"
       }
     }
   }
