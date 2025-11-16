@@ -1,3 +1,4 @@
+import { useTranslation } from '@/i18n';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React, { useState } from 'react';
@@ -14,13 +15,14 @@ import {
 const { width, height } = Dimensions.get('window');
 
 export default function CardiovascularDietSurvey25Screen() {
-  const [selectedOption, setSelectedOption] = useState('5~6컵(1000~1200ml)');
+  const { t } = useTranslation();
+  const [selectedOption, setSelectedOption] = useState(t('cardiovascular.dietSurvey.additionalOptions.water5to6'));
 
   const options = [
-    '2컵(400ml) 미만',
-    '3~4컵(600~800ml)',
-    '5~6컵(1000~1200ml)',
-    '7~8컵(1400~1600ml)',
+    t('cardiovascular.dietSurvey.additionalOptions.waterLessThan2'),
+    t('cardiovascular.dietSurvey.additionalOptions.water3to4'),
+    t('cardiovascular.dietSurvey.additionalOptions.water5to6'),
+    t('cardiovascular.dietSurvey.additionalOptions.water7to8'),
   ];
 
   const handleBack = () => {
@@ -44,7 +46,7 @@ export default function CardiovascularDietSurvey25Screen() {
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>진단하기</Text>
+        <Text style={styles.headerTitle}>{t('cardiovascular.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
@@ -61,13 +63,13 @@ export default function CardiovascularDietSurvey25Screen() {
         <View style={styles.questionContainer}>
           <View style={styles.questionBox}>
             <Text style={styles.questionText}>
-              Q 하루 수분 섭취량은?
+              {t('cardiovascular.dietSurvey.questions.25')}
             </Text>
             <Text style={styles.questionDescription}>
-              하루 수분 섭취량은 얼마나 되나요?
+              {t('cardiovascular.dietSurvey.questions.25Description')}
             </Text>
             <Text style={styles.questionNote}>
-              *한컵 200ml기준으로 녹차, 홍차, 커피 등 제외
+              {t('cardiovascular.dietSurvey.questions.25Note')}
             </Text>
           </View>
         </View>
@@ -105,10 +107,10 @@ export default function CardiovascularDietSurvey25Screen() {
         
         <View style={styles.buttonContainer}>
           <TouchableOpacity style={styles.previousButton} onPress={handleBack}>
-            <Text style={styles.previousButtonText}>이전</Text>
+            <Text style={styles.previousButtonText}>{t('common.previous')}</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.nextButton} onPress={handleNext}>
-            <Text style={styles.nextButtonText}>다음</Text>
+            <Text style={styles.nextButtonText}>{t('common.next')}</Text>
           </TouchableOpacity>
         </View>
       </View>
