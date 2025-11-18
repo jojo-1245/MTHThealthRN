@@ -1,3 +1,4 @@
+import { useTranslation } from '@/i18n';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React, { useState } from 'react';
@@ -14,13 +15,14 @@ import {
 const { width, height } = Dimensions.get('window');
 
 export default function CardiovascularDietSurvey32Screen() {
-  const [selectedOption, setSelectedOption] = useState('가끔');
+  const { t } = useTranslation();
+  const [selectedOption, setSelectedOption] = useState(t('cardiovascular.dietSurvey.additionalOptions.outdoorSometimes'));
 
   const options = [
-    '매일',
-    '자주',
-    '가끔',
-    '하지 않음',
+    t('cardiovascular.dietSurvey.additionalOptions.outdoorDaily'),
+    t('cardiovascular.dietSurvey.additionalOptions.outdoorOften'),
+    t('cardiovascular.dietSurvey.additionalOptions.outdoorSometimes'),
+    t('cardiovascular.dietSurvey.additionalOptions.outdoorNever'),
   ];
 
   const handleBack = () => {
@@ -44,7 +46,7 @@ export default function CardiovascularDietSurvey32Screen() {
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>진단하기</Text>
+        <Text style={styles.headerTitle}>{t('cardiovascular.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
@@ -61,13 +63,13 @@ export default function CardiovascularDietSurvey32Screen() {
         <View style={styles.questionContainer}>
           <View style={styles.questionBox}>
             <Text style={styles.questionText}>
-              Q 자외선 노출이 강한 날 야외활동은 얼마나 자주 하나요?
+              {t('cardiovascular.dietSurvey.questions.32')}
             </Text>
             <Text style={styles.questionDescription}>
-              자외선 노출이 강한 날 야외활동은 얼마나 자주 하시나요?
+              {t('cardiovascular.dietSurvey.questions.32Description')}
             </Text>
             <Text style={styles.questionNote}>
-              *오전 10시 ~ 오후 3시의 레저활동, 운동, 외부활동
+              {t('cardiovascular.dietSurvey.questions.32Note')}
             </Text>
           </View>
         </View>
@@ -105,10 +107,10 @@ export default function CardiovascularDietSurvey32Screen() {
         
         <View style={styles.buttonContainer}>
           <TouchableOpacity style={styles.previousButton} onPress={handleBack}>
-            <Text style={styles.previousButtonText}>이전</Text>
+            <Text style={styles.previousButtonText}>{t('common.previous')}</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.nextButton} onPress={handleNext}>
-            <Text style={styles.nextButtonText}>다음</Text>
+            <Text style={styles.nextButtonText}>{t('common.next')}</Text>
           </TouchableOpacity>
         </View>
       </View>
