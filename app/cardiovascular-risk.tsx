@@ -1,19 +1,21 @@
+import { useTranslation } from '@/i18n';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React, { useState } from 'react';
 import {
-    Dimensions,
-    ScrollView,
-    StatusBar,
-    StyleSheet,
-    Text,
-    TouchableOpacity,
-    View,
+  Dimensions,
+  ScrollView,
+  StatusBar,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
 } from 'react-native';
 
 const { width, height } = Dimensions.get('window');
 
 export default function CardiovascularRiskScreen() {
+  const { t } = useTranslation();
   const [selectedDate, setSelectedDate] = useState(9); // 10월 9일 선택된 상태
 
   const handleBack = () => {
@@ -62,7 +64,15 @@ export default function CardiovascularRiskScreen() {
   };
 
   const renderWeekDays = () => {
-    const weekDays = ['일', '월', '화', '수', '목', '금', '토'];
+    const weekDays = [
+      t('cardiovascular.risk.weekDays.sun'),
+      t('cardiovascular.risk.weekDays.mon'),
+      t('cardiovascular.risk.weekDays.tue'),
+      t('cardiovascular.risk.weekDays.wed'),
+      t('cardiovascular.risk.weekDays.thu'),
+      t('cardiovascular.risk.weekDays.fri'),
+      t('cardiovascular.risk.weekDays.sat'),
+    ];
     return weekDays.map((day, index) => (
       <View key={index} style={styles.weekDayCell}>
         <Text style={styles.weekDayText}>{day}</Text>
@@ -79,7 +89,7 @@ export default function CardiovascularRiskScreen() {
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>심혈관 건강 위험도</Text>
+        <Text style={styles.headerTitle}>{t('cardiovascular.risk.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
@@ -88,7 +98,7 @@ export default function CardiovascularRiskScreen() {
         {/* 달력 섹션 */}
         <View style={styles.calendarSection}>
           <View style={styles.calendarHeader}>
-            <Text style={styles.monthYear}>2025년 10월</Text>
+            <Text style={styles.monthYear}>{t('cardiovascular.risk.monthYear')}</Text>
           </View>
           
           {/* 요일 헤더 */}
@@ -107,8 +117,7 @@ export default function CardiovascularRiskScreen() {
           <View style={styles.messageContainer}>
             <Ionicons name="warning" size={24} color="#F59E0B" />
             <Text style={styles.messageText}>
-              심혈관 건강 위험도를 정확히 측정하기 위해{'\n'}
-              만성질환과 식/생활습관 항목을 자가진단해주세요
+              {t('cardiovascular.risk.message')}
             </Text>
           </View>
         </View>
@@ -117,7 +126,7 @@ export default function CardiovascularRiskScreen() {
       {/* 하단 버튼 */}
       <View style={styles.bottomContainer}>
         <TouchableOpacity style={styles.addDiagnosisButton} onPress={handleAddSelfDiagnosis}>
-          <Text style={styles.addDiagnosisText}>자가진단 추가</Text>
+          <Text style={styles.addDiagnosisText}>{t('cardiovascular.risk.addDiagnosis')}</Text>
         </TouchableOpacity>
       </View>
     </View>

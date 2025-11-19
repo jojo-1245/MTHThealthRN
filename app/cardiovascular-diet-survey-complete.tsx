@@ -1,3 +1,4 @@
+import { useTranslation } from '@/i18n';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React from 'react';
@@ -14,6 +15,7 @@ import {
 const { width, height } = Dimensions.get('window');
 
 export default function CardiovascularDietSurveyCompleteScreen() {
+  const { t } = useTranslation();
   const handleBack = () => {
     router.back();
   };
@@ -32,7 +34,7 @@ export default function CardiovascularDietSurveyCompleteScreen() {
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>진단하기</Text>
+        <Text style={styles.headerTitle}>{t('cardiovascular.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
@@ -48,29 +50,28 @@ export default function CardiovascularDietSurveyCompleteScreen() {
         {/* 완료 메시지 */}
         <View style={styles.messageContainer}>
           <Text style={styles.messageTitle}>
-            심혈관 식습관 체크가 완료되었습니다
+            {t('cardiovascular.dietSurveyComplete.title')}
           </Text>
           <Text style={styles.messageDescription}>
-            총 33개의 질문에 대한 답변을 바탕으로{'\n'}
-            개인별 심혈관 건강 상태를 분석했습니다.
+            {t('cardiovascular.dietSurveyComplete.description')}
           </Text>
         </View>
 
         {/* 결과 요약 */}
         <View style={styles.summaryContainer}>
           <View style={styles.summaryBox}>
-            <Text style={styles.summaryTitle}>진단 결과 요약</Text>
+            <Text style={styles.summaryTitle}>{t('cardiovascular.dietSurveyComplete.summaryTitle')}</Text>
             <View style={styles.summaryItem}>
-              <Text style={styles.summaryLabel}>진단 항목</Text>
-              <Text style={styles.summaryValue}>심혈관 식습관</Text>
+              <Text style={styles.summaryLabel}>{t('cardiovascular.dietSurveyComplete.summaryItem')}</Text>
+              <Text style={styles.summaryValue}>{t('cardiovascular.dietSurveyComplete.summaryValue')}</Text>
             </View>
             <View style={styles.summaryItem}>
-              <Text style={styles.summaryLabel}>진단 일시</Text>
+              <Text style={styles.summaryLabel}>{t('cardiovascular.dietSurveyComplete.summaryDate')}</Text>
               <Text style={styles.summaryValue}>2025-01-15</Text>
             </View>
             <View style={styles.summaryItem}>
-              <Text style={styles.summaryLabel}>총 질문 수</Text>
-              <Text style={styles.summaryValue}>33개</Text>
+              <Text style={styles.summaryLabel}>{t('cardiovascular.dietSurveyComplete.summaryQuestions')}</Text>
+              <Text style={styles.summaryValue}>{t('cardiovascular.dietSurveyComplete.summaryQuestionsValue')}</Text>
             </View>
           </View>
         </View>
@@ -79,7 +80,7 @@ export default function CardiovascularDietSurveyCompleteScreen() {
       {/* 하단 버튼 */}
       <View style={styles.bottomContainer}>
         <TouchableOpacity style={styles.saveButton} onPress={handleSave}>
-          <Text style={styles.saveButtonText}>저장하기</Text>
+          <Text style={styles.saveButtonText}>{t('cardiovascular.dietSurveyComplete.saveButton')}</Text>
         </TouchableOpacity>
       </View>
     </View>
