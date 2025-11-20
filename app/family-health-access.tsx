@@ -1,3 +1,4 @@
+import { useTranslation } from '@/i18n';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React, { useState } from 'react';
@@ -14,6 +15,7 @@ import {
 const { width, height } = Dimensions.get('window');
 
 export default function FamilyHealthAccessScreen() {
+  const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState<'received' | 'sent'>('received');
 
   const handleBack = () => {
@@ -29,7 +31,7 @@ export default function FamilyHealthAccessScreen() {
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>건강정보 열람</Text>
+        <Text style={styles.headerTitle}>{t('family.healthAccess.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
@@ -40,7 +42,7 @@ export default function FamilyHealthAccessScreen() {
           onPress={() => setActiveTab('received')}
         >
           <Text style={[styles.tabText, activeTab === 'received' && styles.activeTabText]}>
-            요청 받음
+            {t('family.healthAccess.tabs.received')}
           </Text>
         </TouchableOpacity>
         <TouchableOpacity
@@ -48,7 +50,7 @@ export default function FamilyHealthAccessScreen() {
           onPress={() => setActiveTab('sent')}
         >
           <Text style={[styles.tabText, activeTab === 'sent' && styles.activeTabText]}>
-            요청함
+            {t('family.healthAccess.tabs.sent')}
           </Text>
         </TouchableOpacity>
       </View>

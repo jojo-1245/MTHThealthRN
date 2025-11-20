@@ -1,3 +1,4 @@
+import { useTranslation } from '@/i18n';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React from 'react';
@@ -14,6 +15,7 @@ import {
 const { width, height } = Dimensions.get('window');
 
 export default function FatigueMeasurementResultScreen() {
+  const { t } = useTranslation();
   const handleBack = () => {
     router.back();
   };
@@ -24,11 +26,11 @@ export default function FatigueMeasurementResultScreen() {
   };
 
   const symptoms = [
-    '불안 증상',
-    '우울감',
-    '무기력함',
-    '만성 신경쇠약',
-    '급성 스트레스',
+    t('fatigue.measurementResult.symptoms.anxiety'),
+    t('fatigue.measurementResult.symptoms.depression'),
+    t('fatigue.measurementResult.symptoms.lethargy'),
+    t('fatigue.measurementResult.symptoms.chronicNeurasthenia'),
+    t('fatigue.measurementResult.symptoms.acuteStress'),
   ];
 
   return (
@@ -40,7 +42,7 @@ export default function FatigueMeasurementResultScreen() {
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>피로도 측정 결과</Text>
+        <Text style={styles.headerTitle}>{t('fatigue.measurementResult.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
@@ -48,11 +50,11 @@ export default function FatigueMeasurementResultScreen() {
       <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
         {/* 피로도 점수 */}
         <View style={styles.scoreContainer}>
-          <Text style={styles.scoreTitle}>피로도</Text>
+          <Text style={styles.scoreTitle}>{t('fatigue.measurementResult.scoreTitle')}</Text>
           <View style={styles.scoreDisplay}>
             <Text style={styles.scoreValue}>73점</Text>
             <View style={styles.scoreBadge}>
-              <Text style={styles.badgeText}>양호</Text>
+              <Text style={styles.badgeText}>{t('fatigue.measurementResult.scoreBadge')}</Text>
             </View>
           </View>
         </View>
@@ -60,14 +62,13 @@ export default function FatigueMeasurementResultScreen() {
         {/* 격려 메시지 */}
         <View style={styles.messageContainer}>
           <Text style={styles.messageText}>
-            피로 회복을 잘 하고 계시네요!{'\n'}
-            지금 상태를 유지하세요
+            {t('fatigue.measurementResult.message')}
           </Text>
         </View>
 
         {/* 피로 지속 시 안내 */}
         <View style={styles.warningContainer}>
-          <Text style={styles.warningTitle}>피로가 지속되면?</Text>
+          <Text style={styles.warningTitle}>{t('fatigue.measurementResult.warningTitle')}</Text>
           
           <View style={styles.warningIconContainer}>
             <View style={styles.personIcon}>
@@ -91,7 +92,7 @@ export default function FatigueMeasurementResultScreen() {
           {/* 주의사항 */}
           <View style={styles.disclaimerContainer}>
             <Text style={styles.disclaimerText}>
-              위 증상이 지속적으로 나타난다면 전문가와 상담해보세요
+              {t('fatigue.measurementResult.disclaimer')}
             </Text>
           </View>
         </View>
@@ -100,7 +101,7 @@ export default function FatigueMeasurementResultScreen() {
       {/* 하단 버튼 */}
       <View style={styles.bottomContainer}>
         <TouchableOpacity style={styles.completeButton} onPress={handleAnalysisComplete}>
-          <Text style={styles.completeButtonText}>분석 완료</Text>
+          <Text style={styles.completeButtonText}>{t('fatigue.measurementResult.completeButton')}</Text>
         </TouchableOpacity>
       </View>
     </View>

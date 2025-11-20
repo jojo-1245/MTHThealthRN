@@ -1,3 +1,4 @@
+import { useTranslation } from '@/i18n';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React from 'react';
@@ -14,6 +15,7 @@ import {
 const { width, height } = Dimensions.get('window');
 
 export default function FatigueMeasurementPrepScreen() {
+  const { t } = useTranslation();
   const handleBack = () => {
     router.back();
   };
@@ -38,7 +40,7 @@ export default function FatigueMeasurementPrepScreen() {
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>피로도 측정</Text>
+        <Text style={styles.headerTitle}>{t('fatigue.measurementPrep.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
@@ -46,9 +48,9 @@ export default function FatigueMeasurementPrepScreen() {
       <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
         {/* 안내 텍스트 */}
         <View style={styles.instructionContainer}>
-          <Text style={styles.instructionTitle}>측정 시작 전</Text>
+          <Text style={styles.instructionTitle}>{t('fatigue.measurementPrep.instructionTitle')}</Text>
           <Text style={styles.instructionText}>
-            얼굴이 감지되면 자동으로 측정이 시작됩니다
+            {t('fatigue.measurementPrep.instructionText')}
           </Text>
         </View>
 
@@ -64,7 +66,7 @@ export default function FatigueMeasurementPrepScreen() {
         {/* 안내 메시지 */}
         <View style={styles.guidanceContainer}>
           <Text style={styles.guidanceText}>
-            원 영역 안에 머리와 얼굴이 위치하도록 해주세요
+            {t('fatigue.measurementPrep.guidance')}
           </Text>
         </View>
       </ScrollView>
@@ -72,7 +74,7 @@ export default function FatigueMeasurementPrepScreen() {
       {/* 하단 버튼 */}
       <View style={styles.bottomContainer}>
         <TouchableOpacity style={styles.helpButton} onPress={handleViewMethodAgain}>
-          <Text style={styles.helpButtonText}>측정 방법 다시 보기</Text>
+          <Text style={styles.helpButtonText}>{t('fatigue.measurementPrep.viewMethodAgain')}</Text>
         </TouchableOpacity>
       </View>
     </View>

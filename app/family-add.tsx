@@ -1,3 +1,4 @@
+import { useTranslation } from '@/i18n';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React, { useState } from 'react';
@@ -14,6 +15,7 @@ import {
 const { width, height } = Dimensions.get('window');
 
 export default function FamilyAddScreen() {
+  const { t } = useTranslation();
   const [searchQuery, setSearchQuery] = useState('');
 
   const handleBack = () => {
@@ -34,7 +36,7 @@ export default function FamilyAddScreen() {
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>패밀리 추가</Text>
+        <Text style={styles.headerTitle}>{t('family.add.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
@@ -43,7 +45,7 @@ export default function FamilyAddScreen() {
         <View style={styles.searchInputContainer}>
           <TextInput
             style={styles.searchInput}
-            placeholder="아이디 또는 휴대폰 번호를 입력하세요"
+            placeholder={t('family.add.placeholder')}
             placeholderTextColor="#9CA3AF"
             value={searchQuery}
             onChangeText={setSearchQuery}

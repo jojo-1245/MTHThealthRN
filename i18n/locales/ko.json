@@ -499,6 +499,86 @@
       },
       "closeButton": "닫기"
     }
+  },
+  "faceMeasurement": {
+    "title": "스트레스 / 심박수 측정",
+    "status": {
+      "before": "측정 시작 전",
+      "measuring": "측정 중"
+    },
+    "instruction": "얼굴이 감지되면 자동으로 측정이 시작됩니다",
+    "guidance": "원 영역 안에 머리와 얼굴이 위치하도록 해주세요",
+    "viewMethodAgain": "측정 방법 다시 보기"
+  },
+  "family": {
+    "add": {
+      "title": "패밀리 추가",
+      "placeholder": "아이디 또는 휴대폰 번호를 입력하세요"
+    },
+    "healthAccess": {
+      "title": "건강정보 열람",
+      "tabs": {
+        "received": "요청 받음",
+        "sent": "요청함"
+      }
+    },
+    "healthMain": {
+      "title": "내 가족 건강도 챙겨보기",
+      "tabs": {
+        "selfDiagnosis": "자가진단",
+        "healthCheckup": "건강검진결과",
+        "otherAnalysis": "기타 정밀분석"
+      },
+      "actions": {
+        "acceptFamily": "패밀리 수락",
+        "careGift": "케어 기프트"
+      },
+      "emptyText": "아직 추가된 패밀리가 없어요",
+      "addFamily": "패밀리추가",
+      "habit": {
+        "title": "건강 습관 만들기",
+        "description": "위드 (with)는 건강습관 만들기 도전 이벤트입니다"
+      }
+    }
+  },
+  "fatigue": {
+    "main": {
+      "title": "피로도",
+      "weekdays": {
+        "sun": "SUN",
+        "mon": "MON",
+        "tue": "TUE",
+        "wed": "WED",
+        "thu": "THU",
+        "fri": "FRI",
+        "sat": "SAT"
+      },
+      "status": "아직 기록 전이에요.",
+      "measureButton": "얼굴 측정"
+    },
+    "measurementPrep": {
+      "title": "피로도 측정",
+      "instructionTitle": "측정 시작 전",
+      "instructionText": "얼굴이 감지되면 자동으로 측정이 시작됩니다",
+      "guidance": "원 영역 안에 머리와 얼굴이 위치하도록 해주세요",
+      "viewMethodAgain": "측정 방법 다시 보기"
+    },
+    "measurementResult": {
+      "title": "피로도 측정 결과",
+      "scoreTitle": "피로도",
+      "scoreBadge": "양호",
+      "message": "피로 회복을 잘 하고 계시네요!\n지금 상태를 유지하세요",
+      "warningTitle": "피로가 지속되면?",
+      "symptoms": {
+        "anxiety": "불안 증상",
+        "depression": "우울감",
+        "lethargy": "무기력함",
+        "chronicNeurasthenia": "만성 신경쇠약",
+        "acuteStress": "급성 스트레스"
+      },
+      "disclaimer": "위 증상이 지속적으로 나타난다면 전문가와 상담해보세요",
+      "completeButton": "분석 완료"
+    }
   }
 }
 

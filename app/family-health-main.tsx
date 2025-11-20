@@ -1,3 +1,4 @@
+import { useTranslation } from '@/i18n';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React from 'react';
@@ -14,6 +15,7 @@ import {
 const { width, height } = Dimensions.get('window');
 
 export default function FamilyHealthMainScreen() {
+  const { t } = useTranslation();
   const handleAcceptFamily = () => {
     router.push('/family-health-access');
   };
@@ -36,7 +38,7 @@ export default function FamilyHealthMainScreen() {
         <TouchableOpacity style={styles.profileButton}>
           <Ionicons name="person-circle" size={32} color="#8B5CF6" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>내 가족 건강도 챙겨보기</Text>
+        <Text style={styles.headerTitle}>{t('family.healthMain.title')}</Text>
         <TouchableOpacity style={styles.notificationButton}>
           <Ionicons name="notifications" size={24} color="#000" />
         </TouchableOpacity>
@@ -45,13 +47,13 @@ export default function FamilyHealthMainScreen() {
       {/* 탭 메뉴 */}
       <View style={styles.tabContainer}>
         <TouchableOpacity style={[styles.tab, styles.activeTab]}>
-          <Text style={[styles.tabText, styles.activeTabText]}>자가진단</Text>
+          <Text style={[styles.tabText, styles.activeTabText]}>{t('family.healthMain.tabs.selfDiagnosis')}</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.tab}>
-          <Text style={styles.tabText}>건강검진결과</Text>
+          <Text style={styles.tabText}>{t('family.healthMain.tabs.healthCheckup')}</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.tab}>
-          <Text style={styles.tabText}>기타 정밀분석</Text>
+          <Text style={styles.tabText}>{t('family.healthMain.tabs.otherAnalysis')}</Text>
         </TouchableOpacity>
       </View>
 
@@ -61,32 +63,32 @@ export default function FamilyHealthMainScreen() {
         <View style={styles.actionButtons}>
           <TouchableOpacity style={styles.actionButton} onPress={handleAcceptFamily}>
             <Ionicons name="people" size={24} color="#8B5CF6" />
-            <Text style={styles.actionButtonText}>패밀리 수락</Text>
+            <Text style={styles.actionButtonText}>{t('family.healthMain.actions.acceptFamily')}</Text>
           </TouchableOpacity>
           
           <TouchableOpacity style={styles.actionButton} onPress={handleCareGift}>
             <Ionicons name="gift" size={24} color="#8B5CF6" />
-            <Text style={styles.actionButtonText}>케어 기프트</Text>
+            <Text style={styles.actionButtonText}>{t('family.healthMain.actions.careGift')}</Text>
           </TouchableOpacity>
         </View>
 
         {/* 패밀리 목록 영역 */}
         <View style={styles.familySection}>
-          <Text style={styles.emptyText}>아직 추가된 패밀리가 없어요</Text>
+          <Text style={styles.emptyText}>{t('family.healthMain.emptyText')}</Text>
           
           <TouchableOpacity style={styles.addFamilyButton} onPress={handleAddFamily}>
             <View style={styles.addFamilyCircle}>
               <Ionicons name="add" size={48} color="#8B5CF6" />
             </View>
-            <Text style={styles.addFamilyText}>패밀리추가</Text>
+            <Text style={styles.addFamilyText}>{t('family.healthMain.addFamily')}</Text>
           </TouchableOpacity>
         </View>
 
         {/* 건강 습관 만들기 섹션 */}
         <View style={styles.habitSection}>
-          <Text style={styles.habitTitle}>건강 습관 만들기</Text>
+          <Text style={styles.habitTitle}>{t('family.healthMain.habit.title')}</Text>
           <Text style={styles.habitDescription}>
-            위드 (with)는 건강습관 만들기 도전 이벤트입니다
+            {t('family.healthMain.habit.description')}
           </Text>
           <View style={styles.habitIcons}>
             <Ionicons name="chatbubbles" size={24} color="#8B5CF6" />

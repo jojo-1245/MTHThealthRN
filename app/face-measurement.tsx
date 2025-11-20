@@ -1,15 +1,17 @@
+import { useTranslation } from '@/i18n';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React, { useEffect, useState } from 'react';
 import {
-    Animated,
-    StyleSheet,
-    Text,
-    TouchableOpacity,
-    View,
+  Animated,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
 } from 'react-native';
 
 export default function FaceMeasurement() {
+  const { t } = useTranslation();
   const [isDetecting, setIsDetecting] = useState(true);
   const [faceDetected, setFaceDetected] = useState(false);
   const [measurementProgress, setMeasurementProgress] = useState(0);
@@ -68,7 +70,7 @@ export default function FaceMeasurement() {
         <TouchableOpacity onPress={handleBack} style={styles.backButton}>
           <Ionicons name="arrow-back" size={24} color="#fff" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>스트레스 / 심박수 측정</Text>
+        <Text style={styles.headerTitle}>{t('faceMeasurement.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
@@ -86,7 +88,7 @@ export default function FaceMeasurement() {
           // 얼굴 감지 전
           <View style={styles.preDetectionContainer}>
             <View style={styles.statusContainer}>
-              <Text style={styles.statusText}>측정 시작 전</Text>
+              <Text style={styles.statusText}>{t('faceMeasurement.status.before')}</Text>
             </View>
             
             <View style={styles.cameraFrame}>
@@ -96,12 +98,12 @@ export default function FaceMeasurement() {
             </View>
             
             <View style={styles.instructionContainer}>
-              <Text style={styles.mainInstruction}>얼굴이 감지되면 자동으로 측정이 시작됩니다</Text>
+              <Text style={styles.mainInstruction}>{t('faceMeasurement.instruction')}</Text>
             </View>
 
             <View style={styles.positioningGuidance}>
               <Text style={styles.guidanceText}>
-                원 영역 안에 머리와 얼굴이 위치하도록 해주세요
+                {t('faceMeasurement.guidance')}
               </Text>
             </View>
           </View>
@@ -109,7 +111,7 @@ export default function FaceMeasurement() {
           // 측정 중
           <View style={styles.measurementContainer}>
             <View style={styles.statusContainer}>
-              <Text style={styles.statusText}>측정 중</Text>
+              <Text style={styles.statusText}>{t('faceMeasurement.status.measuring')}</Text>
             </View>
             
             <View style={styles.cameraFrame}>
@@ -119,12 +121,12 @@ export default function FaceMeasurement() {
             </View>
             
             <View style={styles.instructionContainer}>
-              <Text style={styles.mainInstruction}>얼굴이 감지되면 자동으로 측정이 시작됩니다</Text>
+              <Text style={styles.mainInstruction}>{t('faceMeasurement.instruction')}</Text>
             </View>
 
             <View style={styles.positioningGuidance}>
               <Text style={styles.guidanceText}>
-                원 영역 안에 머리와 얼굴이 위치하도록 해주세요
+                {t('faceMeasurement.guidance')}
               </Text>
             </View>
           </View>
@@ -134,7 +136,7 @@ export default function FaceMeasurement() {
       {/* 하단 버튼 */}
       <View style={styles.bottomButtonContainer}>
         <TouchableOpacity style={styles.methodButton} onPress={handleViewMethodAgain}>
-          <Text style={styles.methodButtonText}>측정 방법 다시 보기</Text>
+          <Text style={styles.methodButtonText}>{t('faceMeasurement.viewMethodAgain')}</Text>
         </TouchableOpacity>
       </View>
     </Animated.View>
