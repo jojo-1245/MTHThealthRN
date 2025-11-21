@@ -579,6 +579,92 @@
       "disclaimer": "위 증상이 지속적으로 나타난다면 전문가와 상담해보세요",
       "completeButton": "분석 완료"
     }
+  },
+  "food": {
+    "search": {
+      "title": "음식품 검색",
+      "placeholder": "음식품을 입력하세요.",
+      "info": {
+        "registered": "• 식약처에 등록된 제품을 대상으로 분석해요",
+        "unregistered": "• 식약처에 등록되지 않은 해외 직구 식품은 검색이 되지않아요",
+        "input": "• 제품명 입력 시 띄어쓰기, 맞춤법에 유의하여 정확하게 입력하세요"
+      },
+      "empty": {
+        "noResults": "검색 결과가 없습니다",
+        "enterFood": "음식품명을 입력하여 검색하세요"
+      },
+      "loading": "검색 중...",
+      "manufacturer": "제조원:",
+      "analyzeButton": "분석신청"
+    },
+    "searchResult": {
+      "title": "음식품 검색 결과",
+      "tabs": {
+        "detail": "상세정보",
+        "ranking": "영양순위"
+      },
+      "category": "분류 카테고리",
+      "categoryCount": "카테고리 음식품 수",
+      "analysisResult": "분석결과",
+      "topPercent": "상위",
+      "analysisTitle": "주요 성분 분석",
+      "analysisLabels": {
+        "lowCalorie": "저칼로리",
+        "lowCarb": "저탄수",
+        "highProtein": "고단백",
+        "lowFat": "저지방",
+        "lowSodium": "저나트륨",
+        "lowSugar": "저당"
+      },
+      "scale": {
+        "top": "상위",
+        "bottom": "하위"
+      },
+      "footerNote": "음식물 1회 제공량 기준 분석입니다.",
+      "rankingTitle": "과/채주스 카테고리 TOP 10",
+      "serving": "1회 제공량:",
+      "viewAllButton": "영양성분 전체보기",
+      "compareButton": "영양성분 비교하기"
+    },
+    "nutritionDetail": {
+      "title": "영양성분 전체보기",
+      "serving": {
+        "perServing": "1회 제공량",
+        "totalContent": "총 내용량"
+      },
+      "guide": {
+        "title": "영양성분표 읽는 방법",
+        "text": "영양성분표는 1회 제공량 기준으로 표시되며, 일일 영양소 기준치에 대한 비율(%)을 나타냅니다."
+      },
+      "sections": {
+        "caloriesMajor": "열량 및 3대 영양소(3개)",
+        "minerals": "무기질(1개)"
+      },
+      "nutrients": {
+        "energy": "에너지",
+        "carbs": "탄수화물",
+        "totalFiber": "총 식이섬유"
+      }
+    },
+    "nutritionCompare": {
+      "title": "영양성분 비교",
+      "vs": "VS",
+      "servingLabel": "1회 제공량",
+      "sections": {
+        "caloriesMajor": "열량 및 3대 영양소",
+        "minerals": "무기질"
+      },
+      "nutrients": {
+        "energy": "에너지",
+        "carbs": "탄수화물",
+        "totalSugar": "총당류",
+        "totalFiber": "총 식이섬유",
+        "sodium": "나트륨",
+        "calcium": "칼슘",
+        "iron": "철"
+      },
+      "addFoodButton": "음식물 추가"
+    }
   }
 }
 
