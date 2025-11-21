@@ -1,3 +1,4 @@
+import { useTranslation } from '@/i18n';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React, { useState } from 'react';
@@ -25,6 +26,7 @@ const mockNutritionRanking = [
 ];
 
 export default function FoodSearchResult() {
+  const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState<'detail' | 'ranking'>('detail');
   const [expandedSections, setExpandedSections] = useState<{[key: string]: boolean}>({
     'nutrition-guide': false,
@@ -52,15 +54,15 @@ export default function FoodSearchResult() {
       <View style={styles.foodInfoCard}>
         <Text style={styles.foodName}>당근</Text>
         <View style={styles.foodDetails}>
-          <Text style={styles.foodDetailLabel}>분류 카테고리</Text>
+          <Text style={styles.foodDetailLabel}>{t('food.searchResult.category')}</Text>
           <Text style={styles.foodDetailValue}>과/채주스</Text>
         </View>
         <View style={styles.foodDetails}>
-          <Text style={styles.foodDetailLabel}>카테고리 음식품 수</Text>
+          <Text style={styles.foodDetailLabel}>{t('food.searchResult.categoryCount')}</Text>
           <Text style={styles.foodDetailValue}>3,304개</Text>
         </View>
         <View style={styles.foodDetails}>
-          <Text style={styles.foodDetailLabel}>분석결과</Text>
+          <Text style={styles.foodDetailLabel}>{t('food.searchResult.analysisResult')}</Text>
           <View style={styles.analysisResult}>
             <Text style={styles.analysisText}>상위 31%</Text>
             <View style={styles.progressBar}>
@@ -73,48 +75,48 @@ export default function FoodSearchResult() {
       {/* 주요 성분 분석 */}
       <View style={styles.analysisCard}>
         <View style={styles.analysisHeader}>
-          <Text style={styles.analysisTitle}>주요 성분 분석</Text>
+            <Text style={styles.analysisTitle}>{t('food.searchResult.analysisTitle')}</Text>
           <Ionicons name="help-circle-outline" size={20} color="#999" />
         </View>
         
         <View style={styles.analysisItems}>
           <View style={styles.analysisItem}>
-            <Text style={styles.analysisItemLabel}>저칼로리</Text>
+            <Text style={styles.analysisItemLabel}>{t('food.searchResult.analysisLabels.lowCalorie')}</Text>
             <View style={styles.analysisBar}>
               <View style={[styles.analysisBarFill, styles.analysisBarGood, { width: '85%' }]} />
             </View>
           </View>
           
           <View style={styles.analysisItem}>
-            <Text style={styles.analysisItemLabel}>저탄수</Text>
+            <Text style={styles.analysisItemLabel}>{t('food.searchResult.analysisLabels.lowCarb')}</Text>
             <View style={styles.analysisBar}>
               <View style={[styles.analysisBarFill, styles.analysisBarGood, { width: '90%' }]} />
             </View>
           </View>
           
           <View style={styles.analysisItem}>
-            <Text style={styles.analysisItemLabel}>고단백</Text>
+            <Text style={styles.analysisItemLabel}>{t('food.searchResult.analysisLabels.highProtein')}</Text>
             <View style={styles.analysisBar}>
               <View style={[styles.analysisBarFill, styles.analysisBarBad, { width: '15%' }]} />
             </View>
           </View>
           
           <View style={styles.analysisItem}>
-            <Text style={styles.analysisItemLabel}>저지방</Text>
+            <Text style={styles.analysisItemLabel}>{t('food.searchResult.analysisLabels.lowFat')}</Text>
             <View style={styles.analysisBar}>
               <View style={[styles.analysisBarFill, styles.analysisBarNormal, { width: '60%' }]} />
             </View>
           </View>
           
           <View style={styles.analysisItem}>
-            <Text style={styles.analysisItemLabel}>저나트륨</Text>
+            <Text style={styles.analysisItemLabel}>{t('food.searchResult.analysisLabels.lowSodium')}</Text>
             <View style={styles.analysisBar}>
               <View style={[styles.analysisBarFill, styles.analysisBarBad, { width: '20%' }]} />
             </View>
           </View>
           
           <View style={styles.analysisItem}>
-            <Text style={styles.analysisItemLabel}>저당</Text>
+            <Text style={styles.analysisItemLabel}>{t('food.searchResult.analysisLabels.lowSugar')}</Text>
             <View style={styles.analysisBar}>
               <View style={[styles.analysisBarFill, styles.analysisBarNormal, { width: '70%' }]} />
             </View>
@@ -122,19 +124,19 @@ export default function FoodSearchResult() {
         </View>
         
         <View style={styles.analysisScale}>
-          <Text style={styles.scaleLabel}>상위</Text>
+          <Text style={styles.scaleLabel}>{t('food.searchResult.scale.top')}</Text>
           <View style={styles.scaleNumbers}>
             {[1, 25, 50, 75, 100].map(num => (
               <Text key={num} style={styles.scaleNumber}>{num}</Text>
             ))}
           </View>
-          <Text style={styles.scaleLabel}>하위</Text>
+          <Text style={styles.scaleLabel}>{t('food.searchResult.scale.bottom')}</Text>
         </View>
       </View>
 
       {/* 하단 안내 */}
       <View style={styles.footerNote}>
-        <Text style={styles.footerText}>음식물 1회 제공량 기준 분석입니다.</Text>
+        <Text style={styles.footerText}>{t('food.searchResult.footerNote')}</Text>
       </View>
     </ScrollView>
   );
@@ -142,7 +144,7 @@ export default function FoodSearchResult() {
   const renderRankingTab = () => (
     <View style={styles.tabContent}>
       <View style={styles.rankingHeader}>
-        <Text style={styles.rankingTitle}>과/채주스 카테고리 TOP 10</Text>
+        <Text style={styles.rankingTitle}>{t('food.searchResult.rankingTitle')}</Text>
         <Ionicons name="help-circle-outline" size={20} color="#999" />
       </View>
       
@@ -156,7 +158,7 @@ export default function FoodSearchResult() {
             </View>
             <View style={styles.rankingNutrition}>
               <Text style={styles.rankingCalories}>{item.calories}</Text>
-              <Text style={styles.rankingServing}>1회 제공량: {item.serving}</Text>
+              <Text style={styles.rankingServing}>{t('food.searchResult.serving')} {item.serving}</Text>
             </View>
           </View>
         )}
@@ -173,7 +175,7 @@ export default function FoodSearchResult() {
         <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>음식품 검색 결과</Text>
+        <Text style={styles.headerTitle}>{t('food.searchResult.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
@@ -184,7 +186,7 @@ export default function FoodSearchResult() {
           onPress={() => setActiveTab('detail')}
         >
           <Text style={[styles.tabButtonText, activeTab === 'detail' && styles.activeTabButtonText]}>
-            상세정보
+            {t('food.searchResult.tabs.detail')}
           </Text>
         </TouchableOpacity>
         <TouchableOpacity
@@ -192,7 +194,7 @@ export default function FoodSearchResult() {
           onPress={() => setActiveTab('ranking')}
         >
           <Text style={[styles.tabButtonText, activeTab === 'ranking' && styles.activeTabButtonText]}>
-            영양순위
+            {t('food.searchResult.tabs.ranking')}
           </Text>
         </TouchableOpacity>
       </View>
@@ -205,11 +207,11 @@ export default function FoodSearchResult() {
       {/* 하단 버튼들 */}
       <View style={styles.bottomButtonContainer}>
         <TouchableOpacity style={styles.viewAllButton} onPress={handleViewAllNutrients}>
-          <Text style={styles.viewAllButtonText}>영양성분 전체보기</Text>
+          <Text style={styles.viewAllButtonText}>{t('food.searchResult.viewAllButton')}</Text>
         </TouchableOpacity>
         
         <TouchableOpacity style={styles.compareButton} onPress={handleCompareNutrients}>
-          <Text style={styles.compareButtonText}>영양성분 비교하기</Text>
+          <Text style={styles.compareButtonText}>{t('food.searchResult.compareButton')}</Text>
         </TouchableOpacity>
       </View>
     </View>

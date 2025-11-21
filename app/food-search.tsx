@@ -1,3 +1,4 @@
+import { useTranslation } from '@/i18n';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React, { useState } from 'react';
@@ -22,6 +23,7 @@ const mockFoodItems = [
 ];
 
 export default function FoodSearch() {
+  const { t } = useTranslation();
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState<any[]>([]);
   const [isSearching, setIsSearching] = useState(false);
@@ -76,7 +78,7 @@ export default function FoodSearch() {
     >
       <View style={styles.foodInfo}>
         <Text style={styles.foodName}>{item.name}</Text>
-        <Text style={styles.foodManufacturer}>제조원: {item.manufacturer}</Text>
+        <Text style={styles.foodManufacturer}>{t('food.search.manufacturer')} {item.manufacturer}</Text>
       </View>
       <View style={[
         styles.checkbox,
@@ -93,7 +95,7 @@ export default function FoodSearch() {
     <View style={styles.emptyState}>
       <Ionicons name="search-outline" size={48} color="#ccc" />
       <Text style={styles.emptyStateText}>
-        {searchQuery ? '검색 결과가 없습니다' : '음식품명을 입력하여 검색하세요'}
+        {searchQuery ? t('food.search.empty.noResults') : t('food.search.empty.enterFood')}
       </Text>
     </View>
   );
@@ -102,7 +104,7 @@ export default function FoodSearch() {
     if (isSearching) {
       return (
         <View style={styles.loadingState}>
-          <Text style={styles.loadingText}>검색 중...</Text>
+          <Text style={styles.loadingText}>{t('food.search.loading')}</Text>
         </View>
       );
     }
@@ -129,7 +131,7 @@ export default function FoodSearch() {
         <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>음식품 검색</Text>
+        <Text style={styles.headerTitle}>{t('food.search.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
@@ -142,7 +144,7 @@ export default function FoodSearch() {
               style={styles.searchInput}
               value={searchQuery}
               onChangeText={handleSearch}
-              placeholder="음식품을 입력하세요."
+              placeholder={t('food.search.placeholder')}
               placeholderTextColor="#999"
               autoFocus={true}
               returnKeyType="search"
@@ -158,13 +160,13 @@ export default function FoodSearch() {
         {/* 안내사항 */}
         <View style={styles.infoSection}>
           <View style={styles.infoItem}>
-            <Text style={styles.infoText}>• 식약처에 등록된 제품을 대상으로 분석해요</Text>
+            <Text style={styles.infoText}>{t('food.search.info.registered')}</Text>
           </View>
           <View style={styles.infoItem}>
-            <Text style={styles.infoText}>• 식약처에 등록되지 않은 해외 직구 식품은 검색이 되지않아요</Text>
+            <Text style={styles.infoText}>{t('food.search.info.unregistered')}</Text>
           </View>
           <View style={styles.infoItem}>
-            <Text style={styles.infoText}>• 제품명 입력 시 띄어쓰기, 맞춤법에 유의하여 정확하게 입력하세요</Text>
+            <Text style={styles.infoText}>{t('food.search.info.input')}</Text>
           </View>
         </View>
 
@@ -182,7 +184,7 @@ export default function FoodSearch() {
           disabled={!selectedFood || isSearching}
         >
           <Text style={[styles.analyzeButtonText, (!selectedFood || isSearching) && styles.analyzeButtonTextDisabled]}>
-            분석신청
+            {t('food.search.analyzeButton')}
           </Text>
         </TouchableOpacity>
       </View>

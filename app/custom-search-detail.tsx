@@ -1,3 +1,4 @@
+import { useTranslation } from '@/i18n';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React, { useState } from 'react';
@@ -10,6 +11,7 @@ import {
 } from 'react-native';
 
 export default function CustomSearchDetail() {
+  const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState<'essential' | 'functional'>('essential');
   const [expandedNutrient, setExpandedNutrient] = useState<string | null>(null);
 
@@ -26,7 +28,7 @@ export default function CustomSearchDetail() {
       id: 'vitamin-a',
       name: '비타민 A',
       status: 'supplement',
-      statusText: '복약중 보충',
+      statusText: t('customSearch.detail.status.supplement'),
       statusColor: '#4caf50',
       description: '피부 건강과 시력에 중요한 비타민입니다.',
       recommendedDose: '800-1000 IU',
@@ -36,7 +38,7 @@ export default function CustomSearchDetail() {
       id: 'vitamin-c',
       name: '비타민 C',
       status: 'caution',
-      statusText: '복약중 주의',
+      statusText: t('customSearch.detail.status.caution'),
       statusColor: '#ff9800',
       description: '항산화 작용과 콜라겐 생성에 필수적입니다.',
       recommendedDose: '100-200mg',
@@ -46,7 +48,7 @@ export default function CustomSearchDetail() {
       id: 'vitamin-d',
       name: '비타민 D',
       status: 'normal',
-      statusText: '정상',
+      statusText: t('customSearch.detail.status.normal'),
       statusColor: '#2196f3',
       description: '뼈 건강과 면역력에 중요한 비타민입니다.',
       recommendedDose: '600-800 IU',
@@ -56,7 +58,7 @@ export default function CustomSearchDetail() {
       id: 'vitamin-k',
       name: '비타민 K',
       status: 'normal',
-      statusText: '정상',
+      statusText: t('customSearch.detail.status.normal'),
       statusColor: '#2196f3',
       description: '혈액 응고와 뼈 건강에 필요합니다.',
       recommendedDose: '90-120mcg',
@@ -66,7 +68,7 @@ export default function CustomSearchDetail() {
       id: 'iodine',
       name: '요오드',
       status: 'normal',
-      statusText: '정상',
+      statusText: t('customSearch.detail.status.normal'),
       statusColor: '#2196f3',
       description: '갑상선 기능에 필수적인 미네랄입니다.',
       recommendedDose: '150mcg',
@@ -76,7 +78,7 @@ export default function CustomSearchDetail() {
       id: 'selenium',
       name: '셀레늄',
       status: 'caution',
-      statusText: '복약중 주의',
+      statusText: t('customSearch.detail.status.caution'),
       statusColor: '#ff9800',
       description: '항산화 작용과 면역력에 중요한 미네랄입니다.',
       recommendedDose: '55mcg',
@@ -112,7 +114,7 @@ export default function CustomSearchDetail() {
         <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>맞춤형 검색</Text>
+        <Text style={styles.headerTitle}>{t('customSearch.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
@@ -121,14 +123,14 @@ export default function CustomSearchDetail() {
         <View style={styles.causesCard}>
           <View style={styles.causesHeader}>
             <Ionicons name="checkmark-circle" size={20} color="#8B5CF6" />
-            <Text style={styles.causesTitle}>개인별 발생원인</Text>
+            <Text style={styles.causesTitle}>{t('customSearch.detail.causesTitle')}</Text>
           </View>
           
           <View style={styles.causesList}>
             <View style={styles.causeItem}>
               <Text style={styles.causeName}>지방식이?</Text>
               <View style={[styles.causeStatus, styles.causeStatusDanger]}>
-                <Text style={styles.causeStatusText}>위험</Text>
+                <Text style={styles.causeStatusText}>{t('customSearch.detail.status.danger')}</Text>
               </View>
               <Ionicons name="help-circle-outline" size={16} color="#999" />
             </View>
@@ -136,7 +138,7 @@ export default function CustomSearchDetail() {
             <View style={styles.causeItem}>
               <Text style={styles.causeName}>운동량?</Text>
               <View style={[styles.causeStatus, styles.causeStatusCaution]}>
-                <Text style={styles.causeStatusText}>주의</Text>
+                <Text style={styles.causeStatusText}>{t('customSearch.detail.status.caution2')}</Text>
               </View>
               <Ionicons name="help-circle-outline" size={16} color="#999" />
             </View>
@@ -144,7 +146,7 @@ export default function CustomSearchDetail() {
             <View style={styles.causeItem}>
               <Text style={styles.causeName}>만성피로?</Text>
               <View style={[styles.causeStatus, styles.causeStatusDanger]}>
-                <Text style={styles.causeStatusText}>위험</Text>
+                <Text style={styles.causeStatusText}>{t('customSearch.detail.status.danger')}</Text>
               </View>
               <Ionicons name="help-circle-outline" size={16} color="#999" />
             </View>
@@ -152,7 +154,7 @@ export default function CustomSearchDetail() {
             <View style={styles.causeItem}>
               <Text style={styles.causeName}>과당식이?</Text>
               <View style={[styles.causeStatus, styles.causeStatusConcern]}>
-                <Text style={styles.causeStatusText}>관심</Text>
+                <Text style={styles.causeStatusText}>{t('customSearch.detail.status.concern')}</Text>
               </View>
               <Ionicons name="help-circle-outline" size={16} color="#999" />
             </View>
@@ -163,7 +165,7 @@ export default function CustomSearchDetail() {
         <View style={styles.nutrientCard}>
           <View style={styles.nutrientHeader}>
             <Ionicons name="checkmark-circle" size={20} color="#8B5CF6" />
-            <Text style={styles.nutrientTitle}>필요 영양 정보</Text>
+            <Text style={styles.nutrientTitle}>{t('customSearch.detail.nutrientTitle')}</Text>
           </View>
 
           {/* 탭 버튼들 */}
@@ -173,7 +175,7 @@ export default function CustomSearchDetail() {
               onPress={() => setActiveTab('essential')}
             >
               <Text style={[styles.tabButtonText, activeTab === 'essential' && styles.activeTabButtonText]}>
-                필수 영양소
+                {t('customSearch.detail.tabs.essential')}
               </Text>
             </TouchableOpacity>
             <TouchableOpacity
@@ -181,7 +183,7 @@ export default function CustomSearchDetail() {
               onPress={() => setActiveTab('functional')}
             >
               <Text style={[styles.tabButtonText, activeTab === 'functional' && styles.activeTabButtonText]}>
-                기능성 성분
+                {t('customSearch.detail.tabs.functional')}
               </Text>
             </TouchableOpacity>
           </View>
@@ -212,11 +214,11 @@ export default function CustomSearchDetail() {
                     <View style={styles.nutrientDetails}>
                       <Text style={styles.nutrientDescription}>{nutrient.description}</Text>
                       <View style={styles.nutrientDetailRow}>
-                        <Text style={styles.nutrientDetailLabel}>권장 섭취량:</Text>
+                        <Text style={styles.nutrientDetailLabel}>{t('customSearch.detail.nutrientDetails.recommendedDose')}</Text>
                         <Text style={styles.nutrientDetailValue}>{nutrient.recommendedDose}</Text>
                       </View>
                       <View style={styles.nutrientDetailRow}>
-                        <Text style={styles.nutrientDetailLabel}>주요 공급원:</Text>
+                        <Text style={styles.nutrientDetailLabel}>{t('customSearch.detail.nutrientDetails.sources')}</Text>
                         <Text style={styles.nutrientDetailValue}>{nutrient.sources}</Text>
                       </View>
                     </View>
@@ -244,7 +246,7 @@ export default function CustomSearchDetail() {
                     <View style={styles.nutrientDetails}>
                       <Text style={styles.nutrientDescription}>{ingredient.description}</Text>
                       <View style={styles.benefitsList}>
-                        <Text style={styles.benefitsTitle}>주요 효과:</Text>
+                        <Text style={styles.benefitsTitle}>{t('customSearch.detail.nutrientDetails.benefits')}</Text>
                         {ingredient.benefits.map((benefit, index) => (
                           <Text key={index} style={styles.benefitItem}>• {benefit}</Text>
                         ))}
@@ -261,7 +263,7 @@ export default function CustomSearchDetail() {
       {/* 하단 닫기 버튼 */}
       <View style={styles.bottomButtonContainer}>
         <TouchableOpacity style={styles.closeButton} onPress={handleClose}>
-          <Text style={styles.closeButtonText}>닫기</Text>
+          <Text style={styles.closeButtonText}>{t('customSearch.detail.closeButton')}</Text>
         </TouchableOpacity>
       </View>
     </View>

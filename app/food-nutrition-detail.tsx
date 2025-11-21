@@ -1,3 +1,4 @@
+import { useTranslation } from '@/i18n';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React, { useState } from 'react';
@@ -10,6 +11,7 @@ import {
 } from 'react-native';
 
 export default function FoodNutritionDetail() {
+  const { t } = useTranslation();
   const [selectedServing, setSelectedServing] = useState<'per-serving' | 'total-content'>('per-serving');
   const [expandedSections, setExpandedSections] = useState<{[key: string]: boolean}>({
     'nutrition-guide': false,
@@ -63,7 +65,7 @@ export default function FoodNutritionDetail() {
         <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>영양성분 전체보기</Text>
+        <Text style={styles.headerTitle}>{t('food.nutritionDetail.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
@@ -80,7 +82,7 @@ export default function FoodNutritionDetail() {
             onPress={() => setSelectedServing('per-serving')}
           >
             <Text style={[styles.servingButtonText, selectedServing === 'per-serving' && styles.activeServingButtonText]}>
-              1회 제공량
+              {t('food.nutritionDetail.serving.perServing')}
             </Text>
           </TouchableOpacity>
           <TouchableOpacity
@@ -88,7 +90,7 @@ export default function FoodNutritionDetail() {
             onPress={() => setSelectedServing('total-content')}
           >
             <Text style={[styles.servingButtonText, selectedServing === 'total-content' && styles.activeServingButtonText]}>
-              총 내용량
+              {t('food.nutritionDetail.serving.totalContent')}
             </Text>
           </TouchableOpacity>
         </View>
@@ -102,32 +104,32 @@ export default function FoodNutritionDetail() {
 
         {/* 영양성분표 읽는 방법 */}
         {renderNutritionItem(
-          '영양성분표 읽는 방법',
+          t('food.nutritionDetail.guide.title'),
           '',
           '',
           true,
           <View style={styles.guideContent}>
             <Text style={styles.guideText}>
-              영양성분표는 1회 제공량 기준으로 표시되며, 일일 영양소 기준치에 대한 비율(%)을 나타냅니다.
+              {t('food.nutritionDetail.guide.text')}
             </Text>
           </View>
         )}
 
         {/* 열량 및 3대 영양소 */}
         {renderNutritionItem(
-          '열량 및 3대 영양소(3개)',
+          t('food.nutritionDetail.sections.caloriesMajor'),
           '',
           '',
           true,
           <View style={styles.majorNutrients}>
-            {renderNutritionItem('에너지', '40 / 2500kcal', '2%')}
+            {renderNutritionItem(t('food.nutritionDetail.nutrients.energy'), '40 / 2500kcal', '2%')}
             {renderNutritionItem(
-              '탄수화물',
+              t('food.nutritionDetail.nutrients.carbs'),
               '8 / 130g',
               '6%',
               true,
               <View style={styles.carbsDetail}>
-                {renderNutritionItem('총 식이섬유', '2 / 30g', '7%')}
+                {renderNutritionItem(t('food.nutritionDetail.nutrients.totalFiber'), '2 / 30g', '7%')}
               </View>
             )}
           </View>
@@ -135,7 +137,7 @@ export default function FoodNutritionDetail() {
 
         {/* 무기질 */}
         {renderNutritionItem(
-          '무기질(1개)',
+          t('food.nutritionDetail.sections.minerals'),
           '',
           '',
           true,

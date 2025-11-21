@@ -1,3 +1,4 @@
+import { useTranslation } from '@/i18n';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React, { useState } from 'react';
@@ -14,6 +15,7 @@ import {
 const { width, height } = Dimensions.get('window');
 
 export default function FatigueMainScreen() {
+  const { t } = useTranslation();
   const [selectedDate, setSelectedDate] = useState(new Date());
 
   const handleBack = () => {
@@ -31,7 +33,15 @@ export default function FatigueMainScreen() {
   };
 
   const getDayOfWeek = (date: Date) => {
-    const days = ['일', '월', '화', '수', '목', '금', '토'];
+    const days = [
+      t('fatigue.main.weekdays.sun'),
+      t('fatigue.main.weekdays.mon'),
+      t('fatigue.main.weekdays.tue'),
+      t('fatigue.main.weekdays.wed'),
+      t('fatigue.main.weekdays.thu'),
+      t('fatigue.main.weekdays.fri'),
+      t('fatigue.main.weekdays.sat'),
+    ];
     return days[date.getDay()];
   };
 
@@ -70,7 +80,7 @@ export default function FatigueMainScreen() {
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>피로도</Text>
+        <Text style={styles.headerTitle}>{t('fatigue.main.title')}</Text>
         <TouchableOpacity style={styles.graphButton}>
           <Ionicons name="bar-chart" size={24} color="#8B5CF6" />
         </TouchableOpacity>
@@ -92,7 +102,15 @@ export default function FatigueMainScreen() {
 
           {/* 요일 헤더 */}
           <View style={styles.weekdayHeader}>
-            {['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'].map((day, index) => (
+            {[
+              t('fatigue.main.weekdays.sun'),
+              t('fatigue.main.weekdays.mon'),
+              t('fatigue.main.weekdays.tue'),
+              t('fatigue.main.weekdays.wed'),
+              t('fatigue.main.weekdays.thu'),
+              t('fatigue.main.weekdays.fri'),
+              t('fatigue.main.weekdays.sat'),
+            ].map((day, index) => (
               <Text key={index} style={styles.weekdayText}>{day}</Text>
             ))}
           </View>
@@ -130,7 +148,7 @@ export default function FatigueMainScreen() {
         <View style={styles.statusContainer}>
           <View style={styles.statusBox}>
             <Ionicons name="warning" size={20} color="#F59E0B" />
-            <Text style={styles.statusText}>아직 기록 전이에요.</Text>
+            <Text style={styles.statusText}>{t('fatigue.main.status')}</Text>
           </View>
         </View>
       </ScrollView>
@@ -139,7 +157,7 @@ export default function FatigueMainScreen() {
       <View style={styles.bottomContainer}>
         <TouchableOpacity style={styles.measureButton} onPress={handleFaceMeasurement}>
           <Ionicons name="camera" size={24} color="#fff" />
-          <Text style={styles.measureButtonText}>얼굴 측정</Text>
+          <Text style={styles.measureButtonText}>{t('fatigue.main.measureButton')}</Text>
         </TouchableOpacity>
       </View>
     </View>

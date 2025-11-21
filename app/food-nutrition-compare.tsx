@@ -1,15 +1,17 @@
+import { useTranslation } from '@/i18n';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React, { useState } from 'react';
 import {
-    ScrollView,
-    StyleSheet,
-    Text,
-    TouchableOpacity,
-    View,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
 } from 'react-native';
 
 export default function FoodNutritionCompare() {
+  const { t } = useTranslation();
   const [expandedSections, setExpandedSections] = useState<{[key: string]: boolean}>({
     'calories-major': true,
     'minerals': false,
@@ -77,7 +79,7 @@ export default function FoodNutritionCompare() {
         <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>영양성분 비교</Text>
+        <Text style={styles.headerTitle}>{t('food.nutritionCompare.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
@@ -97,7 +99,7 @@ export default function FoodNutritionCompare() {
 
           {/* VS 텍스트 */}
           <View style={styles.vsContainer}>
-            <Text style={styles.vsText}>VS</Text>
+            <Text style={styles.vsText}>{t('food.nutritionCompare.vs')}</Text>
           </View>
 
           {/* 오른쪽 음식물 카드 */}
@@ -108,7 +110,7 @@ export default function FoodNutritionCompare() {
                 <Ionicons name="close-circle" size={24} color="#999" />
               </TouchableOpacity>
             </View>
-            <Text style={styles.foodCardServing}>1회 제공량</Text>
+            <Text style={styles.foodCardServing}>{t('food.nutritionCompare.servingLabel')}</Text>
           </View>
         </View>
 
@@ -116,7 +118,7 @@ export default function FoodNutritionCompare() {
         <View style={styles.servingInfo}>
           <View style={styles.servingInfoRow}>
             <Text style={styles.servingInfoValue}>120mL</Text>
-            <Text style={styles.servingInfoLabel}>1회 제공량</Text>
+            <Text style={styles.servingInfoLabel}>{t('food.nutritionCompare.servingLabel')}</Text>
             <Text style={styles.servingInfoValue}>70mL</Text>
           </View>
         </View>
@@ -125,24 +127,24 @@ export default function FoodNutritionCompare() {
         <View style={styles.comparisonTable}>
           {/* 열량 및 3대 영양소 */}
           {renderExpandableSection(
-            '열량 및 3대 영양소',
+            t('food.nutritionCompare.sections.caloriesMajor'),
             'calories-major',
             <View style={styles.comparisonContent}>
-              {renderComparisonItem('에너지', '40', '30', 'kcal')}
-              {renderComparisonItem('탄수화물', '8', '7', 'g')}
-              {renderComparisonItem('총당류', '-', '7', 'g')}
-              {renderComparisonItem('총 식이섬유', '2', '-', 'g')}
+              {renderComparisonItem(t('food.nutritionCompare.nutrients.energy'), '40', '30', 'kcal')}
+              {renderComparisonItem(t('food.nutritionCompare.nutrients.carbs'), '8', '7', 'g')}
+              {renderComparisonItem(t('food.nutritionCompare.nutrients.totalSugar'), '-', '7', 'g')}
+              {renderComparisonItem(t('food.nutritionCompare.nutrients.totalFiber'), '2', '-', 'g')}
             </View>
           )}
 
           {/* 무기질 */}
           {renderExpandableSection(
-            '무기질',
+            t('food.nutritionCompare.sections.minerals'),
             'minerals',
             <View style={styles.comparisonContent}>
-              {renderComparisonItem('나트륨', '0.06', '0.05', 'g')}
-              {renderComparisonItem('칼슘', '20', '15', 'mg')}
-              {renderComparisonItem('철', '0.5', '0.8', 'mg')}
+              {renderComparisonItem(t('food.nutritionCompare.nutrients.sodium'), '0.06', '0.05', 'g')}
+              {renderComparisonItem(t('food.nutritionCompare.nutrients.calcium'), '20', '15', 'mg')}
+              {renderComparisonItem(t('food.nutritionCompare.nutrients.iron'), '0.5', '0.8', 'mg')}
             </View>
           )}
         </View>
@@ -152,7 +154,7 @@ export default function FoodNutritionCompare() {
       <View style={styles.bottomButtonContainer}>
         <TouchableOpacity style={styles.addFoodButton} onPress={() => handleAddFood('left')}>
           <Ionicons name="add" size={20} color="#8B5CF6" />
-          <Text style={styles.addFoodButtonText}>음식물 추가</Text>
+          <Text style={styles.addFoodButtonText}>{t('food.nutritionCompare.addFoodButton')}</Text>
         </TouchableOpacity>
       </View>
     </View>

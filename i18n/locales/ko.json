@@ -231,6 +231,17 @@
       "continueButton": "식/생활습관 항목 계속 진단하기",
       "saveButton": "저장하고 종료하기"
     },
+    "dietSurveyComplete": {
+      "title": "심혈관 식습관 체크가 완료되었습니다",
+      "description": "총 33개의 질문에 대한 답변을 바탕으로\n개인별 심혈관 건강 상태를 분석했습니다.",
+      "summaryTitle": "진단 결과 요약",
+      "summaryItem": "진단 항목",
+      "summaryValue": "심혈관 식습관",
+      "summaryDate": "진단 일시",
+      "summaryQuestions": "총 질문 수",
+      "summaryQuestionsValue": "33개",
+      "saveButton": "저장하기"
+    },
     "dietSurvey": {
       "options": {
         "daily": "매일(주 4일 이상)",
@@ -312,7 +323,21 @@
         "26Description": "평소 술 마시는 횟수는 얼마나 되나요?",
         "27": "Q 현재 흡연자라면 하루에 담배는 얼마나 피우나요?",
         "27Description": "현재 흡연자라면 하루에 담배는 얼마나 피우시나요?",
-        "27Note": "*1갑 : 20개비, 전자담배 포함"
+        "27Note": "*1갑 : 20개비, 전자담배 포함",
+        "28": "Q 현재 또는 과거의 흡연 누적 기간은?",
+        "28Description": "현재 또는 과거의 흡연 누적 기간은 얼마나 되나요?",
+        "28Note": "*전자담배 포함",
+        "29": "Q 최근 들어 일의 수행능력이 떨어졌다",
+        "29Description": "최근 들어 일의 수행능력이 떨어졌다고 느끼시나요?",
+        "30": "Q 최근 몇 년간 새로운 것을 배우거나 공부한 적이 없다",
+        "30Description": "최근 몇 년간 새로운 것을 배우거나 공부한 적이 없나요?",
+        "31": "Q 신문, 잡지, 책 등을 거의 읽지 않는다",
+        "31Description": "신문, 잡지, 책 등을 거의 읽지 않으시나요?",
+        "32": "Q 자외선 노출이 강한 날 야외활동은 얼마나 자주 하나요?",
+        "32Description": "자외선 노출이 강한 날 야외활동은 얼마나 자주 하시나요?",
+        "32Note": "*오전 10시 ~ 오후 3시의 레저활동, 운동, 외부활동",
+        "33": "Q 최근 들어 기억력이 떨어졌다고 느낀다",
+        "33Description": "최근 들어 기억력이 떨어졌다고 느끼시나요?"
       },
       "additionalOptions": {
         "none": "없음",
@@ -353,8 +378,292 @@
         "smoking1plus": "하루 1갑 이상",
         "smoking1orLess": "하루 1갑 이내",
         "smokingEx": "과거 흡연자(현재 금연)",
-        "smokingNone": "비흡연자"
+        "smokingNone": "비흡연자",
+        "smokingCurrent10plus": "현재 흡연자(10년 이상)",
+        "smokingCurrent10less": "현재 흡연자(10년 미만)",
+        "smokingQuit10less": "현재 금연자(10년 미만)",
+        "smokingQuit10plus": "현재 금연자(10년 이상)",
+        "veryMuch": "매우 그렇다",
+        "agree": "그렇다",
+        "outdoorDaily": "매일",
+        "outdoorOften": "자주",
+        "outdoorSometimes": "가끔",
+        "outdoorNever": "하지 않음"
       }
+    }
+  },
+  "customSearch": {
+    "title": "맞춤형 검색",
+    "careInfo": {
+      "headerTitle": "맞춤형 케어 검색이란?",
+      "mainTitle": "개인 맞춤형 건강 관리",
+      "description": "나의 건강 상태와 관리 필요 항목을 분석하여 최적의 제품과 서비스를 추천해드립니다.",
+      "sectionTitle": {
+        "features": "주요 기능",
+        "howToUse": "사용 방법",
+        "warnings": "주의사항"
+      },
+      "features": {
+        "healthAnalysis": {
+          "title": "개인 건강 분석",
+          "description": "자가진단 결과를 바탕으로 개인의 건강 상태를 종합적으로 분석합니다."
+        },
+        "productSearch": {
+          "title": "맞춤 제품 검색",
+          "description": "건강 상태에 맞는 영양제, 화장품, 의료기기 등을 추천합니다."
+        },
+        "compatibility": {
+          "title": "적합도 평가",
+          "description": "제품의 성분과 개인 건강 상태의 적합도를 정확하게 평가합니다."
+        },
+        "nutrientAnalysis": {
+          "title": "영양소 분석",
+          "description": "필요한 영양소와 섭취량을 개인별로 맞춤 분석해드립니다."
+        }
+      },
+      "steps": {
+        "1": {
+          "title": "관리 필요 항목 선택",
+          "description": "피지과다, 홍조, 건조함, 민감성, 트러블, 안티에이징 중 원하는 항목을 선택하세요."
+        },
+        "2": {
+          "title": "카테고리 선택",
+          "description": "건강기능식품, 화장품, 의료기기, 식품, 생활용품 중 분석할 카테고리를 선택하세요."
+        },
+        "3": {
+          "title": "제품 검색 또는 스캔",
+          "description": "제품명을 직접 입력하거나 카메라로 제품을 스캔하여 분석을 시작하세요."
+        },
+        "4": {
+          "title": "맞춤 결과 확인",
+          "description": "개인 건강 상태에 맞는 적합도와 상세 분석 결과를 확인하세요."
+        }
+      },
+      "warnings": {
+        "reference": "이 서비스는 참고용이며, 의료진의 진단을 대체하지 않습니다.",
+        "medication": "복용 중인 약물이 있다면 의사와 상담 후 영양제를 섭취하세요.",
+        "productInfo": "제품 정보는 식약처 등록 정보를 기반으로 제공됩니다."
+      },
+      "startButton": "맞춤형 검색 시작하기"
+    },
+    "result": {
+      "resultTitle": "맞춤 검색 결과",
+      "userInfo": "Ted님 우선 건강관리 항목",
+      "productLabel": "검색제품",
+      "compatibilityLabel": "맞춤 적합도",
+      "gaugeLabels": {
+        "low": "낮음",
+        "normal": "보통",
+        "good": "양호",
+        "high": "높음"
+      },
+      "gaugeResult": "80% 양호",
+      "ingredientTitle": "성분평가",
+      "ingredientEvaluation": "성분평가",
+      "ingredientCount": "성분개수",
+      "supplementCaution": "보충/주의",
+      "detailsButton": "자세히 보기",
+      "causesTitle": "개인별 발생원인",
+      "nutrientTitle": "필요 영양 정보",
+      "tabs": {
+        "essential": "필수 영양소",
+        "functional": "기능성 성분"
+      },
+      "viewAllButton": "필수 영양소 전체보기",
+      "closeButton": "닫기",
+      "status": {
+        "danger": "위험",
+        "caution": "주의",
+        "good": "양호"
+      }
+    },
+    "detail": {
+      "causesTitle": "개인별 발생원인",
+      "nutrientTitle": "필요 영양 정보",
+      "tabs": {
+        "essential": "필수 영양소",
+        "functional": "기능성 성분"
+      },
+      "status": {
+        "supplement": "복약중 보충",
+        "caution": "복약중 주의",
+        "normal": "정상",
+        "danger": "위험",
+        "caution2": "주의",
+        "concern": "관심"
+      },
+      "nutrientDetails": {
+        "recommendedDose": "권장 섭취량:",
+        "sources": "주요 공급원:",
+        "benefits": "주요 효과:"
+      },
+      "closeButton": "닫기"
+    }
+  },
+  "faceMeasurement": {
+    "title": "스트레스 / 심박수 측정",
+    "status": {
+      "before": "측정 시작 전",
+      "measuring": "측정 중"
+    },
+    "instruction": "얼굴이 감지되면 자동으로 측정이 시작됩니다",
+    "guidance": "원 영역 안에 머리와 얼굴이 위치하도록 해주세요",
+    "viewMethodAgain": "측정 방법 다시 보기"
+  },
+  "family": {
+    "add": {
+      "title": "패밀리 추가",
+      "placeholder": "아이디 또는 휴대폰 번호를 입력하세요"
+    },
+    "healthAccess": {
+      "title": "건강정보 열람",
+      "tabs": {
+        "received": "요청 받음",
+        "sent": "요청함"
+      }
+    },
+    "healthMain": {
+      "title": "내 가족 건강도 챙겨보기",
+      "tabs": {
+        "selfDiagnosis": "자가진단",
+        "healthCheckup": "건강검진결과",
+        "otherAnalysis": "기타 정밀분석"
+      },
+      "actions": {
+        "acceptFamily": "패밀리 수락",
+        "careGift": "케어 기프트"
+      },
+      "emptyText": "아직 추가된 패밀리가 없어요",
+      "addFamily": "패밀리추가",
+      "habit": {
+        "title": "건강 습관 만들기",
+        "description": "위드 (with)는 건강습관 만들기 도전 이벤트입니다"
+      }
+    }
+  },
+  "fatigue": {
+    "main": {
+      "title": "피로도",
+      "weekdays": {
+        "sun": "SUN",
+        "mon": "MON",
+        "tue": "TUE",
+        "wed": "WED",
+        "thu": "THU",
+        "fri": "FRI",
+        "sat": "SAT"
+      },
+      "status": "아직 기록 전이에요.",
+      "measureButton": "얼굴 측정"
+    },
+    "measurementPrep": {
+      "title": "피로도 측정",
+      "instructionTitle": "측정 시작 전",
+      "instructionText": "얼굴이 감지되면 자동으로 측정이 시작됩니다",
+      "guidance": "원 영역 안에 머리와 얼굴이 위치하도록 해주세요",
+      "viewMethodAgain": "측정 방법 다시 보기"
+    },
+    "measurementResult": {
+      "title": "피로도 측정 결과",
+      "scoreTitle": "피로도",
+      "scoreBadge": "양호",
+      "message": "피로 회복을 잘 하고 계시네요!\n지금 상태를 유지하세요",
+      "warningTitle": "피로가 지속되면?",
+      "symptoms": {
+        "anxiety": "불안 증상",
+        "depression": "우울감",
+        "lethargy": "무기력함",
+        "chronicNeurasthenia": "만성 신경쇠약",
+        "acuteStress": "급성 스트레스"
+      },
+      "disclaimer": "위 증상이 지속적으로 나타난다면 전문가와 상담해보세요",
+      "completeButton": "분석 완료"
+    }
+  },
+  "food": {
+    "search": {
+      "title": "음식품 검색",
+      "placeholder": "음식품을 입력하세요.",
+      "info": {
+        "registered": "• 식약처에 등록된 제품을 대상으로 분석해요",
+        "unregistered": "• 식약처에 등록되지 않은 해외 직구 식품은 검색이 되지않아요",
+        "input": "• 제품명 입력 시 띄어쓰기, 맞춤법에 유의하여 정확하게 입력하세요"
+      },
+      "empty": {
+        "noResults": "검색 결과가 없습니다",
+        "enterFood": "음식품명을 입력하여 검색하세요"
+      },
+      "loading": "검색 중...",
+      "manufacturer": "제조원:",
+      "analyzeButton": "분석신청"
+    },
+    "searchResult": {
+      "title": "음식품 검색 결과",
+      "tabs": {
+        "detail": "상세정보",
+        "ranking": "영양순위"
+      },
+      "category": "분류 카테고리",
+      "categoryCount": "카테고리 음식품 수",
+      "analysisResult": "분석결과",
+      "topPercent": "상위",
+      "analysisTitle": "주요 성분 분석",
+      "analysisLabels": {
+        "lowCalorie": "저칼로리",
+        "lowCarb": "저탄수",
+        "highProtein": "고단백",
+        "lowFat": "저지방",
+        "lowSodium": "저나트륨",
+        "lowSugar": "저당"
+      },
+      "scale": {
+        "top": "상위",
+        "bottom": "하위"
+      },
+      "footerNote": "음식물 1회 제공량 기준 분석입니다.",
+      "rankingTitle": "과/채주스 카테고리 TOP 10",
+      "serving": "1회 제공량:",
+      "viewAllButton": "영양성분 전체보기",
+      "compareButton": "영양성분 비교하기"
+    },
+    "nutritionDetail": {
+      "title": "영양성분 전체보기",
+      "serving": {
+        "perServing": "1회 제공량",
+        "totalContent": "총 내용량"
+      },
+      "guide": {
+        "title": "영양성분표 읽는 방법",
+        "text": "영양성분표는 1회 제공량 기준으로 표시되며, 일일 영양소 기준치에 대한 비율(%)을 나타냅니다."
+      },
+      "sections": {
+        "caloriesMajor": "열량 및 3대 영양소(3개)",
+        "minerals": "무기질(1개)"
+      },
+      "nutrients": {
+        "energy": "에너지",
+        "carbs": "탄수화물",
+        "totalFiber": "총 식이섬유"
+      }
+    },
+    "nutritionCompare": {
+      "title": "영양성분 비교",
+      "vs": "VS",
+      "servingLabel": "1회 제공량",
+      "sections": {
+        "caloriesMajor": "열량 및 3대 영양소",
+        "minerals": "무기질"
+      },
+      "nutrients": {
+        "energy": "에너지",
+        "carbs": "탄수화물",
+        "totalSugar": "총당류",
+        "totalFiber": "총 식이섬유",
+        "sodium": "나트륨",
+        "calcium": "칼슘",
+        "iron": "철"
+      },
+      "addFoodButton": "음식물 추가"
     }
   }
 }

@@ -1,3 +1,4 @@
+import { useTranslation } from '@/i18n';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React, { useState } from 'react';
@@ -10,6 +11,7 @@ import {
 } from 'react-native';
 
 export default function CustomSearchResult() {
+  const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState<'essential' | 'functional'>('essential');
 
   const handleViewDetails = () => {
@@ -40,17 +42,17 @@ export default function CustomSearchResult() {
           <View style={styles.gaugeArc} />
           {/* 게이지 라벨들 */}
           <View style={styles.gaugeLabels}>
-            <Text style={[styles.gaugeLabel, styles.gaugeLabelLow]}>낮음</Text>
-            <Text style={[styles.gaugeLabel, styles.gaugeLabelNormal]}>보통</Text>
-            <Text style={[styles.gaugeLabel, styles.gaugeLabelGood]}>양호</Text>
-            <Text style={[styles.gaugeLabel, styles.gaugeLabelHigh]}>높음</Text>
+            <Text style={[styles.gaugeLabel, styles.gaugeLabelLow]}>{t('customSearch.result.gaugeLabels.low')}</Text>
+            <Text style={[styles.gaugeLabel, styles.gaugeLabelNormal]}>{t('customSearch.result.gaugeLabels.normal')}</Text>
+            <Text style={[styles.gaugeLabel, styles.gaugeLabelGood]}>{t('customSearch.result.gaugeLabels.good')}</Text>
+            <Text style={[styles.gaugeLabel, styles.gaugeLabelHigh]}>{t('customSearch.result.gaugeLabels.high')}</Text>
           </View>
           {/* 게이지 포인터 */}
           <View style={[styles.gaugePointer, { transform: [{ rotate: `${angle}deg` }] }]} />
         </View>
         <View style={styles.gaugeResult}>
           <Ionicons name="checkmark-circle" size={24} color="#8B5CF6" />
-          <Text style={styles.gaugePercentage}>80% 양호</Text>
+          <Text style={styles.gaugePercentage}>{t('customSearch.result.gaugeResult')}</Text>
         </View>
       </View>
     );
@@ -63,47 +65,47 @@ export default function CustomSearchResult() {
         <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>맞춤형 검색</Text>
+        <Text style={styles.headerTitle}>{t('customSearch.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
       <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
         {/* 검색 결과 카드 */}
         <View style={styles.resultCard}>
-          <Text style={styles.resultTitle}>맞춤 검색 결과</Text>
+          <Text style={styles.resultTitle}>{t('customSearch.result.resultTitle')}</Text>
           
           {/* 사용자 정보 */}
           <View style={styles.userInfo}>
-            <Text style={styles.userName}>Ted님 우선 건강관리 항목</Text>
+            <Text style={styles.userName}>{t('customSearch.result.userInfo')}</Text>
             <Text style={styles.healthItem}>피지과다</Text>
           </View>
 
           {/* 검색 제품 */}
           <View style={styles.productInfo}>
-            <Text style={styles.productLabel}>검색제품</Text>
+            <Text style={styles.productLabel}>{t('customSearch.result.productLabel')}</Text>
             <Text style={styles.productName}>락토빗</Text>
           </View>
 
           {/* 적합도 게이지 */}
           <View style={styles.compatibilitySection}>
-            <Text style={styles.compatibilityLabel}>맞춤 적합도</Text>
+            <Text style={styles.compatibilityLabel}>{t('customSearch.result.compatibilityLabel')}</Text>
             {renderGauge()}
           </View>
 
           {/* 성분평가 */}
           <View style={styles.ingredientSection}>
-            <Text style={styles.ingredientTitle}>성분평가</Text>
+            <Text style={styles.ingredientTitle}>{t('customSearch.result.ingredientTitle')}</Text>
             <View style={styles.ingredientGrid}>
               <View style={styles.ingredientItem}>
-                <Text style={styles.ingredientLabel}>성분평가</Text>
-                <Text style={styles.ingredientValue}>양호</Text>
+                <Text style={styles.ingredientLabel}>{t('customSearch.result.ingredientEvaluation')}</Text>
+                <Text style={styles.ingredientValue}>{t('customSearch.result.status.good')}</Text>
               </View>
               <View style={styles.ingredientItem}>
-                <Text style={styles.ingredientLabel}>성분개수</Text>
+                <Text style={styles.ingredientLabel}>{t('customSearch.result.ingredientCount')}</Text>
                 <Text style={styles.ingredientValue}>1개</Text>
               </View>
               <View style={styles.ingredientItem}>
-                <Text style={styles.ingredientLabel}>보충/주의</Text>
+                <Text style={styles.ingredientLabel}>{t('customSearch.result.supplementCaution')}</Text>
                 <Text style={styles.ingredientValue}>0개</Text>
               </View>
             </View>
@@ -111,7 +113,7 @@ export default function CustomSearchResult() {
 
           {/* 자세히 보기 버튼 */}
           <TouchableOpacity style={styles.detailsButton} onPress={handleViewDetails}>
-            <Text style={styles.detailsButtonText}>자세히 보기</Text>
+            <Text style={styles.detailsButtonText}>{t('customSearch.result.detailsButton')}</Text>
             <Ionicons name="chevron-forward" size={20} color="#8B5CF6" />
           </TouchableOpacity>
         </View>
@@ -120,14 +122,14 @@ export default function CustomSearchResult() {
         <View style={styles.causesCard}>
           <View style={styles.causesHeader}>
             <Ionicons name="checkmark-circle" size={20} color="#8B5CF6" />
-            <Text style={styles.causesTitle}>개인별 발생원인</Text>
+            <Text style={styles.causesTitle}>{t('customSearch.result.causesTitle')}</Text>
           </View>
           
           <View style={styles.causesList}>
             <View style={styles.causeItem}>
               <Text style={styles.causeName}>U존피지상태</Text>
               <View style={[styles.causeStatus, styles.causeStatusDanger]}>
-                <Text style={styles.causeStatusText}>위험</Text>
+                <Text style={styles.causeStatusText}>{t('customSearch.result.status.danger')}</Text>
               </View>
               <Ionicons name="help-circle-outline" size={16} color="#999" />
             </View>
@@ -135,7 +137,7 @@ export default function CustomSearchResult() {
             <View style={styles.causeItem}>
               <Text style={styles.causeName}>T존피지상태</Text>
               <View style={[styles.causeStatus, styles.causeStatusCaution]}>
-                <Text style={styles.causeStatusText}>주의</Text>
+                <Text style={styles.causeStatusText}>{t('customSearch.result.status.caution')}</Text>
               </View>
               <Ionicons name="help-circle-outline" size={16} color="#999" />
             </View>
@@ -143,7 +145,7 @@ export default function CustomSearchResult() {
             <View style={styles.causeItem}>
               <Text style={styles.causeName}>피부보습인자</Text>
               <View style={[styles.causeStatus, styles.causeStatusGood]}>
-                <Text style={styles.causeStatusText}>양호</Text>
+                <Text style={styles.causeStatusText}>{t('customSearch.result.status.good')}</Text>
               </View>
               <Ionicons name="help-circle-outline" size={16} color="#999" />
             </View>
@@ -151,7 +153,7 @@ export default function CustomSearchResult() {
             <View style={styles.causeItem}>
               <Text style={styles.causeName}>피부 홍조</Text>
               <View style={[styles.causeStatus, styles.causeStatusGood]}>
-                <Text style={styles.causeStatusText}>양호</Text>
+                <Text style={styles.causeStatusText}>{t('customSearch.result.status.good')}</Text>
               </View>
               <Ionicons name="help-circle-outline" size={16} color="#999" />
             </View>
@@ -162,7 +164,7 @@ export default function CustomSearchResult() {
         <View style={styles.nutrientCard}>
           <View style={styles.nutrientHeader}>
             <Ionicons name="checkmark-circle" size={20} color="#8B5CF6" />
-            <Text style={styles.nutrientTitle}>필요 영양 정보</Text>
+            <Text style={styles.nutrientTitle}>{t('customSearch.result.nutrientTitle')}</Text>
           </View>
 
           {/* 탭 버튼들 */}
@@ -172,7 +174,7 @@ export default function CustomSearchResult() {
               onPress={() => setActiveTab('essential')}
             >
               <Text style={[styles.tabButtonText, activeTab === 'essential' && styles.activeTabButtonText]}>
-                필수 영양소
+                {t('customSearch.result.tabs.essential')}
               </Text>
             </TouchableOpacity>
             <TouchableOpacity
@@ -180,7 +182,7 @@ export default function CustomSearchResult() {
               onPress={() => setActiveTab('functional')}
             >
               <Text style={[styles.tabButtonText, activeTab === 'functional' && styles.activeTabButtonText]}>
-                기능성 성분
+                {t('customSearch.result.tabs.functional')}
               </Text>
             </TouchableOpacity>
           </View>
@@ -215,7 +217,7 @@ export default function CustomSearchResult() {
 
           {/* 전체보기 버튼 */}
           <TouchableOpacity style={styles.viewAllButton} onPress={handleViewAllNutrients}>
-            <Text style={styles.viewAllButtonText}>필수 영양소 전체보기</Text>
+            <Text style={styles.viewAllButtonText}>{t('customSearch.result.viewAllButton')}</Text>
             <Ionicons name="chevron-forward" size={16} color="#8B5CF6" />
           </TouchableOpacity>
         </View>
@@ -224,7 +226,7 @@ export default function CustomSearchResult() {
       {/* 하단 닫기 버튼 */}
       <View style={styles.bottomButtonContainer}>
         <TouchableOpacity style={styles.closeButton} onPress={handleClose}>
-          <Text style={styles.closeButtonText}>닫기</Text>
+          <Text style={styles.closeButtonText}>{t('customSearch.result.closeButton')}</Text>
         </TouchableOpacity>
       </View>
     </View>
