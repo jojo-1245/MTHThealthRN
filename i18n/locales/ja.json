@@ -399,6 +399,132 @@
       "serviceTitle": "サービス別分析結果",
       "serviceName": "自己診断"
     }
+  },
+  "medication": {
+    "add": {
+      "title": "医薬品登録",
+      "scanButton": "追加スキャン",
+      "searchButton": "医薬品検索",
+      "prescribedLabel": "処方された薬",
+      "prescriptionDate": "処方日",
+      "medicationPeriod": "服用期間",
+      "datePlaceholder": "日付を選択してください",
+      "periodPlaceholder": "服用期間を選択してください",
+      "saveButton": "保存",
+      "alertTitle": "通知",
+      "alertMessage": "正常に処理されました",
+      "alertConfirm": "確認",
+      "errorTitle": "入力エラー",
+      "errorMessage": "すべてのフィールドを入力してください。",
+      "scanAlert": "追加スキャン",
+      "scanAlertMessage": "追加スキャン機能を実装してください。"
+    },
+    "detail": {
+      "title": "詳細情報",
+      "registeredTitle": "登録された医薬品",
+      "period": "服用期間",
+      "description": "この医薬品は栄養素相互作用に関する情報がない薬物です",
+      "source": "(出典: NIH, Drugs.com, 処方別ガイド, ビタミン療法)"
+    },
+    "record": {
+      "title": "服薬記録",
+      "months": {
+        "1": "1月",
+        "2": "2月",
+        "3": "3月",
+        "4": "4月",
+        "5": "5月",
+        "6": "6月",
+        "7": "7月",
+        "8": "8月",
+        "9": "9月",
+        "10": "10月",
+        "11": "11月",
+        "12": "12月"
+      },
+      "weekDays": {
+        "sun": "日",
+        "mon": "月",
+        "tue": "火",
+        "wed": "水",
+        "thu": "木",
+        "fri": "金",
+        "sat": "土"
+      },
+      "dateInfo": "{day}日({dayOfWeek})",
+      "emptyMessage": "服用中の医薬品がありません",
+      "addButton": "記録追加"
+    },
+    "search": {
+      "title": "医薬品検索",
+      "placeholder": "医薬品名を入力してください（例：タイレノール）",
+      "empty": {
+        "noResults": "検索結果がありません",
+        "enterMedication": "医薬品名を入力して検索してください"
+      },
+      "loading": "検索中...",
+      "addButton": "追加"
+    }
+  },
+  "nutrition": {
+    "search": {
+      "title": "カスタマイズ検索",
+      "guideText": "カスタマイズ検索のために以下の項目を選択してください",
+      "infoLink": "カスタマイズケア検索とは？",
+      "managementLabel": "管理必要項目選択",
+      "managementHint": "希望する項目を選択してください",
+      "categoryLabel": "分析する製品/サービスカテゴリー",
+      "categoryInfo": "検索製品およびサービス案内事項 >",
+      "managementModalTitle": "管理必要項目選択",
+      "categoryModalTitle": "分析する製品/サービスカテゴリー項目選択",
+      "scanButton": "製品名スキャン",
+      "searchButton": "製品名検索",
+      "managementOptions": {
+        "oilySkin": "皮脂過多（スキンケアアルゴリズム推奨）",
+        "redness": "紅潮",
+        "dryness": "乾燥",
+        "sensitivity": "敏感性",
+        "trouble": "トラブル",
+        "antiAging": "アンチエイジング"
+      },
+      "categoryOptions": {
+        "healthFood": "健康機能食品",
+        "cosmetics": "化粧品",
+        "medicalDevice": "医療機器",
+        "food": "食品",
+        "dailyGoods": "日用品"
+      }
+    }
+  },
+  "family": {
+    "myFamily": {
+      "title": "私のファミリー",
+      "tabs": {
+        "parents": "両親",
+        "friends": "フレンズ"
+      },
+      "empty": "まだ追加されたファミリーがありません",
+      "description": "カスタマイズ健康管理から服薬中の栄養管理まで\nデータで管理してみましょう 😊",
+      "addButton": "追加"
+    }
+  },
+  "obesity": {
+    "overview": {
+      "title": "肥満体脂肪",
+      "info": "肥満とは体脂肪が異常に過多な状態を指し、二次性肥満（病気、遺伝、薬物などによる）と一次性肥満（生活習慣による）に分かれ、一次性肥満が90%以上を占めます。2型糖尿病、高血圧、高脂血症など様々な健康問題を引き起こす可能性があるため、食事療法、運動、行動制御による予防と改善が必要です。",
+      "illustrationLabel": "人体イラスト",
+      "statusSummary": "{name}さんの肥満体脂肪状態は危険段階で\n同年代男性平均未満です。",
+      "riskLabels": {
+        "danger": "危険",
+        "average": "平均",
+        "good": "良好"
+      },
+      "analysisTitle": "肥満体脂肪状態分析",
+      "analysisItems": {
+        "lifestyle": "生活習慣",
+        "chronicDisease": "慢性疾患"
+      }
+    }
   }
 }
 

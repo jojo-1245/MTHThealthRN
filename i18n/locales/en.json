@@ -399,6 +399,132 @@
       "serviceTitle": "Service-by-Service Analysis Results",
       "serviceName": "Self Diagnosis"
     }
+  },
+  "medication": {
+    "add": {
+      "title": "Medication Registration",
+      "scanButton": "Additional Scan",
+      "searchButton": "Medication Search",
+      "prescribedLabel": "Prescribed Medication",
+      "prescriptionDate": "Prescription Date",
+      "medicationPeriod": "Medication Period",
+      "datePlaceholder": "Select date",
+      "periodPlaceholder": "Select medication period",
+      "saveButton": "Save",
+      "alertTitle": "Notification",
+      "alertMessage": "Processed successfully",
+      "alertConfirm": "OK",
+      "errorTitle": "Input Error",
+      "errorMessage": "Please fill in all fields.",
+      "scanAlert": "Additional Scan",
+      "scanAlertMessage": "Please implement the additional scan feature."
+    },
+    "detail": {
+      "title": "Details",
+      "registeredTitle": "Registered Medication",
+      "period": "Medication Period",
+      "description": "This medication has no information on nutrient interactions",
+      "source": "(Source: NIH, Drugs.com, Drug Guide by Prescription, Vitamin Therapy)"
+    },
+    "record": {
+      "title": "Medication Record",
+      "months": {
+        "1": "Jan",
+        "2": "Feb",
+        "3": "Mar",
+        "4": "Apr",
+        "5": "May",
+        "6": "Jun",
+        "7": "Jul",
+        "8": "Aug",
+        "9": "Sep",
+        "10": "Oct",
+        "11": "Nov",
+        "12": "Dec"
+      },
+      "weekDays": {
+        "sun": "Sun",
+        "mon": "Mon",
+        "tue": "Tue",
+        "wed": "Wed",
+        "thu": "Thu",
+        "fri": "Fri",
+        "sat": "Sat"
+      },
+      "dateInfo": "{day} ({dayOfWeek})",
+      "emptyMessage": "No medications being taken",
+      "addButton": "Add Record"
+    },
+    "search": {
+      "title": "Medication Search",
+      "placeholder": "Enter medication name (e.g. Tylenol)",
+      "empty": {
+        "noResults": "No search results",
+        "enterMedication": "Enter medication name to search"
+      },
+      "loading": "Searching...",
+      "addButton": "Add"
+    }
+  },
+  "nutrition": {
+    "search": {
+      "title": "Customized Search",
+      "guideText": "Please select the items below for customized search",
+      "infoLink": "What is customized care search?",
+      "managementLabel": "Select Management Item",
+      "managementHint": "Please select the desired item",
+      "categoryLabel": "Product / Service Category to Analyze",
+      "categoryInfo": "Search Product and Service Information >",
+      "managementModalTitle": "Select Management Item",
+      "categoryModalTitle": "Select Product / Service Category Item",
+      "scanButton": "Scan Product Name",
+      "searchButton": "Search Product Name",
+      "managementOptions": {
+        "oilySkin": "Excessive Sebum (Skin Care Algorithm Recommendation)",
+        "redness": "Redness",
+        "dryness": "Dryness",
+        "sensitivity": "Sensitivity",
+        "trouble": "Trouble",
+        "antiAging": "Anti-Aging"
+      },
+      "categoryOptions": {
+        "healthFood": "Health Functional Food",
+        "cosmetics": "Cosmetics",
+        "medicalDevice": "Medical Device",
+        "food": "Food",
+        "dailyGoods": "Daily Goods"
+      }
+    }
+  },
+  "family": {
+    "myFamily": {
+      "title": "My Family",
+      "tabs": {
+        "parents": "Parents",
+        "friends": "Friends"
+      },
+      "empty": "No family members added yet",
+      "description": "Manage everything from customized health care\nto nutrition management during medication with data 😊",
+      "addButton": "Add"
+    }
+  },
+  "obesity": {
+    "overview": {
+      "title": "Obesity/Body Fat",
+      "info": "Obesity refers to a state of abnormally excessive body fat, divided into secondary obesity (caused by disease, genetics, medication, etc.) and primary obesity (caused by lifestyle), with primary obesity accounting for more than 90%. It can cause various health problems such as type 2 diabetes, hypertension, and hyperlipidemia, so prevention and improvement through diet, exercise, and behavioral control are necessary.",
+      "illustrationLabel": "Human Body Illustration",
+      "statusSummary": "{name}'s obesity/body fat status is at a danger level\nbelow the average for men of the same age.",
+      "riskLabels": {
+        "danger": "Danger",
+        "average": "Average",
+        "good": "Good"
+      },
+      "analysisTitle": "Obesity/Body Fat Status Analysis",
+      "analysisItems": {
+        "lifestyle": "Lifestyle",
+        "chronicDisease": "Chronic Disease"
+      }
+    }
   }
 }
 

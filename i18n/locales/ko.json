@@ -747,6 +747,132 @@
       "serviceTitle": "서비스별 분석결과",
       "serviceName": "자가진단"
     }
+  },
+  "medication": {
+    "add": {
+      "title": "의약품 등록",
+      "scanButton": "추가스캔",
+      "searchButton": "의약품 검색",
+      "prescribedLabel": "처방 받은 약",
+      "prescriptionDate": "처방 일자",
+      "medicationPeriod": "복용 기간",
+      "datePlaceholder": "날짜를 선택하세요",
+      "periodPlaceholder": "복용 기간을 선택하세요",
+      "saveButton": "저장",
+      "alertTitle": "알림",
+      "alertMessage": "정상 처리 되었습니다",
+      "alertConfirm": "확인",
+      "errorTitle": "입력 오류",
+      "errorMessage": "모든 필드를 입력해주세요.",
+      "scanAlert": "추가스캔",
+      "scanAlertMessage": "추가스캔 기능을 구현해주세요."
+    },
+    "detail": {
+      "title": "상세 정보",
+      "registeredTitle": "등록된 의약품",
+      "period": "복용 기간",
+      "description": "해당 의약품은 영양소 상호작용에 대한 정보가 없는 약물입니다",
+      "source": "(출처: NIH, Drugs.com, 영영제 처별 가이드, 비타민 치료)"
+    },
+    "record": {
+      "title": "복약 기록",
+      "months": {
+        "1": "1월",
+        "2": "2월",
+        "3": "3월",
+        "4": "4월",
+        "5": "5월",
+        "6": "6월",
+        "7": "7월",
+        "8": "8월",
+        "9": "9월",
+        "10": "10월",
+        "11": "11월",
+        "12": "12월"
+      },
+      "weekDays": {
+        "sun": "일",
+        "mon": "월",
+        "tue": "화",
+        "wed": "수",
+        "thu": "목",
+        "fri": "금",
+        "sat": "토"
+      },
+      "dateInfo": "{day}일({dayOfWeek})",
+      "emptyMessage": "복용중인 의약품이 없습니다",
+      "addButton": "기록 추가"
+    },
+    "search": {
+      "title": "의약품 검색",
+      "placeholder": "의약품명을 입력하세요. (ex 타이레놀)",
+      "empty": {
+        "noResults": "검색 결과가 없습니다",
+        "enterMedication": "의약품명을 입력하여 검색하세요"
+      },
+      "loading": "검색 중...",
+      "addButton": "추가"
+    }
+  },
+  "nutrition": {
+    "search": {
+      "title": "맞춤형 검색",
+      "guideText": "맞춤 검색을 위해 아래 내용들을 선택해주세요",
+      "infoLink": "맞춤형 케어 검색이란?",
+      "managementLabel": "관리 필요 항목 선택",
+      "managementHint": "원하는 항목으로 선택 하세요",
+      "categoryLabel": "분석할 제품 / 서비스 카테고리",
+      "categoryInfo": "검색 제품 및 서비스 안내 사항 >",
+      "managementModalTitle": "관리 필요 항목 선택",
+      "categoryModalTitle": "분석할 제품 / 서비스 카테고리 항목 선택",
+      "scanButton": "제품명 스캔하기",
+      "searchButton": "제품명 검색하기",
+      "managementOptions": {
+        "oilySkin": "피지과다(스킨케어 알고리즘 추천)",
+        "redness": "홍조",
+        "dryness": "건조함",
+        "sensitivity": "민감성",
+        "trouble": "트러블",
+        "antiAging": "안티에이징"
+      },
+      "categoryOptions": {
+        "healthFood": "건강기능식품",
+        "cosmetics": "화장품",
+        "medicalDevice": "의료기기",
+        "food": "식품",
+        "dailyGoods": "생활용품"
+      }
+    }
+  },
+  "family": {
+    "myFamily": {
+      "title": "나의 패밀리",
+      "tabs": {
+        "parents": "부모님",
+        "friends": "프렌즈"
+      },
+      "empty": "아직 추가된 패밀리가 없어요",
+      "description": "맞춤 건강관리부터 복약 중 영양관리까지\n데이터로 관리해보세요 😊",
+      "addButton": "추가하기"
+    }
+  },
+  "obesity": {
+    "overview": {
+      "title": "비만체지방",
+      "info": "비만이란 체지방이 비정상적으로 과다한 상태를 말하며, 이차성 비만(질병, 유전, 약물 등으로 인한)과 일차성 비만(생활습관으로 인한)으로 나뉘며, 일차성 비만이 90% 이상을 차지합니다. 2형 당뇨병, 고혈압, 고지혈증 등 여러 건강 문제를 야기할 수 있어 식이요법, 운동, 행동조절을 통한 예방 및 개선이 필요합니다.",
+      "illustrationLabel": "인체 일러스트",
+      "statusSummary": "{name}님의 비만체지방 상태는 위험단계로\n또래 남성 평균 미달입니다.",
+      "riskLabels": {
+        "danger": "위험",
+        "average": "평균",
+        "good": "양호"
+      },
+      "analysisTitle": "비만체지방 상태 분석",
+      "analysisItems": {
+        "lifestyle": "생활습관",
+        "chronicDisease": "만성질환"
+      }
+    }
   }
 }
 

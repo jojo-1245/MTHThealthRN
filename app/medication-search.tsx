@@ -1,3 +1,4 @@
+import { useTranslation } from '@/i18n';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React, { useState } from 'react';
@@ -26,6 +27,7 @@ const mockMedications = [
 ];
 
 export default function MedicationSearch() {
+  const { t } = useTranslation();
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState<any[]>([]);
   const [isSearching, setIsSearching] = useState(false);
@@ -96,7 +98,7 @@ export default function MedicationSearch() {
     <View style={styles.emptyState}>
       <Ionicons name="search-outline" size={48} color="#ccc" />
       <Text style={styles.emptyStateText}>
-        {searchQuery ? '검색 결과가 없습니다' : '의약품명을 입력하여 검색하세요'}
+        {searchQuery ? t('medication.search.empty.noResults') : t('medication.search.empty.enterMedication')}
       </Text>
     </View>
   );
@@ -105,7 +107,7 @@ export default function MedicationSearch() {
     if (isSearching) {
       return (
         <View style={styles.loadingState}>
-          <Text style={styles.loadingText}>검색 중...</Text>
+          <Text style={styles.loadingText}>{t('medication.search.loading')}</Text>
         </View>
       );
     }
@@ -132,7 +134,7 @@ export default function MedicationSearch() {
         <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>의약품 검색</Text>
+        <Text style={styles.headerTitle}>{t('medication.search.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
@@ -144,7 +146,7 @@ export default function MedicationSearch() {
             style={styles.searchInput}
             value={searchQuery}
             onChangeText={handleSearch}
-            placeholder="의약품명을 입력하세요. (ex 타이레놀)"
+            placeholder={t('medication.search.placeholder')}
             placeholderTextColor="#999"
             autoFocus={true}
             returnKeyType="search"
@@ -171,7 +173,7 @@ export default function MedicationSearch() {
             disabled={!selectedMedication}
           >
             <Text style={[styles.addButtonText, !selectedMedication && styles.addButtonTextDisabled]}>
-              추가
+              {t('medication.search.addButton')}
             </Text>
           </TouchableOpacity>
         </View>

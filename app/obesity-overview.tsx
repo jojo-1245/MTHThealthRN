@@ -1,3 +1,4 @@
+import { useTranslation } from '@/i18n';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React from 'react';
@@ -14,6 +15,7 @@ import {
 const { width, height } = Dimensions.get('window');
 
 export default function ObesityOverviewScreen() {
+  const { t } = useTranslation();
   const handleBack = () => {
     router.back();
   };
@@ -31,7 +33,7 @@ export default function ObesityOverviewScreen() {
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>비만체지방</Text>
+        <Text style={styles.headerTitle}>{t('obesity.overview.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
@@ -40,10 +42,7 @@ export default function ObesityOverviewScreen() {
         {/* 정보 텍스트 */}
         <View style={styles.infoSection}>
           <Text style={styles.infoText}>
-            비만이란 체지방이 비정상적으로 과다한 상태를 말하며, 이차성 비만(질병, 유전, 약물
-            등으로 인한)과 일차성 비만(생활습관으로 인한)으로 나뉘며, 일차성 비만이 90% 이상을
-            차지합니다. 2형 당뇨병, 고혈압, 고지혈증 등 여러 건강 문제를 야기할 수 있어 식이요법,
-            운동, 행동조절을 통한 예방 및 개선이 필요합니다.
+            {t('obesity.overview.info')}
           </Text>
         </View>
 
@@ -51,15 +50,14 @@ export default function ObesityOverviewScreen() {
         <View style={styles.illustrationContainer}>
           <View style={styles.illustration}>
             <Ionicons name="body" size={120} color="#F59E0B" />
-            <Text style={styles.illustrationLabel}>인체 일러스트</Text>
+            <Text style={styles.illustrationLabel}>{t('obesity.overview.illustrationLabel')}</Text>
           </View>
         </View>
 
         {/* 사용자 상태 요약 */}
         <View style={styles.statusSummary}>
           <Text style={styles.statusSummaryText}>
-            Ted님의 비만체지방 상태는 위험단계로{'\n'}
-            또래 남성 평균 미달입니다.
+            {t('obesity.overview.statusSummary', { name: 'Ted' })}
           </Text>
         </View>
 
@@ -70,29 +68,29 @@ export default function ObesityOverviewScreen() {
             <View style={styles.riskMarker} />
           </View>
           <View style={styles.riskLabels}>
-            <Text style={styles.riskLabel}>위험</Text>
-            <Text style={styles.averageLabel}>평균</Text>
-            <Text style={styles.goodLabel}>양호</Text>
+            <Text style={styles.riskLabel}>{t('obesity.overview.riskLabels.danger')}</Text>
+            <Text style={styles.averageLabel}>{t('obesity.overview.riskLabels.average')}</Text>
+            <Text style={styles.goodLabel}>{t('obesity.overview.riskLabels.good')}</Text>
           </View>
           <Text style={styles.riskValue}>30</Text>
         </View>
 
         {/* 상태 분석 */}
         <View style={styles.analysisSection}>
-          <Text style={styles.analysisTitle}>비만체지방 상태 분석</Text>
+          <Text style={styles.analysisTitle}>{t('obesity.overview.analysisTitle')}</Text>
           
           <View style={styles.analysisItems}>
             <TouchableOpacity style={styles.analysisItem} onPress={handleDetail}>
-              <Text style={styles.analysisItemLabel}>생활습관</Text>
+              <Text style={styles.analysisItemLabel}>{t('obesity.overview.analysisItems.lifestyle')}</Text>
               <View style={[styles.statusButton, styles.goodStatus]}>
-                <Text style={[styles.statusButtonText, styles.goodStatusText]}>양호</Text>
+                <Text style={[styles.statusButtonText, styles.goodStatusText]}>{t('obesity.overview.riskLabels.good')}</Text>
               </View>
             </TouchableOpacity>
 
             <TouchableOpacity style={styles.analysisItem} onPress={handleDetail}>
-              <Text style={styles.analysisItemLabel}>만성질환</Text>
+              <Text style={styles.analysisItemLabel}>{t('obesity.overview.analysisItems.chronicDisease')}</Text>
               <View style={[styles.statusButton, styles.dangerStatus]}>
-                <Text style={[styles.statusButtonText, styles.dangerStatusText]}>위험</Text>
+                <Text style={[styles.statusButtonText, styles.dangerStatusText]}>{t('obesity.overview.riskLabels.danger')}</Text>
               </View>
             </TouchableOpacity>
           </View>
@@ -185,5 +183,90 @@ const styles = StyleSheet.create({
     top: 0,
     width: '30%',
     height: '100%',
-    backgroundColor: '#EF4444走得',
-    בו
+    backgroundColor: '#EF4444',
+    borderRadius: 12,
+  },
+  riskMarker: {
+    position: 'absolute',
+    left: '30%',
+    top: -4,
+    width: 8,
+    height: 8,
+    borderRadius: 4,
+    backgroundColor: '#6B7280',
+  },
+  riskLabels: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginBottom: 8,
+  },
+  riskLabel: {
+    fontSize: 12,
+    color: '#EF4444',
+    fontWeight: '500',
+  },
+  averageLabel: {
+    fontSize: 12,
+    color: '#6B7280',
+    fontWeight: '500',
+  },
+  goodLabel: {
+    fontSize: 12,
+    color: '#10B981',
+    fontWeight: '500',
+  },
+  riskValue: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#EF4444',
+    textAlign: 'center',
+  },
+  analysisSection: {
+    marginBottom: 40,
+  },
+  analysisTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#000',
+    marginBottom: 20,
+  },
+  analysisItems: {
+    gap: 12,
+  },
+  analysisItem: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    backgroundColor: '#F9FAFB',
+    padding: 16,
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: '#E5E7EB',
+  },
+  analysisItemLabel: {
+    fontSize: 16,
+    fontWeight: '500',
+    color: '#000',
+  },
+  statusButton: {
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    borderRadius: 12,
+  },
+  goodStatus: {
+    backgroundColor: '#D1FAE5',
+  },
+  dangerStatus: {
+    backgroundColor: '#FEE2E2',
+  },
+  statusButtonText: {
+    fontSize: 12,
+    fontWeight: 'bold',
+  },
+  goodStatusText: {
+    color: '#10B981',
+  },
+  dangerStatusText: {
+    color: '#EF4444',
+  },
+});

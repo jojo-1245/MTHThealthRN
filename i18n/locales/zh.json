@@ -399,6 +399,132 @@
       "serviceTitle": "服务分析结果",
       "serviceName": "自我诊断"
     }
+  },
+  "medication": {
+    "add": {
+      "title": "药品注册",
+      "scanButton": "追加扫描",
+      "searchButton": "药品搜索",
+      "prescribedLabel": "处方药",
+      "prescriptionDate": "处方日期",
+      "medicationPeriod": "服药期间",
+      "datePlaceholder": "选择日期",
+      "periodPlaceholder": "选择服药期间",
+      "saveButton": "保存",
+      "alertTitle": "通知",
+      "alertMessage": "处理成功",
+      "alertConfirm": "确认",
+      "errorTitle": "输入错误",
+      "errorMessage": "请填写所有字段。",
+      "scanAlert": "追加扫描",
+      "scanAlertMessage": "请实现追加扫描功能。"
+    },
+    "detail": {
+      "title": "详细信息",
+      "registeredTitle": "已注册药品",
+      "period": "服药期间",
+      "description": "该药品没有关于营养素相互作用的信息",
+      "source": "(来源: NIH, Drugs.com, 处方药物指南, 维生素治疗)"
+    },
+    "record": {
+      "title": "服药记录",
+      "months": {
+        "1": "1月",
+        "2": "2月",
+        "3": "3月",
+        "4": "4月",
+        "5": "5月",
+        "6": "6月",
+        "7": "7月",
+        "8": "8月",
+        "9": "9月",
+        "10": "10月",
+        "11": "11月",
+        "12": "12月"
+      },
+      "weekDays": {
+        "sun": "日",
+        "mon": "一",
+        "tue": "二",
+        "wed": "三",
+        "thu": "四",
+        "fri": "五",
+        "sat": "六"
+      },
+      "dateInfo": "{day}日({dayOfWeek})",
+      "emptyMessage": "没有正在服用的药品",
+      "addButton": "添加记录"
+    },
+    "search": {
+      "title": "药品搜索",
+      "placeholder": "请输入药品名称（例如：泰诺）",
+      "empty": {
+        "noResults": "没有搜索结果",
+        "enterMedication": "请输入药品名称进行搜索"
+      },
+      "loading": "搜索中...",
+      "addButton": "添加"
+    }
+  },
+  "nutrition": {
+    "search": {
+      "title": "定制搜索",
+      "guideText": "请选择以下项目进行定制搜索",
+      "infoLink": "什么是定制护理搜索？",
+      "managementLabel": "选择管理项目",
+      "managementHint": "请选择所需项目",
+      "categoryLabel": "要分析的产品/服务类别",
+      "categoryInfo": "搜索产品和服务信息 >",
+      "managementModalTitle": "选择管理项目",
+      "categoryModalTitle": "选择产品/服务类别项目",
+      "scanButton": "扫描产品名称",
+      "searchButton": "搜索产品名称",
+      "managementOptions": {
+        "oilySkin": "皮脂过多（护肤算法推荐）",
+        "redness": "红潮",
+        "dryness": "干燥",
+        "sensitivity": "敏感性",
+        "trouble": "问题",
+        "antiAging": "抗衰老"
+      },
+      "categoryOptions": {
+        "healthFood": "健康功能食品",
+        "cosmetics": "化妆品",
+        "medicalDevice": "医疗器械",
+        "food": "食品",
+        "dailyGoods": "日用品"
+      }
+    }
+  },
+  "family": {
+    "myFamily": {
+      "title": "我的家庭",
+      "tabs": {
+        "parents": "父母",
+        "friends": "朋友"
+      },
+      "empty": "还没有添加家庭成员",
+      "description": "从定制健康管理到服药期间的营养管理\n用数据来管理吧 😊",
+      "addButton": "添加"
+    }
+  },
+  "obesity": {
+    "overview": {
+      "title": "肥胖/体脂肪",
+      "info": "肥胖是指体脂肪异常过多的状态，分为继发性肥胖（由疾病、遗传、药物等引起）和原发性肥胖（由生活习惯引起），其中原发性肥胖占90%以上。它可能引起2型糖尿病、高血压、高脂血症等多种健康问题，因此需要通过饮食疗法、运动和行为控制来预防和改善。",
+      "illustrationLabel": "人体插图",
+      "statusSummary": "{name}的肥胖/体脂肪状态处于危险水平\n低于同龄男性平均水平。",
+      "riskLabels": {
+        "danger": "危险",
+        "average": "平均",
+        "good": "良好"
+      },
+      "analysisTitle": "肥胖/体脂肪状态分析",
+      "analysisItems": {
+        "lifestyle": "生活习惯",
+        "chronicDisease": "慢性疾病"
+      }
+    }
   }
 }
 

@@ -399,6 +399,132 @@
       "serviceTitle": "Hasil Analisis Per Layanan",
       "serviceName": "Diagnosis Mandiri"
     }
+  },
+  "medication": {
+    "add": {
+      "title": "Registrasi Obat",
+      "scanButton": "Pindai Tambahan",
+      "searchButton": "Cari Obat",
+      "prescribedLabel": "Obat yang Diresepkan",
+      "prescriptionDate": "Tanggal Resep",
+      "medicationPeriod": "Periode Pengobatan",
+      "datePlaceholder": "Pilih tanggal",
+      "periodPlaceholder": "Pilih periode pengobatan",
+      "saveButton": "Simpan",
+      "alertTitle": "Notifikasi",
+      "alertMessage": "Berhasil diproses",
+      "alertConfirm": "OK",
+      "errorTitle": "Kesalahan Input",
+      "errorMessage": "Harap isi semua bidang.",
+      "scanAlert": "Pindai Tambahan",
+      "scanAlertMessage": "Harap implementasikan fitur pindai tambahan."
+    },
+    "detail": {
+      "title": "Detail",
+      "registeredTitle": "Obat Terdaftar",
+      "period": "Periode Pengobatan",
+      "description": "Obat ini tidak memiliki informasi tentang interaksi nutrisi",
+      "source": "(Sumber: NIH, Drugs.com, Panduan Obat per Resep, Terapi Vitamin)"
+    },
+    "record": {
+      "title": "Catatan Pengobatan",
+      "months": {
+        "1": "Jan",
+        "2": "Feb",
+        "3": "Mar",
+        "4": "Apr",
+        "5": "Mei",
+        "6": "Jun",
+        "7": "Jul",
+        "8": "Agu",
+        "9": "Sep",
+        "10": "Okt",
+        "11": "Nov",
+        "12": "Des"
+      },
+      "weekDays": {
+        "sun": "Min",
+        "mon": "Sen",
+        "tue": "Sel",
+        "wed": "Rab",
+        "thu": "Kam",
+        "fri": "Jum",
+        "sat": "Sab"
+      },
+      "dateInfo": "{day} ({dayOfWeek})",
+      "emptyMessage": "Tidak ada obat yang sedang dikonsumsi",
+      "addButton": "Tambah Catatan"
+    },
+    "search": {
+      "title": "Cari Obat",
+      "placeholder": "Masukkan nama obat (contoh: Tylenol)",
+      "empty": {
+        "noResults": "Tidak ada hasil pencarian",
+        "enterMedication": "Masukkan nama obat untuk mencari"
+      },
+      "loading": "Mencari...",
+      "addButton": "Tambah"
+    }
+  },
+  "nutrition": {
+    "search": {
+      "title": "Pencarian Kustom",
+      "guideText": "Harap pilih item di bawah ini untuk pencarian kustom",
+      "infoLink": "Apa itu pencarian perawatan kustom?",
+      "managementLabel": "Pilih Item Manajemen",
+      "managementHint": "Harap pilih item yang diinginkan",
+      "categoryLabel": "Kategori Produk / Layanan untuk Dianalisis",
+      "categoryInfo": "Informasi Produk dan Layanan Pencarian >",
+      "managementModalTitle": "Pilih Item Manajemen",
+      "categoryModalTitle": "Pilih Item Kategori Produk / Layanan",
+      "scanButton": "Pindai Nama Produk",
+      "searchButton": "Cari Nama Produk",
+      "managementOptions": {
+        "oilySkin": "Sebum Berlebih (Rekomendasi Algoritma Perawatan Kulit)",
+        "redness": "Kemerahan",
+        "dryness": "Kekeringan",
+        "sensitivity": "Sensitivitas",
+        "trouble": "Masalah",
+        "antiAging": "Anti-Aging"
+      },
+      "categoryOptions": {
+        "healthFood": "Makanan Fungsional Kesehatan",
+        "cosmetics": "Kosmetik",
+        "medicalDevice": "Alat Medis",
+        "food": "Makanan",
+        "dailyGoods": "Barang Sehari-hari"
+      }
+    }
+  },
+  "family": {
+    "myFamily": {
+      "title": "Keluarga Saya",
+      "tabs": {
+        "parents": "Orang Tua",
+        "friends": "Teman"
+      },
+      "empty": "Belum ada anggota keluarga yang ditambahkan",
+      "description": "Kelola semuanya dari perawatan kesehatan kustom\nhingga manajemen nutrisi selama pengobatan dengan data 😊",
+      "addButton": "Tambah"
+    }
+  },
+  "obesity": {
+    "overview": {
+      "title": "Obesitas/Lemak Tubuh",
+      "info": "Obesitas mengacu pada keadaan lemak tubuh yang berlebihan secara tidak normal, dibagi menjadi obesitas sekunder (disebabkan oleh penyakit, genetika, obat-obatan, dll.) dan obesitas primer (disebabkan oleh gaya hidup), dengan obesitas primer menyumbang lebih dari 90%. Ini dapat menyebabkan berbagai masalah kesehatan seperti diabetes tipe 2, hipertensi, dan hiperlipidemia, sehingga pencegahan dan perbaikan melalui diet, olahraga, dan kontrol perilaku diperlukan.",
+      "illustrationLabel": "Ilustrasi Tubuh Manusia",
+      "statusSummary": "Status obesitas/lemak tubuh {name} berada pada tingkat bahaya\ndi bawah rata-rata untuk pria seusia.",
+      "riskLabels": {
+        "danger": "Bahaya",
+        "average": "Rata-rata",
+        "good": "Baik"
+      },
+      "analysisTitle": "Analisis Status Obesitas/Lemak Tubuh",
+      "analysisItems": {
+        "lifestyle": "Gaya Hidup",
+        "chronicDisease": "Penyakit Kronis"
+      }
+    }
   }
 }
 
