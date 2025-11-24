@@ -231,6 +231,174 @@
         "dailyTrue": "Setiap hari"
       }
     }
+  },
+  "food": {
+    "search": {
+      "title": "Pencarian Makanan",
+      "placeholder": "Masukkan nama makanan",
+      "info": {
+        "registered": "• Kami menganalisis produk yang terdaftar di Kementerian Keamanan Pangan dan Obat",
+        "unregistered": "• Makanan impor langsung dari luar negeri yang tidak terdaftar di Kementerian Keamanan Pangan dan Obat tidak dapat dicari",
+        "input": "• Harap masukkan nama produk dengan akurat, perhatikan spasi dan ejaan"
+      },
+      "empty": {
+        "noResults": "Tidak ada hasil pencarian",
+        "enterFood": "Masukkan nama makanan untuk mencari"
+      },
+      "loading": "Mencari...",
+      "manufacturer": "Produsen:",
+      "analyzeButton": "Minta Analisis"
+    },
+    "searchResult": {
+      "title": "Hasil Pencarian Makanan",
+      "tabs": {
+        "detail": "Detail",
+        "ranking": "Peringkat Nutrisi"
+      },
+      "category": "Kategori",
+      "categoryCount": "Jumlah makanan dalam kategori",
+      "analysisResult": "Hasil Analisis",
+      "topPercent": "Teratas",
+      "analysisTitle": "Analisis Bahan Utama",
+      "analysisLabels": {
+        "lowCalorie": "Rendah Kalori",
+        "lowCarb": "Rendah Karbohidrat",
+        "highProtein": "Tinggi Protein",
+        "lowFat": "Rendah Lemak",
+        "lowSodium": "Rendah Natrium",
+        "lowSugar": "Rendah Gula"
+      },
+      "scale": {
+        "top": "Teratas",
+        "bottom": "Terbawah"
+      },
+      "footerNote": "Analisis didasarkan pada satu porsi saji.",
+      "rankingTitle": "Kategori Jus Buah/Sayur TOP 10",
+      "serving": "Ukuran porsi:",
+      "viewAllButton": "Lihat Semua Nutrisi",
+      "compareButton": "Bandingkan Nutrisi"
+    },
+    "nutritionDetail": {
+      "title": "Lihat Semua Nutrisi",
+      "serving": {
+        "perServing": "Per Porsi",
+        "totalContent": "Total Konten"
+      },
+      "guide": {
+        "title": "Cara Membaca Fakta Nutrisi",
+        "text": "Fakta nutrisi ditampilkan berdasarkan satu porsi saji dan menunjukkan persentase (%) dari standar nutrisi harian."
+      },
+      "sections": {
+        "caloriesMajor": "Kalori dan 3 Nutrisi Utama (3)",
+        "minerals": "Mineral (1)"
+      },
+      "nutrients": {
+        "energy": "Energi",
+        "carbs": "Karbohidrat",
+        "totalFiber": "Total Serat Makanan"
+      }
+    },
+    "nutritionCompare": {
+      "title": "Bandingkan Nutrisi",
+      "vs": "VS",
+      "servingLabel": "Per Porsi",
+      "sections": {
+        "caloriesMajor": "Kalori dan 3 Nutrisi Utama",
+        "minerals": "Mineral"
+      },
+      "nutrients": {
+        "energy": "Energi",
+        "carbs": "Karbohidrat",
+        "totalSugar": "Total Gula",
+        "totalFiber": "Total Serat Makanan",
+        "sodium": "Natrium",
+        "calcium": "Kalsium",
+        "iron": "Besi"
+      },
+      "addFoodButton": "Tambah Makanan"
+    }
+  },
+  "health": {
+    "geneticTest": {
+      "title": "Tes Genetik",
+      "noData": "Tidak ada informasi tes tersedia.",
+      "addMessage": "Harap tambahkan hasil tes genetik Anda.",
+      "addButton": "Tambah Tes",
+      "note": "※ Layanan ini disediakan untuk anggota mitra Hint.\nLayanan untuk anggota umum akan tersedia di masa depan."
+    },
+    "checkupAuth": {
+      "title": "Muat Hasil Pemeriksaan Kesehatan",
+      "message": "Autentikasi diperlukan\nuntuk memuat hasil pemeriksaan kesehatan!",
+      "kakaoButton": "Autentikasi dengan Kakao",
+      "certificateButton": "Autentikasi dengan Sertifikat"
+    },
+    "checkupLoad": {
+      "title": "Muat Hasil Pemeriksaan Kesehatan",
+      "message": "Harap tambahkan hasil pemeriksaan kesehatan Anda.",
+      "addButton": "Tambah Hasil Pemeriksaan"
+    },
+    "statusMain": {
+      "title": "Cek Status Kesehatan Saya",
+      "userLevel": "Tingkat Kesehatan {name}?",
+      "levelText": "Tingkat Kesehatan",
+      "levelBadge": "Tingkat {level} Tahap Peringatan",
+      "levelDescription": "Manajemen yang hati-hati diperlukan untuk perbaikan kondisi",
+      "manageTitle": "Apa yang harus saya kelola terlebih dahulu?",
+      "status": {
+        "danger": "Bahaya",
+        "caution": "Peringatan"
+      },
+      "items": {
+        "obesity": "Obesitas/Lemak Tubuh",
+        "metabolism": "Regulasi Metabolik",
+        "scalp": "Kulit Kepala Berketombe"
+      },
+      "addTitle": "Apakah Anda ingin menambahkan informasi kesehatan?",
+      "timeRequired": "Memakan waktu sekitar {time}",
+      "addItems": {
+        "selfDiagnosis": "Diagnosis Mandiri",
+        "healthCheckup": "Hasil Pemeriksaan Kesehatan",
+        "detailedAnalysis": "Analisis Detail Lainnya"
+      },
+      "habitTitle": "Bangun Kebiasaan Sehat",
+      "habitDescription": "With adalah acara tantangan untuk membangun kebiasaan sehat",
+      "habitItems": {
+        "recruiting": "With yang Sedang Direkrut",
+        "recruitingSubtitle": "Bergabung gratis dan dapatkan hadiah",
+        "ended": "With yang Berakhir",
+        "endedSubtitle": "Periksa hasil dan dapatkan hadiah"
+      }
+    },
+    "statusResults": {
+      "title": "Semua Hasil",
+      "summary": "Tingkat kesehatan {name} adalah Tingkat {level},",
+      "summaryHighlight": "di atas rata-rata untuk pria seusia",
+      "average": "Rata-rata",
+      "itemsTitle": "Hasil Analisis Per Item",
+      "items": {
+        "obesity": "Obesitas/Lemak Tubuh",
+        "metabolism": "Regulasi Metabolik",
+        "scalp": "Kulit Kepala Berketombe",
+        "liver": "Kesehatan Hati",
+        "bone": "Kesehatan Tulang/Sendi",
+        "sleep": "Tidur/Stres",
+        "circulation": "Peningkatan Sirkulasi",
+        "immunity": "Kekebalan/Antioksidan",
+        "acne": "Jerawat Inflamasi",
+        "digestion": "Kesehatan Pencernaan",
+        "eye": "Kesehatan Mata",
+        "muscle": "Metabolisme Otot",
+        "brain": "Otak/Ingatan"
+      },
+      "status": {
+        "danger": "Bahaya",
+        "caution": "Peringatan",
+        "interest": "Minat",
+        "good": "Baik"
+      },
+      "serviceTitle": "Hasil Analisis Per Layanan",
+      "serviceName": "Diagnosis Mandiri"
+    }
   }
 }
 

@@ -231,6 +231,174 @@
         "dailyTrue": "毎日そう"
       }
     }
+  },
+  "food": {
+    "search": {
+      "title": "食品検索",
+      "placeholder": "食品名を入力してください",
+      "info": {
+        "registered": "• 食品医薬品安全処に登録された製品を対象に分析します",
+        "unregistered": "• 食品医薬品安全処に登録されていない海外直購食品は検索できません",
+        "input": "• 製品名入力時は、スペース、正字法に注意して正確に入力してください"
+      },
+      "empty": {
+        "noResults": "検索結果がありません",
+        "enterFood": "食品名を入力して検索してください"
+      },
+      "loading": "検索中...",
+      "manufacturer": "製造元:",
+      "analyzeButton": "分析申請"
+    },
+    "searchResult": {
+      "title": "食品検索結果",
+      "tabs": {
+        "detail": "詳細情報",
+        "ranking": "栄養順位"
+      },
+      "category": "分類カテゴリー",
+      "categoryCount": "カテゴリー食品数",
+      "analysisResult": "分析結果",
+      "topPercent": "上位",
+      "analysisTitle": "主要成分分析",
+      "analysisLabels": {
+        "lowCalorie": "低カロリー",
+        "lowCarb": "低炭水",
+        "highProtein": "高タンパク",
+        "lowFat": "低脂肪",
+        "lowSodium": "低ナトリウム",
+        "lowSugar": "低糖"
+      },
+      "scale": {
+        "top": "上位",
+        "bottom": "下位"
+      },
+      "footerNote": "食品1回提供量基準で分析しています。",
+      "rankingTitle": "果物/野菜ジュースカテゴリー TOP 10",
+      "serving": "1回提供量:",
+      "viewAllButton": "栄養成分全体を見る",
+      "compareButton": "栄養成分比較"
+    },
+    "nutritionDetail": {
+      "title": "栄養成分全体を見る",
+      "serving": {
+        "perServing": "1回提供量",
+        "totalContent": "総内容量"
+      },
+      "guide": {
+        "title": "栄養成分表の読み方",
+        "text": "栄養成分表は1回提供量基準で表示され、1日の栄養素基準値に対する割合(%)を示します。"
+      },
+      "sections": {
+        "caloriesMajor": "熱量及び3大栄養素(3個)",
+        "minerals": "無機質(1個)"
+      },
+      "nutrients": {
+        "energy": "エネルギー",
+        "carbs": "炭水化物",
+        "totalFiber": "総食物繊維"
+      }
+    },
+    "nutritionCompare": {
+      "title": "栄養成分比較",
+      "vs": "VS",
+      "servingLabel": "1回提供量",
+      "sections": {
+        "caloriesMajor": "熱量及び3大栄養素",
+        "minerals": "無機質"
+      },
+      "nutrients": {
+        "energy": "エネルギー",
+        "carbs": "炭水化物",
+        "totalSugar": "総糖類",
+        "totalFiber": "総食物繊維",
+        "sodium": "ナトリウム",
+        "calcium": "カルシウム",
+        "iron": "鉄"
+      },
+      "addFoodButton": "食品追加"
+    }
+  },
+  "health": {
+    "geneticTest": {
+      "title": "遺伝子検査",
+      "noData": "検査情報がありません。",
+      "addMessage": "遺伝子検査結果を追加してください。",
+      "addButton": "検査追加",
+      "note": "※ このサービスはヒントパートナー会員対象で提供しています。\n今後、一般会員対象でサービス提供予定です。"
+    },
+    "checkupAuth": {
+      "title": "健康診断結果読み込み",
+      "message": "健康診断結果を読み込むには\n認証が必要です！",
+      "kakaoButton": "カカオ簡易認証",
+      "certificateButton": "共同認証書認証"
+    },
+    "checkupLoad": {
+      "title": "健康診断結果読み込み",
+      "message": "健康診断結果を追加してください。",
+      "addButton": "診断結果追加"
+    },
+    "statusMain": {
+      "title": "私の健康状態を知る",
+      "userLevel": "{name}さんの健康レベル？",
+      "levelText": "健康レベル",
+      "levelBadge": "レベル{level}注意段階",
+      "levelDescription": "状態改善のための注意深い管理が必要",
+      "manageTitle": "何から管理しますか？",
+      "status": {
+        "danger": "危険",
+        "caution": "注意"
+      },
+      "items": {
+        "obesity": "肥満体脂肪",
+        "metabolism": "代謝調節",
+        "scalp": "フケ頭皮"
+      },
+      "addTitle": "健康情報を追加してみますか？",
+      "timeRequired": "約{time}かかります",
+      "addItems": {
+        "selfDiagnosis": "自己診断",
+        "healthCheckup": "健康診断結果",
+        "detailedAnalysis": "その他精密分析"
+      },
+      "habitTitle": "健康習慣を作る",
+      "habitDescription": "ウィズ(with)は健康習慣作り挑戦イベントです",
+      "habitItems": {
+        "recruiting": "募集中ウィズ",
+        "recruitingSubtitle": "無料で参加してリワードを受け取る",
+        "ended": "終了したウィズ",
+        "endedSubtitle": "結果を確認してリワードを受け取る"
+      }
+    },
+    "statusResults": {
+      "title": "全体結果",
+      "summary": "{name}さんの健康レベルはレベル{level}段階で、",
+      "summaryHighlight": "同年代男性平均以上です",
+      "average": "平均",
+      "itemsTitle": "項目別分析結果",
+      "items": {
+        "obesity": "肥満体脂肪",
+        "metabolism": "代謝調節",
+        "scalp": "フケ頭皮",
+        "liver": "肝健康",
+        "bone": "骨関節健康",
+        "sleep": "睡眠・ストレス",
+        "circulation": "血行改善",
+        "immunity": "免疫抗酸化",
+        "acne": "化膿性ニキビ",
+        "digestion": "消化腸健康",
+        "eye": "目の健康",
+        "muscle": "筋肉代謝",
+        "brain": "脳記憶力"
+      },
+      "status": {
+        "danger": "危険",
+        "caution": "注意",
+        "interest": "関心",
+        "good": "良好"
+      },
+      "serviceTitle": "サービス別分析結果",
+      "serviceName": "自己診断"
+    }
   }
 }
 

@@ -231,6 +231,174 @@
         "dailyTrue": "每天是"
       }
     }
+  },
+  "food": {
+    "search": {
+      "title": "食品搜索",
+      "placeholder": "请输入食品名称",
+      "info": {
+        "registered": "• 我们分析在食品药品安全处注册的产品",
+        "unregistered": "• 未在食品药品安全处注册的海外直购食品无法搜索",
+        "input": "• 输入产品名称时，请注意空格和拼写，准确输入"
+      },
+      "empty": {
+        "noResults": "没有搜索结果",
+        "enterFood": "请输入食品名称进行搜索"
+      },
+      "loading": "搜索中...",
+      "manufacturer": "制造商:",
+      "analyzeButton": "申请分析"
+    },
+    "searchResult": {
+      "title": "食品搜索结果",
+      "tabs": {
+        "detail": "详细信息",
+        "ranking": "营养排名"
+      },
+      "category": "分类类别",
+      "categoryCount": "类别食品数量",
+      "analysisResult": "分析结果",
+      "topPercent": "上位",
+      "analysisTitle": "主要成分分析",
+      "analysisLabels": {
+        "lowCalorie": "低卡路里",
+        "lowCarb": "低碳水",
+        "highProtein": "高蛋白",
+        "lowFat": "低脂肪",
+        "lowSodium": "低钠",
+        "lowSugar": "低糖"
+      },
+      "scale": {
+        "top": "上位",
+        "bottom": "下位"
+      },
+      "footerNote": "基于食品一次提供量进行分析。",
+      "rankingTitle": "果蔬汁类别 TOP 10",
+      "serving": "一次提供量:",
+      "viewAllButton": "查看全部营养成分",
+      "compareButton": "比较营养成分"
+    },
+    "nutritionDetail": {
+      "title": "查看全部营养成分",
+      "serving": {
+        "perServing": "一次提供量",
+        "totalContent": "总含量"
+      },
+      "guide": {
+        "title": "如何阅读营养成分表",
+        "text": "营养成分表以一次提供量为基准显示，表示每日营养素标准值的百分比(%)。"
+      },
+      "sections": {
+        "caloriesMajor": "热量及三大营养素(3个)",
+        "minerals": "矿物质(1个)"
+      },
+      "nutrients": {
+        "energy": "能量",
+        "carbs": "碳水化合物",
+        "totalFiber": "总膳食纤维"
+      }
+    },
+    "nutritionCompare": {
+      "title": "比较营养成分",
+      "vs": "VS",
+      "servingLabel": "一次提供量",
+      "sections": {
+        "caloriesMajor": "热量及三大营养素",
+        "minerals": "矿物质"
+      },
+      "nutrients": {
+        "energy": "能量",
+        "carbs": "碳水化合物",
+        "totalSugar": "总糖类",
+        "totalFiber": "总膳食纤维",
+        "sodium": "钠",
+        "calcium": "钙",
+        "iron": "铁"
+      },
+      "addFoodButton": "添加食品"
+    }
+  },
+  "health": {
+    "geneticTest": {
+      "title": "基因检测",
+      "noData": "没有检测信息。",
+      "addMessage": "请添加您的基因检测结果。",
+      "addButton": "添加检测",
+      "note": "※ 此服务面向提示合作伙伴会员提供。\n未来将向普通会员提供服务。"
+    },
+    "checkupAuth": {
+      "title": "加载健康检查结果",
+      "message": "加载健康检查结果\n需要认证！",
+      "kakaoButton": "Kakao简易认证",
+      "certificateButton": "共同认证书认证"
+    },
+    "checkupLoad": {
+      "title": "加载健康检查结果",
+      "message": "请添加您的健康检查结果。",
+      "addButton": "添加检查结果"
+    },
+    "statusMain": {
+      "title": "了解我的健康状况",
+      "userLevel": "{name}的健康水平？",
+      "levelText": "健康水平",
+      "levelBadge": "水平{level}注意阶段",
+      "levelDescription": "需要仔细管理以改善状态",
+      "manageTitle": "我应该先管理什么？",
+      "status": {
+        "danger": "危险",
+        "caution": "注意"
+      },
+      "items": {
+        "obesity": "肥胖/体脂肪",
+        "metabolism": "代谢调节",
+        "scalp": "头皮屑头皮"
+      },
+      "addTitle": "您想添加健康信息吗？",
+      "timeRequired": "大约需要{time}",
+      "addItems": {
+        "selfDiagnosis": "自我诊断",
+        "healthCheckup": "健康检查结果",
+        "detailedAnalysis": "其他精密分析"
+      },
+      "habitTitle": "建立健康习惯",
+      "habitDescription": "With是建立健康习惯的挑战活动",
+      "habitItems": {
+        "recruiting": "招募中的With",
+        "recruitingSubtitle": "免费参加并获得奖励",
+        "ended": "已结束的With",
+        "endedSubtitle": "查看结果并获得奖励"
+      }
+    },
+    "statusResults": {
+      "title": "全部结果",
+      "summary": "{name}的健康水平是水平{level}，",
+      "summaryHighlight": "高于同龄男性平均水平",
+      "average": "平均",
+      "itemsTitle": "项目分析结果",
+      "items": {
+        "obesity": "肥胖/体脂肪",
+        "metabolism": "代谢调节",
+        "scalp": "头皮屑头皮",
+        "liver": "肝脏健康",
+        "bone": "骨骼/关节健康",
+        "sleep": "睡眠/压力",
+        "circulation": "血液循环改善",
+        "immunity": "免疫/抗氧化",
+        "acne": "炎症性痤疮",
+        "digestion": "消化健康",
+        "eye": "眼部健康",
+        "muscle": "肌肉代谢",
+        "brain": "大脑/记忆力"
+      },
+      "status": {
+        "danger": "危险",
+        "caution": "注意",
+        "interest": "关注",
+        "good": "良好"
+      },
+      "serviceTitle": "服务分析结果",
+      "serviceName": "自我诊断"
+    }
   }
 }
 

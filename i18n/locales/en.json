@@ -231,6 +231,174 @@
         "dailyTrue": "Daily"
       }
     }
+  },
+  "food": {
+    "search": {
+      "title": "Food Search",
+      "placeholder": "Enter food name",
+      "info": {
+        "registered": "• We analyze products registered with the Ministry of Food and Drug Safety",
+        "unregistered": "• Overseas direct purchase foods not registered with the Ministry of Food and Drug Safety cannot be searched",
+        "input": "• Please enter the product name accurately, paying attention to spacing and spelling"
+      },
+      "empty": {
+        "noResults": "No search results",
+        "enterFood": "Enter a food name to search"
+      },
+      "loading": "Searching...",
+      "manufacturer": "Manufacturer:",
+      "analyzeButton": "Request Analysis"
+    },
+    "searchResult": {
+      "title": "Food Search Results",
+      "tabs": {
+        "detail": "Details",
+        "ranking": "Nutrition Ranking"
+      },
+      "category": "Category",
+      "categoryCount": "Number of foods in category",
+      "analysisResult": "Analysis Result",
+      "topPercent": "Top",
+      "analysisTitle": "Main Ingredient Analysis",
+      "analysisLabels": {
+        "lowCalorie": "Low Calorie",
+        "lowCarb": "Low Carb",
+        "highProtein": "High Protein",
+        "lowFat": "Low Fat",
+        "lowSodium": "Low Sodium",
+        "lowSugar": "Low Sugar"
+      },
+      "scale": {
+        "top": "Top",
+        "bottom": "Bottom"
+      },
+      "footerNote": "Analysis is based on one serving size.",
+      "rankingTitle": "Fruit/Vegetable Juice Category TOP 10",
+      "serving": "Serving size:",
+      "viewAllButton": "View All Nutrients",
+      "compareButton": "Compare Nutrients"
+    },
+    "nutritionDetail": {
+      "title": "View All Nutrients",
+      "serving": {
+        "perServing": "Per Serving",
+        "totalContent": "Total Content"
+      },
+      "guide": {
+        "title": "How to Read Nutrition Facts",
+        "text": "Nutrition facts are displayed based on one serving size and show the percentage (%) of daily nutritional standards."
+      },
+      "sections": {
+        "caloriesMajor": "Calories and 3 Major Nutrients (3)",
+        "minerals": "Minerals (1)"
+      },
+      "nutrients": {
+        "energy": "Energy",
+        "carbs": "Carbohydrates",
+        "totalFiber": "Total Dietary Fiber"
+      }
+    },
+    "nutritionCompare": {
+      "title": "Compare Nutrients",
+      "vs": "VS",
+      "servingLabel": "Per Serving",
+      "sections": {
+        "caloriesMajor": "Calories and 3 Major Nutrients",
+        "minerals": "Minerals"
+      },
+      "nutrients": {
+        "energy": "Energy",
+        "carbs": "Carbohydrates",
+        "totalSugar": "Total Sugars",
+        "totalFiber": "Total Dietary Fiber",
+        "sodium": "Sodium",
+        "calcium": "Calcium",
+        "iron": "Iron"
+      },
+      "addFoodButton": "Add Food"
+    }
+  },
+  "health": {
+    "geneticTest": {
+      "title": "Genetic Test",
+      "noData": "No test information available.",
+      "addMessage": "Please add your genetic test results.",
+      "addButton": "Add Test",
+      "note": "※ This service is provided to Hint partner members.\nService for general members will be available in the future."
+    },
+    "checkupAuth": {
+      "title": "Load Health Checkup Results",
+      "message": "Authentication is required\nto load health checkup results!",
+      "kakaoButton": "Authenticate with Kakao",
+      "certificateButton": "Authenticate with Certificate"
+    },
+    "checkupLoad": {
+      "title": "Load Health Checkup Results",
+      "message": "Please add your health checkup results.",
+      "addButton": "Add Checkup Results"
+    },
+    "statusMain": {
+      "title": "Check My Health Status",
+      "userLevel": "{name}'s Health Level?",
+      "levelText": "Health Level",
+      "levelBadge": "Level {level} Caution Stage",
+      "levelDescription": "Careful management needed for condition improvement",
+      "manageTitle": "What should I manage first?",
+      "status": {
+        "danger": "Danger",
+        "caution": "Caution"
+      },
+      "items": {
+        "obesity": "Obesity/Body Fat",
+        "metabolism": "Metabolic Regulation",
+        "scalp": "Dandruff Scalp"
+      },
+      "addTitle": "Would you like to add health information?",
+      "timeRequired": "Takes about {time}",
+      "addItems": {
+        "selfDiagnosis": "Self Diagnosis",
+        "healthCheckup": "Health Checkup Results",
+        "detailedAnalysis": "Other Detailed Analysis"
+      },
+      "habitTitle": "Build Healthy Habits",
+      "habitDescription": "With is a challenge event to build healthy habits",
+      "habitItems": {
+        "recruiting": "Recruiting With",
+        "recruitingSubtitle": "Join for free and get rewards",
+        "ended": "Ended With",
+        "endedSubtitle": "Check results and get rewards"
+      }
+    },
+    "statusResults": {
+      "title": "All Results",
+      "summary": "{name}'s health level is Level {level},",
+      "summaryHighlight": "above average for men of the same age",
+      "average": "Average",
+      "itemsTitle": "Item-by-Item Analysis Results",
+      "items": {
+        "obesity": "Obesity/Body Fat",
+        "metabolism": "Metabolic Regulation",
+        "scalp": "Dandruff Scalp",
+        "liver": "Liver Health",
+        "bone": "Bone/Joint Health",
+        "sleep": "Sleep/Stress",
+        "circulation": "Circulation Improvement",
+        "immunity": "Immunity/Antioxidant",
+        "acne": "Inflammatory Acne",
+        "digestion": "Digestive Health",
+        "eye": "Eye Health",
+        "muscle": "Muscle Metabolism",
+        "brain": "Brain/Memory"
+      },
+      "status": {
+        "danger": "Danger",
+        "caution": "Caution",
+        "interest": "Interest",
+        "good": "Good"
+      },
+      "serviceTitle": "Service-by-Service Analysis Results",
+      "serviceName": "Self Diagnosis"
+    }
   }
 }
 
