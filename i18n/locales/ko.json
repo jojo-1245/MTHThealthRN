@@ -665,6 +665,88 @@
       },
       "addFoodButton": "음식물 추가"
     }
+  },
+  "health": {
+    "geneticTest": {
+      "title": "유전자 검사",
+      "noData": "검사 정보가 없습니다.",
+      "addMessage": "유전자 검사 결과를 추가해주세요.",
+      "addButton": "검사 추가",
+      "note": "※ 해당 서비스는 힌트 파트너사 회원 대상으로 제공하고 있습니다.\n추후 일반 회원 대상으로 서비스 제공 예정입니다."
+    },
+    "checkupAuth": {
+      "title": "건강검진 결과 불러오기",
+      "message": "건강검진 결과를 불러오려면\n인증이 필요해요!",
+      "kakaoButton": "카카오 간편인증하기",
+      "certificateButton": "공동 인증서 인증하기"
+    },
+    "checkupLoad": {
+      "title": "건강검진 결과 불러오기",
+      "message": "건강검진 결과를 추가해주세요.",
+      "addButton": "검진결과 추가"
+    },
+    "statusMain": {
+      "title": "내 건강상태 알아보기",
+      "userLevel": "{name}님의 건강레벨?",
+      "levelText": "건강레벨",
+      "levelBadge": "Level {level} 주의단계",
+      "levelDescription": "상태 개선을 위한 주의 깊은 관리 필요",
+      "manageTitle": "무엇부터 관리하지?",
+      "status": {
+        "danger": "위험",
+        "caution": "주의"
+      },
+      "items": {
+        "obesity": "비만체지방",
+        "metabolism": "대사조절",
+        "scalp": "비듬두피"
+      },
+      "addTitle": "건강정보 추가해 볼까?",
+      "timeRequired": "약 {time} 소요",
+      "addItems": {
+        "selfDiagnosis": "자가진단",
+        "healthCheckup": "건강검진결과",
+        "detailedAnalysis": "기타 정밀분석"
+      },
+      "habitTitle": "건강 습관 만들기",
+      "habitDescription": "위드 (with)는 건강습관 만들기 도전 이벤트입니다",
+      "habitItems": {
+        "recruiting": "모집중 위드",
+        "recruitingSubtitle": "무료로 참여하고 리워드 받기",
+        "ended": "종료된 위드",
+        "endedSubtitle": "결과 확인하고 리워드 받기"
+      }
+    },
+    "statusResults": {
+      "title": "전체결과",
+      "summary": "{name}님의 건강레벨은 Level {level}단계로,",
+      "summaryHighlight": "내 또래 남성 평균이상입니다",
+      "average": "평균",
+      "itemsTitle": "항목별 분석결과",
+      "items": {
+        "obesity": "비만체지방",
+        "metabolism": "대사조절",
+        "scalp": "비듬두피",
+        "liver": "간건강",
+        "bone": "뼈관절건강",
+        "sleep": "수면·스트레스",
+        "circulation": "혈행개선",
+        "immunity": "면역항산화",
+        "acne": "화농성여드름",
+        "digestion": "소화장건강",
+        "eye": "눈건강",
+        "muscle": "근육대사",
+        "brain": "뇌기억력"
+      },
+      "status": {
+        "danger": "위험",
+        "caution": "주의",
+        "interest": "관심",
+        "good": "양호"
+      },
+      "serviceTitle": "서비스별 분석결과",
+      "serviceName": "자가진단"
+    }
   }
 }
 

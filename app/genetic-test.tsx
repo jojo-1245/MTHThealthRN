@@ -1,3 +1,4 @@
+import { useTranslation } from '@/i18n';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React from 'react';
@@ -13,6 +14,7 @@ import {
 const { width, height } = Dimensions.get('window');
 
 export default function GeneticTestScreen() {
+  const { t } = useTranslation();
   const handleBack = () => {
     router.back();
   };
@@ -31,7 +33,7 @@ export default function GeneticTestScreen() {
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>유전자 검사</Text>
+        <Text style={styles.headerTitle}>{t('health.geneticTest.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
@@ -46,9 +48,9 @@ export default function GeneticTestScreen() {
 
         {/* 안내 메시지 */}
         <View style={styles.messageContainer}>
-          <Text style={styles.messageText}>검사 정보가 없습니다.</Text>
+          <Text style={styles.messageText}>{t('health.geneticTest.noData')}</Text>
           <Text style={styles.subMessageText}>
-            유전자 검사 결과를 추가해주세요.
+            {t('health.geneticTest.addMessage')}
           </Text>
         </View>
 
@@ -56,7 +58,7 @@ export default function GeneticTestScreen() {
         <View style={styles.buttonContainer}>
           <TouchableOpacity style={styles.addButton} onPress={handleAddTest}>
             <Ionicons name="add" size={24} color="#fff" />
-            <Text style={styles.addButtonText}>검사 추가</Text>
+            <Text style={styles.addButtonText}>{t('health.geneticTest.addButton')}</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -64,8 +66,7 @@ export default function GeneticTestScreen() {
       {/* 하단 안내 */}
       <View style={styles.footerNote}>
         <Text style={styles.noteText}>
-          ※ 해당 서비스는 힌트 파트너사 회원 대상으로 제공하고 있습니다.{'\n'}
-          추후 일반 회원 대상으로 서비스 제공 예정입니다.
+          {t('health.geneticTest.note')}
         </Text>
       </View>
     </View>

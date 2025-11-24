@@ -1,3 +1,4 @@
+import { useTranslation } from '@/i18n';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React from 'react';
@@ -13,6 +14,7 @@ import {
 const { width, height } = Dimensions.get('window');
 
 export default function HealthCheckupLoadScreen() {
+  const { t } = useTranslation();
   const handleBack = () => {
     router.back();
   };
@@ -31,7 +33,7 @@ export default function HealthCheckupLoadScreen() {
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>건강검진 결과 불러오기</Text>
+        <Text style={styles.headerTitle}>{t('health.checkupLoad.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
@@ -47,7 +49,7 @@ export default function HealthCheckupLoadScreen() {
         {/* 안내 메시지 */}
         <View style={styles.messageContainer}>
           <Text style={styles.messageText}>
-            건강검진 결과를 추가해주세요.
+            {t('health.checkupLoad.message')}
           </Text>
         </View>
 
@@ -55,7 +57,7 @@ export default function HealthCheckupLoadScreen() {
         <View style={styles.buttonContainer}>
           <TouchableOpacity style={styles.addButton} onPress={handleAddResults}>
             <Ionicons name="add" size={24} color="#fff" />
-            <Text style={styles.addButtonText}>검진결과 추가</Text>
+            <Text style={styles.addButtonText}>{t('health.checkupLoad.addButton')}</Text>
           </TouchableOpacity>
         </View>
       </View>
