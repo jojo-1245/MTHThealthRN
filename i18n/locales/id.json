@@ -525,6 +525,104 @@
         "chronicDisease": "Penyakit Kronis"
       }
     }
+  },
+  "previousResult": {
+    "title": "Hasil Sebelumnya",
+    "scoreGood": "{percentage}% Baik",
+    "productName": "Nama Produk",
+    "healthItem": "Item Kesehatan",
+    "detailsButton": "Lihat Detail",
+    "guideTitle": "Panduan Interpretasi Hasil",
+    "interpretation": {
+      "high": {
+        "title": "Tinggi (80-100%)",
+        "description": "Produk ini sangat cocok dengan kondisi kesehatan pribadi Anda."
+      },
+      "good": {
+        "title": "Baik (60-79%)",
+        "description": "Produk ini cocok dengan kondisi kesehatan pribadi Anda."
+      },
+      "normal": {
+        "title": "Normal (40-59%)",
+        "description": "Produk ini cukup cocok dengan kondisi kesehatan pribadi Anda."
+      },
+      "low": {
+        "title": "Rendah (0-39%)",
+        "description": "Produk ini tidak cocok dengan kondisi kesehatan pribadi Anda."
+      }
+    },
+    "recommendationTitle": "Rekomendasi",
+    "recommendations": {
+      "1": "Produk saat ini cocok untuk mengelola sebum berlebih.",
+      "2": "Konsumsi rutin dapat memaksimalkan efektivitas.",
+      "3": "Periksa efektivitas melalui pemeriksaan ulang setelah 3 bulan."
+    },
+    "newSearchButton": "Pencarian Baru"
+  },
+  "productScan": {
+    "title": "Pindai Nama Produk",
+    "instruction": "Harap ambil foto yang mencakup teks [Nama Produk] pada kemasan produk.",
+    "dontShowAgain": "Jangan tampilkan lagi",
+    "next": "Selanjutnya",
+    "scanComplete": "Pindai Selesai",
+    "scanCompleteMessage": "Produk telah dikenali.",
+    "cancel": "Batal",
+    "confirm": "Konfirmasi",
+    "resultTitle": "Hasil Pindai",
+    "productName": "Nama Produk",
+    "foodType": "Jenis Makanan",
+    "reportNumber": "Nomor Laporan Item",
+    "distributor": "Distributor"
+  },
+  "productSearch": {
+    "title": "Pilihan Produk",
+    "placeholder": "Masukkan nama produk (contoh: Probio)",
+    "infoTitle": "Produk tidak akan dicari dalam kasus berikut",
+    "infoItems": {
+      "1": "• Suplemen yang terdaftar sebagai obat umum",
+      "2": "• Suplemen impor langsung dari luar negeri yang tidak terdaftar di Kementerian Keamanan Pangan dan Obat",
+      "3": "• Produk yang terdaftar sebelum 2018"
+    },
+    "inputNote": "Harap masukkan nama produk dengan akurat, perhatikan spasi dan ejaan",
+    "searching": "Mencari...",
+    "analyzeButton": "Minta Analisis"
+  },
+  "profileEdit": {
+    "title": "Edit Informasi Saya",
+    "saveButton": "Simpan",
+    "saveSuccess": "Simpan Selesai",
+    "saveSuccessMessage": "Informasi telah berhasil disimpan.",
+    "phoneNumber": "Nomor Telepon",
+    "phonePlaceholder": "Masukkan nomor telepon",
+    "birthDate": "Tanggal Lahir",
+    "birthPlaceholder": "YYYY-MM-DD",
+    "gender": "Jenis Kelamin",
+    "male": "Laki-laki",
+    "female": "Perempuan",
+    "nickname": "Nama Panggilan",
+    "nicknamePlaceholder": "Masukkan nama panggilan",
+    "nicknameHint": "Harap masukkan 2-6 karakter dalam bahasa Korea atau Inggris.",
+    "bodyInfo": "Informasi Tubuh",
+    "height": "Tinggi",
+    "weight": "Berat",
+    "changeButton": "Ubah",
+    "email": "Email",
+    "emailPlaceholder": "Masukkan email",
+    "address": "Alamat",
+    "addressPlaceholder": "Masukkan alamat",
+    "channel": "Pengaturan Saluran",
+    "snsLink": "Tautan Akun SNS",
+    "kakao": "Kakao",
+    "apple": "Apple",
+    "linked": "Terhubung",
+    "connect": "Hubungkan",
+    "findPassword": "Cari Kata Sandi",
+    "findPasswordMessage": "Harap implementasikan fitur pencarian kata sandi.",
+    "logout": "Keluar",
+    "logoutMessage": "Apakah Anda yakin ingin keluar?",
+    "withdrawal": "Tarik Keanggotaan",
+    "withdrawalMessage": "Apakah Anda yakin ingin menarik keanggotaan?",
+    "withdraw": "Tarik"
   }
 }
 

@@ -525,6 +525,104 @@
         "chronicDisease": "Chronic Disease"
       }
     }
+  },
+  "previousResult": {
+    "title": "Previous Results",
+    "scoreGood": "{percentage}% Good",
+    "productName": "Product Name",
+    "healthItem": "Health Item",
+    "detailsButton": "View Details",
+    "guideTitle": "Result Interpretation Guide",
+    "interpretation": {
+      "high": {
+        "title": "High (80-100%)",
+        "description": "This product is very well-suited to your personal health condition."
+      },
+      "good": {
+        "title": "Good (60-79%)",
+        "description": "This product is well-suited to your personal health condition."
+      },
+      "normal": {
+        "title": "Normal (40-59%)",
+        "description": "This product is moderately suited to your personal health condition."
+      },
+      "low": {
+        "title": "Low (0-39%)",
+        "description": "This product is not suited to your personal health condition."
+      }
+    },
+    "recommendationTitle": "Recommendations",
+    "recommendations": {
+      "1": "The current product is suitable for managing excessive sebum.",
+      "2": "Regular intake can maximize effectiveness.",
+      "3": "Check effectiveness through re-examination after 3 months."
+    },
+    "newSearchButton": "New Search"
+  },
+  "productScan": {
+    "title": "Scan Product Name",
+    "instruction": "Please take a photo including the [Product Name] text on the product packaging.",
+    "dontShowAgain": "Don't show again",
+    "next": "Next",
+    "scanComplete": "Scan Complete",
+    "scanCompleteMessage": "Product has been recognized.",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "resultTitle": "Scan Result",
+    "productName": "Product Name",
+    "foodType": "Food Type",
+    "reportNumber": "Item Report Number",
+    "distributor": "Distributor"
+  },
+  "productSearch": {
+    "title": "Product Selection",
+    "placeholder": "Enter product name (e.g. Probio)",
+    "infoTitle": "Products will not be searched in the following cases",
+    "infoItems": {
+      "1": "• Supplements registered as general medications",
+      "2": "• Overseas direct purchase supplements not registered with the Ministry of Food and Drug Safety",
+      "3": "• Products registered before 2018"
+    },
+    "inputNote": "Please enter the product name accurately, paying attention to spacing and spelling",
+    "searching": "Searching...",
+    "analyzeButton": "Request Analysis"
+  },
+  "profileEdit": {
+    "title": "Edit My Information",
+    "saveButton": "Save",
+    "saveSuccess": "Save Complete",
+    "saveSuccessMessage": "Information has been successfully saved.",
+    "phoneNumber": "Phone Number",
+    "phonePlaceholder": "Enter phone number",
+    "birthDate": "Date of Birth",
+    "birthPlaceholder": "YYYY-MM-DD",
+    "gender": "Gender",
+    "male": "Male",
+    "female": "Female",
+    "nickname": "Nickname",
+    "nicknamePlaceholder": "Enter nickname",
+    "nicknameHint": "Please enter 2-6 characters in Korean or English.",
+    "bodyInfo": "Body Information",
+    "height": "Height",
+    "weight": "Weight",
+    "changeButton": "Change",
+    "email": "Email",
+    "emailPlaceholder": "Enter email",
+    "address": "Address",
+    "addressPlaceholder": "Enter address",
+    "channel": "Channel Settings",
+    "snsLink": "SNS Account Link",
+    "kakao": "Kakao",
+    "apple": "Apple",
+    "linked": "Linked",
+    "connect": "Connect",
+    "findPassword": "Find Password",
+    "findPasswordMessage": "Please implement the find password feature.",
+    "logout": "Logout",
+    "logoutMessage": "Are you sure you want to logout?",
+    "withdrawal": "Withdraw Membership",
+    "withdrawalMessage": "Are you sure you want to withdraw membership?",
+    "withdraw": "Withdraw"
   }
 }
 

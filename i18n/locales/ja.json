@@ -525,6 +525,104 @@
         "chronicDisease": "慢性疾患"
       }
     }
+  },
+  "previousResult": {
+    "title": "以前の結果",
+    "scoreGood": "{percentage}%良好",
+    "productName": "製品名",
+    "healthItem": "健康項目",
+    "detailsButton": "詳細結果を見る",
+    "guideTitle": "結果解釈ガイド",
+    "interpretation": {
+      "high": {
+        "title": "高い (80-100%)",
+        "description": "個人の健康状態と非常に良く合う製品です。"
+      },
+      "good": {
+        "title": "良好 (60-79%)",
+        "description": "個人の健康状態と良く合う製品です。"
+      },
+      "normal": {
+        "title": "普通 (40-59%)",
+        "description": "個人の健康状態と普通のレベルで合う製品です。"
+      },
+      "low": {
+        "title": "低い (0-39%)",
+        "description": "個人の健康状態と合わない製品です。"
+      }
+    },
+    "recommendationTitle": "推奨事項",
+    "recommendations": {
+      "1": "現在の製品は皮脂過多管理に適しています。",
+      "2": "定期的な服用で効果を最大化できます。",
+      "3": "3ヶ月後に再検査を通じて効果を確認してみてください。"
+    },
+    "newSearchButton": "新しい検索"
+  },
+  "productScan": {
+    "title": "製品名スキャン",
+    "instruction": "製品包装の[製品名]文字を必ず含めて撮影してください。",
+    "dontShowAgain": "もう表示しない",
+    "next": "次へ",
+    "scanComplete": "スキャン完了",
+    "scanCompleteMessage": "製品が認識されました。",
+    "cancel": "キャンセル",
+    "confirm": "確認",
+    "resultTitle": "スキャン結果",
+    "productName": "製品名",
+    "foodType": "食品の種類",
+    "reportNumber": "品目報告番号",
+    "distributor": "流通専門販売元"
+  },
+  "productSearch": {
+    "title": "製品選択",
+    "placeholder": "製品名を入力してください（例：プロバイオ）",
+    "infoTitle": "以下の場合には製品が検索されません",
+    "infoItems": {
+      "1": "• 一般医薬品として登録された栄養剤",
+      "2": "• 食品医薬品安全処に登録されていない海外直購栄養剤",
+      "3": "• 2018年以前に登録された製品"
+    },
+    "inputNote": "製品名入力時は、スペース、正字法に注意して正確に入力してください",
+    "searching": "検索中...",
+    "analyzeButton": "分析申請"
+  },
+  "profileEdit": {
+    "title": "私の情報修正",
+    "saveButton": "保存",
+    "saveSuccess": "保存完了",
+    "saveSuccessMessage": "情報が正常に保存されました。",
+    "phoneNumber": "携帯電話番号",
+    "phonePlaceholder": "携帯電話番号を入力してください",
+    "birthDate": "生年月日",
+    "birthPlaceholder": "YYYY-MM-DD",
+    "gender": "性別",
+    "male": "男性",
+    "female": "女性",
+    "nickname": "ニックネーム",
+    "nicknamePlaceholder": "ニックネームを入力してください",
+    "nicknameHint": "ハングル、英文2〜6文字以内で入力してください。",
+    "bodyInfo": "身体情報",
+    "height": "身長",
+    "weight": "体重",
+    "changeButton": "変更",
+    "email": "メール",
+    "emailPlaceholder": "メールを入力してください",
+    "address": "住所",
+    "addressPlaceholder": "住所を入力してください",
+    "channel": "チャンネル設定",
+    "snsLink": "SNSアカウント連動",
+    "kakao": "カカオ",
+    "apple": "アップル",
+    "linked": "連動完了",
+    "connect": "接続する",
+    "findPassword": "パスワード検索",
+    "findPasswordMessage": "パスワード検索機能を実装してください。",
+    "logout": "ログアウト",
+    "logoutMessage": "本当にログアウトしますか？",
+    "withdrawal": "会員脱退",
+    "withdrawalMessage": "本当に会員脱退しますか？",
+    "withdraw": "脱退"
   }
 }
 

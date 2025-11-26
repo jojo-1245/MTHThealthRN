@@ -1,3 +1,4 @@
+import { useTranslation } from '@/i18n';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React, { useState } from 'react';
@@ -12,6 +13,7 @@ import {
 } from 'react-native';
 
 export default function ProfileEdit() {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     phoneNumber: '010-2487-6746',
     birthDate: '1994-11-24',
@@ -27,7 +29,7 @@ export default function ProfileEdit() {
   const [appleLinked, setAppleLinked] = useState(false);
 
   const handleSave = () => {
-    Alert.alert('저장 완료', '정보가 성공적으로 저장되었습니다.');
+    Alert.alert(t('profileEdit.saveSuccess'), t('profileEdit.saveSuccessMessage'));
     router.back();
   };
 
@@ -44,20 +46,20 @@ export default function ProfileEdit() {
   };
 
   const handleFindPassword = () => {
-    Alert.alert('비밀번호 찾기', '비밀번호 찾기 기능을 구현해주세요.');
+    Alert.alert(t('profileEdit.findPassword'), t('profileEdit.findPasswordMessage'));
   };
 
   const handleLogout = () => {
-    Alert.alert('로그아웃', '정말 로그아웃하시겠습니까?', [
-      { text: '취소', style: 'cancel' },
-      { text: '로그아웃', style: 'destructive', onPress: () => router.replace('/(tabs)') },
+    Alert.alert(t('profileEdit.logout'), t('profileEdit.logoutMessage'), [
+      { text: t('common.cancel'), style: 'cancel' },
+      { text: t('profileEdit.logout'), style: 'destructive', onPress: () => router.replace('/(tabs)') },
     ]);
   };
 
   const handleWithdrawal = () => {
-    Alert.alert('회원탈퇴', '정말 회원탈퇴하시겠습니까?', [
-      { text: '취소', style: 'cancel' },
-      { text: '탈퇴', style: 'destructive', onPress: () => router.replace('/(tabs)') },
+    Alert.alert(t('profileEdit.withdrawal'), t('profileEdit.withdrawalMessage'), [
+      { text: t('common.cancel'), style: 'cancel' },
+      { text: t('profileEdit.withdraw'), style: 'destructive', onPress: () => router.replace('/(tabs)') },
     ]);
   };
 
@@ -68,9 +70,9 @@ export default function ProfileEdit() {
         <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>내 정보 수정</Text>
+        <Text style={styles.headerTitle}>{t('profileEdit.title')}</Text>
         <TouchableOpacity onPress={handleSave} style={styles.saveButton}>
-          <Text style={styles.saveButtonText}>저장</Text>
+          <Text style={styles.saveButtonText}>{t('profileEdit.saveButton')}</Text>
         </TouchableOpacity>
       </View>
 
@@ -93,37 +95,37 @@ export default function ProfileEdit() {
         <View style={styles.formSection}>
           {/* 휴대폰 번호 */}
           <View style={styles.inputGroup}>
-            <Text style={styles.inputLabel}>휴대폰 번호</Text>
+            <Text style={styles.inputLabel}>{t('profileEdit.phoneNumber')}</Text>
             <TextInput
               style={styles.input}
               value={formData.phoneNumber}
               onChangeText={(text) => setFormData(prev => ({ ...prev, phoneNumber: text }))}
-              placeholder="휴대폰 번호를 입력하세요"
+              placeholder={t('profileEdit.phonePlaceholder')}
               keyboardType="phone-pad"
             />
           </View>
 
           {/* 생년월일 */}
           <View style={styles.inputGroup}>
-            <Text style={styles.inputLabel}>생년월일</Text>
+            <Text style={styles.inputLabel}>{t('profileEdit.birthDate')}</Text>
             <TextInput
               style={styles.input}
               value={formData.birthDate}
               onChangeText={(text) => setFormData(prev => ({ ...prev, birthDate: text }))}
-              placeholder="YYYY-MM-DD"
+              placeholder={t('profileEdit.birthPlaceholder')}
             />
           </View>
 
           {/* 성별 */}
           <View style={styles.inputGroup}>
-            <Text style={styles.inputLabel}>성별</Text>
+            <Text style={styles.inputLabel}>{t('profileEdit.gender')}</Text>
             <View style={styles.genderContainer}>
               <TouchableOpacity
                 style={[styles.genderButton, formData.gender === 'male' && styles.genderButtonSelected]}
                 onPress={() => handleGenderChange('male')}
               >
                 <Text style={[styles.genderButtonText, formData.gender === 'male' && styles.genderButtonTextSelected]}>
-                  남성
+                  {t('profileEdit.male')}
                 </Text>
               </TouchableOpacity>
               <TouchableOpacity
@@ -131,7 +133,7 @@ export default function ProfileEdit() {
                 onPress={() => handleGenderChange('female')}
               >
                 <Text style={[styles.genderButtonText, formData.gender === 'female' && styles.genderButtonTextSelected]}>
-                  여성
+                  {t('profileEdit.female')}
                 </Text>
               </TouchableOpacity>
             </View>
@@ -139,26 +141,26 @@ export default function ProfileEdit() {
 
           {/* 닉네임 */}
           <View style={styles.inputGroup}>
-            <Text style={styles.inputLabel}>닉네임</Text>
+            <Text style={styles.inputLabel}>{t('profileEdit.nickname')}</Text>
             <TextInput
               style={styles.input}
               value={formData.nickname}
               onChangeText={(text) => setFormData(prev => ({ ...prev, nickname: text }))}
-              placeholder="닉네임을 입력하세요"
+              placeholder={t('profileEdit.nicknamePlaceholder')}
             />
-            <Text style={styles.inputHint}>한글, 영문 2~6자리 이내로 입력해주세요.</Text>
+            <Text style={styles.inputHint}>{t('profileEdit.nicknameHint')}</Text>
           </View>
 
           {/* 신체정보 */}
           <View style={styles.inputGroup}>
-            <Text style={styles.inputLabel}>신체정보</Text>
+            <Text style={styles.inputLabel}>{t('profileEdit.bodyInfo')}</Text>
             <View style={styles.bodyInfoContainer}>
               <View style={styles.bodyInfoItem}>
                 <TextInput
                   style={styles.bodyInfoInput}
                   value={formData.height}
                   onChangeText={(text) => setFormData(prev => ({ ...prev, height: text }))}
-                  placeholder="키"
+                  placeholder={t('profileEdit.height')}
                   keyboardType="numeric"
                 />
                 <Text style={styles.bodyInfoUnit}>cm</Text>
@@ -168,26 +170,26 @@ export default function ProfileEdit() {
                   style={styles.bodyInfoInput}
                   value={formData.weight}
                   onChangeText={(text) => setFormData(prev => ({ ...prev, weight: text }))}
-                  placeholder="체중"
+                  placeholder={t('profileEdit.weight')}
                   keyboardType="numeric"
                 />
                 <Text style={styles.bodyInfoUnit}>kg</Text>
               </View>
               <TouchableOpacity style={styles.changeButton}>
-                <Text style={styles.changeButtonText}>변경</Text>
+                <Text style={styles.changeButtonText}>{t('profileEdit.changeButton')}</Text>
               </TouchableOpacity>
             </View>
           </View>
 
           {/* 이메일 */}
           <View style={styles.inputGroup}>
-            <Text style={styles.inputLabel}>이메일</Text>
+            <Text style={styles.inputLabel}>{t('profileEdit.email')}</Text>
             <View style={styles.emailContainer}>
               <TextInput
                 style={styles.emailInput}
                 value={formData.email}
                 onChangeText={(text) => setFormData(prev => ({ ...prev, email: text }))}
-                placeholder="이메일을 입력하세요"
+                placeholder={t('profileEdit.emailPlaceholder')}
                 keyboardType="email-address"
               />
               <TouchableOpacity style={styles.clearButton}>
@@ -198,13 +200,13 @@ export default function ProfileEdit() {
 
           {/* 주소 */}
           <View style={styles.inputGroup}>
-            <Text style={styles.inputLabel}>주소</Text>
+            <Text style={styles.inputLabel}>{t('profileEdit.address')}</Text>
             <TouchableOpacity style={styles.addressContainer}>
               <TextInput
                 style={styles.addressInput}
                 value={formData.address}
                 onChangeText={(text) => setFormData(prev => ({ ...prev, address: text }))}
-                placeholder="주소를 입력하세요"
+                placeholder={t('profileEdit.addressPlaceholder')}
                 editable={false}
               />
               <Ionicons name="chevron-forward" size={20} color="#999" />
@@ -213,7 +215,7 @@ export default function ProfileEdit() {
 
           {/* 채널설정 */}
           <View style={styles.inputGroup}>
-            <Text style={styles.inputLabel}>채널설정</Text>
+            <Text style={styles.inputLabel}>{t('profileEdit.channel')}</Text>
             <TouchableOpacity style={styles.channelContainer}>
               <Text style={styles.channelText}>이정훈</Text>
               <Ionicons name="chevron-forward" size={20} color="#999" />
@@ -222,22 +224,22 @@ export default function ProfileEdit() {
 
           {/* SNS 계정 연동 */}
           <View style={styles.inputGroup}>
-            <Text style={styles.inputLabel}>SNS 계정 연동</Text>
+            <Text style={styles.inputLabel}>{t('profileEdit.snsLink')}</Text>
             
             {/* 카카오 */}
             <View style={styles.snsContainer}>
               <View style={styles.snsInfo}>
                 <View style={styles.kakaoIcon}>
-                  <Text style={styles.kakaoText}>카카오</Text>
+                  <Text style={styles.kakaoText}>{t('profileEdit.kakao')}</Text>
                 </View>
-                <Text style={styles.snsName}>카카오</Text>
+                <Text style={styles.snsName}>{t('profileEdit.kakao')}</Text>
               </View>
               <TouchableOpacity
                 style={[styles.snsButton, kakaoLinked && styles.snsButtonLinked]}
                 onPress={() => handleSNSLink('kakao')}
               >
                 <Text style={[styles.snsButtonText, kakaoLinked && styles.snsButtonTextLinked]}>
-                  {kakaoLinked ? '연동 완료' : '연결하기'}
+                  {kakaoLinked ? t('profileEdit.linked') : t('profileEdit.connect')}
                 </Text>
               </TouchableOpacity>
             </View>
@@ -248,14 +250,14 @@ export default function ProfileEdit() {
                 <View style={styles.appleIcon}>
                   <Ionicons name="logo-apple" size={20} color="#fff" />
                 </View>
-                <Text style={styles.snsName}>애플</Text>
+                <Text style={styles.snsName}>{t('profileEdit.apple')}</Text>
               </View>
               <TouchableOpacity
                 style={[styles.snsButton, appleLinked && styles.snsButtonLinked]}
                 onPress={() => handleSNSLink('apple')}
               >
                 <Text style={[styles.snsButtonText, appleLinked && styles.snsButtonTextLinked]}>
-                  {appleLinked ? '연동 완료' : '연결하기'}
+                  {appleLinked ? t('profileEdit.linked') : t('profileEdit.connect')}
                 </Text>
               </TouchableOpacity>
             </View>
@@ -265,15 +267,15 @@ export default function ProfileEdit() {
         {/* 하단 액션 버튼들 */}
         <View style={styles.bottomActions}>
           <TouchableOpacity onPress={handleFindPassword}>
-            <Text style={styles.bottomActionText}>비밀번호 찾기</Text>
+            <Text style={styles.bottomActionText}>{t('profileEdit.findPassword')}</Text>
           </TouchableOpacity>
           <View style={styles.bottomActionDivider} />
           <TouchableOpacity onPress={handleLogout}>
-            <Text style={styles.bottomActionText}>로그아웃</Text>
+            <Text style={styles.bottomActionText}>{t('profileEdit.logout')}</Text>
           </TouchableOpacity>
           <View style={styles.bottomActionDivider} />
           <TouchableOpacity onPress={handleWithdrawal}>
-            <Text style={styles.bottomActionText}>회원탈퇴</Text>
+            <Text style={styles.bottomActionText}>{t('profileEdit.withdrawal')}</Text>
           </TouchableOpacity>
         </View>
       </ScrollView>

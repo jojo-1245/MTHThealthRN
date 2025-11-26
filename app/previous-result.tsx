@@ -1,15 +1,17 @@
+import { useTranslation } from '@/i18n';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React from 'react';
 import {
-    ScrollView,
-    StyleSheet,
-    Text,
-    TouchableOpacity,
-    View,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
 } from 'react-native';
 
 export default function PreviousResult() {
+  const { t } = useTranslation();
   const handleViewDetails = () => {
     // 상세 결과 페이지로 이동
     router.push('/custom-search-result');
@@ -27,7 +29,7 @@ export default function PreviousResult() {
         <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>이전 결과</Text>
+        <Text style={styles.headerTitle}>{t('previousResult.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
@@ -38,24 +40,24 @@ export default function PreviousResult() {
             <Text style={styles.resultDate}>2025-10-09</Text>
             <View style={styles.resultScore}>
               <Ionicons name="checkmark-circle" size={20} color="#8B5CF6" />
-              <Text style={styles.scoreText}>80% 양호</Text>
+              <Text style={styles.scoreText}>{t('previousResult.scoreGood', { percentage: 80 })}</Text>
             </View>
           </View>
           
           <View style={styles.resultInfo}>
             <View style={styles.infoRow}>
-              <Text style={styles.infoLabel}>제품명</Text>
+              <Text style={styles.infoLabel}>{t('previousResult.productName')}</Text>
               <Text style={styles.infoValue}>락토빗</Text>
             </View>
             
             <View style={styles.infoRow}>
-              <Text style={styles.infoLabel}>건강항목</Text>
+              <Text style={styles.infoLabel}>{t('previousResult.healthItem')}</Text>
               <Text style={styles.infoValue}>피지과다</Text>
             </View>
           </View>
 
           <TouchableOpacity style={styles.detailsButton} onPress={handleViewDetails}>
-            <Text style={styles.detailsButtonText}>상세 결과 보기</Text>
+            <Text style={styles.detailsButtonText}>{t('previousResult.detailsButton')}</Text>
             <Ionicons name="chevron-forward" size={16} color="#8B5CF6" />
           </TouchableOpacity>
         </View>
@@ -65,16 +67,16 @@ export default function PreviousResult() {
           <View style={styles.infoCard}>
             <View style={styles.infoCardHeader}>
               <Ionicons name="information-circle" size={20} color="#8B5CF6" />
-              <Text style={styles.infoCardTitle}>결과 해석 가이드</Text>
+              <Text style={styles.infoCardTitle}>{t('previousResult.guideTitle')}</Text>
             </View>
             
             <View style={styles.interpretationList}>
               <View style={styles.interpretationItem}>
                 <View style={[styles.statusIndicator, styles.statusHigh]} />
                 <View style={styles.interpretationContent}>
-                  <Text style={styles.interpretationTitle}>높음 (80-100%)</Text>
+                  <Text style={styles.interpretationTitle}>{t('previousResult.interpretation.high.title')}</Text>
                   <Text style={styles.interpretationDescription}>
-                    개인 건강 상태와 매우 잘 맞는 제품입니다.
+                    {t('previousResult.interpretation.high.description')}
                   </Text>
                 </View>
               </View>
@@ -82,9 +84,9 @@ export default function PreviousResult() {
               <View style={styles.interpretationItem}>
                 <View style={[styles.statusIndicator, styles.statusGood]} />
                 <View style={styles.interpretationContent}>
-                  <Text style={styles.interpretationTitle}>양호 (60-79%)</Text>
+                  <Text style={styles.interpretationTitle}>{t('previousResult.interpretation.good.title')}</Text>
                   <Text style={styles.interpretationDescription}>
-                    개인 건강 상태와 잘 맞는 제품입니다.
+                    {t('previousResult.interpretation.good.description')}
                   </Text>
                 </View>
               </View>
@@ -92,9 +94,9 @@ export default function PreviousResult() {
               <View style={styles.interpretationItem}>
                 <View style={[styles.statusIndicator, styles.statusNormal]} />
                 <View style={styles.interpretationContent}>
-                  <Text style={styles.interpretationTitle}>보통 (40-59%)</Text>
+                  <Text style={styles.interpretationTitle}>{t('previousResult.interpretation.normal.title')}</Text>
                   <Text style={styles.interpretationDescription}>
-                    개인 건강 상태와 보통 수준으로 맞는 제품입니다.
+                    {t('previousResult.interpretation.normal.description')}
                   </Text>
                 </View>
               </View>
@@ -102,9 +104,9 @@ export default function PreviousResult() {
               <View style={styles.interpretationItem}>
                 <View style={[styles.statusIndicator, styles.statusLow]} />
                 <View style={styles.interpretationContent}>
-                  <Text style={styles.interpretationTitle}>낮음 (0-39%)</Text>
+                  <Text style={styles.interpretationTitle}>{t('previousResult.interpretation.low.title')}</Text>
                   <Text style={styles.interpretationDescription}>
-                    개인 건강 상태와 맞지 않는 제품입니다.
+                    {t('previousResult.interpretation.low.description')}
                   </Text>
                 </View>
               </View>
@@ -117,28 +119,28 @@ export default function PreviousResult() {
           <View style={styles.recommendationCard}>
             <View style={styles.recommendationHeader}>
               <Ionicons name="star" size={20} color="#ff9800" />
-              <Text style={styles.recommendationTitle}>추천 사항</Text>
+              <Text style={styles.recommendationTitle}>{t('previousResult.recommendationTitle')}</Text>
             </View>
             
             <View style={styles.recommendationList}>
               <View style={styles.recommendationItem}>
                 <Ionicons name="checkmark-circle" size={16} color="#4caf50" />
                 <Text style={styles.recommendationText}>
-                  현재 제품은 피지과다 관리에 적합합니다.
+                  {t('previousResult.recommendations.1')}
                 </Text>
               </View>
               
               <View style={styles.recommendationItem}>
                 <Ionicons name="checkmark-circle" size={16} color="#4caf50" />
                 <Text style={styles.recommendationText}>
-                  정기적인 복용으로 효과를 극대화할 수 있습니다.
+                  {t('previousResult.recommendations.2')}
                 </Text>
               </View>
               
               <View style={styles.recommendationItem}>
                 <Ionicons name="information-circle" size={16} color="#2196f3" />
                 <Text style={styles.recommendationText}>
-                  3개월 후 재검사를 통해 효과를 확인해보세요.
+                  {t('previousResult.recommendations.3')}
                 </Text>
               </View>
             </View>
@@ -150,7 +152,7 @@ export default function PreviousResult() {
       <View style={styles.bottomButtonContainer}>
         <TouchableOpacity style={styles.newSearchButton} onPress={handleNewSearch}>
           <Ionicons name="search" size={20} color="#fff" style={styles.buttonIcon} />
-          <Text style={styles.newSearchButtonText}>새로운 검색하기</Text>
+          <Text style={styles.newSearchButtonText}>{t('previousResult.newSearchButton')}</Text>
         </TouchableOpacity>
       </View>
     </View>

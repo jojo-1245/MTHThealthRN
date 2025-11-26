@@ -525,6 +525,104 @@
         "chronicDisease": "慢性疾病"
       }
     }
+  },
+  "previousResult": {
+    "title": "之前的结果",
+    "scoreGood": "{percentage}%良好",
+    "productName": "产品名称",
+    "healthItem": "健康项目",
+    "detailsButton": "查看详细结果",
+    "guideTitle": "结果解读指南",
+    "interpretation": {
+      "high": {
+        "title": "高 (80-100%)",
+        "description": "与个人健康状况非常匹配的产品。"
+      },
+      "good": {
+        "title": "良好 (60-79%)",
+        "description": "与个人健康状况匹配的产品。"
+      },
+      "normal": {
+        "title": "普通 (40-59%)",
+        "description": "与个人健康状况中等匹配的产品。"
+      },
+      "low": {
+        "title": "低 (0-39%)",
+        "description": "与个人健康状况不匹配的产品。"
+      }
+    },
+    "recommendationTitle": "推荐事项",
+    "recommendations": {
+      "1": "当前产品适合管理皮脂过多。",
+      "2": "定期服用可以最大化效果。",
+      "3": "3个月后通过重新检查来确认效果。"
+    },
+    "newSearchButton": "新搜索"
+  },
+  "productScan": {
+    "title": "扫描产品名称",
+    "instruction": "请拍摄包含产品包装上[产品名称]文字的照片。",
+    "dontShowAgain": "不再显示",
+    "next": "下一步",
+    "scanComplete": "扫描完成",
+    "scanCompleteMessage": "产品已被识别。",
+    "cancel": "取消",
+    "confirm": "确认",
+    "resultTitle": "扫描结果",
+    "productName": "产品名称",
+    "foodType": "食品类型",
+    "reportNumber": "项目报告编号",
+    "distributor": "流通专业销售商"
+  },
+  "productSearch": {
+    "title": "产品选择",
+    "placeholder": "请输入产品名称（例如：益生菌）",
+    "infoTitle": "以下情况产品将无法搜索",
+    "infoItems": {
+      "1": "• 注册为一般药品的营养品",
+      "2": "• 未在食品药品安全处注册的海外直购营养品",
+      "3": "• 2018年之前注册的产品"
+    },
+    "inputNote": "输入产品名称时，请注意空格和拼写，准确输入",
+    "searching": "搜索中...",
+    "analyzeButton": "申请分析"
+  },
+  "profileEdit": {
+    "title": "修改我的信息",
+    "saveButton": "保存",
+    "saveSuccess": "保存完成",
+    "saveSuccessMessage": "信息已成功保存。",
+    "phoneNumber": "手机号码",
+    "phonePlaceholder": "请输入手机号码",
+    "birthDate": "出生日期",
+    "birthPlaceholder": "YYYY-MM-DD",
+    "gender": "性别",
+    "male": "男性",
+    "female": "女性",
+    "nickname": "昵称",
+    "nicknamePlaceholder": "请输入昵称",
+    "nicknameHint": "请输入2-6个字符的韩文或英文。",
+    "bodyInfo": "身体信息",
+    "height": "身高",
+    "weight": "体重",
+    "changeButton": "更改",
+    "email": "电子邮件",
+    "emailPlaceholder": "请输入电子邮件",
+    "address": "地址",
+    "addressPlaceholder": "请输入地址",
+    "channel": "频道设置",
+    "snsLink": "SNS账户关联",
+    "kakao": "Kakao",
+    "apple": "Apple",
+    "linked": "关联完成",
+    "connect": "连接",
+    "findPassword": "找回密码",
+    "findPasswordMessage": "请实现找回密码功能。",
+    "logout": "登出",
+    "logoutMessage": "您确定要登出吗？",
+    "withdrawal": "退出会员",
+    "withdrawalMessage": "您确定要退出会员吗？",
+    "withdraw": "退出"
   }
 }
 

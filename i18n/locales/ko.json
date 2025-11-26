@@ -873,6 +873,104 @@
         "chronicDisease": "만성질환"
       }
     }
+  },
+  "previousResult": {
+    "title": "이전 결과",
+    "scoreGood": "{percentage}% 양호",
+    "productName": "제품명",
+    "healthItem": "건강항목",
+    "detailsButton": "상세 결과 보기",
+    "guideTitle": "결과 해석 가이드",
+    "interpretation": {
+      "high": {
+        "title": "높음 (80-100%)",
+        "description": "개인 건강 상태와 매우 잘 맞는 제품입니다."
+      },
+      "good": {
+        "title": "양호 (60-79%)",
+        "description": "개인 건강 상태와 잘 맞는 제품입니다."
+      },
+      "normal": {
+        "title": "보통 (40-59%)",
+        "description": "개인 건강 상태와 보통 수준으로 맞는 제품입니다."
+      },
+      "low": {
+        "title": "낮음 (0-39%)",
+        "description": "개인 건강 상태와 맞지 않는 제품입니다."
+      }
+    },
+    "recommendationTitle": "추천 사항",
+    "recommendations": {
+      "1": "현재 제품은 피지과다 관리에 적합합니다.",
+      "2": "정기적인 복용으로 효과를 극대화할 수 있습니다.",
+      "3": "3개월 후 재검사를 통해 효과를 확인해보세요."
+    },
+    "newSearchButton": "새로운 검색하기"
+  },
+  "productScan": {
+    "title": "제품명 스캔",
+    "instruction": "제품 포장의 [제품명] 글자를 꼭 포함하여 촬영해주세요.",
+    "dontShowAgain": "다시 보지 않기",
+    "next": "다음",
+    "scanComplete": "스캔 완료",
+    "scanCompleteMessage": "제품이 인식되었습니다.",
+    "cancel": "취소",
+    "confirm": "확인",
+    "resultTitle": "스캔 결과",
+    "productName": "제품명",
+    "foodType": "식품의 유형",
+    "reportNumber": "품목 보고번호",
+    "distributor": "유통전문 판매원"
+  },
+  "productSearch": {
+    "title": "제품선택",
+    "placeholder": "제품명을 입력하세요. (ex 프로바이오)",
+    "infoTitle": "아래 경우에는 제품이 검색되지 않아요",
+    "infoItems": {
+      "1": "• 일반 의약품으로 등록된 영양제",
+      "2": "• 식약처에 등록되지 않은 해외 직구 영양제",
+      "3": "• 2018년 이전에 등록된 제품"
+    },
+    "inputNote": "제품명 입력 시 띄어쓰기, 맞춤법에 유의하여 정확하게 입력하세요",
+    "searching": "검색 중...",
+    "analyzeButton": "분석신청"
+  },
+  "profileEdit": {
+    "title": "내 정보 수정",
+    "saveButton": "저장",
+    "saveSuccess": "저장 완료",
+    "saveSuccessMessage": "정보가 성공적으로 저장되었습니다.",
+    "phoneNumber": "휴대폰 번호",
+    "phonePlaceholder": "휴대폰 번호를 입력하세요",
+    "birthDate": "생년월일",
+    "birthPlaceholder": "YYYY-MM-DD",
+    "gender": "성별",
+    "male": "남성",
+    "female": "여성",
+    "nickname": "닉네임",
+    "nicknamePlaceholder": "닉네임을 입력하세요",
+    "nicknameHint": "한글, 영문 2~6자리 이내로 입력해주세요.",
+    "bodyInfo": "신체정보",
+    "height": "키",
+    "weight": "체중",
+    "changeButton": "변경",
+    "email": "이메일",
+    "emailPlaceholder": "이메일을 입력하세요",
+    "address": "주소",
+    "addressPlaceholder": "주소를 입력하세요",
+    "channel": "채널설정",
+    "snsLink": "SNS 계정 연동",
+    "kakao": "카카오",
+    "apple": "애플",
+    "linked": "연동 완료",
+    "connect": "연결하기",
+    "findPassword": "비밀번호 찾기",
+    "findPasswordMessage": "비밀번호 찾기 기능을 구현해주세요.",
+    "logout": "로그아웃",
+    "logoutMessage": "정말 로그아웃하시겠습니까?",
+    "withdrawal": "회원탈퇴",
+    "withdrawalMessage": "정말 회원탈퇴하시겠습니까?",
+    "withdraw": "탈퇴"
   }
 }
 
