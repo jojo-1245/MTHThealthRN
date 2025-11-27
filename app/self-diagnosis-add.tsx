@@ -1,3 +1,4 @@
+import { useTranslation } from '@/i18n';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React, { useState } from 'react';
@@ -22,49 +23,50 @@ interface DiagnosisCard {
 }
 
 export default function SelfDiagnosisAddScreen() {
-  const [selectedCards, setSelectedCards] = useState<string[]>(['피부건강']);
+  const { t } = useTranslation();
+  const [selectedCards, setSelectedCards] = useState<string[]>([t('selfDiagnosis.add.cards.skinHealth.title')]);
 
   const diagnosisCards: DiagnosisCard[] = [
     {
-      id: '기초건강',
-      title: '기초건강',
-      description: '기초건강상태부터 알아볼래요',
-      duration: '약 30초 소요',
+      id: t('selfDiagnosis.add.cards.basicHealth.title'),
+      title: t('selfDiagnosis.add.cards.basicHealth.title'),
+      description: t('selfDiagnosis.add.cards.basicHealth.description'),
+      duration: t('selfDiagnosis.add.cards.basicHealth.duration'),
       durationColor: '#3B82F6',
     },
     {
-      id: '만성질환',
-      title: '만성질환',
-      description: '현재 질환이 있어 약 복용 중 (관리중)이에요',
-      duration: '약 15초 소요',
+      id: t('selfDiagnosis.add.cards.chronicDisease.title'),
+      title: t('selfDiagnosis.add.cards.chronicDisease.title'),
+      description: t('selfDiagnosis.add.cards.chronicDisease.description'),
+      duration: t('selfDiagnosis.add.cards.chronicDisease.duration'),
       durationColor: '#EF4444',
     },
     {
-      id: '식/생활습관',
-      title: '식/생활습관',
-      description: '현재 식/생활습관 상태가 궁금해요',
-      duration: '약 2분 30초 소요',
+      id: t('selfDiagnosis.add.cards.lifestyle.title'),
+      title: t('selfDiagnosis.add.cards.lifestyle.title'),
+      description: t('selfDiagnosis.add.cards.lifestyle.description'),
+      duration: t('selfDiagnosis.add.cards.lifestyle.duration'),
       durationColor: '#3B82F6',
     },
     {
-      id: '자각증상',
-      title: '자각증상',
-      description: '현재 느끼고 있는 자각증상이 있어요',
-      duration: '약 5분 소요',
+      id: t('selfDiagnosis.add.cards.symptoms.title'),
+      title: t('selfDiagnosis.add.cards.symptoms.title'),
+      description: t('selfDiagnosis.add.cards.symptoms.description'),
+      duration: t('selfDiagnosis.add.cards.symptoms.duration'),
       durationColor: '#6B7280',
     },
     {
-      id: '피부건강',
-      title: '피부건강',
-      description: '현재 피부상태가 궁금해요',
-      duration: '약 3분 소요',
+      id: t('selfDiagnosis.add.cards.skinHealth.title'),
+      title: t('selfDiagnosis.add.cards.skinHealth.title'),
+      description: t('selfDiagnosis.add.cards.skinHealth.description'),
+      duration: t('selfDiagnosis.add.cards.skinHealth.duration'),
       durationColor: '#6B7280',
     },
     {
-      id: '두피건강',
-      title: '두피건강',
-      description: '현재 두피상태가 궁금해요',
-      duration: '약 2분 소요',
+      id: t('selfDiagnosis.add.cards.scalpHealth.title'),
+      title: t('selfDiagnosis.add.cards.scalpHealth.title'),
+      description: t('selfDiagnosis.add.cards.scalpHealth.description'),
+      duration: t('selfDiagnosis.add.cards.scalpHealth.duration'),
       durationColor: '#6B7280',
     },
   ];
@@ -141,7 +143,7 @@ export default function SelfDiagnosisAddScreen() {
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
           <Ionicons name="arrow-back" size={24} color="#fff" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>자가진단 추가</Text>
+        <Text style={styles.headerTitle}>{t('selfDiagnosis.add.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
@@ -150,7 +152,7 @@ export default function SelfDiagnosisAddScreen() {
         {/* 안내 문구 */}
         <View style={styles.infoSection}>
           <Text style={styles.infoText}>
-            아래 항목을 추가 체크하면 더 정밀한 영양관리를 해드릴 수 있어요
+            {t('selfDiagnosis.add.infoText')}
           </Text>
         </View>
 
@@ -198,7 +200,7 @@ export default function SelfDiagnosisAddScreen() {
       {/* 하단 다음 버튼 */}
       <View style={styles.bottomButtonContainer}>
         <TouchableOpacity style={styles.nextButton} onPress={handleNext}>
-          <Text style={styles.nextButtonText}>다음</Text>
+          <Text style={styles.nextButtonText}>{t('selfDiagnosis.add.nextButton')}</Text>
         </TouchableOpacity>
       </View>
     </View>

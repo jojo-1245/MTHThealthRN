@@ -1,3 +1,4 @@
+import { useTranslation } from '@/i18n';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React, { useState } from 'react';
@@ -26,7 +27,12 @@ interface Category {
 }
 
 export default function SelfDiagnosisResultsScreen() {
-  const [expandedCategories, setExpandedCategories] = useState<string[]>(['식습관', '생활습관', '피부건강']);
+  const { t } = useTranslation();
+  const [expandedCategories, setExpandedCategories] = useState<string[]>([
+    t('selfDiagnosis.results.categories.diet'),
+    t('selfDiagnosis.results.categories.lifestyle'),
+    t('selfDiagnosis.results.categories.skinHealth')
+  ]);
 
   const handleBack = () => {
     router.back();
@@ -46,68 +52,66 @@ export default function SelfDiagnosisResultsScreen() {
   };
 
   const getStatusColor = (status: string) => {
-    switch (status) {
-      case '위험': return '#EF4444';
-      case '주의': return '#F59E0B';
-      case '관심': return '#10B981';
-      case '양호': return '#3B82F6';
-      default: return '#6B7280';
-    }
+    if (status === t('selfDiagnosis.results.status.danger')) return '#EF4444';
+    if (status === t('selfDiagnosis.results.status.caution')) return '#F59E0B';
+    if (status === t('selfDiagnosis.results.status.interest')) return '#10B981';
+    if (status === t('selfDiagnosis.results.status.good')) return '#3B82F6';
+    return '#6B7280';
   };
 
   const categories: Category[] = [
     {
-      name: '식습관',
-      overallStatus: '위험',
+      name: t('selfDiagnosis.results.categories.diet'),
+      overallStatus: t('selfDiagnosis.results.status.danger'),
       items: [
-        { name: '탄수화물 식이', progress: 0.2, status: '위험' },
-        { name: '트랜스지방 식이', progress: 0.2, status: '위험' },
-        { name: '포화지방 식이', progress: 0.2, status: '위험' },
-        { name: '당 식이', progress: 0.2, status: '위험' },
-        { name: '식사 속도 습관', progress: 0.2, status: '위험' },
-        { name: '식후 간식 습관', progress: 0.2, status: '위험' },
-        { name: '과식 습관', progress: 0.2, status: '위험' },
-        { name: '나트륨 식이', progress: 0.2, status: '위험' },
-        { name: '야식 습관', progress: 0.2, status: '위험' },
-        { name: '필수지방산 식이', progress: 0.8, status: '양호' },
-        { name: '영양 식이', progress: 0.8, status: '양호' },
-        { name: '단백질 식이', progress: 0.8, status: '양호' },
+        { name: t('selfDiagnosis.results.dietItems.carbDiet'), progress: 0.2, status: t('selfDiagnosis.results.status.danger') },
+        { name: t('selfDiagnosis.results.dietItems.transFatDiet'), progress: 0.2, status: t('selfDiagnosis.results.status.danger') },
+        { name: t('selfDiagnosis.results.dietItems.saturatedFatDiet'), progress: 0.2, status: t('selfDiagnosis.results.status.danger') },
+        { name: t('selfDiagnosis.results.dietItems.sugarDiet'), progress: 0.2, status: t('selfDiagnosis.results.status.danger') },
+        { name: t('selfDiagnosis.results.dietItems.eatingSpeed'), progress: 0.2, status: t('selfDiagnosis.results.status.danger') },
+        { name: t('selfDiagnosis.results.dietItems.afterMealSnack'), progress: 0.2, status: t('selfDiagnosis.results.status.danger') },
+        { name: t('selfDiagnosis.results.dietItems.overeating'), progress: 0.2, status: t('selfDiagnosis.results.status.danger') },
+        { name: t('selfDiagnosis.results.dietItems.sodiumDiet'), progress: 0.2, status: t('selfDiagnosis.results.status.danger') },
+        { name: t('selfDiagnosis.results.dietItems.lateNightMeal'), progress: 0.2, status: t('selfDiagnosis.results.status.danger') },
+        { name: t('selfDiagnosis.results.dietItems.essentialFattyAcidDiet'), progress: 0.8, status: t('selfDiagnosis.results.status.good') },
+        { name: t('selfDiagnosis.results.dietItems.nutritionDiet'), progress: 0.8, status: t('selfDiagnosis.results.status.good') },
+        { name: t('selfDiagnosis.results.dietItems.proteinDiet'), progress: 0.8, status: t('selfDiagnosis.results.status.good') },
       ],
     },
     {
-      name: '생활습관',
-      overallStatus: '관심',
+      name: t('selfDiagnosis.results.categories.lifestyle'),
+      overallStatus: t('selfDiagnosis.results.status.interest'),
       items: [
-        { name: '흡연 상태', progress: 0.2, status: '위험' },
-        { name: '활동대사량', progress: 0.5, status: '주의' },
-        { name: '두뇌 활동', progress: 0.7, status: '관심' },
-        { name: '수면생체리듬', progress: 0.7, status: '관심' },
-        { name: '수분 섭취', progress: 0.8, status: '양호' },
-        { name: '자외선 노출', progress: 0.8, status: '양호' },
-        { name: '기초대사량', progress: 0.8, status: '양호' },
-        { name: '카페인 섭취', progress: 0.8, status: '양호' },
-        { name: '관절 기능', progress: 0.8, status: '양호' },
-        { name: '알코올 섭취', progress: 0.8, status: '양호' },
+        { name: t('selfDiagnosis.results.lifestyleItems.smoking'), progress: 0.2, status: t('selfDiagnosis.results.status.danger') },
+        { name: t('selfDiagnosis.results.lifestyleItems.activityMetabolism'), progress: 0.5, status: t('selfDiagnosis.results.status.caution') },
+        { name: t('selfDiagnosis.results.lifestyleItems.brainActivity'), progress: 0.7, status: t('selfDiagnosis.results.status.interest') },
+        { name: t('selfDiagnosis.results.lifestyleItems.sleepRhythm'), progress: 0.7, status: t('selfDiagnosis.results.status.interest') },
+        { name: t('selfDiagnosis.results.lifestyleItems.waterIntake'), progress: 0.8, status: t('selfDiagnosis.results.status.good') },
+        { name: t('selfDiagnosis.results.lifestyleItems.uvExposure'), progress: 0.8, status: t('selfDiagnosis.results.status.good') },
+        { name: t('selfDiagnosis.results.lifestyleItems.basalMetabolism'), progress: 0.8, status: t('selfDiagnosis.results.status.good') },
+        { name: t('selfDiagnosis.results.lifestyleItems.caffeineIntake'), progress: 0.8, status: t('selfDiagnosis.results.status.good') },
+        { name: t('selfDiagnosis.results.lifestyleItems.jointFunction'), progress: 0.8, status: t('selfDiagnosis.results.status.good') },
+        { name: t('selfDiagnosis.results.lifestyleItems.alcoholIntake'), progress: 0.8, status: t('selfDiagnosis.results.status.good') },
       ],
     },
     {
-      name: '피부건강',
-      overallStatus: '양호',
+      name: t('selfDiagnosis.results.categories.skinHealth'),
+      overallStatus: t('selfDiagnosis.results.status.good'),
       items: [
-        { name: 'U존피지상태', progress: 0.5, status: '주의' },
-        { name: 'T존피지상태', progress: 0.5, status: '주의' },
-        { name: '피부장벽기능', progress: 0.5, status: '주의' },
-        { name: '피부피지상태', progress: 0.8, status: '양호' },
-        { name: '자외선피부손상', progress: 0.8, status: '양호' },
-        { name: '피부 손상', progress: 0.8, status: '양호' },
-        { name: '피부보습인자', progress: 0.8, status: '양호' },
-        { name: '피부각질주기', progress: 0.8, status: '양호' },
-        { name: '눈주위 근육', progress: 0.8, status: '양호' },
-        { name: '피부 홍조', progress: 0.8, status: '양호' },
-        { name: '멜라닌 색소', progress: 0.8, status: '양호' },
-        { name: '피부 밀도', progress: 0.8, status: '양호' },
-        { name: '광노화', progress: 0.8, status: '양호' },
-        { name: '표정주름', progress: 0.8, status: '양호' },
+        { name: t('selfDiagnosis.results.skinHealthItems.uZoneSebum'), progress: 0.5, status: t('selfDiagnosis.results.status.caution') },
+        { name: t('selfDiagnosis.results.skinHealthItems.tZoneSebum'), progress: 0.5, status: t('selfDiagnosis.results.status.caution') },
+        { name: t('selfDiagnosis.results.skinHealthItems.skinBarrier'), progress: 0.5, status: t('selfDiagnosis.results.status.caution') },
+        { name: t('selfDiagnosis.results.skinHealthItems.skinSebum'), progress: 0.8, status: t('selfDiagnosis.results.status.good') },
+        { name: t('selfDiagnosis.results.skinHealthItems.uvDamage'), progress: 0.8, status: t('selfDiagnosis.results.status.good') },
+        { name: t('selfDiagnosis.results.skinHealthItems.skinDamage'), progress: 0.8, status: t('selfDiagnosis.results.status.good') },
+        { name: t('selfDiagnosis.results.skinHealthItems.skinMoisture'), progress: 0.8, status: t('selfDiagnosis.results.status.good') },
+        { name: t('selfDiagnosis.results.skinHealthItems.skinExfoliation'), progress: 0.8, status: t('selfDiagnosis.results.status.good') },
+        { name: t('selfDiagnosis.results.skinHealthItems.eyeMuscles'), progress: 0.8, status: t('selfDiagnosis.results.status.good') },
+        { name: t('selfDiagnosis.results.skinHealthItems.skinRedness'), progress: 0.8, status: t('selfDiagnosis.results.status.good') },
+        { name: t('selfDiagnosis.results.skinHealthItems.melanin'), progress: 0.8, status: t('selfDiagnosis.results.status.good') },
+        { name: t('selfDiagnosis.results.skinHealthItems.skinDensity'), progress: 0.8, status: t('selfDiagnosis.results.status.good') },
+        { name: t('selfDiagnosis.results.skinHealthItems.photoAging'), progress: 0.8, status: t('selfDiagnosis.results.status.good') },
+        { name: t('selfDiagnosis.results.skinHealthItems.expressionWrinkles'), progress: 0.8, status: t('selfDiagnosis.results.status.good') },
       ],
     },
   ];
@@ -121,7 +125,7 @@ export default function SelfDiagnosisResultsScreen() {
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>자가진단 결과</Text>
+        <Text style={styles.headerTitle}>{t('selfDiagnosis.results.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 

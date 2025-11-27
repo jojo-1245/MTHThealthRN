@@ -623,6 +623,187 @@
     "withdrawal": "Withdraw Membership",
     "withdrawalMessage": "Are you sure you want to withdraw membership?",
     "withdraw": "Withdraw"
+  },
+  "resultComparison": {
+    "title": "Result Comparison",
+    "tabs": {
+      "health": "Health",
+      "skin": "Skin",
+      "scalp": "Scalp/Hair Loss"
+    },
+    "comparison": {
+      "previous": "Previous",
+      "recent": "Recent"
+    },
+    "chartPlaceholder": "Radar Chart",
+    "chartDescriptions": {
+      "health": "Circulation, Metabolism, Immunity/Antioxidant, Obesity/Body Fat",
+      "skin": "Oily Skin, Pigmented Skin, Sensitive Skin, Dry Skin, Aging Skin",
+      "scalp": "Dry Scalp, Hair Loss, Oily Scalp, Dandruff Scalp, Sensitive Scalp"
+    },
+    "table": {
+      "item": "Item",
+      "previous": "Previous",
+      "recent": "Recent"
+    },
+    "status": {
+      "danger": "Danger",
+      "caution": "Caution",
+      "interest": "Interest",
+      "good": "Good"
+    },
+    "healthItems": {
+      "circulation": "Circulation",
+      "metabolism": "Metabolism",
+      "immunity": "Immunity/Antioxidant",
+      "obesity": "Obesity/Body Fat"
+    },
+    "skinItems": {
+      "oily": "Oily Skin",
+      "pigment": "Pigmented Skin",
+      "sensitive": "Sensitive Skin",
+      "dry": "Dry Skin",
+      "aging": "Aging Skin"
+    },
+    "scalpItems": {
+      "dry": "Dry Scalp",
+      "hairLoss": "Hair Loss",
+      "oily": "Oily Scalp",
+      "dandruff": "Dandruff Scalp",
+      "sensitive": "Sensitive Scalp"
+    }
+  },
+  "selfDiagnosis": {
+    "add": {
+      "title": "Add Self Diagnosis",
+      "infoText": "If you check the items below, we can provide more precise nutrition management",
+      "nextButton": "Next",
+      "cards": {
+        "basicHealth": {
+          "title": "Basic Health",
+          "description": "I want to check my basic health status",
+          "duration": "About 30 seconds"
+        },
+        "chronicDisease": {
+          "title": "Chronic Disease",
+          "description": "I currently have a disease and am taking medication (under management)",
+          "duration": "About 15 seconds"
+        },
+        "lifestyle": {
+          "title": "Diet/Lifestyle",
+          "description": "I'm curious about my current diet/lifestyle status",
+          "duration": "About 2 minutes 30 seconds"
+        },
+        "symptoms": {
+          "title": "Self-Aware Symptoms",
+          "description": "I have self-aware symptoms I'm currently feeling",
+          "duration": "About 5 minutes"
+        },
+        "skinHealth": {
+          "title": "Skin Health",
+          "description": "I'm curious about my current skin condition",
+          "duration": "About 3 minutes"
+        },
+        "scalpHealth": {
+          "title": "Scalp Health",
+          "description": "I'm curious about my current scalp condition",
+          "duration": "About 2 minutes"
+        }
+      }
+    },
+    "addModify": {
+      "title": "Add and Modify Self Diagnosis",
+      "instruction": "Please select the items to modify",
+      "additionalInstruction": "If you check the items below, we can provide more precise nutrition management",
+      "nextButton": "Next"
+    },
+    "complete": {
+      "title": "Self Diagnosis",
+      "addModifyButton": "Add and Modify",
+      "diagnosisMonth": "Diagnosis Month",
+      "diagnosisItem": "Diagnosis Item",
+      "detailedResults": "Detailed Results"
+    },
+    "detail": {
+      "title": "Self Diagnosis Results",
+      "skinHealth": "Skin Health",
+      "status": {
+        "good": "Good",
+        "warning": "Caution"
+      },
+      "indicators": {
+        "tZoneSebum": "T-Zone Sebum Status",
+        "uZoneSebum": "U-Zone Sebum Status",
+        "skinBarrier": "Skin Barrier Function",
+        "eyeMuscles": "Eye Area Muscles",
+        "skinExfoliation": "Skin Exfoliation Cycle",
+        "skinMoisture": "Skin Moisturizing Factor",
+        "skinDamage": "Skin Damage",
+        "uvDamage": "UV Skin Damage",
+        "skinSebum": "Skin Sebum Status",
+        "skinDensity": "Skin Density",
+        "melanin": "Melanin Pigment",
+        "skinRedness": "Skin Redness",
+        "neckMuscles": "Neck Muscles",
+        "expressionWrinkles": "Expression Wrinkles"
+      }
+    },
+    "results": {
+      "title": "Self Diagnosis Results",
+      "categories": {
+        "diet": "Diet",
+        "lifestyle": "Lifestyle",
+        "skinHealth": "Skin Health"
+      },
+      "status": {
+        "danger": "Danger",
+        "caution": "Caution",
+        "interest": "Interest",
+        "good": "Good"
+      },
+      "dietItems": {
+        "carbDiet": "Carbohydrate Diet",
+        "transFatDiet": "Trans Fat Diet",
+        "saturatedFatDiet": "Saturated Fat Diet",
+        "sugarDiet": "Sugar Diet",
+        "eatingSpeed": "Eating Speed Habit",
+        "afterMealSnack": "After Meal Snack Habit",
+        "overeating": "Overeating Habit",
+        "sodiumDiet": "Sodium Diet",
+        "lateNightMeal": "Late Night Meal Habit",
+        "essentialFattyAcidDiet": "Essential Fatty Acid Diet",
+        "nutritionDiet": "Nutrition Diet",
+        "proteinDiet": "Protein Diet"
+      },
+      "lifestyleItems": {
+        "smoking": "Smoking Status",
+        "activityMetabolism": "Activity Metabolism",
+        "brainActivity": "Brain Activity",
+        "sleepRhythm": "Sleep Circadian Rhythm",
+        "waterIntake": "Water Intake",
+        "uvExposure": "UV Exposure",
+        "basalMetabolism": "Basal Metabolism",
+        "caffeineIntake": "Caffeine Intake",
+        "jointFunction": "Joint Function",
+        "alcoholIntake": "Alcohol Intake"
+      },
+      "skinHealthItems": {
+        "uZoneSebum": "U-Zone Sebum Status",
+        "tZoneSebum": "T-Zone Sebum Status",
+        "skinBarrier": "Skin Barrier Function",
+        "skinSebum": "Skin Sebum Status",
+        "uvDamage": "UV Skin Damage",
+        "skinDamage": "Skin Damage",
+        "skinMoisture": "Skin Moisturizing Factor",
+        "skinExfoliation": "Skin Exfoliation Cycle",
+        "eyeMuscles": "Eye Area Muscles",
+        "skinRedness": "Skin Redness",
+        "melanin": "Melanin Pigment",
+        "skinDensity": "Skin Density",
+        "photoAging": "Photo Aging",
+        "expressionWrinkles": "Expression Wrinkles"
+      }
+    }
   }
 }
 

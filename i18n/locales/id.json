@@ -623,6 +623,187 @@
     "withdrawal": "Tarik Keanggotaan",
     "withdrawalMessage": "Apakah Anda yakin ingin menarik keanggotaan?",
     "withdraw": "Tarik"
+  },
+  "resultComparison": {
+    "title": "Perbandingan Hasil",
+    "tabs": {
+      "health": "Kesehatan",
+      "skin": "Kulit",
+      "scalp": "Kulit Kepala/Rambut Rontok"
+    },
+    "comparison": {
+      "previous": "Sebelumnya",
+      "recent": "Terbaru"
+    },
+    "chartPlaceholder": "Radar Chart",
+    "chartDescriptions": {
+      "health": "Sirkulasi, Metabolisme, Kekebalan/Antioksidan, Obesitas/Lemak Tubuh",
+      "skin": "Kulit Berminyak, Kulit Berpigmen, Kulit Sensitif, Kulit Kering, Kulit Menua",
+      "scalp": "Kulit Kepala Kering, Rambut Rontok, Kulit Kepala Berminyak, Kulit Kepala Berketombe, Kulit Kepala Sensitif"
+    },
+    "table": {
+      "item": "Item",
+      "previous": "Sebelumnya",
+      "recent": "Terbaru"
+    },
+    "status": {
+      "danger": "Bahaya",
+      "caution": "Peringatan",
+      "interest": "Minat",
+      "good": "Baik"
+    },
+    "healthItems": {
+      "circulation": "Sirkulasi",
+      "metabolism": "Metabolisme",
+      "immunity": "Kekebalan/Antioksidan",
+      "obesity": "Obesitas/Lemak Tubuh"
+    },
+    "skinItems": {
+      "oily": "Kulit Berminyak",
+      "pigment": "Kulit Berpigmen",
+      "sensitive": "Kulit Sensitif",
+      "dry": "Kulit Kering",
+      "aging": "Kulit Menua"
+    },
+    "scalpItems": {
+      "dry": "Kulit Kepala Kering",
+      "hairLoss": "Rambut Rontok",
+      "oily": "Kulit Kepala Berminyak",
+      "dandruff": "Kulit Kepala Berketombe",
+      "sensitive": "Kulit Kepala Sensitif"
+    }
+  },
+  "selfDiagnosis": {
+    "add": {
+      "title": "Tambah Diagnosis Mandiri",
+      "infoText": "Jika Anda mencentang item di bawah ini, kami dapat memberikan manajemen nutrisi yang lebih tepat",
+      "nextButton": "Selanjutnya",
+      "cards": {
+        "basicHealth": {
+          "title": "Kesehatan Dasar",
+          "description": "Saya ingin memeriksa status kesehatan dasar saya",
+          "duration": "Sekitar 30 detik"
+        },
+        "chronicDisease": {
+          "title": "Penyakit Kronis",
+          "description": "Saya saat ini memiliki penyakit dan sedang minum obat (dalam pengelolaan)",
+          "duration": "Sekitar 15 detik"
+        },
+        "lifestyle": {
+          "title": "Diet/Gaya Hidup",
+          "description": "Saya penasaran dengan status diet/gaya hidup saya saat ini",
+          "duration": "Sekitar 2 menit 30 detik"
+        },
+        "symptoms": {
+          "title": "Gejala Kesadaran Diri",
+          "description": "Saya memiliki gejala kesadaran diri yang saat ini saya rasakan",
+          "duration": "Sekitar 5 menit"
+        },
+        "skinHealth": {
+          "title": "Kesehatan Kulit",
+          "description": "Saya penasaran dengan kondisi kulit saya saat ini",
+          "duration": "Sekitar 3 menit"
+        },
+        "scalpHealth": {
+          "title": "Kesehatan Kulit Kepala",
+          "description": "Saya penasaran dengan kondisi kulit kepala saya saat ini",
+          "duration": "Sekitar 2 menit"
+        }
+      }
+    },
+    "addModify": {
+      "title": "Tambah dan Ubah Diagnosis Mandiri",
+      "instruction": "Harap pilih item yang akan diubah",
+      "additionalInstruction": "Jika Anda mencentang item di bawah ini, kami dapat memberikan manajemen nutrisi yang lebih tepat",
+      "nextButton": "Selanjutnya"
+    },
+    "complete": {
+      "title": "Diagnosis Mandiri",
+      "addModifyButton": "Tambah dan Ubah",
+      "diagnosisMonth": "Bulan Diagnosis",
+      "diagnosisItem": "Item Diagnosis",
+      "detailedResults": "Hasil Detail"
+    },
+    "detail": {
+      "title": "Hasil Diagnosis Mandiri",
+      "skinHealth": "Kesehatan Kulit",
+      "status": {
+        "good": "Baik",
+        "warning": "Peringatan"
+      },
+      "indicators": {
+        "tZoneSebum": "Status Sebum Zona T",
+        "uZoneSebum": "Status Sebum Zona U",
+        "skinBarrier": "Fungsi Penghalang Kulit",
+        "eyeMuscles": "Otot Area Mata",
+        "skinExfoliation": "Siklus Pengelupasan Kulit",
+        "skinMoisture": "Faktor Pelembab Kulit",
+        "skinDamage": "Kerusakan Kulit",
+        "uvDamage": "Kerusakan Kulit UV",
+        "skinSebum": "Status Sebum Kulit",
+        "skinDensity": "Kepadatan Kulit",
+        "melanin": "Pigmen Melanin",
+        "skinRedness": "Kemerahan Kulit",
+        "neckMuscles": "Otot Leher",
+        "expressionWrinkles": "Kerutan Ekspresi"
+      }
+    },
+    "results": {
+      "title": "Hasil Diagnosis Mandiri",
+      "categories": {
+        "diet": "Diet",
+        "lifestyle": "Gaya Hidup",
+        "skinHealth": "Kesehatan Kulit"
+      },
+      "status": {
+        "danger": "Bahaya",
+        "caution": "Peringatan",
+        "interest": "Minat",
+        "good": "Baik"
+      },
+      "dietItems": {
+        "carbDiet": "Diet Karbohidrat",
+        "transFatDiet": "Diet Lemak Trans",
+        "saturatedFatDiet": "Diet Lemak Jenuh",
+        "sugarDiet": "Diet Gula",
+        "eatingSpeed": "Kebiasaan Kecepatan Makan",
+        "afterMealSnack": "Kebiasaan Cemilan Setelah Makan",
+        "overeating": "Kebiasaan Makan Berlebihan",
+        "sodiumDiet": "Diet Natrium",
+        "lateNightMeal": "Kebiasaan Makan Malam",
+        "essentialFattyAcidDiet": "Diet Asam Lemak Esensial",
+        "nutritionDiet": "Diet Nutrisi",
+        "proteinDiet": "Diet Protein"
+      },
+      "lifestyleItems": {
+        "smoking": "Status Merokok",
+        "activityMetabolism": "Metabolisme Aktivitas",
+        "brainActivity": "Aktivitas Otak",
+        "sleepRhythm": "Ritme Sirkadian Tidur",
+        "waterIntake": "Asupan Air",
+        "uvExposure": "Paparan UV",
+        "basalMetabolism": "Metabolisme Basal",
+        "caffeineIntake": "Asupan Kafein",
+        "jointFunction": "Fungsi Sendi",
+        "alcoholIntake": "Asupan Alkohol"
+      },
+      "skinHealthItems": {
+        "uZoneSebum": "Status Sebum Zona U",
+        "tZoneSebum": "Status Sebum Zona T",
+        "skinBarrier": "Fungsi Penghalang Kulit",
+        "skinSebum": "Status Sebum Kulit",
+        "uvDamage": "Kerusakan Kulit UV",
+        "skinDamage": "Kerusakan Kulit",
+        "skinMoisture": "Faktor Pelembab Kulit",
+        "skinExfoliation": "Siklus Pengelupasan Kulit",
+        "eyeMuscles": "Otot Area Mata",
+        "skinRedness": "Kemerahan Kulit",
+        "melanin": "Pigmen Melanin",
+        "skinDensity": "Kepadatan Kulit",
+        "photoAging": "Penuaan Foto",
+        "expressionWrinkles": "Kerutan Ekspresi"
+      }
+    }
   }
 }
 

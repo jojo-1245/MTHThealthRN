@@ -623,6 +623,187 @@
     "withdrawal": "会員脱退",
     "withdrawalMessage": "本当に会員脱退しますか？",
     "withdraw": "脱退"
+  },
+  "resultComparison": {
+    "title": "結果比較",
+    "tabs": {
+      "health": "ヘルス",
+      "skin": "肌",
+      "scalp": "頭皮脱毛"
+    },
+    "comparison": {
+      "previous": "以前",
+      "recent": "最近"
+    },
+    "chartPlaceholder": "レーダーチャート",
+    "chartDescriptions": {
+      "health": "血行改善、代謝調節、免疫抗酸化、肥満体脂肪",
+      "skin": "脂性肌、色素肌、敏感肌、乾燥肌、老化肌",
+      "scalp": "乾燥頭皮、脱毛、脂性頭皮、フケ頭皮、敏感頭皮"
+    },
+    "table": {
+      "item": "項目",
+      "previous": "以前",
+      "recent": "最近"
+    },
+    "status": {
+      "danger": "危険",
+      "caution": "注意",
+      "interest": "関心",
+      "good": "良好"
+    },
+    "healthItems": {
+      "circulation": "血行改善",
+      "metabolism": "代謝調節",
+      "immunity": "免疫抗酸化",
+      "obesity": "肥満体脂肪"
+    },
+    "skinItems": {
+      "oily": "脂性肌",
+      "pigment": "色素肌",
+      "sensitive": "敏感肌",
+      "dry": "乾燥肌",
+      "aging": "老化肌"
+    },
+    "scalpItems": {
+      "dry": "乾燥頭皮",
+      "hairLoss": "脱毛",
+      "oily": "脂性頭皮",
+      "dandruff": "フケ頭皮",
+      "sensitive": "敏感頭皮"
+    }
+  },
+  "selfDiagnosis": {
+    "add": {
+      "title": "自己診断追加",
+      "infoText": "以下の項目を追加チェックすると、より精密な栄養管理を提供できます",
+      "nextButton": "次へ",
+      "cards": {
+        "basicHealth": {
+          "title": "基礎健康",
+          "description": "基礎健康状態から確認したいです",
+          "duration": "約30秒"
+        },
+        "chronicDisease": {
+          "title": "慢性疾患",
+          "description": "現在疾患があり、薬を服用中（管理中）です",
+          "duration": "約15秒"
+        },
+        "lifestyle": {
+          "title": "食事/生活習慣",
+          "description": "現在の食事/生活習慣状態が気になります",
+          "duration": "約2分30秒"
+        },
+        "symptoms": {
+          "title": "自覚症状",
+          "description": "現在感じている自覚症状があります",
+          "duration": "約5分"
+        },
+        "skinHealth": {
+          "title": "肌健康",
+          "description": "現在の肌状態が気になります",
+          "duration": "約3分"
+        },
+        "scalpHealth": {
+          "title": "頭皮健康",
+          "description": "現在の頭皮状態が気になります",
+          "duration": "約2分"
+        }
+      }
+    },
+    "addModify": {
+      "title": "自己診断追加及び修正",
+      "instruction": "修正する項目を選択してください",
+      "additionalInstruction": "以下の項目を追加チェックすると、より精密な栄養管理を提供できます",
+      "nextButton": "次へ"
+    },
+    "complete": {
+      "title": "自己診断",
+      "addModifyButton": "追加及び修正",
+      "diagnosisMonth": "診断月",
+      "diagnosisItem": "診断項目",
+      "detailedResults": "詳細結果"
+    },
+    "detail": {
+      "title": "自己診断結果",
+      "skinHealth": "肌健康",
+      "status": {
+        "good": "良好",
+        "warning": "注意"
+      },
+      "indicators": {
+        "tZoneSebum": "Tゾーン皮脂状態",
+        "uZoneSebum": "Uゾーン皮脂状態",
+        "skinBarrier": "肌バリア機能",
+        "eyeMuscles": "目の周りの筋肉",
+        "skinExfoliation": "肌角質周期",
+        "skinMoisture": "肌保湿因子",
+        "skinDamage": "肌損傷",
+        "uvDamage": "紫外線肌損傷",
+        "skinSebum": "肌皮脂状態",
+        "skinDensity": "肌密度",
+        "melanin": "メラニン色素",
+        "skinRedness": "肌紅潮",
+        "neckMuscles": "首の筋肉",
+        "expressionWrinkles": "表情しわ"
+      }
+    },
+    "results": {
+      "title": "自己診断結果",
+      "categories": {
+        "diet": "食習慣",
+        "lifestyle": "生活習慣",
+        "skinHealth": "肌健康"
+      },
+      "status": {
+        "danger": "危険",
+        "caution": "注意",
+        "interest": "関心",
+        "good": "良好"
+      },
+      "dietItems": {
+        "carbDiet": "炭水化物食事",
+        "transFatDiet": "トランス脂肪食事",
+        "saturatedFatDiet": "飽和脂肪食事",
+        "sugarDiet": "糖食事",
+        "eatingSpeed": "食事速度習慣",
+        "afterMealSnack": "食後間食習慣",
+        "overeating": "過食習慣",
+        "sodiumDiet": "ナトリウム食事",
+        "lateNightMeal": "夜食習慣",
+        "essentialFattyAcidDiet": "必須脂肪酸食事",
+        "nutritionDiet": "栄養食事",
+        "proteinDiet": "タンパク質食事"
+      },
+      "lifestyleItems": {
+        "smoking": "喫煙状態",
+        "activityMetabolism": "活動代謝量",
+        "brainActivity": "脳活動",
+        "sleepRhythm": "睡眠生体リズム",
+        "waterIntake": "水分摂取",
+        "uvExposure": "紫外線露出",
+        "basalMetabolism": "基礎代謝量",
+        "caffeineIntake": "カフェイン摂取",
+        "jointFunction": "関節機能",
+        "alcoholIntake": "アルコール摂取"
+      },
+      "skinHealthItems": {
+        "uZoneSebum": "Uゾーン皮脂状態",
+        "tZoneSebum": "Tゾーン皮脂状態",
+        "skinBarrier": "肌バリア機能",
+        "skinSebum": "肌皮脂状態",
+        "uvDamage": "紫外線肌損傷",
+        "skinDamage": "肌損傷",
+        "skinMoisture": "肌保湿因子",
+        "skinExfoliation": "肌角質周期",
+        "eyeMuscles": "目の周りの筋肉",
+        "skinRedness": "肌紅潮",
+        "melanin": "メラニン色素",
+        "skinDensity": "肌密度",
+        "photoAging": "光老化",
+        "expressionWrinkles": "表情しわ"
+      }
+    }
   }
 }
 

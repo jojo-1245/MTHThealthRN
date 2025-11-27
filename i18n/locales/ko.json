@@ -971,6 +971,187 @@
     "withdrawal": "회원탈퇴",
     "withdrawalMessage": "정말 회원탈퇴하시겠습니까?",
     "withdraw": "탈퇴"
+  },
+  "resultComparison": {
+    "title": "결과비교",
+    "tabs": {
+      "health": "헬스",
+      "skin": "피부",
+      "scalp": "두피탈모"
+    },
+    "comparison": {
+      "previous": "이전",
+      "recent": "최근"
+    },
+    "chartPlaceholder": "레이더 차트",
+    "chartDescriptions": {
+      "health": "혈행개선, 대사조절, 면역항산화, 비만체지방",
+      "skin": "지성피부, 색소피부, 민감피부, 건성피부, 노화피부",
+      "scalp": "건성두피, 탈모, 지성두피, 비듬두피, 예민두피"
+    },
+    "table": {
+      "item": "항목",
+      "previous": "이전",
+      "recent": "최근"
+    },
+    "status": {
+      "danger": "위험",
+      "caution": "주의",
+      "interest": "관심",
+      "good": "양호"
+    },
+    "healthItems": {
+      "circulation": "혈행개선",
+      "metabolism": "대사조절",
+      "immunity": "면역항산화",
+      "obesity": "비만체지방"
+    },
+    "skinItems": {
+      "oily": "지성피부",
+      "pigment": "색소피부",
+      "sensitive": "민감피부",
+      "dry": "건성피부",
+      "aging": "노화피부"
+    },
+    "scalpItems": {
+      "dry": "건성두피",
+      "hairLoss": "탈모",
+      "oily": "지성두피",
+      "dandruff": "비듬두피",
+      "sensitive": "예민두피"
+    }
+  },
+  "selfDiagnosis": {
+    "add": {
+      "title": "자가진단 추가",
+      "infoText": "아래 항목을 추가 체크하면 더 정밀한 영양관리를 해드릴 수 있어요",
+      "nextButton": "다음",
+      "cards": {
+        "basicHealth": {
+          "title": "기초건강",
+          "description": "기초건강상태부터 알아볼래요",
+          "duration": "약 30초 소요"
+        },
+        "chronicDisease": {
+          "title": "만성질환",
+          "description": "현재 질환이 있어 약 복용 중 (관리중)이에요",
+          "duration": "약 15초 소요"
+        },
+        "lifestyle": {
+          "title": "식/생활습관",
+          "description": "현재 식/생활습관 상태가 궁금해요",
+          "duration": "약 2분 30초 소요"
+        },
+        "symptoms": {
+          "title": "자각증상",
+          "description": "현재 느끼고 있는 자각증상이 있어요",
+          "duration": "약 5분 소요"
+        },
+        "skinHealth": {
+          "title": "피부건강",
+          "description": "현재 피부상태가 궁금해요",
+          "duration": "약 3분 소요"
+        },
+        "scalpHealth": {
+          "title": "두피건강",
+          "description": "현재 두피상태가 궁금해요",
+          "duration": "약 2분 소요"
+        }
+      }
+    },
+    "addModify": {
+      "title": "자가진단 추가 및 수정",
+      "instruction": "수정할 항목을 선택해주세요",
+      "additionalInstruction": "아래 항목을 추가 체크하면 더 정밀한 영양관리를 해드릴 수 있어요",
+      "nextButton": "다음"
+    },
+    "complete": {
+      "title": "자가진단",
+      "addModifyButton": "추가 및 수정",
+      "diagnosisMonth": "진단 월",
+      "diagnosisItem": "진단항목",
+      "detailedResults": "상세결과"
+    },
+    "detail": {
+      "title": "자가진단 결과",
+      "skinHealth": "피부건강",
+      "status": {
+        "good": "양호",
+        "warning": "주의"
+      },
+      "indicators": {
+        "tZoneSebum": "T존피지상태",
+        "uZoneSebum": "U존피지상태",
+        "skinBarrier": "피부장벽기능",
+        "eyeMuscles": "눈주위 근육",
+        "skinExfoliation": "피부각질주기",
+        "skinMoisture": "피부보습인자",
+        "skinDamage": "피부 손상",
+        "uvDamage": "자외선피부손상",
+        "skinSebum": "피부피지상태",
+        "skinDensity": "피부 밀도",
+        "melanin": "멜라닌 색소",
+        "skinRedness": "피부 홍조",
+        "neckMuscles": "목 근육",
+        "expressionWrinkles": "표정주름"
+      }
+    },
+    "results": {
+      "title": "자가진단 결과",
+      "categories": {
+        "diet": "식습관",
+        "lifestyle": "생활습관",
+        "skinHealth": "피부건강"
+      },
+      "status": {
+        "danger": "위험",
+        "caution": "주의",
+        "interest": "관심",
+        "good": "양호"
+      },
+      "dietItems": {
+        "carbDiet": "탄수화물 식이",
+        "transFatDiet": "트랜스지방 식이",
+        "saturatedFatDiet": "포화지방 식이",
+        "sugarDiet": "당 식이",
+        "eatingSpeed": "식사 속도 습관",
+        "afterMealSnack": "식후 간식 습관",
+        "overeating": "과식 습관",
+        "sodiumDiet": "나트륨 식이",
+        "lateNightMeal": "야식 습관",
+        "essentialFattyAcidDiet": "필수지방산 식이",
+        "nutritionDiet": "영양 식이",
+        "proteinDiet": "단백질 식이"
+      },
+      "lifestyleItems": {
+        "smoking": "흡연 상태",
+        "activityMetabolism": "활동대사량",
+        "brainActivity": "두뇌 활동",
+        "sleepRhythm": "수면생체리듬",
+        "waterIntake": "수분 섭취",
+        "uvExposure": "자외선 노출",
+        "basalMetabolism": "기초대사량",
+        "caffeineIntake": "카페인 섭취",
+        "jointFunction": "관절 기능",
+        "alcoholIntake": "알코올 섭취"
+      },
+      "skinHealthItems": {
+        "uZoneSebum": "U존피지상태",
+        "tZoneSebum": "T존피지상태",
+        "skinBarrier": "피부장벽기능",
+        "skinSebum": "피부피지상태",
+        "uvDamage": "자외선피부손상",
+        "skinDamage": "피부 손상",
+        "skinMoisture": "피부보습인자",
+        "skinExfoliation": "피부각질주기",
+        "eyeMuscles": "눈주위 근육",
+        "skinRedness": "피부 홍조",
+        "melanin": "멜라닌 색소",
+        "skinDensity": "피부 밀도",
+        "photoAging": "광노화",
+        "expressionWrinkles": "표정주름"
+      }
+    }
   }
 }
 

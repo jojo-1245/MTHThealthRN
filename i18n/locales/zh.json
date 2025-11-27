@@ -623,6 +623,187 @@
     "withdrawal": "退出会员",
     "withdrawalMessage": "您确定要退出会员吗？",
     "withdraw": "退出"
+  },
+  "resultComparison": {
+    "title": "结果比较",
+    "tabs": {
+      "health": "健康",
+      "skin": "皮肤",
+      "scalp": "头皮脱发"
+    },
+    "comparison": {
+      "previous": "之前",
+      "recent": "最近"
+    },
+    "chartPlaceholder": "雷达图",
+    "chartDescriptions": {
+      "health": "血液循环改善、代谢调节、免疫抗氧化、肥胖体脂肪",
+      "skin": "油性皮肤、色素皮肤、敏感皮肤、干燥皮肤、老化皮肤",
+      "scalp": "干燥头皮、脱发、油性头皮、头皮屑、敏感头皮"
+    },
+    "table": {
+      "item": "项目",
+      "previous": "之前",
+      "recent": "最近"
+    },
+    "status": {
+      "danger": "危险",
+      "caution": "注意",
+      "interest": "关注",
+      "good": "良好"
+    },
+    "healthItems": {
+      "circulation": "血液循环改善",
+      "metabolism": "代谢调节",
+      "immunity": "免疫抗氧化",
+      "obesity": "肥胖体脂肪"
+    },
+    "skinItems": {
+      "oily": "油性皮肤",
+      "pigment": "色素皮肤",
+      "sensitive": "敏感皮肤",
+      "dry": "干燥皮肤",
+      "aging": "老化皮肤"
+    },
+    "scalpItems": {
+      "dry": "干燥头皮",
+      "hairLoss": "脱发",
+      "oily": "油性头皮",
+      "dandruff": "头皮屑",
+      "sensitive": "敏感头皮"
+    }
+  },
+  "selfDiagnosis": {
+    "add": {
+      "title": "添加自我诊断",
+      "infoText": "如果您勾选以下项目，我们可以提供更精确的营养管理",
+      "nextButton": "下一步",
+      "cards": {
+        "basicHealth": {
+          "title": "基础健康",
+          "description": "我想检查我的基础健康状况",
+          "duration": "约30秒"
+        },
+        "chronicDisease": {
+          "title": "慢性疾病",
+          "description": "我目前患有疾病，正在服药（管理中）",
+          "duration": "约15秒"
+        },
+        "lifestyle": {
+          "title": "饮食/生活习惯",
+          "description": "我想了解我当前的饮食/生活习惯状态",
+          "duration": "约2分30秒"
+        },
+        "symptoms": {
+          "title": "自觉症状",
+          "description": "我有目前感觉到的自觉症状",
+          "duration": "约5分钟"
+        },
+        "skinHealth": {
+          "title": "皮肤健康",
+          "description": "我想了解我当前的皮肤状况",
+          "duration": "约3分钟"
+        },
+        "scalpHealth": {
+          "title": "头皮健康",
+          "description": "我想了解我当前的头皮状况",
+          "duration": "约2分钟"
+        }
+      }
+    },
+    "addModify": {
+      "title": "添加和修改自我诊断",
+      "instruction": "请选择要修改的项目",
+      "additionalInstruction": "如果您勾选以下项目，我们可以提供更精确的营养管理",
+      "nextButton": "下一步"
+    },
+    "complete": {
+      "title": "自我诊断",
+      "addModifyButton": "添加和修改",
+      "diagnosisMonth": "诊断月份",
+      "diagnosisItem": "诊断项目",
+      "detailedResults": "详细结果"
+    },
+    "detail": {
+      "title": "自我诊断结果",
+      "skinHealth": "皮肤健康",
+      "status": {
+        "good": "良好",
+        "warning": "注意"
+      },
+      "indicators": {
+        "tZoneSebum": "T区皮脂状态",
+        "uZoneSebum": "U区皮脂状态",
+        "skinBarrier": "皮肤屏障功能",
+        "eyeMuscles": "眼部肌肉",
+        "skinExfoliation": "皮肤角质周期",
+        "skinMoisture": "皮肤保湿因子",
+        "skinDamage": "皮肤损伤",
+        "uvDamage": "紫外线皮肤损伤",
+        "skinSebum": "皮肤皮脂状态",
+        "skinDensity": "皮肤密度",
+        "melanin": "黑色素",
+        "skinRedness": "皮肤红潮",
+        "neckMuscles": "颈部肌肉",
+        "expressionWrinkles": "表情皱纹"
+      }
+    },
+    "results": {
+      "title": "自我诊断结果",
+      "categories": {
+        "diet": "饮食习惯",
+        "lifestyle": "生活习惯",
+        "skinHealth": "皮肤健康"
+      },
+      "status": {
+        "danger": "危险",
+        "caution": "注意",
+        "interest": "关注",
+        "good": "良好"
+      },
+      "dietItems": {
+        "carbDiet": "碳水化合物饮食",
+        "transFatDiet": "反式脂肪饮食",
+        "saturatedFatDiet": "饱和脂肪饮食",
+        "sugarDiet": "糖饮食",
+        "eatingSpeed": "进食速度习惯",
+        "afterMealSnack": "餐后零食习惯",
+        "overeating": "暴食习惯",
+        "sodiumDiet": "钠饮食",
+        "lateNightMeal": "夜宵习惯",
+        "essentialFattyAcidDiet": "必需脂肪酸饮食",
+        "nutritionDiet": "营养饮食",
+        "proteinDiet": "蛋白质饮食"
+      },
+      "lifestyleItems": {
+        "smoking": "吸烟状态",
+        "activityMetabolism": "活动代谢量",
+        "brainActivity": "大脑活动",
+        "sleepRhythm": "睡眠生物节律",
+        "waterIntake": "水分摄入",
+        "uvExposure": "紫外线暴露",
+        "basalMetabolism": "基础代谢量",
+        "caffeineIntake": "咖啡因摄入",
+        "jointFunction": "关节功能",
+        "alcoholIntake": "酒精摄入"
+      },
+      "skinHealthItems": {
+        "uZoneSebum": "U区皮脂状态",
+        "tZoneSebum": "T区皮脂状态",
+        "skinBarrier": "皮肤屏障功能",
+        "skinSebum": "皮肤皮脂状态",
+        "uvDamage": "紫外线皮肤损伤",
+        "skinDamage": "皮肤损伤",
+        "skinMoisture": "皮肤保湿因子",
+        "skinExfoliation": "皮肤角质周期",
+        "eyeMuscles": "眼部肌肉",
+        "skinRedness": "皮肤红潮",
+        "melanin": "黑色素",
+        "skinDensity": "皮肤密度",
+        "photoAging": "光老化",
+        "expressionWrinkles": "表情皱纹"
+      }
+    }
   }
 }
 

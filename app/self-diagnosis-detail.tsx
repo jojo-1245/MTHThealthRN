@@ -1,3 +1,4 @@
+import { useTranslation } from '@/i18n';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React from 'react';
@@ -21,21 +22,22 @@ interface SkinIndicator {
 }
 
 export default function SelfDiagnosisDetailScreen() {
+  const { t } = useTranslation();
   const skinIndicators: SkinIndicator[] = [
-    { id: 't_zone_sebum', name: 'T존피지상태', progress: 40, status: 'warning' },
-    { id: 'u_zone_sebum', name: 'U존피지상태', progress: 40, status: 'warning' },
-    { id: 'skin_barrier', name: '피부장벽기능', progress: 40, status: 'warning' },
-    { id: 'eye_muscles', name: '눈주위 근육', progress: 60, status: 'good' },
-    { id: 'skin_exfoliation', name: '피부각질주기', progress: 60, status: 'good' },
-    { id: 'skin_moisture', name: '피부보습인자', progress: 60, status: 'good' },
-    { id: 'skin_damage', name: '피부 손상', progress: 60, status: 'good' },
-    { id: 'uv_damage', name: '자외선피부손상', progress: 60, status: 'good' },
-    { id: 'skin_sebum', name: '피부피지상태', progress: 60, status: 'good' },
-    { id: 'skin_density', name: '피부 밀도', progress: 60, status: 'good' },
-    { id: 'melanin', name: '멜라닌 색소', progress: 60, status: 'good' },
-    { id: 'skin_redness', name: '피부 홍조', progress: 60, status: 'good' },
-    { id: 'neck_muscles', name: '목 근육', progress: 60, status: 'good' },
-    { id: 'expression_wrinkles', name: '표정주름', progress: 60, status: 'good' },
+    { id: 't_zone_sebum', name: t('selfDiagnosis.detail.indicators.tZoneSebum'), progress: 40, status: 'warning' },
+    { id: 'u_zone_sebum', name: t('selfDiagnosis.detail.indicators.uZoneSebum'), progress: 40, status: 'warning' },
+    { id: 'skin_barrier', name: t('selfDiagnosis.detail.indicators.skinBarrier'), progress: 40, status: 'warning' },
+    { id: 'eye_muscles', name: t('selfDiagnosis.detail.indicators.eyeMuscles'), progress: 60, status: 'good' },
+    { id: 'skin_exfoliation', name: t('selfDiagnosis.detail.indicators.skinExfoliation'), progress: 60, status: 'good' },
+    { id: 'skin_moisture', name: t('selfDiagnosis.detail.indicators.skinMoisture'), progress: 60, status: 'good' },
+    { id: 'skin_damage', name: t('selfDiagnosis.detail.indicators.skinDamage'), progress: 60, status: 'good' },
+    { id: 'uv_damage', name: t('selfDiagnosis.detail.indicators.uvDamage'), progress: 60, status: 'good' },
+    { id: 'skin_sebum', name: t('selfDiagnosis.detail.indicators.skinSebum'), progress: 60, status: 'good' },
+    { id: 'skin_density', name: t('selfDiagnosis.detail.indicators.skinDensity'), progress: 60, status: 'good' },
+    { id: 'melanin', name: t('selfDiagnosis.detail.indicators.melanin'), progress: 60, status: 'good' },
+    { id: 'skin_redness', name: t('selfDiagnosis.detail.indicators.skinRedness'), progress: 60, status: 'good' },
+    { id: 'neck_muscles', name: t('selfDiagnosis.detail.indicators.neckMuscles'), progress: 60, status: 'good' },
+    { id: 'expression_wrinkles', name: t('selfDiagnosis.detail.indicators.expressionWrinkles'), progress: 60, status: 'good' },
   ];
 
   const handleBack = () => {
@@ -73,7 +75,7 @@ export default function SelfDiagnosisDetailScreen() {
           styles.statusText,
           isWarning ? styles.warningText : styles.goodText
         ]}>
-          {isWarning ? '주의' : '양호'}
+          {isWarning ? t('selfDiagnosis.detail.status.warning') : t('selfDiagnosis.detail.status.good')}
         </Text>
       </View>
     );
@@ -103,7 +105,7 @@ export default function SelfDiagnosisDetailScreen() {
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>자가진단 결과</Text>
+        <Text style={styles.headerTitle}>{t('selfDiagnosis.detail.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
@@ -112,9 +114,9 @@ export default function SelfDiagnosisDetailScreen() {
         {/* 피부건강 섹션 */}
         <View style={styles.sectionContainer}>
           <View style={styles.sectionHeader}>
-            <Text style={styles.sectionTitle}>피부건강</Text>
+            <Text style={styles.sectionTitle}>{t('selfDiagnosis.detail.skinHealth')}</Text>
             <TouchableOpacity style={styles.sectionStatusButton}>
-              <Text style={styles.sectionStatusText}>양호</Text>
+              <Text style={styles.sectionStatusText}>{t('selfDiagnosis.detail.status.good')}</Text>
               <Ionicons name="chevron-up" size={16} color="#fff" />
             </TouchableOpacity>
           </View>
