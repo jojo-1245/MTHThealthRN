@@ -804,6 +804,105 @@
         "expressionWrinkles": "表情しわ"
       }
     }
+  },
+  "stressHeartrate": {
+    "statistics": {
+      "title": "ストレス/心拍数統計",
+      "tabs": {
+        "daily": "日間",
+        "weekly": "週間",
+        "monthly": "月間"
+      },
+      "emptyTitle": "最低3日以上",
+      "emptyText": "ストレス/心拍数を測定してください。"
+    },
+    "main": {
+      "title": "ストレス/心拍数",
+      "noRecord": "まだ記録前です。",
+      "fingerMeasurement": "指測定",
+      "faceMeasurement": "顔測定",
+      "months": {
+        "1": "1月",
+        "2": "2月",
+        "3": "3月",
+        "4": "4月",
+        "5": "5月",
+        "6": "6月",
+        "7": "7月",
+        "8": "8月",
+        "9": "9月",
+        "10": "10月",
+        "11": "11月",
+        "12": "12月"
+      },
+      "weekDays": {
+        "sun": "日",
+        "mon": "月",
+        "tue": "火",
+        "wed": "水",
+        "thu": "木",
+        "fri": "金",
+        "sat": "土"
+      },
+      "dateInfo": "{day}日({dayOfWeek})"
+    },
+    "measurement": {
+      "title": "ストレス/心拍数測定",
+      "active": {
+        "coverCamera": "背面カメラを覆う",
+        "coverInstruction": "円の中の画面を見て、背面カメラを指で覆ってください",
+        "startButton": "測定開始",
+        "warningText": "中央の円領域全体が赤色で埋められる必要があります！",
+        "iosWarning": "* iOSデバイスはカメラセンサーが敏感なため、正確な測定のために動きを最小限に抑えてください。",
+        "viewMethodAgain": "測定方法を再度見る"
+      },
+      "guide": {
+        "mainInstruction": "人差し指で背面カメラを覆う",
+        "subInstruction": "人差し指で背面カメラを覆うと自動的に測定が開始されます",
+        "dontShowAgain": "もう表示しない",
+        "close": "閉じる"
+      },
+      "prep": {
+        "step1Title": "座る",
+        "step1Instruction": "測定中は座って落ち着いて測定してください",
+        "step2Title": "手を上げて肘を机に",
+        "step2Instruction": "腕の姿勢を図のようにして、手の高さを心臓と似たようにしてください",
+        "next": "次へ",
+        "dontShowAgain": "もう表示しない"
+      },
+      "result": {
+        "title": "ストレス/心拍数結果",
+        "stressScore": "ストレススコア",
+        "scoreAdvice": "心の余裕を持てばもっと良くなります",
+        "heartRate": "心拍数",
+        "heartRateUnit": "回/分",
+        "status": {
+          "interest": "関心",
+          "good": "良好"
+        },
+        "rangeDescription": "私の同年代の安静時心拍範囲",
+        "stressAccumulation": "ストレスが蓄積すると？",
+        "symptomsTitle": "ストレス症状:",
+        "symptoms": {
+          "1": "焦りと緊張",
+          "2": "不眠",
+          "3": "罪悪感、自責感",
+          "4": "刺激的な行為（ゲーム、携帯電話）への過没入",
+          "5": "無気力",
+          "6": "消化不良",
+          "7": "頭痛とめまい"
+        },
+        "specialistAdvice": "上記の症状が持続的に現れる場合は専門家に相談してください",
+        "accuracyTitle": "精度情報",
+        "accuracyText": "上記の結果はディープメディを通じて提供され、以下の精度で分析されます。",
+        "accuracyItems": {
+          "stress": "ストレス指数: 95%精度（KCL公認試験成績）",
+          "heartRate": "心拍数: 98%精度（KTLおよびKCL公認試験成績）"
+        },
+        "disclaimer": "ストレス指数/心拍数測定サービスは医療機器ではなく、本サービスの目的は疾病の診断、治療、軽減、処置、予防にありません。",
+        "completeButton": "分析完了"
+      }
+    }
   }
 }
 

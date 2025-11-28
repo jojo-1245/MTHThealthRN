@@ -1,3 +1,4 @@
+import { useTranslation } from '@/i18n';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React, { useState } from 'react';
@@ -9,6 +10,7 @@ import {
 } from 'react-native';
 
 export default function StressMeasurementPrep() {
+  const { t } = useTranslation();
   const [currentStep, setCurrentStep] = useState(1);
   const [dontShowAgain, setDontShowAgain] = useState(false);
 
@@ -57,9 +59,9 @@ export default function StressMeasurementPrep() {
       </View>
       
       <View style={styles.instructionContainer}>
-        <Text style={styles.mainInstruction}>자리에 앉기</Text>
+        <Text style={styles.mainInstruction}>{t('stressHeartrate.measurement.prep.step1Title')}</Text>
         <Text style={styles.subInstruction}>
-          측정하는 동안 자리에 앉아 차분하게 측정 해주세요
+          {t('stressHeartrate.measurement.prep.step1Instruction')}
         </Text>
       </View>
     </View>
@@ -86,9 +88,9 @@ export default function StressMeasurementPrep() {
       </View>
       
       <View style={styles.instructionContainer}>
-        <Text style={styles.mainInstruction}>손을 올리고 팔꿈치를 책상에</Text>
+        <Text style={styles.mainInstruction}>{t('stressHeartrate.measurement.prep.step2Title')}</Text>
         <Text style={styles.subInstruction}>
-          팔의 자세를 그림처럼 만들고 손의 높이를 심장과 비슷하게 해주세요
+          {t('stressHeartrate.measurement.prep.step2Instruction')}
         </Text>
       </View>
     </View>
@@ -101,7 +103,7 @@ export default function StressMeasurementPrep() {
         <TouchableOpacity onPress={handleBack} style={styles.backButton}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>스트레스 / 심박수 측정</Text>
+        <Text style={styles.headerTitle}>{t('stressHeartrate.measurement.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
@@ -121,11 +123,11 @@ export default function StressMeasurementPrep() {
       {/* 하단 버튼들 */}
       <View style={styles.bottomButtonContainer}>
         <TouchableOpacity style={styles.dontShowButton} onPress={handleDontShowAgain}>
-          <Text style={styles.dontShowButtonText}>다시 보지 않기</Text>
+          <Text style={styles.dontShowButtonText}>{t('stressHeartrate.measurement.prep.dontShowAgain')}</Text>
         </TouchableOpacity>
         
         <TouchableOpacity style={styles.nextButton} onPress={handleNext}>
-          <Text style={styles.nextButtonText}>다음</Text>
+          <Text style={styles.nextButtonText}>{t('stressHeartrate.measurement.prep.next')}</Text>
         </TouchableOpacity>
       </View>
     </View>

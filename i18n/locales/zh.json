@@ -804,6 +804,105 @@
         "expressionWrinkles": "表情皱纹"
       }
     }
+  },
+  "stressHeartrate": {
+    "statistics": {
+      "title": "压力/心率统计",
+      "tabs": {
+        "daily": "日间",
+        "weekly": "周间",
+        "monthly": "月间"
+      },
+      "emptyTitle": "至少3天以上",
+      "emptyText": "请测量压力/心率。"
+    },
+    "main": {
+      "title": "压力/心率",
+      "noRecord": "还没有记录。",
+      "fingerMeasurement": "手指测量",
+      "faceMeasurement": "面部测量",
+      "months": {
+        "1": "1月",
+        "2": "2月",
+        "3": "3月",
+        "4": "4月",
+        "5": "5月",
+        "6": "6月",
+        "7": "7月",
+        "8": "8月",
+        "9": "9月",
+        "10": "10月",
+        "11": "11月",
+        "12": "12月"
+      },
+      "weekDays": {
+        "sun": "日",
+        "mon": "一",
+        "tue": "二",
+        "wed": "三",
+        "thu": "四",
+        "fri": "五",
+        "sat": "六"
+      },
+      "dateInfo": "{day}日({dayOfWeek})"
+    },
+    "measurement": {
+      "title": "压力/心率测量",
+      "active": {
+        "coverCamera": "遮挡后置摄像头",
+        "coverInstruction": "看着圆圈内的屏幕，用手指遮挡后置摄像头",
+        "startButton": "开始测量",
+        "warningText": "中间圆圈区域必须全部填满红色！",
+        "iosWarning": "* iOS设备的摄像头传感器很敏感，为了准确测量，请尽量减少移动。",
+        "viewMethodAgain": "再次查看测量方法"
+      },
+      "guide": {
+        "mainInstruction": "用食指遮挡后置摄像头",
+        "subInstruction": "用食指遮挡后置摄像头时，测量会自动开始",
+        "dontShowAgain": "不再显示",
+        "close": "关闭"
+      },
+      "prep": {
+        "step1Title": "坐下",
+        "step1Instruction": "测量期间请坐下并保持平静地测量",
+        "step2Title": "将手放在桌子上，肘部支撑",
+        "step2Instruction": "按照图示调整手臂姿势，使手的高度与心脏位置相似",
+        "next": "下一步",
+        "dontShowAgain": "不再显示"
+      },
+      "result": {
+        "title": "压力/心率结果",
+        "stressScore": "压力分数",
+        "scoreAdvice": "保持心情放松会更好",
+        "heartRate": "心率",
+        "heartRateUnit": "次/分",
+        "status": {
+          "interest": "关注",
+          "good": "良好"
+        },
+        "rangeDescription": "我同龄人的静息心率范围",
+        "stressAccumulation": "压力积累会怎样？",
+        "symptomsTitle": "压力症状:",
+        "symptoms": {
+          "1": "焦虑和紧张",
+          "2": "失眠",
+          "3": "内疚、自责",
+          "4": "过度沉迷于刺激性活动（游戏、手机）",
+          "5": "无精打采",
+          "6": "消化不良",
+          "7": "头痛和头晕"
+        },
+        "specialistAdvice": "如果上述症状持续出现，请咨询专家",
+        "accuracyTitle": "准确性信息",
+        "accuracyText": "上述结果通过DeepMedi提供，并按以下准确性进行分析。",
+        "accuracyItems": {
+          "stress": "压力指数: 95%准确性（KCL认证测试成绩）",
+          "heartRate": "心率: 98%准确性（KTL和KCL认证测试成绩）"
+        },
+        "disclaimer": "压力指数/心率测量服务不是医疗设备，本服务的目的不是用于疾病的诊断、治疗、缓解、处理或预防。",
+        "completeButton": "分析完成"
+      }
+    }
   }
 }
 

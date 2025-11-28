@@ -1152,6 +1152,105 @@
         "expressionWrinkles": "표정주름"
       }
     }
+  },
+  "stressHeartrate": {
+    "statistics": {
+      "title": "스트레스 / 심박수 통계",
+      "tabs": {
+        "daily": "일간",
+        "weekly": "주간",
+        "monthly": "월간"
+      },
+      "emptyTitle": "최소 3일이상",
+      "emptyText": "스트레스 / 심박수 측정을 해 주세요."
+    },
+    "main": {
+      "title": "스트레스 / 심박수",
+      "noRecord": "아직 기록 전이에요.",
+      "fingerMeasurement": "손가락 측정",
+      "faceMeasurement": "얼굴 측정",
+      "months": {
+        "1": "1월",
+        "2": "2월",
+        "3": "3월",
+        "4": "4월",
+        "5": "5월",
+        "6": "6월",
+        "7": "7월",
+        "8": "8월",
+        "9": "9월",
+        "10": "10월",
+        "11": "11월",
+        "12": "12월"
+      },
+      "weekDays": {
+        "sun": "일",
+        "mon": "월",
+        "tue": "화",
+        "wed": "수",
+        "thu": "목",
+        "fri": "금",
+        "sat": "토"
+      },
+      "dateInfo": "{day}일({dayOfWeek})"
+    },
+    "measurement": {
+      "title": "스트레스 / 심박수 측정",
+      "active": {
+        "coverCamera": "후면 카메라 가리기",
+        "coverInstruction": "원 안에 화면을 보고 후면 카메라를 손가락으로 가려주세요",
+        "startButton": "측정 시작",
+        "warningText": "가운데 원 영역 전체가 붉은색으로 채워져야 해요!",
+        "iosWarning": "* iOS 기기는 카메라 센서가 민감하기 때문에 정확한 측정을 위해 움직임을 최소화해주시기 바랍니다.",
+        "viewMethodAgain": "측정 방법 다시 보기"
+      },
+      "guide": {
+        "mainInstruction": "검지로 후면 카메라 가리기",
+        "subInstruction": "검지로 후면 카메라를 가리면 자동으로 측정이 시작돼요",
+        "dontShowAgain": "다시 보지 않기",
+        "close": "닫기"
+      },
+      "prep": {
+        "step1Title": "자리에 앉기",
+        "step1Instruction": "측정하는 동안 자리에 앉아 차분하게 측정 해주세요",
+        "step2Title": "손을 올리고 팔꿈치를 책상에",
+        "step2Instruction": "팔의 자세를 그림처럼 만들고 손의 높이를 심장과 비슷하게 해주세요",
+        "next": "다음",
+        "dontShowAgain": "다시 보지 않기"
+      },
+      "result": {
+        "title": "스트레스 / 심박수 결과",
+        "stressScore": "스트레스 점수",
+        "scoreAdvice": "마음의 여유를 가지면 더 좋아질거에요",
+        "heartRate": "심박수",
+        "heartRateUnit": "회/분",
+        "status": {
+          "interest": "관심",
+          "good": "양호"
+        },
+        "rangeDescription": "내 또래 안정 심박 범위",
+        "stressAccumulation": "스트레스가 쌓이면?",
+        "symptomsTitle": "스트레스 증상:",
+        "symptoms": {
+          "1": "초조 및 긴장",
+          "2": "불면",
+          "3": "죄책감, 자책감",
+          "4": "자극적인 행위(게임, 휴대폰)에 과몰입",
+          "5": "무기력함",
+          "6": "소화불량",
+          "7": "두통 및 어지러움"
+        },
+        "specialistAdvice": "위 증상이 지속적으로 나타난다면 전문가와 상담해보세요",
+        "accuracyTitle": "정확도 정보",
+        "accuracyText": "위 결과는 딥메디를 통해 제공되며 아래의 정확도로 분석됩니다.",
+        "accuracyItems": {
+          "stress": "스트레스 지수: 95% 정확도 (KCL 공인시험 성적)",
+          "heartRate": "심박수: 98% 정확도 (KTL 및 KCL 공인시험 성적)"
+        },
+        "disclaimer": "스트레스 지수 / 심박수 측정 서비스는 의료기기가 아니며, 본 서비스의 목적은 질병의 진단, 치료, 경감, 처치, 예방에 있지 않습니다.",
+        "completeButton": "분석 완료"
+      }
+    }
   }
 }
 

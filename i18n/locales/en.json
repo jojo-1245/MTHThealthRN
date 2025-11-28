@@ -804,6 +804,105 @@
         "expressionWrinkles": "Expression Wrinkles"
       }
     }
+  },
+  "stressHeartrate": {
+    "statistics": {
+      "title": "Stress / Heart Rate Statistics",
+      "tabs": {
+        "daily": "Daily",
+        "weekly": "Weekly",
+        "monthly": "Monthly"
+      },
+      "emptyTitle": "At least 3 days",
+      "emptyText": "Please measure stress / heart rate."
+    },
+    "main": {
+      "title": "Stress / Heart Rate",
+      "noRecord": "No record yet.",
+      "fingerMeasurement": "Finger Measurement",
+      "faceMeasurement": "Face Measurement",
+      "months": {
+        "1": "Jan",
+        "2": "Feb",
+        "3": "Mar",
+        "4": "Apr",
+        "5": "May",
+        "6": "Jun",
+        "7": "Jul",
+        "8": "Aug",
+        "9": "Sep",
+        "10": "Oct",
+        "11": "Nov",
+        "12": "Dec"
+      },
+      "weekDays": {
+        "sun": "Sun",
+        "mon": "Mon",
+        "tue": "Tue",
+        "wed": "Wed",
+        "thu": "Thu",
+        "fri": "Fri",
+        "sat": "Sat"
+      },
+      "dateInfo": "{day} ({dayOfWeek})"
+    },
+    "measurement": {
+      "title": "Stress / Heart Rate Measurement",
+      "active": {
+        "coverCamera": "Cover Rear Camera",
+        "coverInstruction": "Look at the screen in the circle and cover the rear camera with your finger",
+        "startButton": "Start Measurement",
+        "warningText": "The entire center circle area must be filled with red!",
+        "iosWarning": "* iOS devices have sensitive camera sensors, so please minimize movement for accurate measurement.",
+        "viewMethodAgain": "View Measurement Method Again"
+      },
+      "guide": {
+        "mainInstruction": "Cover Rear Camera with Index Finger",
+        "subInstruction": "When you cover the rear camera with your index finger, measurement will start automatically",
+        "dontShowAgain": "Don't show again",
+        "close": "Close"
+      },
+      "prep": {
+        "step1Title": "Sit Down",
+        "step1Instruction": "Please sit down and measure calmly during measurement",
+        "step2Title": "Place Hand on Desk with Elbow",
+        "step2Instruction": "Position your arm as shown in the picture and make the height of your hand similar to your heart",
+        "next": "Next",
+        "dontShowAgain": "Don't show again"
+      },
+      "result": {
+        "title": "Stress / Heart Rate Results",
+        "stressScore": "Stress Score",
+        "scoreAdvice": "It will get better if you have peace of mind",
+        "heartRate": "Heart Rate",
+        "heartRateUnit": "bpm",
+        "status": {
+          "interest": "Interest",
+          "good": "Good"
+        },
+        "rangeDescription": "My age group's resting heart rate range",
+        "stressAccumulation": "What happens when stress builds up?",
+        "symptomsTitle": "Stress Symptoms:",
+        "symptoms": {
+          "1": "Anxiety and tension",
+          "2": "Insomnia",
+          "3": "Guilt and self-blame",
+          "4": "Over-immersion in stimulating activities (games, mobile phones)",
+          "5": "Lethargy",
+          "6": "Indigestion",
+          "7": "Headache and dizziness"
+        },
+        "specialistAdvice": "If the above symptoms persist, please consult with a specialist",
+        "accuracyTitle": "Accuracy Information",
+        "accuracyText": "The above results are provided through DeepMedi and analyzed with the following accuracy.",
+        "accuracyItems": {
+          "stress": "Stress Index: 95% accuracy (KCL certified test results)",
+          "heartRate": "Heart Rate: 98% accuracy (KTL and KCL certified test results)"
+        },
+        "disclaimer": "The stress index / heart rate measurement service is not a medical device, and the purpose of this service is not for diagnosis, treatment, relief, handling, or prevention of diseases.",
+        "completeButton": "Analysis Complete"
+      }
+    }
   }
 }
 

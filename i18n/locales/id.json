@@ -804,6 +804,105 @@
         "expressionWrinkles": "Kerutan Ekspresi"
       }
     }
+  },
+  "stressHeartrate": {
+    "statistics": {
+      "title": "Statistik Stres / Detak Jantung",
+      "tabs": {
+        "daily": "Harian",
+        "weekly": "Mingguan",
+        "monthly": "Bulanan"
+      },
+      "emptyTitle": "Minimal 3 hari",
+      "emptyText": "Harap ukur stres / detak jantung."
+    },
+    "main": {
+      "title": "Stres / Detak Jantung",
+      "noRecord": "Belum ada catatan.",
+      "fingerMeasurement": "Pengukuran Jari",
+      "faceMeasurement": "Pengukuran Wajah",
+      "months": {
+        "1": "Jan",
+        "2": "Feb",
+        "3": "Mar",
+        "4": "Apr",
+        "5": "Mei",
+        "6": "Jun",
+        "7": "Jul",
+        "8": "Agu",
+        "9": "Sep",
+        "10": "Okt",
+        "11": "Nov",
+        "12": "Des"
+      },
+      "weekDays": {
+        "sun": "Min",
+        "mon": "Sen",
+        "tue": "Sel",
+        "wed": "Rab",
+        "thu": "Kam",
+        "fri": "Jum",
+        "sat": "Sab"
+      },
+      "dateInfo": "{day} ({dayOfWeek})"
+    },
+    "measurement": {
+      "title": "Pengukuran Stres / Detak Jantung",
+      "active": {
+        "coverCamera": "Tutup Kamera Belakang",
+        "coverInstruction": "Lihat layar di dalam lingkaran dan tutup kamera belakang dengan jari Anda",
+        "startButton": "Mulai Pengukuran",
+        "warningText": "Seluruh area lingkaran tengah harus diisi dengan warna merah!",
+        "iosWarning": "* Perangkat iOS memiliki sensor kamera yang sensitif, jadi harap minimalkan gerakan untuk pengukuran yang akurat.",
+        "viewMethodAgain": "Lihat Metode Pengukuran Lagi"
+      },
+      "guide": {
+        "mainInstruction": "Tutup Kamera Belakang dengan Jari Telunjuk",
+        "subInstruction": "Saat Anda menutup kamera belakang dengan jari telunjuk, pengukuran akan dimulai secara otomatis",
+        "dontShowAgain": "Jangan tampilkan lagi",
+        "close": "Tutup"
+      },
+      "prep": {
+        "step1Title": "Duduk",
+        "step1Instruction": "Harap duduk dan ukur dengan tenang selama pengukuran",
+        "step2Title": "Letakkan Tangan di Meja dengan Siku",
+        "step2Instruction": "Posisikan lengan Anda seperti yang ditunjukkan dalam gambar dan buat tinggi tangan Anda mirip dengan jantung Anda",
+        "next": "Selanjutnya",
+        "dontShowAgain": "Jangan tampilkan lagi"
+      },
+      "result": {
+        "title": "Hasil Stres / Detak Jantung",
+        "stressScore": "Skor Stres",
+        "scoreAdvice": "Akan lebih baik jika Anda memiliki ketenangan pikiran",
+        "heartRate": "Detak Jantung",
+        "heartRateUnit": "bpm",
+        "status": {
+          "interest": "Minat",
+          "good": "Baik"
+        },
+        "rangeDescription": "Rentang detak jantung istirahat kelompok usia saya",
+        "stressAccumulation": "Apa yang terjadi ketika stres menumpuk?",
+        "symptomsTitle": "Gejala Stres:",
+        "symptoms": {
+          "1": "Kecemasan dan ketegangan",
+          "2": "Insomnia",
+          "3": "Rasa bersalah dan menyalahkan diri sendiri",
+          "4": "Terlalu tenggelam dalam aktivitas yang merangsang (game, ponsel)",
+          "5": "Kelesuan",
+          "6": "Gangguan pencernaan",
+          "7": "Sakit kepala dan pusing"
+        },
+        "specialistAdvice": "Jika gejala di atas terus muncul, harap konsultasikan dengan spesialis",
+        "accuracyTitle": "Informasi Akurasi",
+        "accuracyText": "Hasil di atas disediakan melalui DeepMedi dan dianalisis dengan akurasi berikut.",
+        "accuracyItems": {
+          "stress": "Indeks Stres: 95% akurasi (hasil uji bersertifikat KCL)",
+          "heartRate": "Detak Jantung: 98% akurasi (hasil uji bersertifikat KTL dan KCL)"
+        },
+        "disclaimer": "Layanan pengukuran indeks stres / detak jantung bukanlah perangkat medis, dan tujuan layanan ini bukan untuk diagnosis, pengobatan, peredaan, penanganan, atau pencegahan penyakit.",
+        "completeButton": "Analisis Selesai"
+      }
+    }
   }
 }
 
