@@ -1,3 +1,4 @@
+import { useTranslation } from '@/i18n';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React from 'react';
@@ -10,6 +11,7 @@ import {
 } from 'react-native';
 
 export default function MedicationDetail() {
+  const { t } = useTranslation();
   return (
     <View style={styles.container}>
       {/* 헤더 */}
@@ -17,18 +19,18 @@ export default function MedicationDetail() {
         <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>상세 정보</Text>
+        <Text style={styles.headerTitle}>{t('medication.detail.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
       <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
         {/* 등록된 의약품 섹션 */}
         <View style={styles.section}>
-          <Text style={styles.sectionTitle}>등록된 의약품</Text>
+          <Text style={styles.sectionTitle}>{t('medication.detail.registeredTitle')}</Text>
           
           {/* 복용 기간 정보 */}
           <View style={styles.periodInfo}>
-            <Text style={styles.periodText}>복용 기간 2025.10.09~2025.10.09</Text>
+            <Text style={styles.periodText}>{t('medication.detail.period')} 2025.10.09~2025.10.09</Text>
           </View>
 
           {/* 의약품 정보 */}
@@ -40,14 +42,14 @@ export default function MedicationDetail() {
         {/* 상세 설명 */}
         <View style={styles.section}>
           <Text style={styles.description}>
-            해당 의약품은 영양소 상호작용에 대한 정보가 없는 약물입니다
+            {t('medication.detail.description')}
           </Text>
         </View>
 
         {/* 출처 정보 */}
         <View style={styles.section}>
           <Text style={styles.sourceText}>
-            (출처: NIH, Drugs.com, 영영제 처별 가이드, 비타민 치료)
+            {t('medication.detail.source')}
           </Text>
         </View>
       </ScrollView>

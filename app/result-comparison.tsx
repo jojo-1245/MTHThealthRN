@@ -1,14 +1,15 @@
+import { useTranslation } from '@/i18n';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React, { useState } from 'react';
 import {
-    Dimensions,
-    ScrollView,
-    StatusBar,
-    StyleSheet,
-    Text,
-    TouchableOpacity,
-    View,
+  Dimensions,
+  ScrollView,
+  StatusBar,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
 } from 'react-native';
 
 const { width, height } = Dimensions.get('window');
@@ -22,6 +23,7 @@ interface HealthItem {
 }
 
 export default function ResultComparisonScreen() {
+  const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState<TabType>('health');
   const [selectedComparison, setSelectedComparison] = useState<'previous' | 'recent'>('recent');
 
@@ -31,28 +33,28 @@ export default function ResultComparisonScreen() {
 
   // 헬스 데이터
   const healthData: HealthItem[] = [
-    { name: '혈행개선', status: '주의', value: 0.4 },
-    { name: '대사조절', status: '주의', value: 0.3 },
-    { name: '면역항산화', status: '주의', value: 0.4 },
-    { name: '비만체지방', status: '위험', value: 0.7 },
+    { name: t('resultComparison.healthItems.circulation'), status: t('resultComparison.status.caution'), value: 0.4 },
+    { name: t('resultComparison.healthItems.metabolism'), status: t('resultComparison.status.caution'), value: 0.3 },
+    { name: t('resultComparison.healthItems.immunity'), status: t('resultComparison.status.caution'), value: 0.4 },
+    { name: t('resultComparison.healthItems.obesity'), status: t('resultComparison.status.danger'), value: 0.7 },
   ];
 
   // 피부 데이터
   const skinData: HealthItem[] = [
-    { name: '지성피부', status: '주의', value: 0.5 },
-    { name: '색소피부', status: '관심', value: 0.3 },
-    { name: '민감피부', status: '주의', value: 0.4 },
-    { name: '건성피부', status: '관심', value: 0.3 },
-    { name: '노화피부', status: '관심', value: 0.3 },
+    { name: t('resultComparison.skinItems.oily'), status: t('resultComparison.status.caution'), value: 0.5 },
+    { name: t('resultComparison.skinItems.pigment'), status: t('resultComparison.status.interest'), value: 0.3 },
+    { name: t('resultComparison.skinItems.sensitive'), status: t('resultComparison.status.caution'), value: 0.4 },
+    { name: t('resultComparison.skinItems.dry'), status: t('resultComparison.status.interest'), value: 0.3 },
+    { name: t('resultComparison.skinItems.aging'), status: t('resultComparison.status.interest'), value: 0.3 },
   ];
 
   // 두피탈모 데이터
   const scalpData: HealthItem[] = [
-    { name: '건성두피', status: '주의', value: 0.4 },
-    { name: '탈모', status: '주의', value: 0.4 },
-    { name: '지성두피', status: '주의', value: 0.4 },
-    { name: '비듬두피', status: '주의', value: 0.4 },
-    { name: '예민두피', status: '주의', value: 0.4 },
+    { name: t('resultComparison.scalpItems.dry'), status: t('resultComparison.status.caution'), value: 0.4 },
+    { name: t('resultComparison.scalpItems.hairLoss'), status: t('resultComparison.status.caution'), value: 0.4 },
+    { name: t('resultComparison.scalpItems.oily'), status: t('resultComparison.status.caution'), value: 0.4 },
+    { name: t('resultComparison.scalpItems.dandruff'), status: t('resultComparison.status.caution'), value: 0.4 },
+    { name: t('resultComparison.scalpItems.sensitive'), status: t('resultComparison.status.caution'), value: 0.4 },
   ];
 
   const getCurrentData = () => {
@@ -69,23 +71,38 @@ export default function ResultComparisonScreen() {
   };
 
   const getStatusColor = (status: string) => {
-    switch (status) {
-      case '위험': return '#EF4444';
-      case '주의': return '#F59E0B';
-      case '관심': return '#3B82F6';
-      case '양호': return '#10B981';
-      default: return '#6B7280';
-    }
+    if (status === t('resultComparison.status.danger')) return '#EF4444';
+    if (status === t('resultComparison.status.caution')) return '#F59E0B';
+    if (status === t('resultComparison.status.interest')) return '#3B82F6';
+    if (status === t('resultComparison.status.good')) return '#10B981';
+    return '#6B7280';
   };
 
   const getRadarChartLabels = () => {
     switch (activeTab) {
       case 'health':
-        return ['혈행개선', '대사조절', '면역항산화', '비만체지방'];
+        return [
+          t('resultComparison.healthItems.circulation'),
+          t('resultComparison.healthItems.metabolism'),
+          t('resultComparison.healthItems.immunity'),
+          t('resultComparison.healthItems.obesity')
+        ];
       case 'skin':
-        return ['지성피부', '노화피부', '건성피부', '민감피부', '색소피부'];
+        return [
+          t('resultComparison.skinItems.oily'),
+          t('resultComparison.skinItems.aging'),
+          t('resultComparison.skinItems.dry'),
+          t('resultComparison.skinItems.sensitive'),
+          t('resultComparison.skinItems.pigment')
+        ];
       case 'scalp':
-        return ['건성두피', '예민두피', '비듬두피', '지성두피', '탈모'];
+        return [
+          t('resultComparison.scalpItems.dry'),
+          t('resultComparison.scalpItems.sensitive'),
+          t('resultComparison.scalpItems.dandruff'),
+          t('resultComparison.scalpItems.oily'),
+          t('resultComparison.scalpItems.hairLoss')
+        ];
       default:
         return [];
     }
@@ -103,7 +120,7 @@ export default function ResultComparisonScreen() {
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>결과비교</Text>
+        <Text style={styles.headerTitle}>{t('resultComparison.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
@@ -114,7 +131,7 @@ export default function ResultComparisonScreen() {
           onPress={() => setActiveTab('health')}
         >
           <Text style={[styles.tabText, activeTab === 'health' && styles.activeTabText]}>
-            헬스
+            {t('resultComparison.tabs.health')}
           </Text>
         </TouchableOpacity>
         <TouchableOpacity
@@ -122,7 +139,7 @@ export default function ResultComparisonScreen() {
           onPress={() => setActiveTab('skin')}
         >
           <Text style={[styles.tabText, activeTab === 'skin' && styles.activeTabText]}>
-            피부
+            {t('resultComparison.tabs.skin')}
           </Text>
         </TouchableOpacity>
         <TouchableOpacity
@@ -130,7 +147,7 @@ export default function ResultComparisonScreen() {
           onPress={() => setActiveTab('scalp')}
         >
           <Text style={[styles.tabText, activeTab === 'scalp' && styles.activeTabText]}>
-            두피탈모
+            {t('resultComparison.tabs.scalp')}
           </Text>
         </TouchableOpacity>
       </View>
@@ -150,7 +167,7 @@ export default function ResultComparisonScreen() {
               selectedComparison === 'previous' && styles.activeComparisonOptionText,
             ]}
           >
-            이전
+            {t('resultComparison.comparison.previous')}
           </Text>
         </TouchableOpacity>
         <TouchableOpacity
@@ -166,7 +183,7 @@ export default function ResultComparisonScreen() {
               selectedComparison === 'recent' && styles.activeComparisonOptionText,
             ]}
           >
-            최근
+            {t('resultComparison.comparison.recent')}
           </Text>
           {selectedComparison === 'recent' && (
             <Text style={styles.comparisonDate}>2025-10-09</Text>
@@ -182,11 +199,11 @@ export default function ResultComparisonScreen() {
             {/* 레이더 차트는 이미지로 대체 가능 */}
             <View style={styles.chartPlaceholder}>
               <Ionicons name="pie-chart" size={60} color="#8B5CF6" />
-              <Text style={styles.chartPlaceholderText}>레이더 차트</Text>
+              <Text style={styles.chartPlaceholderText}>{t('resultComparison.chartPlaceholder')}</Text>
               <Text style={styles.chartPlaceholderSubtext}>
-                {activeTab === 'health' && '혈행개선, 대사조절, 면역항산화, 비만체지방'}
-                {activeTab === 'skin' && '지성피부, 색소피부, 민감피부, 건성피부, 노화피부'}
-                {activeTab === 'scalp' && '건성두피, 탈모, 지성두피, 비듬두피, 예민두피'}
+                {activeTab === 'health' && t('resultComparison.chartDescriptions.health')}
+                {activeTab === 'skin' && t('resultComparison.chartDescriptions.skin')}
+                {activeTab === 'scalp' && t('resultComparison.chartDescriptions.scalp')}
               </Text>
             </View>
           </View>
@@ -196,13 +213,13 @@ export default function ResultComparisonScreen() {
         <View style={styles.tableContainer}>
           <View style={styles.tableHeader}>
             <View style={styles.tableHeaderCell}>
-              <Text style={styles.tableHeaderText}>항목</Text>
+              <Text style={styles.tableHeaderText}>{t('resultComparison.table.item')}</Text>
             </View>
             <View style={styles.tableHeaderCell}>
-              <Text style={styles.tableHeaderText}>이전</Text>
+              <Text style={styles.tableHeaderText}>{t('resultComparison.table.previous')}</Text>
             </View>
             <View style={styles.tableHeaderCell}>
-              <Text style={styles.tableHeaderText}>최근</Text>
+              <Text style={styles.tableHeaderText}>{t('resultComparison.table.recent')}</Text>
             </View>
           </View>
           

@@ -1,3 +1,4 @@
+import { useTranslation } from '@/i18n';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React from 'react';
@@ -14,6 +15,7 @@ import {
 const { width, height } = Dimensions.get('window');
 
 export default function SelfDiagnosisCompleteScreen() {
+  const { t } = useTranslation();
   const handleBack = () => {
     router.back();
   };
@@ -40,7 +42,7 @@ export default function SelfDiagnosisCompleteScreen() {
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>자가진단</Text>
+        <Text style={styles.headerTitle}>{t('selfDiagnosis.complete.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
@@ -54,12 +56,12 @@ export default function SelfDiagnosisCompleteScreen() {
             onPress={handleAddModify}
           >
             <Ionicons name="create-outline" size={16} color="#fff" />
-            <Text style={styles.addModifyText}>추가 및 수정</Text>
+            <Text style={styles.addModifyText}>{t('selfDiagnosis.complete.addModifyButton')}</Text>
           </TouchableOpacity>
 
           {/* 진단 월 */}
           <View style={styles.infoRow}>
-            <Text style={styles.infoLabel}>진단 월</Text>
+            <Text style={styles.infoLabel}>{t('selfDiagnosis.complete.diagnosisMonth')}</Text>
             <TouchableOpacity 
               style={styles.monthContainer}
               onPress={handleMonthChange}
@@ -71,8 +73,8 @@ export default function SelfDiagnosisCompleteScreen() {
 
           {/* 진단 항목 */}
           <View style={styles.infoRow}>
-            <Text style={styles.infoLabel}>진단항목</Text>
-            <Text style={styles.diagnosisItem}>만성질환, 식/생활습관, 피부건강</Text>
+            <Text style={styles.infoLabel}>{t('selfDiagnosis.complete.diagnosisItem')}</Text>
+            <Text style={styles.diagnosisItem}>{t('selfDiagnosis.add.cards.chronicDisease.title')}, {t('selfDiagnosis.add.cards.lifestyle.title')}, {t('selfDiagnosis.add.cards.skinHealth.title')}</Text>
           </View>
 
           {/* 상세결과 버튼 */}
@@ -81,7 +83,7 @@ export default function SelfDiagnosisCompleteScreen() {
             onPress={handleDetailedResults}
           >
             <Ionicons name="list-outline" size={20} color="#fff" />
-            <Text style={styles.detailedResultsText}>상세결과</Text>
+            <Text style={styles.detailedResultsText}>{t('selfDiagnosis.complete.detailedResults')}</Text>
           </TouchableOpacity>
         </View>
       </ScrollView>

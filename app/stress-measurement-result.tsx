@@ -1,3 +1,4 @@
+import { useTranslation } from '@/i18n';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React from 'react';
@@ -10,6 +11,7 @@ import {
 } from 'react-native';
 
 export default function StressMeasurementResult() {
+  const { t } = useTranslation();
   const handleAnalysisComplete = () => {
     // 메인 페이지로 돌아가기
     router.push('/stress-heartrate');
@@ -26,32 +28,32 @@ export default function StressMeasurementResult() {
         <TouchableOpacity onPress={handleBack} style={styles.backButton}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>스트레스 / 심박수 결과</Text>
+        <Text style={styles.headerTitle}>{t('stressHeartrate.measurement.result.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
       <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
         {/* 스트레스 점수 섹션 */}
         <View style={styles.resultCard}>
-          <Text style={styles.resultTitle}>스트레스 점수</Text>
+          <Text style={styles.resultTitle}>{t('stressHeartrate.measurement.result.stressScore')}</Text>
           <View style={styles.scoreContainer}>
             <Text style={styles.scoreValue}>64점</Text>
             <View style={styles.scoreBadge}>
-              <Text style={styles.scoreBadgeText}>관심</Text>
+              <Text style={styles.scoreBadgeText}>{t('stressHeartrate.measurement.result.status.interest')}</Text>
             </View>
           </View>
           <Text style={styles.scoreAdvice}>
-            마음의 여유를 가지면 더 좋아질거에요
+            {t('stressHeartrate.measurement.result.scoreAdvice')}
           </Text>
         </View>
 
         {/* 심박수 섹션 */}
         <View style={styles.resultCard}>
-          <Text style={styles.resultTitle}>심박수</Text>
+          <Text style={styles.resultTitle}>{t('stressHeartrate.measurement.result.heartRate')}</Text>
           <View style={styles.heartRateContainer}>
-            <Text style={styles.heartRateValue}>61 회/분</Text>
+            <Text style={styles.heartRateValue}>61 {t('stressHeartrate.measurement.result.heartRateUnit')}</Text>
             <View style={styles.heartRateBadge}>
-              <Text style={styles.heartRateBadgeText}>양호</Text>
+              <Text style={styles.heartRateBadgeText}>{t('stressHeartrate.measurement.result.status.good')}</Text>
             </View>
           </View>
           
@@ -69,14 +71,14 @@ export default function StressMeasurementResult() {
             </View>
             <View style={styles.rangeDescription}>
               <View style={styles.rangeIndicator} />
-              <Text style={styles.rangeDescriptionText}>내 또래 안정 심박 범위</Text>
+              <Text style={styles.rangeDescriptionText}>{t('stressHeartrate.measurement.result.rangeDescription')}</Text>
             </View>
           </View>
         </View>
 
         {/* 스트레스가 쌓이면? 섹션 */}
         <View style={styles.resultCard}>
-          <Text style={styles.resultTitle}>스트레스가 쌓이면?</Text>
+          <Text style={styles.resultTitle}>{t('stressHeartrate.measurement.result.stressAccumulation')}</Text>
           
           {/* 일러스트레이션 */}
           <View style={styles.stressIllustration}>
@@ -98,51 +100,51 @@ export default function StressMeasurementResult() {
 
           {/* 스트레스 증상 목록 */}
           <View style={styles.symptomsList}>
-            <Text style={styles.symptomsTitle}>스트레스 증상:</Text>
+            <Text style={styles.symptomsTitle}>{t('stressHeartrate.measurement.result.symptomsTitle')}</Text>
             <View style={styles.symptomItem}>
-              <Text style={styles.symptomText}>1. 초조 및 긴장</Text>
+              <Text style={styles.symptomText}>1. {t('stressHeartrate.measurement.result.symptoms.1')}</Text>
             </View>
             <View style={styles.symptomItem}>
-              <Text style={styles.symptomText}>2. 불면</Text>
+              <Text style={styles.symptomText}>2. {t('stressHeartrate.measurement.result.symptoms.2')}</Text>
             </View>
             <View style={styles.symptomItem}>
-              <Text style={styles.symptomText}>3. 죄책감, 자책감</Text>
+              <Text style={styles.symptomText}>3. {t('stressHeartrate.measurement.result.symptoms.3')}</Text>
             </View>
             <View style={styles.symptomItem}>
-              <Text style={styles.symptomText}>4. 자극적인 행위(게임, 휴대폰)에 과몰입</Text>
+              <Text style={styles.symptomText}>4. {t('stressHeartrate.measurement.result.symptoms.4')}</Text>
             </View>
             <View style={styles.symptomItem}>
-              <Text style={styles.symptomText}>5. 무기력함</Text>
+              <Text style={styles.symptomText}>5. {t('stressHeartrate.measurement.result.symptoms.5')}</Text>
             </View>
             <View style={styles.symptomItem}>
-              <Text style={styles.symptomText}>6. 소화불량</Text>
+              <Text style={styles.symptomText}>6. {t('stressHeartrate.measurement.result.symptoms.6')}</Text>
             </View>
             <View style={styles.symptomItem}>
-              <Text style={styles.symptomText}>7. 두통 및 어지러움</Text>
+              <Text style={styles.symptomText}>7. {t('stressHeartrate.measurement.result.symptoms.7')}</Text>
             </View>
           </View>
 
           <Text style={styles.specialistAdvice}>
-            위 증상이 지속적으로 나타난다면 전문가와 상담해보세요
+            {t('stressHeartrate.measurement.result.specialistAdvice')}
           </Text>
         </View>
 
         {/* 정확도 정보 */}
         <View style={styles.accuracyCard}>
-          <Text style={styles.accuracyTitle}>정확도 정보</Text>
+          <Text style={styles.accuracyTitle}>{t('stressHeartrate.measurement.result.accuracyTitle')}</Text>
           <Text style={styles.accuracyText}>
-            위 결과는 딥메디를 통해 제공되며 아래의 정확도로 분석됩니다.
+            {t('stressHeartrate.measurement.result.accuracyText')}
           </Text>
           <View style={styles.accuracyList}>
             <Text style={styles.accuracyItem}>
-              • 스트레스 지수: 95% 정확도 (KCL 공인시험 성적)
+              • {t('stressHeartrate.measurement.result.accuracyItems.stress')}
             </Text>
             <Text style={styles.accuracyItem}>
-              • 심박수: 98% 정확도 (KTL 및 KCL 공인시험 성적)
+              • {t('stressHeartrate.measurement.result.accuracyItems.heartRate')}
             </Text>
           </View>
           <Text style={styles.disclaimer}>
-            스트레스 지수 / 심박수 측정 서비스는 의료기기가 아니며, 본 서비스의 목적은 질병의 진단, 치료, 경감, 처치, 예방에 있지 않습니다.
+            {t('stressHeartrate.measurement.result.disclaimer')}
           </Text>
         </View>
       </ScrollView>
@@ -150,7 +152,7 @@ export default function StressMeasurementResult() {
       {/* 하단 분석 완료 버튼 */}
       <View style={styles.bottomButtonContainer}>
         <TouchableOpacity style={styles.completeButton} onPress={handleAnalysisComplete}>
-          <Text style={styles.completeButtonText}>분석 완료</Text>
+          <Text style={styles.completeButtonText}>{t('stressHeartrate.measurement.result.completeButton')}</Text>
         </TouchableOpacity>
       </View>
     </View>

@@ -231,6 +231,678 @@
         "dailyTrue": "毎日そう"
       }
     }
+  },
+  "food": {
+    "search": {
+      "title": "食品検索",
+      "placeholder": "食品名を入力してください",
+      "info": {
+        "registered": "• 食品医薬品安全処に登録された製品を対象に分析します",
+        "unregistered": "• 食品医薬品安全処に登録されていない海外直購食品は検索できません",
+        "input": "• 製品名入力時は、スペース、正字法に注意して正確に入力してください"
+      },
+      "empty": {
+        "noResults": "検索結果がありません",
+        "enterFood": "食品名を入力して検索してください"
+      },
+      "loading": "検索中...",
+      "manufacturer": "製造元:",
+      "analyzeButton": "分析申請"
+    },
+    "searchResult": {
+      "title": "食品検索結果",
+      "tabs": {
+        "detail": "詳細情報",
+        "ranking": "栄養順位"
+      },
+      "category": "分類カテゴリー",
+      "categoryCount": "カテゴリー食品数",
+      "analysisResult": "分析結果",
+      "topPercent": "上位",
+      "analysisTitle": "主要成分分析",
+      "analysisLabels": {
+        "lowCalorie": "低カロリー",
+        "lowCarb": "低炭水",
+        "highProtein": "高タンパク",
+        "lowFat": "低脂肪",
+        "lowSodium": "低ナトリウム",
+        "lowSugar": "低糖"
+      },
+      "scale": {
+        "top": "上位",
+        "bottom": "下位"
+      },
+      "footerNote": "食品1回提供量基準で分析しています。",
+      "rankingTitle": "果物/野菜ジュースカテゴリー TOP 10",
+      "serving": "1回提供量:",
+      "viewAllButton": "栄養成分全体を見る",
+      "compareButton": "栄養成分比較"
+    },
+    "nutritionDetail": {
+      "title": "栄養成分全体を見る",
+      "serving": {
+        "perServing": "1回提供量",
+        "totalContent": "総内容量"
+      },
+      "guide": {
+        "title": "栄養成分表の読み方",
+        "text": "栄養成分表は1回提供量基準で表示され、1日の栄養素基準値に対する割合(%)を示します。"
+      },
+      "sections": {
+        "caloriesMajor": "熱量及び3大栄養素(3個)",
+        "minerals": "無機質(1個)"
+      },
+      "nutrients": {
+        "energy": "エネルギー",
+        "carbs": "炭水化物",
+        "totalFiber": "総食物繊維"
+      }
+    },
+    "nutritionCompare": {
+      "title": "栄養成分比較",
+      "vs": "VS",
+      "servingLabel": "1回提供量",
+      "sections": {
+        "caloriesMajor": "熱量及び3大栄養素",
+        "minerals": "無機質"
+      },
+      "nutrients": {
+        "energy": "エネルギー",
+        "carbs": "炭水化物",
+        "totalSugar": "総糖類",
+        "totalFiber": "総食物繊維",
+        "sodium": "ナトリウム",
+        "calcium": "カルシウム",
+        "iron": "鉄"
+      },
+      "addFoodButton": "食品追加"
+    }
+  },
+  "health": {
+    "geneticTest": {
+      "title": "遺伝子検査",
+      "noData": "検査情報がありません。",
+      "addMessage": "遺伝子検査結果を追加してください。",
+      "addButton": "検査追加",
+      "note": "※ このサービスはヒントパートナー会員対象で提供しています。\n今後、一般会員対象でサービス提供予定です。"
+    },
+    "checkupAuth": {
+      "title": "健康診断結果読み込み",
+      "message": "健康診断結果を読み込むには\n認証が必要です！",
+      "kakaoButton": "カカオ簡易認証",
+      "certificateButton": "共同認証書認証"
+    },
+    "checkupLoad": {
+      "title": "健康診断結果読み込み",
+      "message": "健康診断結果を追加してください。",
+      "addButton": "診断結果追加"
+    },
+    "statusMain": {
+      "title": "私の健康状態を知る",
+      "userLevel": "{name}さんの健康レベル？",
+      "levelText": "健康レベル",
+      "levelBadge": "レベル{level}注意段階",
+      "levelDescription": "状態改善のための注意深い管理が必要",
+      "manageTitle": "何から管理しますか？",
+      "status": {
+        "danger": "危険",
+        "caution": "注意"
+      },
+      "items": {
+        "obesity": "肥満体脂肪",
+        "metabolism": "代謝調節",
+        "scalp": "フケ頭皮"
+      },
+      "addTitle": "健康情報を追加してみますか？",
+      "timeRequired": "約{time}かかります",
+      "addItems": {
+        "selfDiagnosis": "自己診断",
+        "healthCheckup": "健康診断結果",
+        "detailedAnalysis": "その他精密分析"
+      },
+      "habitTitle": "健康習慣を作る",
+      "habitDescription": "ウィズ(with)は健康習慣作り挑戦イベントです",
+      "habitItems": {
+        "recruiting": "募集中ウィズ",
+        "recruitingSubtitle": "無料で参加してリワードを受け取る",
+        "ended": "終了したウィズ",
+        "endedSubtitle": "結果を確認してリワードを受け取る"
+      }
+    },
+    "statusResults": {
+      "title": "全体結果",
+      "summary": "{name}さんの健康レベルはレベル{level}段階で、",
+      "summaryHighlight": "同年代男性平均以上です",
+      "average": "平均",
+      "itemsTitle": "項目別分析結果",
+      "items": {
+        "obesity": "肥満体脂肪",
+        "metabolism": "代謝調節",
+        "scalp": "フケ頭皮",
+        "liver": "肝健康",
+        "bone": "骨関節健康",
+        "sleep": "睡眠・ストレス",
+        "circulation": "血行改善",
+        "immunity": "免疫抗酸化",
+        "acne": "化膿性ニキビ",
+        "digestion": "消化腸健康",
+        "eye": "目の健康",
+        "muscle": "筋肉代謝",
+        "brain": "脳記憶力"
+      },
+      "status": {
+        "danger": "危険",
+        "caution": "注意",
+        "interest": "関心",
+        "good": "良好"
+      },
+      "serviceTitle": "サービス別分析結果",
+      "serviceName": "自己診断"
+    }
+  },
+  "medication": {
+    "add": {
+      "title": "医薬品登録",
+      "scanButton": "追加スキャン",
+      "searchButton": "医薬品検索",
+      "prescribedLabel": "処方された薬",
+      "prescriptionDate": "処方日",
+      "medicationPeriod": "服用期間",
+      "datePlaceholder": "日付を選択してください",
+      "periodPlaceholder": "服用期間を選択してください",
+      "saveButton": "保存",
+      "alertTitle": "通知",
+      "alertMessage": "正常に処理されました",
+      "alertConfirm": "確認",
+      "errorTitle": "入力エラー",
+      "errorMessage": "すべてのフィールドを入力してください。",
+      "scanAlert": "追加スキャン",
+      "scanAlertMessage": "追加スキャン機能を実装してください。"
+    },
+    "detail": {
+      "title": "詳細情報",
+      "registeredTitle": "登録された医薬品",
+      "period": "服用期間",
+      "description": "この医薬品は栄養素相互作用に関する情報がない薬物です",
+      "source": "(出典: NIH, Drugs.com, 処方別ガイド, ビタミン療法)"
+    },
+    "record": {
+      "title": "服薬記録",
+      "months": {
+        "1": "1月",
+        "2": "2月",
+        "3": "3月",
+        "4": "4月",
+        "5": "5月",
+        "6": "6月",
+        "7": "7月",
+        "8": "8月",
+        "9": "9月",
+        "10": "10月",
+        "11": "11月",
+        "12": "12月"
+      },
+      "weekDays": {
+        "sun": "日",
+        "mon": "月",
+        "tue": "火",
+        "wed": "水",
+        "thu": "木",
+        "fri": "金",
+        "sat": "土"
+      },
+      "dateInfo": "{day}日({dayOfWeek})",
+      "emptyMessage": "服用中の医薬品がありません",
+      "addButton": "記録追加"
+    },
+    "search": {
+      "title": "医薬品検索",
+      "placeholder": "医薬品名を入力してください（例：タイレノール）",
+      "empty": {
+        "noResults": "検索結果がありません",
+        "enterMedication": "医薬品名を入力して検索してください"
+      },
+      "loading": "検索中...",
+      "addButton": "追加"
+    }
+  },
+  "nutrition": {
+    "search": {
+      "title": "カスタマイズ検索",
+      "guideText": "カスタマイズ検索のために以下の項目を選択してください",
+      "infoLink": "カスタマイズケア検索とは？",
+      "managementLabel": "管理必要項目選択",
+      "managementHint": "希望する項目を選択してください",
+      "categoryLabel": "分析する製品/サービスカテゴリー",
+      "categoryInfo": "検索製品およびサービス案内事項 >",
+      "managementModalTitle": "管理必要項目選択",
+      "categoryModalTitle": "分析する製品/サービスカテゴリー項目選択",
+      "scanButton": "製品名スキャン",
+      "searchButton": "製品名検索",
+      "managementOptions": {
+        "oilySkin": "皮脂過多（スキンケアアルゴリズム推奨）",
+        "redness": "紅潮",
+        "dryness": "乾燥",
+        "sensitivity": "敏感性",
+        "trouble": "トラブル",
+        "antiAging": "アンチエイジング"
+      },
+      "categoryOptions": {
+        "healthFood": "健康機能食品",
+        "cosmetics": "化粧品",
+        "medicalDevice": "医療機器",
+        "food": "食品",
+        "dailyGoods": "日用品"
+      }
+    }
+  },
+  "family": {
+    "myFamily": {
+      "title": "私のファミリー",
+      "tabs": {
+        "parents": "両親",
+        "friends": "フレンズ"
+      },
+      "empty": "まだ追加されたファミリーがありません",
+      "description": "カスタマイズ健康管理から服薬中の栄養管理まで\nデータで管理してみましょう 😊",
+      "addButton": "追加"
+    }
+  },
+  "obesity": {
+    "overview": {
+      "title": "肥満体脂肪",
+      "info": "肥満とは体脂肪が異常に過多な状態を指し、二次性肥満（病気、遺伝、薬物などによる）と一次性肥満（生活習慣による）に分かれ、一次性肥満が90%以上を占めます。2型糖尿病、高血圧、高脂血症など様々な健康問題を引き起こす可能性があるため、食事療法、運動、行動制御による予防と改善が必要です。",
+      "illustrationLabel": "人体イラスト",
+      "statusSummary": "{name}さんの肥満体脂肪状態は危険段階で\n同年代男性平均未満です。",
+      "riskLabels": {
+        "danger": "危険",
+        "average": "平均",
+        "good": "良好"
+      },
+      "analysisTitle": "肥満体脂肪状態分析",
+      "analysisItems": {
+        "lifestyle": "生活習慣",
+        "chronicDisease": "慢性疾患"
+      }
+    }
+  },
+  "previousResult": {
+    "title": "以前の結果",
+    "scoreGood": "{percentage}%良好",
+    "productName": "製品名",
+    "healthItem": "健康項目",
+    "detailsButton": "詳細結果を見る",
+    "guideTitle": "結果解釈ガイド",
+    "interpretation": {
+      "high": {
+        "title": "高い (80-100%)",
+        "description": "個人の健康状態と非常に良く合う製品です。"
+      },
+      "good": {
+        "title": "良好 (60-79%)",
+        "description": "個人の健康状態と良く合う製品です。"
+      },
+      "normal": {
+        "title": "普通 (40-59%)",
+        "description": "個人の健康状態と普通のレベルで合う製品です。"
+      },
+      "low": {
+        "title": "低い (0-39%)",
+        "description": "個人の健康状態と合わない製品です。"
+      }
+    },
+    "recommendationTitle": "推奨事項",
+    "recommendations": {
+      "1": "現在の製品は皮脂過多管理に適しています。",
+      "2": "定期的な服用で効果を最大化できます。",
+      "3": "3ヶ月後に再検査を通じて効果を確認してみてください。"
+    },
+    "newSearchButton": "新しい検索"
+  },
+  "productScan": {
+    "title": "製品名スキャン",
+    "instruction": "製品包装の[製品名]文字を必ず含めて撮影してください。",
+    "dontShowAgain": "もう表示しない",
+    "next": "次へ",
+    "scanComplete": "スキャン完了",
+    "scanCompleteMessage": "製品が認識されました。",
+    "cancel": "キャンセル",
+    "confirm": "確認",
+    "resultTitle": "スキャン結果",
+    "productName": "製品名",
+    "foodType": "食品の種類",
+    "reportNumber": "品目報告番号",
+    "distributor": "流通専門販売元"
+  },
+  "productSearch": {
+    "title": "製品選択",
+    "placeholder": "製品名を入力してください（例：プロバイオ）",
+    "infoTitle": "以下の場合には製品が検索されません",
+    "infoItems": {
+      "1": "• 一般医薬品として登録された栄養剤",
+      "2": "• 食品医薬品安全処に登録されていない海外直購栄養剤",
+      "3": "• 2018年以前に登録された製品"
+    },
+    "inputNote": "製品名入力時は、スペース、正字法に注意して正確に入力してください",
+    "searching": "検索中...",
+    "analyzeButton": "分析申請"
+  },
+  "profileEdit": {
+    "title": "私の情報修正",
+    "saveButton": "保存",
+    "saveSuccess": "保存完了",
+    "saveSuccessMessage": "情報が正常に保存されました。",
+    "phoneNumber": "携帯電話番号",
+    "phonePlaceholder": "携帯電話番号を入力してください",
+    "birthDate": "生年月日",
+    "birthPlaceholder": "YYYY-MM-DD",
+    "gender": "性別",
+    "male": "男性",
+    "female": "女性",
+    "nickname": "ニックネーム",
+    "nicknamePlaceholder": "ニックネームを入力してください",
+    "nicknameHint": "ハングル、英文2〜6文字以内で入力してください。",
+    "bodyInfo": "身体情報",
+    "height": "身長",
+    "weight": "体重",
+    "changeButton": "変更",
+    "email": "メール",
+    "emailPlaceholder": "メールを入力してください",
+    "address": "住所",
+    "addressPlaceholder": "住所を入力してください",
+    "channel": "チャンネル設定",
+    "snsLink": "SNSアカウント連動",
+    "kakao": "カカオ",
+    "apple": "アップル",
+    "linked": "連動完了",
+    "connect": "接続する",
+    "findPassword": "パスワード検索",
+    "findPasswordMessage": "パスワード検索機能を実装してください。",
+    "logout": "ログアウト",
+    "logoutMessage": "本当にログアウトしますか？",
+    "withdrawal": "会員脱退",
+    "withdrawalMessage": "本当に会員脱退しますか？",
+    "withdraw": "脱退"
+  },
+  "resultComparison": {
+    "title": "結果比較",
+    "tabs": {
+      "health": "ヘルス",
+      "skin": "肌",
+      "scalp": "頭皮脱毛"
+    },
+    "comparison": {
+      "previous": "以前",
+      "recent": "最近"
+    },
+    "chartPlaceholder": "レーダーチャート",
+    "chartDescriptions": {
+      "health": "血行改善、代謝調節、免疫抗酸化、肥満体脂肪",
+      "skin": "脂性肌、色素肌、敏感肌、乾燥肌、老化肌",
+      "scalp": "乾燥頭皮、脱毛、脂性頭皮、フケ頭皮、敏感頭皮"
+    },
+    "table": {
+      "item": "項目",
+      "previous": "以前",
+      "recent": "最近"
+    },
+    "status": {
+      "danger": "危険",
+      "caution": "注意",
+      "interest": "関心",
+      "good": "良好"
+    },
+    "healthItems": {
+      "circulation": "血行改善",
+      "metabolism": "代謝調節",
+      "immunity": "免疫抗酸化",
+      "obesity": "肥満体脂肪"
+    },
+    "skinItems": {
+      "oily": "脂性肌",
+      "pigment": "色素肌",
+      "sensitive": "敏感肌",
+      "dry": "乾燥肌",
+      "aging": "老化肌"
+    },
+    "scalpItems": {
+      "dry": "乾燥頭皮",
+      "hairLoss": "脱毛",
+      "oily": "脂性頭皮",
+      "dandruff": "フケ頭皮",
+      "sensitive": "敏感頭皮"
+    }
+  },
+  "selfDiagnosis": {
+    "add": {
+      "title": "自己診断追加",
+      "infoText": "以下の項目を追加チェックすると、より精密な栄養管理を提供できます",
+      "nextButton": "次へ",
+      "cards": {
+        "basicHealth": {
+          "title": "基礎健康",
+          "description": "基礎健康状態から確認したいです",
+          "duration": "約30秒"
+        },
+        "chronicDisease": {
+          "title": "慢性疾患",
+          "description": "現在疾患があり、薬を服用中（管理中）です",
+          "duration": "約15秒"
+        },
+        "lifestyle": {
+          "title": "食事/生活習慣",
+          "description": "現在の食事/生活習慣状態が気になります",
+          "duration": "約2分30秒"
+        },
+        "symptoms": {
+          "title": "自覚症状",
+          "description": "現在感じている自覚症状があります",
+          "duration": "約5分"
+        },
+        "skinHealth": {
+          "title": "肌健康",
+          "description": "現在の肌状態が気になります",
+          "duration": "約3分"
+        },
+        "scalpHealth": {
+          "title": "頭皮健康",
+          "description": "現在の頭皮状態が気になります",
+          "duration": "約2分"
+        }
+      }
+    },
+    "addModify": {
+      "title": "自己診断追加及び修正",
+      "instruction": "修正する項目を選択してください",
+      "additionalInstruction": "以下の項目を追加チェックすると、より精密な栄養管理を提供できます",
+      "nextButton": "次へ"
+    },
+    "complete": {
+      "title": "自己診断",
+      "addModifyButton": "追加及び修正",
+      "diagnosisMonth": "診断月",
+      "diagnosisItem": "診断項目",
+      "detailedResults": "詳細結果"
+    },
+    "detail": {
+      "title": "自己診断結果",
+      "skinHealth": "肌健康",
+      "status": {
+        "good": "良好",
+        "warning": "注意"
+      },
+      "indicators": {
+        "tZoneSebum": "Tゾーン皮脂状態",
+        "uZoneSebum": "Uゾーン皮脂状態",
+        "skinBarrier": "肌バリア機能",
+        "eyeMuscles": "目の周りの筋肉",
+        "skinExfoliation": "肌角質周期",
+        "skinMoisture": "肌保湿因子",
+        "skinDamage": "肌損傷",
+        "uvDamage": "紫外線肌損傷",
+        "skinSebum": "肌皮脂状態",
+        "skinDensity": "肌密度",
+        "melanin": "メラニン色素",
+        "skinRedness": "肌紅潮",
+        "neckMuscles": "首の筋肉",
+        "expressionWrinkles": "表情しわ"
+      }
+    },
+    "results": {
+      "title": "自己診断結果",
+      "categories": {
+        "diet": "食習慣",
+        "lifestyle": "生活習慣",
+        "skinHealth": "肌健康"
+      },
+      "status": {
+        "danger": "危険",
+        "caution": "注意",
+        "interest": "関心",
+        "good": "良好"
+      },
+      "dietItems": {
+        "carbDiet": "炭水化物食事",
+        "transFatDiet": "トランス脂肪食事",
+        "saturatedFatDiet": "飽和脂肪食事",
+        "sugarDiet": "糖食事",
+        "eatingSpeed": "食事速度習慣",
+        "afterMealSnack": "食後間食習慣",
+        "overeating": "過食習慣",
+        "sodiumDiet": "ナトリウム食事",
+        "lateNightMeal": "夜食習慣",
+        "essentialFattyAcidDiet": "必須脂肪酸食事",
+        "nutritionDiet": "栄養食事",
+        "proteinDiet": "タンパク質食事"
+      },
+      "lifestyleItems": {
+        "smoking": "喫煙状態",
+        "activityMetabolism": "活動代謝量",
+        "brainActivity": "脳活動",
+        "sleepRhythm": "睡眠生体リズム",
+        "waterIntake": "水分摂取",
+        "uvExposure": "紫外線露出",
+        "basalMetabolism": "基礎代謝量",
+        "caffeineIntake": "カフェイン摂取",
+        "jointFunction": "関節機能",
+        "alcoholIntake": "アルコール摂取"
+      },
+      "skinHealthItems": {
+        "uZoneSebum": "Uゾーン皮脂状態",
+        "tZoneSebum": "Tゾーン皮脂状態",
+        "skinBarrier": "肌バリア機能",
+        "skinSebum": "肌皮脂状態",
+        "uvDamage": "紫外線肌損傷",
+        "skinDamage": "肌損傷",
+        "skinMoisture": "肌保湿因子",
+        "skinExfoliation": "肌角質周期",
+        "eyeMuscles": "目の周りの筋肉",
+        "skinRedness": "肌紅潮",
+        "melanin": "メラニン色素",
+        "skinDensity": "肌密度",
+        "photoAging": "光老化",
+        "expressionWrinkles": "表情しわ"
+      }
+    }
+  },
+  "stressHeartrate": {
+    "statistics": {
+      "title": "ストレス/心拍数統計",
+      "tabs": {
+        "daily": "日間",
+        "weekly": "週間",
+        "monthly": "月間"
+      },
+      "emptyTitle": "最低3日以上",
+      "emptyText": "ストレス/心拍数を測定してください。"
+    },
+    "main": {
+      "title": "ストレス/心拍数",
+      "noRecord": "まだ記録前です。",
+      "fingerMeasurement": "指測定",
+      "faceMeasurement": "顔測定",
+      "months": {
+        "1": "1月",
+        "2": "2月",
+        "3": "3月",
+        "4": "4月",
+        "5": "5月",
+        "6": "6月",
+        "7": "7月",
+        "8": "8月",
+        "9": "9月",
+        "10": "10月",
+        "11": "11月",
+        "12": "12月"
+      },
+      "weekDays": {
+        "sun": "日",
+        "mon": "月",
+        "tue": "火",
+        "wed": "水",
+        "thu": "木",
+        "fri": "金",
+        "sat": "土"
+      },
+      "dateInfo": "{day}日({dayOfWeek})"
+    },
+    "measurement": {
+      "title": "ストレス/心拍数測定",
+      "active": {
+        "coverCamera": "背面カメラを覆う",
+        "coverInstruction": "円の中の画面を見て、背面カメラを指で覆ってください",
+        "startButton": "測定開始",
+        "warningText": "中央の円領域全体が赤色で埋められる必要があります！",
+        "iosWarning": "* iOSデバイスはカメラセンサーが敏感なため、正確な測定のために動きを最小限に抑えてください。",
+        "viewMethodAgain": "測定方法を再度見る"
+      },
+      "guide": {
+        "mainInstruction": "人差し指で背面カメラを覆う",
+        "subInstruction": "人差し指で背面カメラを覆うと自動的に測定が開始されます",
+        "dontShowAgain": "もう表示しない",
+        "close": "閉じる"
+      },
+      "prep": {
+        "step1Title": "座る",
+        "step1Instruction": "測定中は座って落ち着いて測定してください",
+        "step2Title": "手を上げて肘を机に",
+        "step2Instruction": "腕の姿勢を図のようにして、手の高さを心臓と似たようにしてください",
+        "next": "次へ",
+        "dontShowAgain": "もう表示しない"
+      },
+      "result": {
+        "title": "ストレス/心拍数結果",
+        "stressScore": "ストレススコア",
+        "scoreAdvice": "心の余裕を持てばもっと良くなります",
+        "heartRate": "心拍数",
+        "heartRateUnit": "回/分",
+        "status": {
+          "interest": "関心",
+          "good": "良好"
+        },
+        "rangeDescription": "私の同年代の安静時心拍範囲",
+        "stressAccumulation": "ストレスが蓄積すると？",
+        "symptomsTitle": "ストレス症状:",
+        "symptoms": {
+          "1": "焦りと緊張",
+          "2": "不眠",
+          "3": "罪悪感、自責感",
+          "4": "刺激的な行為（ゲーム、携帯電話）への過没入",
+          "5": "無気力",
+          "6": "消化不良",
+          "7": "頭痛とめまい"
+        },
+        "specialistAdvice": "上記の症状が持続的に現れる場合は専門家に相談してください",
+        "accuracyTitle": "精度情報",
+        "accuracyText": "上記の結果はディープメディを通じて提供され、以下の精度で分析されます。",
+        "accuracyItems": {
+          "stress": "ストレス指数: 95%精度（KCL公認試験成績）",
+          "heartRate": "心拍数: 98%精度（KTLおよびKCL公認試験成績）"
+        },
+        "disclaimer": "ストレス指数/心拍数測定サービスは医療機器ではなく、本サービスの目的は疾病の診断、治療、軽減、処置、予防にありません。",
+        "completeButton": "分析完了"
+      }
+    }
   }
 }
 

@@ -231,6 +231,678 @@
         "dailyTrue": "Setiap hari"
       }
     }
+  },
+  "food": {
+    "search": {
+      "title": "Pencarian Makanan",
+      "placeholder": "Masukkan nama makanan",
+      "info": {
+        "registered": "• Kami menganalisis produk yang terdaftar di Kementerian Keamanan Pangan dan Obat",
+        "unregistered": "• Makanan impor langsung dari luar negeri yang tidak terdaftar di Kementerian Keamanan Pangan dan Obat tidak dapat dicari",
+        "input": "• Harap masukkan nama produk dengan akurat, perhatikan spasi dan ejaan"
+      },
+      "empty": {
+        "noResults": "Tidak ada hasil pencarian",
+        "enterFood": "Masukkan nama makanan untuk mencari"
+      },
+      "loading": "Mencari...",
+      "manufacturer": "Produsen:",
+      "analyzeButton": "Minta Analisis"
+    },
+    "searchResult": {
+      "title": "Hasil Pencarian Makanan",
+      "tabs": {
+        "detail": "Detail",
+        "ranking": "Peringkat Nutrisi"
+      },
+      "category": "Kategori",
+      "categoryCount": "Jumlah makanan dalam kategori",
+      "analysisResult": "Hasil Analisis",
+      "topPercent": "Teratas",
+      "analysisTitle": "Analisis Bahan Utama",
+      "analysisLabels": {
+        "lowCalorie": "Rendah Kalori",
+        "lowCarb": "Rendah Karbohidrat",
+        "highProtein": "Tinggi Protein",
+        "lowFat": "Rendah Lemak",
+        "lowSodium": "Rendah Natrium",
+        "lowSugar": "Rendah Gula"
+      },
+      "scale": {
+        "top": "Teratas",
+        "bottom": "Terbawah"
+      },
+      "footerNote": "Analisis didasarkan pada satu porsi saji.",
+      "rankingTitle": "Kategori Jus Buah/Sayur TOP 10",
+      "serving": "Ukuran porsi:",
+      "viewAllButton": "Lihat Semua Nutrisi",
+      "compareButton": "Bandingkan Nutrisi"
+    },
+    "nutritionDetail": {
+      "title": "Lihat Semua Nutrisi",
+      "serving": {
+        "perServing": "Per Porsi",
+        "totalContent": "Total Konten"
+      },
+      "guide": {
+        "title": "Cara Membaca Fakta Nutrisi",
+        "text": "Fakta nutrisi ditampilkan berdasarkan satu porsi saji dan menunjukkan persentase (%) dari standar nutrisi harian."
+      },
+      "sections": {
+        "caloriesMajor": "Kalori dan 3 Nutrisi Utama (3)",
+        "minerals": "Mineral (1)"
+      },
+      "nutrients": {
+        "energy": "Energi",
+        "carbs": "Karbohidrat",
+        "totalFiber": "Total Serat Makanan"
+      }
+    },
+    "nutritionCompare": {
+      "title": "Bandingkan Nutrisi",
+      "vs": "VS",
+      "servingLabel": "Per Porsi",
+      "sections": {
+        "caloriesMajor": "Kalori dan 3 Nutrisi Utama",
+        "minerals": "Mineral"
+      },
+      "nutrients": {
+        "energy": "Energi",
+        "carbs": "Karbohidrat",
+        "totalSugar": "Total Gula",
+        "totalFiber": "Total Serat Makanan",
+        "sodium": "Natrium",
+        "calcium": "Kalsium",
+        "iron": "Besi"
+      },
+      "addFoodButton": "Tambah Makanan"
+    }
+  },
+  "health": {
+    "geneticTest": {
+      "title": "Tes Genetik",
+      "noData": "Tidak ada informasi tes tersedia.",
+      "addMessage": "Harap tambahkan hasil tes genetik Anda.",
+      "addButton": "Tambah Tes",
+      "note": "※ Layanan ini disediakan untuk anggota mitra Hint.\nLayanan untuk anggota umum akan tersedia di masa depan."
+    },
+    "checkupAuth": {
+      "title": "Muat Hasil Pemeriksaan Kesehatan",
+      "message": "Autentikasi diperlukan\nuntuk memuat hasil pemeriksaan kesehatan!",
+      "kakaoButton": "Autentikasi dengan Kakao",
+      "certificateButton": "Autentikasi dengan Sertifikat"
+    },
+    "checkupLoad": {
+      "title": "Muat Hasil Pemeriksaan Kesehatan",
+      "message": "Harap tambahkan hasil pemeriksaan kesehatan Anda.",
+      "addButton": "Tambah Hasil Pemeriksaan"
+    },
+    "statusMain": {
+      "title": "Cek Status Kesehatan Saya",
+      "userLevel": "Tingkat Kesehatan {name}?",
+      "levelText": "Tingkat Kesehatan",
+      "levelBadge": "Tingkat {level} Tahap Peringatan",
+      "levelDescription": "Manajemen yang hati-hati diperlukan untuk perbaikan kondisi",
+      "manageTitle": "Apa yang harus saya kelola terlebih dahulu?",
+      "status": {
+        "danger": "Bahaya",
+        "caution": "Peringatan"
+      },
+      "items": {
+        "obesity": "Obesitas/Lemak Tubuh",
+        "metabolism": "Regulasi Metabolik",
+        "scalp": "Kulit Kepala Berketombe"
+      },
+      "addTitle": "Apakah Anda ingin menambahkan informasi kesehatan?",
+      "timeRequired": "Memakan waktu sekitar {time}",
+      "addItems": {
+        "selfDiagnosis": "Diagnosis Mandiri",
+        "healthCheckup": "Hasil Pemeriksaan Kesehatan",
+        "detailedAnalysis": "Analisis Detail Lainnya"
+      },
+      "habitTitle": "Bangun Kebiasaan Sehat",
+      "habitDescription": "With adalah acara tantangan untuk membangun kebiasaan sehat",
+      "habitItems": {
+        "recruiting": "With yang Sedang Direkrut",
+        "recruitingSubtitle": "Bergabung gratis dan dapatkan hadiah",
+        "ended": "With yang Berakhir",
+        "endedSubtitle": "Periksa hasil dan dapatkan hadiah"
+      }
+    },
+    "statusResults": {
+      "title": "Semua Hasil",
+      "summary": "Tingkat kesehatan {name} adalah Tingkat {level},",
+      "summaryHighlight": "di atas rata-rata untuk pria seusia",
+      "average": "Rata-rata",
+      "itemsTitle": "Hasil Analisis Per Item",
+      "items": {
+        "obesity": "Obesitas/Lemak Tubuh",
+        "metabolism": "Regulasi Metabolik",
+        "scalp": "Kulit Kepala Berketombe",
+        "liver": "Kesehatan Hati",
+        "bone": "Kesehatan Tulang/Sendi",
+        "sleep": "Tidur/Stres",
+        "circulation": "Peningkatan Sirkulasi",
+        "immunity": "Kekebalan/Antioksidan",
+        "acne": "Jerawat Inflamasi",
+        "digestion": "Kesehatan Pencernaan",
+        "eye": "Kesehatan Mata",
+        "muscle": "Metabolisme Otot",
+        "brain": "Otak/Ingatan"
+      },
+      "status": {
+        "danger": "Bahaya",
+        "caution": "Peringatan",
+        "interest": "Minat",
+        "good": "Baik"
+      },
+      "serviceTitle": "Hasil Analisis Per Layanan",
+      "serviceName": "Diagnosis Mandiri"
+    }
+  },
+  "medication": {
+    "add": {
+      "title": "Registrasi Obat",
+      "scanButton": "Pindai Tambahan",
+      "searchButton": "Cari Obat",
+      "prescribedLabel": "Obat yang Diresepkan",
+      "prescriptionDate": "Tanggal Resep",
+      "medicationPeriod": "Periode Pengobatan",
+      "datePlaceholder": "Pilih tanggal",
+      "periodPlaceholder": "Pilih periode pengobatan",
+      "saveButton": "Simpan",
+      "alertTitle": "Notifikasi",
+      "alertMessage": "Berhasil diproses",
+      "alertConfirm": "OK",
+      "errorTitle": "Kesalahan Input",
+      "errorMessage": "Harap isi semua bidang.",
+      "scanAlert": "Pindai Tambahan",
+      "scanAlertMessage": "Harap implementasikan fitur pindai tambahan."
+    },
+    "detail": {
+      "title": "Detail",
+      "registeredTitle": "Obat Terdaftar",
+      "period": "Periode Pengobatan",
+      "description": "Obat ini tidak memiliki informasi tentang interaksi nutrisi",
+      "source": "(Sumber: NIH, Drugs.com, Panduan Obat per Resep, Terapi Vitamin)"
+    },
+    "record": {
+      "title": "Catatan Pengobatan",
+      "months": {
+        "1": "Jan",
+        "2": "Feb",
+        "3": "Mar",
+        "4": "Apr",
+        "5": "Mei",
+        "6": "Jun",
+        "7": "Jul",
+        "8": "Agu",
+        "9": "Sep",
+        "10": "Okt",
+        "11": "Nov",
+        "12": "Des"
+      },
+      "weekDays": {
+        "sun": "Min",
+        "mon": "Sen",
+        "tue": "Sel",
+        "wed": "Rab",
+        "thu": "Kam",
+        "fri": "Jum",
+        "sat": "Sab"
+      },
+      "dateInfo": "{day} ({dayOfWeek})",
+      "emptyMessage": "Tidak ada obat yang sedang dikonsumsi",
+      "addButton": "Tambah Catatan"
+    },
+    "search": {
+      "title": "Cari Obat",
+      "placeholder": "Masukkan nama obat (contoh: Tylenol)",
+      "empty": {
+        "noResults": "Tidak ada hasil pencarian",
+        "enterMedication": "Masukkan nama obat untuk mencari"
+      },
+      "loading": "Mencari...",
+      "addButton": "Tambah"
+    }
+  },
+  "nutrition": {
+    "search": {
+      "title": "Pencarian Kustom",
+      "guideText": "Harap pilih item di bawah ini untuk pencarian kustom",
+      "infoLink": "Apa itu pencarian perawatan kustom?",
+      "managementLabel": "Pilih Item Manajemen",
+      "managementHint": "Harap pilih item yang diinginkan",
+      "categoryLabel": "Kategori Produk / Layanan untuk Dianalisis",
+      "categoryInfo": "Informasi Produk dan Layanan Pencarian >",
+      "managementModalTitle": "Pilih Item Manajemen",
+      "categoryModalTitle": "Pilih Item Kategori Produk / Layanan",
+      "scanButton": "Pindai Nama Produk",
+      "searchButton": "Cari Nama Produk",
+      "managementOptions": {
+        "oilySkin": "Sebum Berlebih (Rekomendasi Algoritma Perawatan Kulit)",
+        "redness": "Kemerahan",
+        "dryness": "Kekeringan",
+        "sensitivity": "Sensitivitas",
+        "trouble": "Masalah",
+        "antiAging": "Anti-Aging"
+      },
+      "categoryOptions": {
+        "healthFood": "Makanan Fungsional Kesehatan",
+        "cosmetics": "Kosmetik",
+        "medicalDevice": "Alat Medis",
+        "food": "Makanan",
+        "dailyGoods": "Barang Sehari-hari"
+      }
+    }
+  },
+  "family": {
+    "myFamily": {
+      "title": "Keluarga Saya",
+      "tabs": {
+        "parents": "Orang Tua",
+        "friends": "Teman"
+      },
+      "empty": "Belum ada anggota keluarga yang ditambahkan",
+      "description": "Kelola semuanya dari perawatan kesehatan kustom\nhingga manajemen nutrisi selama pengobatan dengan data 😊",
+      "addButton": "Tambah"
+    }
+  },
+  "obesity": {
+    "overview": {
+      "title": "Obesitas/Lemak Tubuh",
+      "info": "Obesitas mengacu pada keadaan lemak tubuh yang berlebihan secara tidak normal, dibagi menjadi obesitas sekunder (disebabkan oleh penyakit, genetika, obat-obatan, dll.) dan obesitas primer (disebabkan oleh gaya hidup), dengan obesitas primer menyumbang lebih dari 90%. Ini dapat menyebabkan berbagai masalah kesehatan seperti diabetes tipe 2, hipertensi, dan hiperlipidemia, sehingga pencegahan dan perbaikan melalui diet, olahraga, dan kontrol perilaku diperlukan.",
+      "illustrationLabel": "Ilustrasi Tubuh Manusia",
+      "statusSummary": "Status obesitas/lemak tubuh {name} berada pada tingkat bahaya\ndi bawah rata-rata untuk pria seusia.",
+      "riskLabels": {
+        "danger": "Bahaya",
+        "average": "Rata-rata",
+        "good": "Baik"
+      },
+      "analysisTitle": "Analisis Status Obesitas/Lemak Tubuh",
+      "analysisItems": {
+        "lifestyle": "Gaya Hidup",
+        "chronicDisease": "Penyakit Kronis"
+      }
+    }
+  },
+  "previousResult": {
+    "title": "Hasil Sebelumnya",
+    "scoreGood": "{percentage}% Baik",
+    "productName": "Nama Produk",
+    "healthItem": "Item Kesehatan",
+    "detailsButton": "Lihat Detail",
+    "guideTitle": "Panduan Interpretasi Hasil",
+    "interpretation": {
+      "high": {
+        "title": "Tinggi (80-100%)",
+        "description": "Produk ini sangat cocok dengan kondisi kesehatan pribadi Anda."
+      },
+      "good": {
+        "title": "Baik (60-79%)",
+        "description": "Produk ini cocok dengan kondisi kesehatan pribadi Anda."
+      },
+      "normal": {
+        "title": "Normal (40-59%)",
+        "description": "Produk ini cukup cocok dengan kondisi kesehatan pribadi Anda."
+      },
+      "low": {
+        "title": "Rendah (0-39%)",
+        "description": "Produk ini tidak cocok dengan kondisi kesehatan pribadi Anda."
+      }
+    },
+    "recommendationTitle": "Rekomendasi",
+    "recommendations": {
+      "1": "Produk saat ini cocok untuk mengelola sebum berlebih.",
+      "2": "Konsumsi rutin dapat memaksimalkan efektivitas.",
+      "3": "Periksa efektivitas melalui pemeriksaan ulang setelah 3 bulan."
+    },
+    "newSearchButton": "Pencarian Baru"
+  },
+  "productScan": {
+    "title": "Pindai Nama Produk",
+    "instruction": "Harap ambil foto yang mencakup teks [Nama Produk] pada kemasan produk.",
+    "dontShowAgain": "Jangan tampilkan lagi",
+    "next": "Selanjutnya",
+    "scanComplete": "Pindai Selesai",
+    "scanCompleteMessage": "Produk telah dikenali.",
+    "cancel": "Batal",
+    "confirm": "Konfirmasi",
+    "resultTitle": "Hasil Pindai",
+    "productName": "Nama Produk",
+    "foodType": "Jenis Makanan",
+    "reportNumber": "Nomor Laporan Item",
+    "distributor": "Distributor"
+  },
+  "productSearch": {
+    "title": "Pilihan Produk",
+    "placeholder": "Masukkan nama produk (contoh: Probio)",
+    "infoTitle": "Produk tidak akan dicari dalam kasus berikut",
+    "infoItems": {
+      "1": "• Suplemen yang terdaftar sebagai obat umum",
+      "2": "• Suplemen impor langsung dari luar negeri yang tidak terdaftar di Kementerian Keamanan Pangan dan Obat",
+      "3": "• Produk yang terdaftar sebelum 2018"
+    },
+    "inputNote": "Harap masukkan nama produk dengan akurat, perhatikan spasi dan ejaan",
+    "searching": "Mencari...",
+    "analyzeButton": "Minta Analisis"
+  },
+  "profileEdit": {
+    "title": "Edit Informasi Saya",
+    "saveButton": "Simpan",
+    "saveSuccess": "Simpan Selesai",
+    "saveSuccessMessage": "Informasi telah berhasil disimpan.",
+    "phoneNumber": "Nomor Telepon",
+    "phonePlaceholder": "Masukkan nomor telepon",
+    "birthDate": "Tanggal Lahir",
+    "birthPlaceholder": "YYYY-MM-DD",
+    "gender": "Jenis Kelamin",
+    "male": "Laki-laki",
+    "female": "Perempuan",
+    "nickname": "Nama Panggilan",
+    "nicknamePlaceholder": "Masukkan nama panggilan",
+    "nicknameHint": "Harap masukkan 2-6 karakter dalam bahasa Korea atau Inggris.",
+    "bodyInfo": "Informasi Tubuh",
+    "height": "Tinggi",
+    "weight": "Berat",
+    "changeButton": "Ubah",
+    "email": "Email",
+    "emailPlaceholder": "Masukkan email",
+    "address": "Alamat",
+    "addressPlaceholder": "Masukkan alamat",
+    "channel": "Pengaturan Saluran",
+    "snsLink": "Tautan Akun SNS",
+    "kakao": "Kakao",
+    "apple": "Apple",
+    "linked": "Terhubung",
+    "connect": "Hubungkan",
+    "findPassword": "Cari Kata Sandi",
+    "findPasswordMessage": "Harap implementasikan fitur pencarian kata sandi.",
+    "logout": "Keluar",
+    "logoutMessage": "Apakah Anda yakin ingin keluar?",
+    "withdrawal": "Tarik Keanggotaan",
+    "withdrawalMessage": "Apakah Anda yakin ingin menarik keanggotaan?",
+    "withdraw": "Tarik"
+  },
+  "resultComparison": {
+    "title": "Perbandingan Hasil",
+    "tabs": {
+      "health": "Kesehatan",
+      "skin": "Kulit",
+      "scalp": "Kulit Kepala/Rambut Rontok"
+    },
+    "comparison": {
+      "previous": "Sebelumnya",
+      "recent": "Terbaru"
+    },
+    "chartPlaceholder": "Radar Chart",
+    "chartDescriptions": {
+      "health": "Sirkulasi, Metabolisme, Kekebalan/Antioksidan, Obesitas/Lemak Tubuh",
+      "skin": "Kulit Berminyak, Kulit Berpigmen, Kulit Sensitif, Kulit Kering, Kulit Menua",
+      "scalp": "Kulit Kepala Kering, Rambut Rontok, Kulit Kepala Berminyak, Kulit Kepala Berketombe, Kulit Kepala Sensitif"
+    },
+    "table": {
+      "item": "Item",
+      "previous": "Sebelumnya",
+      "recent": "Terbaru"
+    },
+    "status": {
+      "danger": "Bahaya",
+      "caution": "Peringatan",
+      "interest": "Minat",
+      "good": "Baik"
+    },
+    "healthItems": {
+      "circulation": "Sirkulasi",
+      "metabolism": "Metabolisme",
+      "immunity": "Kekebalan/Antioksidan",
+      "obesity": "Obesitas/Lemak Tubuh"
+    },
+    "skinItems": {
+      "oily": "Kulit Berminyak",
+      "pigment": "Kulit Berpigmen",
+      "sensitive": "Kulit Sensitif",
+      "dry": "Kulit Kering",
+      "aging": "Kulit Menua"
+    },
+    "scalpItems": {
+      "dry": "Kulit Kepala Kering",
+      "hairLoss": "Rambut Rontok",
+      "oily": "Kulit Kepala Berminyak",
+      "dandruff": "Kulit Kepala Berketombe",
+      "sensitive": "Kulit Kepala Sensitif"
+    }
+  },
+  "selfDiagnosis": {
+    "add": {
+      "title": "Tambah Diagnosis Mandiri",
+      "infoText": "Jika Anda mencentang item di bawah ini, kami dapat memberikan manajemen nutrisi yang lebih tepat",
+      "nextButton": "Selanjutnya",
+      "cards": {
+        "basicHealth": {
+          "title": "Kesehatan Dasar",
+          "description": "Saya ingin memeriksa status kesehatan dasar saya",
+          "duration": "Sekitar 30 detik"
+        },
+        "chronicDisease": {
+          "title": "Penyakit Kronis",
+          "description": "Saya saat ini memiliki penyakit dan sedang minum obat (dalam pengelolaan)",
+          "duration": "Sekitar 15 detik"
+        },
+        "lifestyle": {
+          "title": "Diet/Gaya Hidup",
+          "description": "Saya penasaran dengan status diet/gaya hidup saya saat ini",
+          "duration": "Sekitar 2 menit 30 detik"
+        },
+        "symptoms": {
+          "title": "Gejala Kesadaran Diri",
+          "description": "Saya memiliki gejala kesadaran diri yang saat ini saya rasakan",
+          "duration": "Sekitar 5 menit"
+        },
+        "skinHealth": {
+          "title": "Kesehatan Kulit",
+          "description": "Saya penasaran dengan kondisi kulit saya saat ini",
+          "duration": "Sekitar 3 menit"
+        },
+        "scalpHealth": {
+          "title": "Kesehatan Kulit Kepala",
+          "description": "Saya penasaran dengan kondisi kulit kepala saya saat ini",
+          "duration": "Sekitar 2 menit"
+        }
+      }
+    },
+    "addModify": {
+      "title": "Tambah dan Ubah Diagnosis Mandiri",
+      "instruction": "Harap pilih item yang akan diubah",
+      "additionalInstruction": "Jika Anda mencentang item di bawah ini, kami dapat memberikan manajemen nutrisi yang lebih tepat",
+      "nextButton": "Selanjutnya"
+    },
+    "complete": {
+      "title": "Diagnosis Mandiri",
+      "addModifyButton": "Tambah dan Ubah",
+      "diagnosisMonth": "Bulan Diagnosis",
+      "diagnosisItem": "Item Diagnosis",
+      "detailedResults": "Hasil Detail"
+    },
+    "detail": {
+      "title": "Hasil Diagnosis Mandiri",
+      "skinHealth": "Kesehatan Kulit",
+      "status": {
+        "good": "Baik",
+        "warning": "Peringatan"
+      },
+      "indicators": {
+        "tZoneSebum": "Status Sebum Zona T",
+        "uZoneSebum": "Status Sebum Zona U",
+        "skinBarrier": "Fungsi Penghalang Kulit",
+        "eyeMuscles": "Otot Area Mata",
+        "skinExfoliation": "Siklus Pengelupasan Kulit",
+        "skinMoisture": "Faktor Pelembab Kulit",
+        "skinDamage": "Kerusakan Kulit",
+        "uvDamage": "Kerusakan Kulit UV",
+        "skinSebum": "Status Sebum Kulit",
+        "skinDensity": "Kepadatan Kulit",
+        "melanin": "Pigmen Melanin",
+        "skinRedness": "Kemerahan Kulit",
+        "neckMuscles": "Otot Leher",
+        "expressionWrinkles": "Kerutan Ekspresi"
+      }
+    },
+    "results": {
+      "title": "Hasil Diagnosis Mandiri",
+      "categories": {
+        "diet": "Diet",
+        "lifestyle": "Gaya Hidup",
+        "skinHealth": "Kesehatan Kulit"
+      },
+      "status": {
+        "danger": "Bahaya",
+        "caution": "Peringatan",
+        "interest": "Minat",
+        "good": "Baik"
+      },
+      "dietItems": {
+        "carbDiet": "Diet Karbohidrat",
+        "transFatDiet": "Diet Lemak Trans",
+        "saturatedFatDiet": "Diet Lemak Jenuh",
+        "sugarDiet": "Diet Gula",
+        "eatingSpeed": "Kebiasaan Kecepatan Makan",
+        "afterMealSnack": "Kebiasaan Cemilan Setelah Makan",
+        "overeating": "Kebiasaan Makan Berlebihan",
+        "sodiumDiet": "Diet Natrium",
+        "lateNightMeal": "Kebiasaan Makan Malam",
+        "essentialFattyAcidDiet": "Diet Asam Lemak Esensial",
+        "nutritionDiet": "Diet Nutrisi",
+        "proteinDiet": "Diet Protein"
+      },
+      "lifestyleItems": {
+        "smoking": "Status Merokok",
+        "activityMetabolism": "Metabolisme Aktivitas",
+        "brainActivity": "Aktivitas Otak",
+        "sleepRhythm": "Ritme Sirkadian Tidur",
+        "waterIntake": "Asupan Air",
+        "uvExposure": "Paparan UV",
+        "basalMetabolism": "Metabolisme Basal",
+        "caffeineIntake": "Asupan Kafein",
+        "jointFunction": "Fungsi Sendi",
+        "alcoholIntake": "Asupan Alkohol"
+      },
+      "skinHealthItems": {
+        "uZoneSebum": "Status Sebum Zona U",
+        "tZoneSebum": "Status Sebum Zona T",
+        "skinBarrier": "Fungsi Penghalang Kulit",
+        "skinSebum": "Status Sebum Kulit",
+        "uvDamage": "Kerusakan Kulit UV",
+        "skinDamage": "Kerusakan Kulit",
+        "skinMoisture": "Faktor Pelembab Kulit",
+        "skinExfoliation": "Siklus Pengelupasan Kulit",
+        "eyeMuscles": "Otot Area Mata",
+        "skinRedness": "Kemerahan Kulit",
+        "melanin": "Pigmen Melanin",
+        "skinDensity": "Kepadatan Kulit",
+        "photoAging": "Penuaan Foto",
+        "expressionWrinkles": "Kerutan Ekspresi"
+      }
+    }
+  },
+  "stressHeartrate": {
+    "statistics": {
+      "title": "Statistik Stres / Detak Jantung",
+      "tabs": {
+        "daily": "Harian",
+        "weekly": "Mingguan",
+        "monthly": "Bulanan"
+      },
+      "emptyTitle": "Minimal 3 hari",
+      "emptyText": "Harap ukur stres / detak jantung."
+    },
+    "main": {
+      "title": "Stres / Detak Jantung",
+      "noRecord": "Belum ada catatan.",
+      "fingerMeasurement": "Pengukuran Jari",
+      "faceMeasurement": "Pengukuran Wajah",
+      "months": {
+        "1": "Jan",
+        "2": "Feb",
+        "3": "Mar",
+        "4": "Apr",
+        "5": "Mei",
+        "6": "Jun",
+        "7": "Jul",
+        "8": "Agu",
+        "9": "Sep",
+        "10": "Okt",
+        "11": "Nov",
+        "12": "Des"
+      },
+      "weekDays": {
+        "sun": "Min",
+        "mon": "Sen",
+        "tue": "Sel",
+        "wed": "Rab",
+        "thu": "Kam",
+        "fri": "Jum",
+        "sat": "Sab"
+      },
+      "dateInfo": "{day} ({dayOfWeek})"
+    },
+    "measurement": {
+      "title": "Pengukuran Stres / Detak Jantung",
+      "active": {
+        "coverCamera": "Tutup Kamera Belakang",
+        "coverInstruction": "Lihat layar di dalam lingkaran dan tutup kamera belakang dengan jari Anda",
+        "startButton": "Mulai Pengukuran",
+        "warningText": "Seluruh area lingkaran tengah harus diisi dengan warna merah!",
+        "iosWarning": "* Perangkat iOS memiliki sensor kamera yang sensitif, jadi harap minimalkan gerakan untuk pengukuran yang akurat.",
+        "viewMethodAgain": "Lihat Metode Pengukuran Lagi"
+      },
+      "guide": {
+        "mainInstruction": "Tutup Kamera Belakang dengan Jari Telunjuk",
+        "subInstruction": "Saat Anda menutup kamera belakang dengan jari telunjuk, pengukuran akan dimulai secara otomatis",
+        "dontShowAgain": "Jangan tampilkan lagi",
+        "close": "Tutup"
+      },
+      "prep": {
+        "step1Title": "Duduk",
+        "step1Instruction": "Harap duduk dan ukur dengan tenang selama pengukuran",
+        "step2Title": "Letakkan Tangan di Meja dengan Siku",
+        "step2Instruction": "Posisikan lengan Anda seperti yang ditunjukkan dalam gambar dan buat tinggi tangan Anda mirip dengan jantung Anda",
+        "next": "Selanjutnya",
+        "dontShowAgain": "Jangan tampilkan lagi"
+      },
+      "result": {
+        "title": "Hasil Stres / Detak Jantung",
+        "stressScore": "Skor Stres",
+        "scoreAdvice": "Akan lebih baik jika Anda memiliki ketenangan pikiran",
+        "heartRate": "Detak Jantung",
+        "heartRateUnit": "bpm",
+        "status": {
+          "interest": "Minat",
+          "good": "Baik"
+        },
+        "rangeDescription": "Rentang detak jantung istirahat kelompok usia saya",
+        "stressAccumulation": "Apa yang terjadi ketika stres menumpuk?",
+        "symptomsTitle": "Gejala Stres:",
+        "symptoms": {
+          "1": "Kecemasan dan ketegangan",
+          "2": "Insomnia",
+          "3": "Rasa bersalah dan menyalahkan diri sendiri",
+          "4": "Terlalu tenggelam dalam aktivitas yang merangsang (game, ponsel)",
+          "5": "Kelesuan",
+          "6": "Gangguan pencernaan",
+          "7": "Sakit kepala dan pusing"
+        },
+        "specialistAdvice": "Jika gejala di atas terus muncul, harap konsultasikan dengan spesialis",
+        "accuracyTitle": "Informasi Akurasi",
+        "accuracyText": "Hasil di atas disediakan melalui DeepMedi dan dianalisis dengan akurasi berikut.",
+        "accuracyItems": {
+          "stress": "Indeks Stres: 95% akurasi (hasil uji bersertifikat KCL)",
+          "heartRate": "Detak Jantung: 98% akurasi (hasil uji bersertifikat KTL dan KCL)"
+        },
+        "disclaimer": "Layanan pengukuran indeks stres / detak jantung bukanlah perangkat medis, dan tujuan layanan ini bukan untuk diagnosis, pengobatan, peredaan, penanganan, atau pencegahan penyakit.",
+        "completeButton": "Analisis Selesai"
+      }
+    }
   }
 }
 

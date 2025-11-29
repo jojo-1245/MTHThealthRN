@@ -1,3 +1,4 @@
+import { useTranslation } from '@/i18n';
 import React, { useState } from 'react';
 import {
   View,
@@ -10,26 +11,28 @@ import { router } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import DropdownModal from '@/components/dropdown-modal';
 
-// 관리 필요 항목 옵션
-const managementOptions = [
-  { id: '1', label: '피지과다(스킨케어 알고리즘 추천)', value: 'oily_skin' },
-  { id: '2', label: '홍조', value: 'redness' },
-  { id: '3', label: '건조함', value: 'dryness' },
-  { id: '4', label: '민감성', value: 'sensitivity' },
-  { id: '5', label: '트러블', value: 'trouble' },
-  { id: '6', label: '안티에이징', value: 'anti_aging' },
-];
-
-// 분석할 제품/서비스 카테고리 옵션
-const categoryOptions = [
-  { id: '1', label: '건강기능식품', value: 'health_food' },
-  { id: '2', label: '화장품', value: 'cosmetics' },
-  { id: '3', label: '의료기기', value: 'medical_device' },
-  { id: '4', label: '식품', value: 'food' },
-  { id: '5', label: '생활용품', value: 'daily_goods' },
-];
-
 export default function NutritionSearch() {
+  const { t } = useTranslation();
+  
+  // 관리 필요 항목 옵션
+  const managementOptions = [
+    { id: '1', label: t('nutrition.search.managementOptions.oilySkin'), value: 'oily_skin' },
+    { id: '2', label: t('nutrition.search.managementOptions.redness'), value: 'redness' },
+    { id: '3', label: t('nutrition.search.managementOptions.dryness'), value: 'dryness' },
+    { id: '4', label: t('nutrition.search.managementOptions.sensitivity'), value: 'sensitivity' },
+    { id: '5', label: t('nutrition.search.managementOptions.trouble'), value: 'trouble' },
+    { id: '6', label: t('nutrition.search.managementOptions.antiAging'), value: 'anti_aging' },
+  ];
+
+  // 분석할 제품/서비스 카테고리 옵션
+  const categoryOptions = [
+    { id: '1', label: t('nutrition.search.categoryOptions.healthFood'), value: 'health_food' },
+    { id: '2', label: t('nutrition.search.categoryOptions.cosmetics'), value: 'cosmetics' },
+    { id: '3', label: t('nutrition.search.categoryOptions.medicalDevice'), value: 'medical_device' },
+    { id: '4', label: t('nutrition.search.categoryOptions.food'), value: 'food' },
+    { id: '5', label: t('nutrition.search.categoryOptions.dailyGoods'), value: 'daily_goods' },
+  ];
+  
   const [selectedManagement, setSelectedManagement] = useState(managementOptions[0]);
   const [selectedCategory, setSelectedCategory] = useState(categoryOptions[0]);
   const [showManagementModal, setShowManagementModal] = useState(false);
@@ -65,7 +68,7 @@ export default function NutritionSearch() {
         <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>맞춤형 검색</Text>
+        <Text style={styles.headerTitle}>{t('nutrition.search.title')}</Text>
         <TouchableOpacity style={styles.refreshButton}>
           <Ionicons name="refresh" size={24} color="#000" />
         </TouchableOpacity>
@@ -78,10 +81,10 @@ export default function NutritionSearch() {
             <Ionicons name="checkmark-circle" size={48} color="#8B5CF6" />
           </View>
           <Text style={styles.guideText}>
-            맞춤 검색을 위해 아래 내용들을 선택해주세요
+            {t('nutrition.search.guideText')}
           </Text>
           <TouchableOpacity onPress={handleCustomCareInfo}>
-            <Text style={styles.infoLink}>맞춤형 케어 검색이란?</Text>
+            <Text style={styles.infoLink}>{t('nutrition.search.infoLink')}</Text>
           </TouchableOpacity>
         </View>
 
@@ -89,7 +92,7 @@ export default function NutritionSearch() {
         <View style={styles.formSection}>
           {/* 관리 필요 항목 선택 */}
           <View style={styles.inputGroup}>
-            <Text style={styles.inputLabel}>관리 필요 항목 선택</Text>
+            <Text style={styles.inputLabel}>{t('nutrition.search.managementLabel')}</Text>
             <TouchableOpacity 
               style={styles.dropdownContainer}
               onPress={() => setShowManagementModal(true)}
@@ -97,12 +100,12 @@ export default function NutritionSearch() {
               <Text style={styles.dropdownText}>{selectedManagement.label}</Text>
               <Ionicons name="chevron-down" size={20} color="#999" />
             </TouchableOpacity>
-            <Text style={styles.inputHint}>원하는 항목으로 선택 하세요</Text>
+            <Text style={styles.inputHint}>{t('nutrition.search.managementHint')}</Text>
           </View>
 
           {/* 분석할 제품 / 서비스 카테고리 */}
           <View style={styles.inputGroup}>
-            <Text style={styles.inputLabel}>분석할 제품 / 서비스 카테고리</Text>
+            <Text style={styles.inputLabel}>{t('nutrition.search.categoryLabel')}</Text>
             <TouchableOpacity 
               style={styles.dropdownContainer}
               onPress={() => setShowCategoryModal(true)}
@@ -111,7 +114,7 @@ export default function NutritionSearch() {
               <Ionicons name="chevron-down" size={20} color="#999" />
             </TouchableOpacity>
             <TouchableOpacity style={styles.infoButton}>
-              <Text style={styles.infoButtonText}>검색 제품 및 서비스 안내 사항 ></Text>
+              <Text style={styles.infoButtonText}>{t('nutrition.search.categoryInfo')}</Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -121,12 +124,12 @@ export default function NutritionSearch() {
       <View style={styles.bottomButtonContainer}>
         <TouchableOpacity style={styles.scanButton} onPress={handleScanProduct}>
           <Ionicons name="scan" size={20} color="#fff" style={styles.buttonIcon} />
-          <Text style={styles.scanButtonText}>제품명 스캔하기</Text>
+          <Text style={styles.scanButtonText}>{t('nutrition.search.scanButton')}</Text>
         </TouchableOpacity>
         
         <TouchableOpacity style={styles.searchButton} onPress={handleSearchProduct}>
           <Ionicons name="search" size={20} color="#8B5CF6" style={styles.buttonIcon} />
-          <Text style={styles.searchButtonText}>제품명 검색하기</Text>
+          <Text style={styles.searchButtonText}>{t('nutrition.search.searchButton')}</Text>
         </TouchableOpacity>
       </View>
 
@@ -135,7 +138,7 @@ export default function NutritionSearch() {
         visible={showManagementModal}
         onClose={() => setShowManagementModal(false)}
         onSelect={handleManagementSelect}
-        title="관리 필요 항목 선택"
+        title={t('nutrition.search.managementModalTitle')}
         options={managementOptions}
         selectedValue={selectedManagement.value}
       />
@@ -145,7 +148,7 @@ export default function NutritionSearch() {
         visible={showCategoryModal}
         onClose={() => setShowCategoryModal(false)}
         onSelect={handleCategorySelect}
-        title="분석할 제품 / 서비스 카테고리 항목 선택"
+        title={t('nutrition.search.categoryModalTitle')}
         options={categoryOptions}
         selectedValue={selectedCategory.value}
       />

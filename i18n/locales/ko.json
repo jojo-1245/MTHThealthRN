@@ -665,6 +665,592 @@
       },
       "addFoodButton": "음식물 추가"
     }
+  },
+  "health": {
+    "geneticTest": {
+      "title": "유전자 검사",
+      "noData": "검사 정보가 없습니다.",
+      "addMessage": "유전자 검사 결과를 추가해주세요.",
+      "addButton": "검사 추가",
+      "note": "※ 해당 서비스는 힌트 파트너사 회원 대상으로 제공하고 있습니다.\n추후 일반 회원 대상으로 서비스 제공 예정입니다."
+    },
+    "checkupAuth": {
+      "title": "건강검진 결과 불러오기",
+      "message": "건강검진 결과를 불러오려면\n인증이 필요해요!",
+      "kakaoButton": "카카오 간편인증하기",
+      "certificateButton": "공동 인증서 인증하기"
+    },
+    "checkupLoad": {
+      "title": "건강검진 결과 불러오기",
+      "message": "건강검진 결과를 추가해주세요.",
+      "addButton": "검진결과 추가"
+    },
+    "statusMain": {
+      "title": "내 건강상태 알아보기",
+      "userLevel": "{name}님의 건강레벨?",
+      "levelText": "건강레벨",
+      "levelBadge": "Level {level} 주의단계",
+      "levelDescription": "상태 개선을 위한 주의 깊은 관리 필요",
+      "manageTitle": "무엇부터 관리하지?",
+      "status": {
+        "danger": "위험",
+        "caution": "주의"
+      },
+      "items": {
+        "obesity": "비만체지방",
+        "metabolism": "대사조절",
+        "scalp": "비듬두피"
+      },
+      "addTitle": "건강정보 추가해 볼까?",
+      "timeRequired": "약 {time} 소요",
+      "addItems": {
+        "selfDiagnosis": "자가진단",
+        "healthCheckup": "건강검진결과",
+        "detailedAnalysis": "기타 정밀분석"
+      },
+      "habitTitle": "건강 습관 만들기",
+      "habitDescription": "위드 (with)는 건강습관 만들기 도전 이벤트입니다",
+      "habitItems": {
+        "recruiting": "모집중 위드",
+        "recruitingSubtitle": "무료로 참여하고 리워드 받기",
+        "ended": "종료된 위드",
+        "endedSubtitle": "결과 확인하고 리워드 받기"
+      }
+    },
+    "statusResults": {
+      "title": "전체결과",
+      "summary": "{name}님의 건강레벨은 Level {level}단계로,",
+      "summaryHighlight": "내 또래 남성 평균이상입니다",
+      "average": "평균",
+      "itemsTitle": "항목별 분석결과",
+      "items": {
+        "obesity": "비만체지방",
+        "metabolism": "대사조절",
+        "scalp": "비듬두피",
+        "liver": "간건강",
+        "bone": "뼈관절건강",
+        "sleep": "수면·스트레스",
+        "circulation": "혈행개선",
+        "immunity": "면역항산화",
+        "acne": "화농성여드름",
+        "digestion": "소화장건강",
+        "eye": "눈건강",
+        "muscle": "근육대사",
+        "brain": "뇌기억력"
+      },
+      "status": {
+        "danger": "위험",
+        "caution": "주의",
+        "interest": "관심",
+        "good": "양호"
+      },
+      "serviceTitle": "서비스별 분석결과",
+      "serviceName": "자가진단"
+    }
+  },
+  "medication": {
+    "add": {
+      "title": "의약품 등록",
+      "scanButton": "추가스캔",
+      "searchButton": "의약품 검색",
+      "prescribedLabel": "처방 받은 약",
+      "prescriptionDate": "처방 일자",
+      "medicationPeriod": "복용 기간",
+      "datePlaceholder": "날짜를 선택하세요",
+      "periodPlaceholder": "복용 기간을 선택하세요",
+      "saveButton": "저장",
+      "alertTitle": "알림",
+      "alertMessage": "정상 처리 되었습니다",
+      "alertConfirm": "확인",
+      "errorTitle": "입력 오류",
+      "errorMessage": "모든 필드를 입력해주세요.",
+      "scanAlert": "추가스캔",
+      "scanAlertMessage": "추가스캔 기능을 구현해주세요."
+    },
+    "detail": {
+      "title": "상세 정보",
+      "registeredTitle": "등록된 의약품",
+      "period": "복용 기간",
+      "description": "해당 의약품은 영양소 상호작용에 대한 정보가 없는 약물입니다",
+      "source": "(출처: NIH, Drugs.com, 영영제 처별 가이드, 비타민 치료)"
+    },
+    "record": {
+      "title": "복약 기록",
+      "months": {
+        "1": "1월",
+        "2": "2월",
+        "3": "3월",
+        "4": "4월",
+        "5": "5월",
+        "6": "6월",
+        "7": "7월",
+        "8": "8월",
+        "9": "9월",
+        "10": "10월",
+        "11": "11월",
+        "12": "12월"
+      },
+      "weekDays": {
+        "sun": "일",
+        "mon": "월",
+        "tue": "화",
+        "wed": "수",
+        "thu": "목",
+        "fri": "금",
+        "sat": "토"
+      },
+      "dateInfo": "{day}일({dayOfWeek})",
+      "emptyMessage": "복용중인 의약품이 없습니다",
+      "addButton": "기록 추가"
+    },
+    "search": {
+      "title": "의약품 검색",
+      "placeholder": "의약품명을 입력하세요. (ex 타이레놀)",
+      "empty": {
+        "noResults": "검색 결과가 없습니다",
+        "enterMedication": "의약품명을 입력하여 검색하세요"
+      },
+      "loading": "검색 중...",
+      "addButton": "추가"
+    }
+  },
+  "nutrition": {
+    "search": {
+      "title": "맞춤형 검색",
+      "guideText": "맞춤 검색을 위해 아래 내용들을 선택해주세요",
+      "infoLink": "맞춤형 케어 검색이란?",
+      "managementLabel": "관리 필요 항목 선택",
+      "managementHint": "원하는 항목으로 선택 하세요",
+      "categoryLabel": "분석할 제품 / 서비스 카테고리",
+      "categoryInfo": "검색 제품 및 서비스 안내 사항 >",
+      "managementModalTitle": "관리 필요 항목 선택",
+      "categoryModalTitle": "분석할 제품 / 서비스 카테고리 항목 선택",
+      "scanButton": "제품명 스캔하기",
+      "searchButton": "제품명 검색하기",
+      "managementOptions": {
+        "oilySkin": "피지과다(스킨케어 알고리즘 추천)",
+        "redness": "홍조",
+        "dryness": "건조함",
+        "sensitivity": "민감성",
+        "trouble": "트러블",
+        "antiAging": "안티에이징"
+      },
+      "categoryOptions": {
+        "healthFood": "건강기능식품",
+        "cosmetics": "화장품",
+        "medicalDevice": "의료기기",
+        "food": "식품",
+        "dailyGoods": "생활용품"
+      }
+    }
+  },
+  "family": {
+    "myFamily": {
+      "title": "나의 패밀리",
+      "tabs": {
+        "parents": "부모님",
+        "friends": "프렌즈"
+      },
+      "empty": "아직 추가된 패밀리가 없어요",
+      "description": "맞춤 건강관리부터 복약 중 영양관리까지\n데이터로 관리해보세요 😊",
+      "addButton": "추가하기"
+    }
+  },
+  "obesity": {
+    "overview": {
+      "title": "비만체지방",
+      "info": "비만이란 체지방이 비정상적으로 과다한 상태를 말하며, 이차성 비만(질병, 유전, 약물 등으로 인한)과 일차성 비만(생활습관으로 인한)으로 나뉘며, 일차성 비만이 90% 이상을 차지합니다. 2형 당뇨병, 고혈압, 고지혈증 등 여러 건강 문제를 야기할 수 있어 식이요법, 운동, 행동조절을 통한 예방 및 개선이 필요합니다.",
+      "illustrationLabel": "인체 일러스트",
+      "statusSummary": "{name}님의 비만체지방 상태는 위험단계로\n또래 남성 평균 미달입니다.",
+      "riskLabels": {
+        "danger": "위험",
+        "average": "평균",
+        "good": "양호"
+      },
+      "analysisTitle": "비만체지방 상태 분석",
+      "analysisItems": {
+        "lifestyle": "생활습관",
+        "chronicDisease": "만성질환"
+      }
+    }
+  },
+  "previousResult": {
+    "title": "이전 결과",
+    "scoreGood": "{percentage}% 양호",
+    "productName": "제품명",
+    "healthItem": "건강항목",
+    "detailsButton": "상세 결과 보기",
+    "guideTitle": "결과 해석 가이드",
+    "interpretation": {
+      "high": {
+        "title": "높음 (80-100%)",
+        "description": "개인 건강 상태와 매우 잘 맞는 제품입니다."
+      },
+      "good": {
+        "title": "양호 (60-79%)",
+        "description": "개인 건강 상태와 잘 맞는 제품입니다."
+      },
+      "normal": {
+        "title": "보통 (40-59%)",
+        "description": "개인 건강 상태와 보통 수준으로 맞는 제품입니다."
+      },
+      "low": {
+        "title": "낮음 (0-39%)",
+        "description": "개인 건강 상태와 맞지 않는 제품입니다."
+      }
+    },
+    "recommendationTitle": "추천 사항",
+    "recommendations": {
+      "1": "현재 제품은 피지과다 관리에 적합합니다.",
+      "2": "정기적인 복용으로 효과를 극대화할 수 있습니다.",
+      "3": "3개월 후 재검사를 통해 효과를 확인해보세요."
+    },
+    "newSearchButton": "새로운 검색하기"
+  },
+  "productScan": {
+    "title": "제품명 스캔",
+    "instruction": "제품 포장의 [제품명] 글자를 꼭 포함하여 촬영해주세요.",
+    "dontShowAgain": "다시 보지 않기",
+    "next": "다음",
+    "scanComplete": "스캔 완료",
+    "scanCompleteMessage": "제품이 인식되었습니다.",
+    "cancel": "취소",
+    "confirm": "확인",
+    "resultTitle": "스캔 결과",
+    "productName": "제품명",
+    "foodType": "식품의 유형",
+    "reportNumber": "품목 보고번호",
+    "distributor": "유통전문 판매원"
+  },
+  "productSearch": {
+    "title": "제품선택",
+    "placeholder": "제품명을 입력하세요. (ex 프로바이오)",
+    "infoTitle": "아래 경우에는 제품이 검색되지 않아요",
+    "infoItems": {
+      "1": "• 일반 의약품으로 등록된 영양제",
+      "2": "• 식약처에 등록되지 않은 해외 직구 영양제",
+      "3": "• 2018년 이전에 등록된 제품"
+    },
+    "inputNote": "제품명 입력 시 띄어쓰기, 맞춤법에 유의하여 정확하게 입력하세요",
+    "searching": "검색 중...",
+    "analyzeButton": "분석신청"
+  },
+  "profileEdit": {
+    "title": "내 정보 수정",
+    "saveButton": "저장",
+    "saveSuccess": "저장 완료",
+    "saveSuccessMessage": "정보가 성공적으로 저장되었습니다.",
+    "phoneNumber": "휴대폰 번호",
+    "phonePlaceholder": "휴대폰 번호를 입력하세요",
+    "birthDate": "생년월일",
+    "birthPlaceholder": "YYYY-MM-DD",
+    "gender": "성별",
+    "male": "남성",
+    "female": "여성",
+    "nickname": "닉네임",
+    "nicknamePlaceholder": "닉네임을 입력하세요",
+    "nicknameHint": "한글, 영문 2~6자리 이내로 입력해주세요.",
+    "bodyInfo": "신체정보",
+    "height": "키",
+    "weight": "체중",
+    "changeButton": "변경",
+    "email": "이메일",
+    "emailPlaceholder": "이메일을 입력하세요",
+    "address": "주소",
+    "addressPlaceholder": "주소를 입력하세요",
+    "channel": "채널설정",
+    "snsLink": "SNS 계정 연동",
+    "kakao": "카카오",
+    "apple": "애플",
+    "linked": "연동 완료",
+    "connect": "연결하기",
+    "findPassword": "비밀번호 찾기",
+    "findPasswordMessage": "비밀번호 찾기 기능을 구현해주세요.",
+    "logout": "로그아웃",
+    "logoutMessage": "정말 로그아웃하시겠습니까?",
+    "withdrawal": "회원탈퇴",
+    "withdrawalMessage": "정말 회원탈퇴하시겠습니까?",
+    "withdraw": "탈퇴"
+  },
+  "resultComparison": {
+    "title": "결과비교",
+    "tabs": {
+      "health": "헬스",
+      "skin": "피부",
+      "scalp": "두피탈모"
+    },
+    "comparison": {
+      "previous": "이전",
+      "recent": "최근"
+    },
+    "chartPlaceholder": "레이더 차트",
+    "chartDescriptions": {
+      "health": "혈행개선, 대사조절, 면역항산화, 비만체지방",
+      "skin": "지성피부, 색소피부, 민감피부, 건성피부, 노화피부",
+      "scalp": "건성두피, 탈모, 지성두피, 비듬두피, 예민두피"
+    },
+    "table": {
+      "item": "항목",
+      "previous": "이전",
+      "recent": "최근"
+    },
+    "status": {
+      "danger": "위험",
+      "caution": "주의",
+      "interest": "관심",
+      "good": "양호"
+    },
+    "healthItems": {
+      "circulation": "혈행개선",
+      "metabolism": "대사조절",
+      "immunity": "면역항산화",
+      "obesity": "비만체지방"
+    },
+    "skinItems": {
+      "oily": "지성피부",
+      "pigment": "색소피부",
+      "sensitive": "민감피부",
+      "dry": "건성피부",
+      "aging": "노화피부"
+    },
+    "scalpItems": {
+      "dry": "건성두피",
+      "hairLoss": "탈모",
+      "oily": "지성두피",
+      "dandruff": "비듬두피",
+      "sensitive": "예민두피"
+    }
+  },
+  "selfDiagnosis": {
+    "add": {
+      "title": "자가진단 추가",
+      "infoText": "아래 항목을 추가 체크하면 더 정밀한 영양관리를 해드릴 수 있어요",
+      "nextButton": "다음",
+      "cards": {
+        "basicHealth": {
+          "title": "기초건강",
+          "description": "기초건강상태부터 알아볼래요",
+          "duration": "약 30초 소요"
+        },
+        "chronicDisease": {
+          "title": "만성질환",
+          "description": "현재 질환이 있어 약 복용 중 (관리중)이에요",
+          "duration": "약 15초 소요"
+        },
+        "lifestyle": {
+          "title": "식/생활습관",
+          "description": "현재 식/생활습관 상태가 궁금해요",
+          "duration": "약 2분 30초 소요"
+        },
+        "symptoms": {
+          "title": "자각증상",
+          "description": "현재 느끼고 있는 자각증상이 있어요",
+          "duration": "약 5분 소요"
+        },
+        "skinHealth": {
+          "title": "피부건강",
+          "description": "현재 피부상태가 궁금해요",
+          "duration": "약 3분 소요"
+        },
+        "scalpHealth": {
+          "title": "두피건강",
+          "description": "현재 두피상태가 궁금해요",
+          "duration": "약 2분 소요"
+        }
+      }
+    },
+    "addModify": {
+      "title": "자가진단 추가 및 수정",
+      "instruction": "수정할 항목을 선택해주세요",
+      "additionalInstruction": "아래 항목을 추가 체크하면 더 정밀한 영양관리를 해드릴 수 있어요",
+      "nextButton": "다음"
+    },
+    "complete": {
+      "title": "자가진단",
+      "addModifyButton": "추가 및 수정",
+      "diagnosisMonth": "진단 월",
+      "diagnosisItem": "진단항목",
+      "detailedResults": "상세결과"
+    },
+    "detail": {
+      "title": "자가진단 결과",
+      "skinHealth": "피부건강",
+      "status": {
+        "good": "양호",
+        "warning": "주의"
+      },
+      "indicators": {
+        "tZoneSebum": "T존피지상태",
+        "uZoneSebum": "U존피지상태",
+        "skinBarrier": "피부장벽기능",
+        "eyeMuscles": "눈주위 근육",
+        "skinExfoliation": "피부각질주기",
+        "skinMoisture": "피부보습인자",
+        "skinDamage": "피부 손상",
+        "uvDamage": "자외선피부손상",
+        "skinSebum": "피부피지상태",
+        "skinDensity": "피부 밀도",
+        "melanin": "멜라닌 색소",
+        "skinRedness": "피부 홍조",
+        "neckMuscles": "목 근육",
+        "expressionWrinkles": "표정주름"
+      }
+    },
+    "results": {
+      "title": "자가진단 결과",
+      "categories": {
+        "diet": "식습관",
+        "lifestyle": "생활습관",
+        "skinHealth": "피부건강"
+      },
+      "status": {
+        "danger": "위험",
+        "caution": "주의",
+        "interest": "관심",
+        "good": "양호"
+      },
+      "dietItems": {
+        "carbDiet": "탄수화물 식이",
+        "transFatDiet": "트랜스지방 식이",
+        "saturatedFatDiet": "포화지방 식이",
+        "sugarDiet": "당 식이",
+        "eatingSpeed": "식사 속도 습관",
+        "afterMealSnack": "식후 간식 습관",
+        "overeating": "과식 습관",
+        "sodiumDiet": "나트륨 식이",
+        "lateNightMeal": "야식 습관",
+        "essentialFattyAcidDiet": "필수지방산 식이",
+        "nutritionDiet": "영양 식이",
+        "proteinDiet": "단백질 식이"
+      },
+      "lifestyleItems": {
+        "smoking": "흡연 상태",
+        "activityMetabolism": "활동대사량",
+        "brainActivity": "두뇌 활동",
+        "sleepRhythm": "수면생체리듬",
+        "waterIntake": "수분 섭취",
+        "uvExposure": "자외선 노출",
+        "basalMetabolism": "기초대사량",
+        "caffeineIntake": "카페인 섭취",
+        "jointFunction": "관절 기능",
+        "alcoholIntake": "알코올 섭취"
+      },
+      "skinHealthItems": {
+        "uZoneSebum": "U존피지상태",
+        "tZoneSebum": "T존피지상태",
+        "skinBarrier": "피부장벽기능",
+        "skinSebum": "피부피지상태",
+        "uvDamage": "자외선피부손상",
+        "skinDamage": "피부 손상",
+        "skinMoisture": "피부보습인자",
+        "skinExfoliation": "피부각질주기",
+        "eyeMuscles": "눈주위 근육",
+        "skinRedness": "피부 홍조",
+        "melanin": "멜라닌 색소",
+        "skinDensity": "피부 밀도",
+        "photoAging": "광노화",
+        "expressionWrinkles": "표정주름"
+      }
+    }
+  },
+  "stressHeartrate": {
+    "statistics": {
+      "title": "스트레스 / 심박수 통계",
+      "tabs": {
+        "daily": "일간",
+        "weekly": "주간",
+        "monthly": "월간"
+      },
+      "emptyTitle": "최소 3일이상",
+      "emptyText": "스트레스 / 심박수 측정을 해 주세요."
+    },
+    "main": {
+      "title": "스트레스 / 심박수",
+      "noRecord": "아직 기록 전이에요.",
+      "fingerMeasurement": "손가락 측정",
+      "faceMeasurement": "얼굴 측정",
+      "months": {
+        "1": "1월",
+        "2": "2월",
+        "3": "3월",
+        "4": "4월",
+        "5": "5월",
+        "6": "6월",
+        "7": "7월",
+        "8": "8월",
+        "9": "9월",
+        "10": "10월",
+        "11": "11월",
+        "12": "12월"
+      },
+      "weekDays": {
+        "sun": "일",
+        "mon": "월",
+        "tue": "화",
+        "wed": "수",
+        "thu": "목",
+        "fri": "금",
+        "sat": "토"
+      },
+      "dateInfo": "{day}일({dayOfWeek})"
+    },
+    "measurement": {
+      "title": "스트레스 / 심박수 측정",
+      "active": {
+        "coverCamera": "후면 카메라 가리기",
+        "coverInstruction": "원 안에 화면을 보고 후면 카메라를 손가락으로 가려주세요",
+        "startButton": "측정 시작",
+        "warningText": "가운데 원 영역 전체가 붉은색으로 채워져야 해요!",
+        "iosWarning": "* iOS 기기는 카메라 센서가 민감하기 때문에 정확한 측정을 위해 움직임을 최소화해주시기 바랍니다.",
+        "viewMethodAgain": "측정 방법 다시 보기"
+      },
+      "guide": {
+        "mainInstruction": "검지로 후면 카메라 가리기",
+        "subInstruction": "검지로 후면 카메라를 가리면 자동으로 측정이 시작돼요",
+        "dontShowAgain": "다시 보지 않기",
+        "close": "닫기"
+      },
+      "prep": {
+        "step1Title": "자리에 앉기",
+        "step1Instruction": "측정하는 동안 자리에 앉아 차분하게 측정 해주세요",
+        "step2Title": "손을 올리고 팔꿈치를 책상에",
+        "step2Instruction": "팔의 자세를 그림처럼 만들고 손의 높이를 심장과 비슷하게 해주세요",
+        "next": "다음",
+        "dontShowAgain": "다시 보지 않기"
+      },
+      "result": {
+        "title": "스트레스 / 심박수 결과",
+        "stressScore": "스트레스 점수",
+        "scoreAdvice": "마음의 여유를 가지면 더 좋아질거에요",
+        "heartRate": "심박수",
+        "heartRateUnit": "회/분",
+        "status": {
+          "interest": "관심",
+          "good": "양호"
+        },
+        "rangeDescription": "내 또래 안정 심박 범위",
+        "stressAccumulation": "스트레스가 쌓이면?",
+        "symptomsTitle": "스트레스 증상:",
+        "symptoms": {
+          "1": "초조 및 긴장",
+          "2": "불면",
+          "3": "죄책감, 자책감",
+          "4": "자극적인 행위(게임, 휴대폰)에 과몰입",
+          "5": "무기력함",
+          "6": "소화불량",
+          "7": "두통 및 어지러움"
+        },
+        "specialistAdvice": "위 증상이 지속적으로 나타난다면 전문가와 상담해보세요",
+        "accuracyTitle": "정확도 정보",
+        "accuracyText": "위 결과는 딥메디를 통해 제공되며 아래의 정확도로 분석됩니다.",
+        "accuracyItems": {
+          "stress": "스트레스 지수: 95% 정확도 (KCL 공인시험 성적)",
+          "heartRate": "심박수: 98% 정확도 (KTL 및 KCL 공인시험 성적)"
+        },
+        "disclaimer": "스트레스 지수 / 심박수 측정 서비스는 의료기기가 아니며, 본 서비스의 목적은 질병의 진단, 치료, 경감, 처치, 예방에 있지 않습니다.",
+        "completeButton": "분석 완료"
+      }
+    }
   }
 }
 

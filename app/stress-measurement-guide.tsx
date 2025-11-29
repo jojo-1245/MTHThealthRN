@@ -1,3 +1,4 @@
+import { useTranslation } from '@/i18n';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React, { useState } from 'react';
@@ -9,6 +10,7 @@ import {
 } from 'react-native';
 
 export default function StressMeasurementGuide() {
+  const { t } = useTranslation();
   const [dontShowAgain, setDontShowAgain] = useState(false);
 
   const handleStartMeasurement = () => {
@@ -33,7 +35,7 @@ export default function StressMeasurementGuide() {
         <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>스트레스 / 심박수 측정</Text>
+        <Text style={styles.headerTitle}>{t('stressHeartrate.measurement.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
@@ -48,9 +50,9 @@ export default function StressMeasurementGuide() {
       {/* 메인 콘텐츠 */}
       <View style={styles.content}>
         <View style={styles.instructionContainer}>
-          <Text style={styles.mainInstruction}>검지로 후면 카메라 가리기</Text>
+          <Text style={styles.mainInstruction}>{t('stressHeartrate.measurement.guide.mainInstruction')}</Text>
           <Text style={styles.subInstruction}>
-            검지로 후면 카메라를 가리면 자동으로 측정이 시작돼요
+            {t('stressHeartrate.measurement.guide.subInstruction')}
           </Text>
         </View>
 
@@ -85,11 +87,11 @@ export default function StressMeasurementGuide() {
       {/* 하단 버튼들 */}
       <View style={styles.bottomButtonContainer}>
         <TouchableOpacity style={styles.dontShowButton} onPress={handleDontShowAgain}>
-          <Text style={styles.dontShowButtonText}>다시 보지 않기</Text>
+          <Text style={styles.dontShowButtonText}>{t('stressHeartrate.measurement.guide.dontShowAgain')}</Text>
         </TouchableOpacity>
         
         <TouchableOpacity style={styles.closeButton} onPress={handleClose}>
-          <Text style={styles.closeButtonText}>닫기</Text>
+          <Text style={styles.closeButtonText}>{t('stressHeartrate.measurement.guide.close')}</Text>
         </TouchableOpacity>
       </View>
     </View>

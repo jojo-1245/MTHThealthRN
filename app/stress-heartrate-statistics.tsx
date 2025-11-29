@@ -1,21 +1,23 @@
+import { useTranslation } from '@/i18n';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React, { useState } from 'react';
 import {
-    StyleSheet,
-    Text,
-    TouchableOpacity,
-    View
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View
 } from 'react-native';
 
 export default function StressHeartrateStatistics() {
+  const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState<'daily' | 'weekly' | 'monthly'>('daily');
 
   const renderEmptyState = () => (
     <View style={styles.emptyState}>
       <Ionicons name="warning" size={48} color="#ccc" />
-      <Text style={styles.emptyStateTitle}>최소 3일이상</Text>
-      <Text style={styles.emptyStateText}>스트레스 / 심박수 측정을 해 주세요.</Text>
+      <Text style={styles.emptyStateTitle}>{t('stressHeartrate.statistics.emptyTitle')}</Text>
+      <Text style={styles.emptyStateText}>{t('stressHeartrate.statistics.emptyText')}</Text>
     </View>
   );
 
@@ -57,7 +59,7 @@ export default function StressHeartrateStatistics() {
         <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>스트레스 / 심박수 통계</Text>
+        <Text style={styles.headerTitle}>{t('stressHeartrate.statistics.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
@@ -68,7 +70,7 @@ export default function StressHeartrateStatistics() {
           onPress={() => setActiveTab('daily')}
         >
           <Text style={[styles.tabButtonText, activeTab === 'daily' && styles.activeTabButtonText]}>
-            일간
+            {t('stressHeartrate.statistics.tabs.daily')}
           </Text>
         </TouchableOpacity>
         <TouchableOpacity
@@ -76,7 +78,7 @@ export default function StressHeartrateStatistics() {
           onPress={() => setActiveTab('weekly')}
         >
           <Text style={[styles.tabButtonText, activeTab === 'weekly' && styles.activeTabButtonText]}>
-            주간
+            {t('stressHeartrate.statistics.tabs.weekly')}
           </Text>
         </TouchableOpacity>
         <TouchableOpacity
@@ -84,7 +86,7 @@ export default function StressHeartrateStatistics() {
           onPress={() => setActiveTab('monthly')}
         >
           <Text style={[styles.tabButtonText, activeTab === 'monthly' && styles.activeTabButtonText]}>
-            월간
+            {t('stressHeartrate.statistics.tabs.monthly')}
           </Text>
         </TouchableOpacity>
       </View>

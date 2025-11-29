@@ -1,3 +1,4 @@
+import { useTranslation } from '@/i18n';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React, { useState } from 'react';
@@ -10,6 +11,7 @@ import {
 } from 'react-native';
 
 export default function MedicationRecord() {
+  const { t } = useTranslation();
   const [currentDate, setCurrentDate] = useState(new Date());
   const [selectedDate, setSelectedDate] = useState(9); // 선택된 날짜
 
@@ -59,11 +61,16 @@ export default function MedicationRecord() {
 
   const days = getDaysInMonth(currentDate);
   const monthNames = [
-    '1월', '2월', '3월', '4월', '5월', '6월',
-    '7월', '8월', '9월', '10월', '11월', '12월'
+    t('medication.record.months.1'), t('medication.record.months.2'), t('medication.record.months.3'), t('medication.record.months.4'),
+    t('medication.record.months.5'), t('medication.record.months.6'), t('medication.record.months.7'), t('medication.record.months.8'),
+    t('medication.record.months.9'), t('medication.record.months.10'), t('medication.record.months.11'), t('medication.record.months.12')
   ];
   const dayNames = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
-  const dayNamesKorean = ['일', '월', '화', '수', '목', '금', '토'];
+  const dayNamesKorean = [
+    t('medication.record.weekDays.sun'), t('medication.record.weekDays.mon'), t('medication.record.weekDays.tue'),
+    t('medication.record.weekDays.wed'), t('medication.record.weekDays.thu'), t('medication.record.weekDays.fri'),
+    t('medication.record.weekDays.sat')
+  ];
 
   const goToPreviousMonth = () => {
     setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() - 1, 1));
@@ -89,7 +96,7 @@ export default function MedicationRecord() {
 
   const getSelectedDateInfo = () => {
     const selectedDayIndex = new Date(currentDate.getFullYear(), currentDate.getMonth(), selectedDate).getDay();
-    return `${selectedDate}일(${dayNamesKorean[selectedDayIndex]})`;
+    return t('medication.record.dateInfo', { day: selectedDate, dayOfWeek: dayNamesKorean[selectedDayIndex] });
   };
 
   return (
@@ -99,7 +106,7 @@ export default function MedicationRecord() {
         <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>복약 기록</Text>
+        <Text style={styles.headerTitle}>{t('medication.record.title')}</Text>
         <TouchableOpacity onPress={handleListIcon} style={styles.listButton}>
           <Ionicons name="list" size={24} color="#000" />
         </TouchableOpacity>
@@ -181,7 +188,7 @@ export default function MedicationRecord() {
             ) : (
               <View style={styles.emptyState}>
                 <Ionicons name="warning-outline" size={48} color="#ccc" />
-                <Text style={styles.emptyStateText}>복용중인 의약품이 없습니다</Text>
+                <Text style={styles.emptyStateText}>{t('medication.record.emptyMessage')}</Text>
               </View>
             )}
           </View>
@@ -191,7 +198,7 @@ export default function MedicationRecord() {
       {/* 하단 액션 버튼 */}
       <View style={styles.bottomButtonContainer}>
         <TouchableOpacity style={styles.addButton} onPress={handleAddRecord}>
-          <Text style={styles.addButtonText}>기록 추가</Text>
+          <Text style={styles.addButtonText}>{t('medication.record.addButton')}</Text>
         </TouchableOpacity>
       </View>
     </View>

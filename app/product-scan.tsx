@@ -1,16 +1,18 @@
+import { useTranslation } from '@/i18n';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React, { useState } from 'react';
 import {
-    Alert,
-    Modal,
-    StyleSheet,
-    Text,
-    TouchableOpacity,
-    View,
+  Alert,
+  Modal,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
 } from 'react-native';
 
 export default function ProductScan() {
+  const { t } = useTranslation();
   const [showInstructions, setShowInstructions] = useState(true);
   const [showResult, setShowResult] = useState(false);
   const [dontShowAgain, setDontShowAgain] = useState(false);
@@ -27,11 +29,11 @@ export default function ProductScan() {
   const handleCapture = () => {
     // 실제로는 카메라 촬영 로직이 들어가겠지만, 여기서는 시뮬레이션
     Alert.alert(
-      '스캔 완료',
-      '제품이 인식되었습니다.',
+      t('productScan.scanComplete'),
+      t('productScan.scanCompleteMessage'),
       [
-        { text: '취소', style: 'cancel' },
-        { text: '확인', onPress: () => setShowResult(true) }
+        { text: t('productScan.cancel'), style: 'cancel' },
+        { text: t('productScan.confirm'), onPress: () => setShowResult(true) }
       ]
     );
   };
@@ -60,7 +62,7 @@ export default function ProductScan() {
       <View style={styles.modalOverlay}>
         <View style={styles.resultModal}>
           <View style={styles.resultHeader}>
-            <Text style={styles.resultTitle}>스캔 결과</Text>
+            <Text style={styles.resultTitle}>{t('productScan.resultTitle')}</Text>
             <TouchableOpacity onPress={handleClose}>
               <Ionicons name="close" size={24} color="#999" />
             </TouchableOpacity>
@@ -68,29 +70,29 @@ export default function ProductScan() {
           
           <View style={styles.productInfo}>
             <View style={styles.productInfoRow}>
-              <Text style={styles.productInfoLabel}>제품명</Text>
+              <Text style={styles.productInfoLabel}>{t('productScan.productName')}</Text>
               <Text style={styles.productInfoValue}>이*********정</Text>
             </View>
             <View style={styles.productInfoRow}>
-              <Text style={styles.productInfoLabel}>식품의 유형</Text>
+              <Text style={styles.productInfoLabel}>{t('productScan.foodType')}</Text>
               <Text style={styles.productInfoValue}>곡류 가공품</Text>
             </View>
             <View style={styles.productInfoRow}>
-              <Text style={styles.productInfoLabel}>품목 보고번호</Text>
+              <Text style={styles.productInfoLabel}>{t('productScan.reportNumber')}</Text>
               <Text style={styles.productInfoValue}>*********</Text>
             </View>
             <View style={styles.productInfoRow}>
-              <Text style={styles.productInfoLabel}>유통전문 판매원</Text>
+              <Text style={styles.productInfoLabel}>{t('productScan.distributor')}</Text>
               <Text style={styles.productInfoValue}>*********</Text>
             </View>
           </View>
 
           <View style={styles.resultButtons}>
             <TouchableOpacity style={styles.cancelButton} onPress={handleClose}>
-              <Text style={styles.cancelButtonText}>취소</Text>
+              <Text style={styles.cancelButtonText}>{t('productScan.cancel')}</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.confirmButton} onPress={handleConfirm}>
-              <Text style={styles.confirmButtonText}>확인</Text>
+              <Text style={styles.confirmButtonText}>{t('productScan.confirm')}</Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -105,7 +107,7 @@ export default function ProductScan() {
         <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
           <Ionicons name="arrow-back" size={24} color="#fff" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>제품명 스캔</Text>
+        <Text style={styles.headerTitle}>{t('productScan.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
@@ -125,7 +127,7 @@ export default function ProductScan() {
           </View>
           
           <Text style={styles.scanInstruction}>
-            제품 포장의 [제품명] 글자를 꼭 포함하여 촬영해주세요.
+            {t('productScan.instruction')}
           </Text>
         </View>
 
@@ -144,11 +146,11 @@ export default function ProductScan() {
       {/* 하단 버튼들 */}
       <View style={styles.bottomButtons}>
         <TouchableOpacity style={styles.dontShowButton} onPress={handleDontShowAgain}>
-          <Text style={styles.dontShowButtonText}>다시 보지 않기</Text>
+          <Text style={styles.dontShowButtonText}>{t('productScan.dontShowAgain')}</Text>
         </TouchableOpacity>
         
         <TouchableOpacity style={styles.nextButton} onPress={handleNext}>
-          <Text style={styles.nextButtonText}>다음</Text>
+          <Text style={styles.nextButtonText}>{t('productScan.next')}</Text>
         </TouchableOpacity>
       </View>
 

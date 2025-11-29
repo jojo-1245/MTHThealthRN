@@ -1,20 +1,22 @@
 import DatePickerModal from '@/components/date-picker-modal';
 import PeriodPickerModal from '@/components/period-picker-modal';
+import { useTranslation } from '@/i18n';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React, { useState } from 'react';
 import {
-    Alert,
-    Modal,
-    ScrollView,
-    StyleSheet,
-    Text,
-    TextInput,
-    TouchableOpacity,
-    View,
+  Alert,
+  Modal,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
 } from 'react-native';
 
 export default function MedicationAdd() {
+  const { t } = useTranslation();
   const [prescriptionDate, setPrescriptionDate] = useState('');
   const [medicationPeriod, setMedicationPeriod] = useState('');
   const [selectedMedication, setSelectedMedication] = useState<string | null>(null);
@@ -25,7 +27,7 @@ export default function MedicationAdd() {
 
   const handleAdditionalScan = () => {
     setActiveTab('scan');
-    Alert.alert('추가스캔', '추가스캔 기능을 구현해주세요.');
+    Alert.alert(t('medication.add.scanAlert'), t('medication.add.scanAlertMessage'));
   };
 
   const handleMedicationSearch = () => {
@@ -56,7 +58,7 @@ export default function MedicationAdd() {
 
   const handleSave = () => {
     if (!prescriptionDate || !medicationPeriod || !selectedMedication) {
-      Alert.alert('입력 오류', '모든 필드를 입력해주세요.');
+      Alert.alert(t('medication.add.errorTitle'), t('medication.add.errorMessage'));
       return;
     }
     
@@ -77,7 +79,7 @@ export default function MedicationAdd() {
         <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>의약품 등록</Text>
+        <Text style={styles.headerTitle}>{t('medication.add.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
@@ -89,7 +91,7 @@ export default function MedicationAdd() {
             onPress={handleAdditionalScan}
           >
             <Ionicons name="scan" size={20} color="#fff" style={styles.buttonIcon} />
-            <Text style={styles.scanButtonText}>추가스캔</Text>
+            <Text style={styles.scanButtonText}>{t('medication.add.scanButton')}</Text>
           </TouchableOpacity>
           
           <TouchableOpacity 
@@ -97,14 +99,14 @@ export default function MedicationAdd() {
             onPress={handleMedicationSearch}
           >
             <Ionicons name="search" size={20} color={activeTab === 'search' ? "#fff" : "#8B5CF6"} style={styles.buttonIcon} />
-            <Text style={[styles.searchButtonText, activeTab === 'search' && styles.activeSearchButtonText]}>의약품 검색</Text>
+            <Text style={[styles.searchButtonText, activeTab === 'search' && styles.activeSearchButtonText]}>{t('medication.add.searchButton')}</Text>
           </TouchableOpacity>
         </View>
 
         {/* 선택된 의약품 표시 */}
         {selectedMedication && (
           <View style={styles.selectedMedicationContainer}>
-            <Text style={styles.selectedMedicationLabel}>처방 받은 약</Text>
+            <Text style={styles.selectedMedicationLabel}>{t('medication.add.prescribedLabel')}</Text>
             <View style={styles.selectedMedicationItem}>
               <Text style={styles.selectedMedicationName}>타이론정</Text>
               <TouchableOpacity onPress={handleMedicationRemove} style={styles.removeButton}>
@@ -118,13 +120,13 @@ export default function MedicationAdd() {
         <View style={styles.formSection}>
           {/* 처방 일자 */}
           <View style={styles.inputGroup}>
-            <Text style={styles.inputLabel}>처방 일자</Text>
+            <Text style={styles.inputLabel}>{t('medication.add.prescriptionDate')}</Text>
             <TouchableOpacity style={styles.dateInputContainer} onPress={handleDateSelect}>
               <TextInput
                 style={styles.dateInput}
                 value={prescriptionDate}
                 onChangeText={setPrescriptionDate}
-                placeholder="날짜를 선택하세요"
+                placeholder={t('medication.add.datePlaceholder')}
                 placeholderTextColor="#999"
                 editable={false}
               />
@@ -134,13 +136,13 @@ export default function MedicationAdd() {
 
           {/* 복용 기간 */}
           <View style={styles.inputGroup}>
-            <Text style={styles.inputLabel}>복용 기간</Text>
+            <Text style={styles.inputLabel}>{t('medication.add.medicationPeriod')}</Text>
             <TouchableOpacity style={styles.periodInputContainer} onPress={handlePeriodSelect}>
               <TextInput
                 style={styles.periodInput}
                 value={medicationPeriod}
                 onChangeText={setMedicationPeriod}
-                placeholder="복용 기간을 선택하세요"
+                placeholder={t('medication.add.periodPlaceholder')}
                 placeholderTextColor="#999"
                 editable={false}
               />
@@ -158,7 +160,7 @@ export default function MedicationAdd() {
           disabled={!isFormValid}
         >
           <Text style={[styles.saveButtonText, !isFormValid && styles.saveButtonTextDisabled]}>
-            저장
+            {t('medication.add.saveButton')}
           </Text>
         </TouchableOpacity>
       </View>
@@ -186,13 +188,13 @@ export default function MedicationAdd() {
       >
         <View style={styles.modalOverlay}>
           <View style={styles.successModalContainer}>
-            <Text style={styles.successModalTitle}>알림</Text>
-            <Text style={styles.successModalMessage}>정상 처리 되었습니다</Text>
+            <Text style={styles.successModalTitle}>{t('medication.add.alertTitle')}</Text>
+            <Text style={styles.successModalMessage}>{t('medication.add.alertMessage')}</Text>
             <TouchableOpacity 
               style={styles.successModalButton} 
               onPress={handleSuccessConfirm}
             >
-              <Text style={styles.successModalButtonText}>확인</Text>
+              <Text style={styles.successModalButtonText}>{t('medication.add.alertConfirm')}</Text>
             </TouchableOpacity>
           </View>
         </View>

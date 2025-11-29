@@ -1,3 +1,4 @@
+import { useTranslation } from '@/i18n';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React, { useState } from 'react';
@@ -10,6 +11,7 @@ import {
 } from 'react-native';
 
 export default function StressHeartrate() {
+  const { t } = useTranslation();
   const [currentDate, setCurrentDate] = useState(new Date());
   const [selectedDate, setSelectedDate] = useState(9); // 선택된 날짜
 
@@ -59,11 +61,16 @@ export default function StressHeartrate() {
 
   const days = getDaysInMonth(currentDate);
   const monthNames = [
-    '1월', '2월', '3월', '4월', '5월', '6월',
-    '7월', '8월', '9월', '10월', '11월', '12월'
+    t('stressHeartrate.main.months.1'), t('stressHeartrate.main.months.2'), t('stressHeartrate.main.months.3'), t('stressHeartrate.main.months.4'),
+    t('stressHeartrate.main.months.5'), t('stressHeartrate.main.months.6'), t('stressHeartrate.main.months.7'), t('stressHeartrate.main.months.8'),
+    t('stressHeartrate.main.months.9'), t('stressHeartrate.main.months.10'), t('stressHeartrate.main.months.11'), t('stressHeartrate.main.months.12')
   ];
   const dayNames = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
-  const dayNamesKorean = ['일', '월', '화', '수', '목', '금', '토'];
+  const dayNamesKorean = [
+    t('stressHeartrate.main.weekDays.sun'), t('stressHeartrate.main.weekDays.mon'), t('stressHeartrate.main.weekDays.tue'),
+    t('stressHeartrate.main.weekDays.wed'), t('stressHeartrate.main.weekDays.thu'), t('stressHeartrate.main.weekDays.fri'),
+    t('stressHeartrate.main.weekDays.sat')
+  ];
 
   const goToPreviousMonth = () => {
     setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() - 1, 1));
@@ -94,7 +101,7 @@ export default function StressHeartrate() {
 
   const getSelectedDateInfo = () => {
     const selectedDayIndex = new Date(currentDate.getFullYear(), currentDate.getMonth(), selectedDate).getDay();
-    return `${selectedDate}일(${dayNamesKorean[selectedDayIndex]})`;
+    return t('stressHeartrate.main.dateInfo', { day: selectedDate, dayOfWeek: dayNamesKorean[selectedDayIndex] });
   };
 
   return (
@@ -104,7 +111,7 @@ export default function StressHeartrate() {
         <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>스트레스 / 심박수</Text>
+        <Text style={styles.headerTitle}>{t('stressHeartrate.main.title')}</Text>
         <TouchableOpacity onPress={handleStatistics} style={styles.statsButton}>
           <Ionicons name="stats-chart" size={24} color="#000" />
         </TouchableOpacity>
@@ -176,12 +183,12 @@ export default function StressHeartrate() {
             {selectedDate === 9 ? (
               <View style={styles.noRecordState}>
                 <Ionicons name="warning" size={48} color="#ccc" />
-                <Text style={styles.noRecordText}>아직 기록 전이에요.</Text>
+                <Text style={styles.noRecordText}>{t('stressHeartrate.main.noRecord')}</Text>
               </View>
             ) : (
               <View style={styles.noRecordState}>
                 <Ionicons name="warning" size={48} color="#ccc" />
-                <Text style={styles.noRecordText}>아직 기록 전이에요.</Text>
+                <Text style={styles.noRecordText}>{t('stressHeartrate.main.noRecord')}</Text>
               </View>
             )}
           </View>
@@ -192,12 +199,12 @@ export default function StressHeartrate() {
       <View style={styles.bottomButtonContainer}>
         <TouchableOpacity style={styles.fingerButton} onPress={handleFingerMeasurement}>
           <Ionicons name="finger-print" size={24} color="#fff" style={styles.buttonIcon} />
-          <Text style={styles.fingerButtonText}>손가락 측정</Text>
+          <Text style={styles.fingerButtonText}>{t('stressHeartrate.main.fingerMeasurement')}</Text>
         </TouchableOpacity>
         
         <TouchableOpacity style={styles.faceButton} onPress={handleFaceMeasurement}>
           <Ionicons name="camera" size={24} color="#8B5CF6" style={styles.buttonIcon} />
-          <Text style={styles.faceButtonText}>얼굴 측정</Text>
+          <Text style={styles.faceButtonText}>{t('stressHeartrate.main.faceMeasurement')}</Text>
         </TouchableOpacity>
       </View>
     </View>

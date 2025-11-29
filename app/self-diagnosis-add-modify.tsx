@@ -1,3 +1,4 @@
+import { useTranslation } from '@/i18n';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React, { useState } from 'react';
@@ -24,36 +25,37 @@ interface DiagnosisCard {
 }
 
 export default function SelfDiagnosisAddModifyScreen() {
+  const { t } = useTranslation();
   const [selectedCards, setSelectedCards] = useState<string[]>([
-    '만성질환',
-    '식/생활습관',
-    '피부건강',
+    t('selfDiagnosis.add.cards.chronicDisease.title'),
+    t('selfDiagnosis.add.cards.lifestyle.title'),
+    t('selfDiagnosis.add.cards.skinHealth.title'),
   ]);
 
   const currentCards: DiagnosisCard[] = [
     {
-      id: '만성질환',
-      title: '만성질환',
-      description: '현재 질환이 있어 약 복용 중 (관리중)이에요',
-      duration: '약 15초 소요',
+      id: t('selfDiagnosis.add.cards.chronicDisease.title'),
+      title: t('selfDiagnosis.add.cards.chronicDisease.title'),
+      description: t('selfDiagnosis.add.cards.chronicDisease.description'),
+      duration: t('selfDiagnosis.add.cards.chronicDisease.duration'),
       durationColor: '#EF4444',
       isSelected: true,
       isCurrent: true,
     },
     {
-      id: '식/생활습관',
-      title: '식/생활습관',
-      description: '현재 식/생활습관 상태가 궁금해요',
-      duration: '약 2분 30초 소요',
+      id: t('selfDiagnosis.add.cards.lifestyle.title'),
+      title: t('selfDiagnosis.add.cards.lifestyle.title'),
+      description: t('selfDiagnosis.add.cards.lifestyle.description'),
+      duration: t('selfDiagnosis.add.cards.lifestyle.duration'),
       durationColor: '#3B82F6',
       isSelected: true,
       isCurrent: true,
     },
     {
-      id: '피부건강',
-      title: '피부건강',
-      description: '현재 피부상태가 궁금해요',
-      duration: '약 3분 소요',
+      id: t('selfDiagnosis.add.cards.skinHealth.title'),
+      title: t('selfDiagnosis.add.cards.skinHealth.title'),
+      description: t('selfDiagnosis.add.cards.skinHealth.description'),
+      duration: t('selfDiagnosis.add.cards.skinHealth.duration'),
       durationColor: '#6B7280',
       isSelected: true,
       isCurrent: true,
@@ -62,19 +64,19 @@ export default function SelfDiagnosisAddModifyScreen() {
 
   const additionalCards: DiagnosisCard[] = [
     {
-      id: '기초건강',
-      title: '기초건강',
-      description: '기초건강상태부터 알아볼래요',
-      duration: '약 30초 소요',
+      id: t('selfDiagnosis.add.cards.basicHealth.title'),
+      title: t('selfDiagnosis.add.cards.basicHealth.title'),
+      description: t('selfDiagnosis.add.cards.basicHealth.description'),
+      duration: t('selfDiagnosis.add.cards.basicHealth.duration'),
       durationColor: '#3B82F6',
       isSelected: false,
       isCurrent: false,
     },
     {
-      id: '자각증상',
-      title: '자각증상',
-      description: '현재 느끼고 있는 자각증상이 있어요',
-      duration: '약 5분 소요',
+      id: t('selfDiagnosis.add.cards.symptoms.title'),
+      title: t('selfDiagnosis.add.cards.symptoms.title'),
+      description: t('selfDiagnosis.add.cards.symptoms.description'),
+      duration: t('selfDiagnosis.add.cards.symptoms.duration'),
       durationColor: '#6B7280',
       isSelected: false,
       isCurrent: false,
@@ -138,13 +140,13 @@ export default function SelfDiagnosisAddModifyScreen() {
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>자가진단 추가 및 수정</Text>
+        <Text style={styles.headerTitle}>{t('selfDiagnosis.addModify.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
       {/* 메인 콘텐츠 */}
       <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
-        <Text style={styles.instructionText}>수정할 항목을 선택해주세요</Text>
+        <Text style={styles.instructionText}>{t('selfDiagnosis.addModify.instruction')}</Text>
 
         {/* 현재 항목들 */}
         <View style={styles.cardsContainer}>
@@ -153,7 +155,7 @@ export default function SelfDiagnosisAddModifyScreen() {
 
         {/* 추가 항목 안내 */}
         <Text style={styles.additionalInstructionText}>
-          아래 항목을 추가 체크하면 더 정밀한 영양관리를 해드릴 수 있어요
+          {t('selfDiagnosis.addModify.additionalInstruction')}
         </Text>
 
         {/* 추가 항목들 */}
@@ -170,7 +172,7 @@ export default function SelfDiagnosisAddModifyScreen() {
           disabled={selectedCards.length === 0}
         >
           <Text style={[styles.nextButtonText, selectedCards.length === 0 && styles.disabledButtonText]}>
-            다음
+            {t('selfDiagnosis.addModify.nextButton')}
           </Text>
         </TouchableOpacity>
       </View>

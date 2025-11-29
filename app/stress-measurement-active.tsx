@@ -1,3 +1,4 @@
+import { useTranslation } from '@/i18n';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React, { useEffect, useState } from 'react';
@@ -10,6 +11,7 @@ import {
 } from 'react-native';
 
 export default function StressMeasurementActive() {
+  const { t } = useTranslation();
   const [measurementProgress, setMeasurementProgress] = useState(0);
   const [isMeasuring, setIsMeasuring] = useState(false);
   const [measurementComplete, setMeasurementComplete] = useState(false);
@@ -62,7 +64,7 @@ export default function StressMeasurementActive() {
         <TouchableOpacity onPress={handleBack} style={styles.backButton}>
           <Ionicons name="arrow-back" size={24} color="#fff" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>스트레스 / 심박수 측정</Text>
+        <Text style={styles.headerTitle}>{t('stressHeartrate.measurement.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
@@ -86,14 +88,14 @@ export default function StressMeasurementActive() {
             </View>
             
             <View style={styles.instructionContainer}>
-              <Text style={styles.mainInstruction}>후면 카메라 가리기</Text>
+              <Text style={styles.mainInstruction}>{t('stressHeartrate.measurement.active.coverCamera')}</Text>
               <Text style={styles.subInstruction}>
-                원 안에 화면을 보고 후면 카메라를 손가락으로 가려주세요
+                {t('stressHeartrate.measurement.active.coverInstruction')}
               </Text>
             </View>
 
             <TouchableOpacity style={styles.startButton} onPress={handleStartMeasurement}>
-              <Text style={styles.startButtonText}>측정 시작</Text>
+              <Text style={styles.startButtonText}>{t('stressHeartrate.measurement.active.startButton')}</Text>
             </TouchableOpacity>
           </View>
         ) : (
@@ -106,21 +108,21 @@ export default function StressMeasurementActive() {
             </View>
             
             <View style={styles.instructionContainer}>
-              <Text style={styles.mainInstruction}>후면 카메라 가리기</Text>
+              <Text style={styles.mainInstruction}>{t('stressHeartrate.measurement.active.coverCamera')}</Text>
               <Text style={styles.subInstruction}>
-                원 안에 화면을 보고 후면 카메라를 손가락으로 가려주세요
+                {t('stressHeartrate.measurement.active.coverInstruction')}
               </Text>
             </View>
 
             <View style={styles.warningContainer}>
               <Text style={styles.warningText}>
-                가운데 원 영역 전체가 붉은색으로 채워져야 해요!
+                {t('stressHeartrate.measurement.active.warningText')}
               </Text>
             </View>
 
             <View style={styles.iosWarningContainer}>
               <Text style={styles.iosWarningText}>
-                * iOS 기기는 카메라 센서가 민감하기 때문에 정확한 측정을 위해 움직임을 최소화해주시기 바랍니다.
+                {t('stressHeartrate.measurement.active.iosWarning')}
               </Text>
             </View>
           </View>
@@ -130,7 +132,7 @@ export default function StressMeasurementActive() {
       {/* 하단 버튼 */}
       <View style={styles.bottomButtonContainer}>
         <TouchableOpacity style={styles.methodButton} onPress={handleViewMethodAgain}>
-          <Text style={styles.methodButtonText}>측정 방법 다시 보기</Text>
+          <Text style={styles.methodButtonText}>{t('stressHeartrate.measurement.active.viewMethodAgain')}</Text>
         </TouchableOpacity>
       </View>
     </Animated.View>

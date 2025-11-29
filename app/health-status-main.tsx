@@ -1,3 +1,4 @@
+import { useTranslation } from '@/i18n';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React from 'react';
@@ -14,6 +15,7 @@ import {
 const { width, height } = Dimensions.get('window');
 
 export default function HealthStatusMainScreen() {
+  const { t } = useTranslation();
   const handleBack = () => {
     router.back();
   };
@@ -49,7 +51,7 @@ export default function HealthStatusMainScreen() {
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>내 건강상태 알아보기</Text>
+        <Text style={styles.headerTitle}>{t('health.statusMain.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
@@ -57,7 +59,7 @@ export default function HealthStatusMainScreen() {
       <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
         {/* 건강레벨 섹션 */}
         <View style={styles.healthLevelSection}>
-          <Text style={styles.userName}>Ted님의 건강레벨?</Text>
+          <Text style={styles.userName}>{t('health.statusMain.userLevel', { name: 'Ted' })}</Text>
           
           <View style={styles.levelContainer}>
             <View style={styles.levelProgress}>
@@ -65,7 +67,7 @@ export default function HealthStatusMainScreen() {
                 <View style={[styles.progressCircleInner, { width: `${(healthLevel / maxLevel) * 100}%` }]} />
               </View>
               <View style={styles.levelTextContainer}>
-                <Text style={styles.levelText}>건강레벨</Text>
+                <Text style={styles.levelText}>{t('health.statusMain.levelText')}</Text>
                 <Text style={styles.levelNumber}>{healthLevel}/{maxLevel}</Text>
               </View>
             </View>
@@ -74,19 +76,19 @@ export default function HealthStatusMainScreen() {
               style={styles.levelBadge} 
               onPress={handleHealthLevelDetail}
             >
-              <Text style={styles.levelBadgeText}>Level {healthLevel} 주의단계</Text>
+              <Text style={styles.levelBadgeText}>{t('health.statusMain.levelBadge', { level: healthLevel })}</Text>
               <Ionicons name="chevron-forward" size={20} color="#F59E0B" />
             </TouchableOpacity>
           </View>
 
           <Text style={styles.levelDescription}>
-            상태 개선을 위한 주의 깊은 관리 필요
+            {t('health.statusMain.levelDescription')}
           </Text>
         </View>
 
         {/* 무엇부터 관리하지? 섹션 */}
         <View style={styles.section}>
-          <Text style={styles.sectionTitle}>무엇부터 관리하지?</Text>
+          <Text style={styles.sectionTitle}>{t('health.statusMain.manageTitle')}</Text>
           
           <View style={styles.cardRow}>
             <TouchableOpacity 
@@ -96,8 +98,8 @@ export default function HealthStatusMainScreen() {
               <View style={[styles.cardIcon, styles.orangeIcon]}>
                 <Ionicons name="scale" size={32} color="#F59E0B" />
               </View>
-              <Text style={styles.cardTitle}>비만체지방</Text>
-              <Text style={styles.dangerLabel}>위험</Text>
+              <Text style={styles.cardTitle}>{t('health.statusMain.items.obesity')}</Text>
+              <Text style={styles.dangerLabel}>{t('health.statusMain.status.danger')}</Text>
             </TouchableOpacity>
 
             <TouchableOpacity 
@@ -107,8 +109,8 @@ export default function HealthStatusMainScreen() {
               <View style={[styles.cardIcon, styles.blueIcon]}>
                 <Ionicons name="sync" size={32} color="#3B82F6" />
               </View>
-              <Text style={styles.cardTitle}>대사조절</Text>
-              <Text style={styles.cautionLabel}>주의</Text>
+              <Text style={styles.cardTitle}>{t('health.statusMain.items.metabolism')}</Text>
+              <Text style={styles.cautionLabel}>{t('health.statusMain.status.caution')}</Text>
             </TouchableOpacity>
 
             <TouchableOpacity 
@@ -118,37 +120,37 @@ export default function HealthStatusMainScreen() {
               <View style={[styles.cardIcon, styles.brownIcon]}>
                 <Ionicons name="water" size={32} color="#92400E" />
               </View>
-              <Text style={styles.cardTitle}>비듬두피</Text>
-              <Text style={styles.cautionLabel}>주의</Text>
+              <Text style={styles.cardTitle}>{t('health.statusMain.items.scalp')}</Text>
+              <Text style={styles.cautionLabel}>{t('health.statusMain.status.caution')}</Text>
             </TouchableOpacity>
           </View>
         </View>
 
         {/* 건강정보 추가해 볼까? 섹션 */}
         <View style={styles.section}>
-          <Text style={styles.sectionTitle}>건강정보 추가해 볼까?</Text>
+          <Text style={styles.sectionTitle}>{t('health.statusMain.addTitle')}</Text>
           
           <View style={styles.cardRow}>
             <TouchableOpacity 
               style={styles.addCard}
               onPress={() => handleAddHealthInfo('self-diagnosis')}
             >
-              <Text style={styles.addCardTime}>약 1분 소요</Text>
+              <Text style={styles.addCardTime}>{t('health.statusMain.timeRequired', { time: '1분' })}</Text>
               <View style={styles.addCardIcon}>
                 <Ionicons name="bar-chart" size={32} color="#8B5CF6" />
               </View>
-              <Text style={styles.addCardTitle}>자가진단</Text>
+              <Text style={styles.addCardTitle}>{t('health.statusMain.addItems.selfDiagnosis')}</Text>
             </TouchableOpacity>
 
             <TouchableOpacity 
               style={styles.addCard}
               onPress={() => handleAddHealthInfo('health-checkup')}
             >
-              <Text style={styles.addCardTime}>약 30초 소요</Text>
+              <Text style={styles.addCardTime}>{t('health.statusMain.timeRequired', { time: '30초' })}</Text>
               <View style={styles.addCardIcon}>
                 <Ionicons name="medical" size={32} color="#8B5CF6" />
               </View>
-              <Text style={styles.addCardTitle}>건강검진결과</Text>
+              <Text style={styles.addCardTitle}>{t('health.statusMain.addItems.healthCheckup')}</Text>
             </TouchableOpacity>
 
             <TouchableOpacity 
@@ -158,16 +160,16 @@ export default function HealthStatusMainScreen() {
               <View style={styles.addCardIcon}>
                 <Ionicons name="document-text" size={32} color="#8B5CF6" />
               </View>
-              <Text style={styles.addCardTitle}>기타 정밀분석</Text>
+              <Text style={styles.addCardTitle}>{t('health.statusMain.addItems.detailedAnalysis')}</Text>
             </TouchableOpacity>
           </View>
         </View>
 
         {/* 건강 습관 만들기 섹션 */}
         <View style={styles.section}>
-          <Text style={styles.sectionTitle}>건강 습관 만들기</Text>
+          <Text style={styles.sectionTitle}>{t('health.statusMain.habitTitle')}</Text>
           <Text style={styles.habitDescription}>
-            위드 (with)는 건강습관 만들기 도전 이벤트입니다
+            {t('health.statusMain.habitDescription')}
           </Text>
           <View style={styles.habitItemsContainer}>
             <TouchableOpacity 
@@ -176,8 +178,8 @@ export default function HealthStatusMainScreen() {
             >
               <View style={[styles.habitStatusDot, { backgroundColor: '#10B981' }]} />
               <View style={styles.habitContent}>
-                <Text style={styles.habitLabel}>모집중 위드</Text>
-                <Text style={styles.habitSubtitle}>무료로 참여하고 리워드 받기</Text>
+                <Text style={styles.habitLabel}>{t('health.statusMain.habitItems.recruiting')}</Text>
+                <Text style={styles.habitSubtitle}>{t('health.statusMain.habitItems.recruitingSubtitle')}</Text>
               </View>
               <Ionicons name="chevron-forward" size={16} color="#9CA3AF" />
             </TouchableOpacity>
@@ -187,8 +189,8 @@ export default function HealthStatusMainScreen() {
             >
               <View style={[styles.habitStatusDot, { backgroundColor: '#EF4444' }]} />
               <View style={styles.habitContent}>
-                <Text style={styles.habitLabel}>종료된 위드</Text>
-                <Text style={styles.habitSubtitle}>결과 확인하고 리워드 받기</Text>
+                <Text style={styles.habitLabel}>{t('health.statusMain.habitItems.ended')}</Text>
+                <Text style={styles.habitSubtitle}>{t('health.statusMain.habitItems.endedSubtitle')}</Text>
               </View>
               <Ionicons name="chevron-forward" size={16} color="#9CA3AF" />
             </TouchableOpacity>

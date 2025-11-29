@@ -1,3 +1,4 @@
+import { useTranslation } from '@/i18n';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React from 'react';
@@ -14,6 +15,7 @@ import {
 const { width, height } = Dimensions.get('window');
 
 export default function HealthStatusResultsScreen() {
+  const { t } = useTranslation();
   const handleBack = () => {
     router.back();
   };
@@ -28,27 +30,27 @@ export default function HealthStatusResultsScreen() {
 
   // 항목별 분석 결과 데이터
   const healthItems = [
-    { name: '비만체지방', status: '위험', size: 'large' },
-    { name: '대사조절', status: '주의', size: 'large' },
-    { name: '비듬두피', status: '주의', size: 'large' },
-    { name: '간건강', status: '주의', size: 'medium' },
-    { name: '뼈관절건강', status: '관심', size: 'medium' },
-    { name: '수면·스트레스', status: '관심', size: 'medium' },
-    { name: '혈행개선', status: '주의', size: 'medium' },
-    { name: '면역항산화', status: '주의', size: 'medium' },
-    { name: '화농성여드름', status: '주의', size: 'medium' },
-    { name: '소화장건강', status: '주의', size: 'medium' },
-    { name: '눈건강', status: '주의', size: 'medium' },
-    { name: '근육대사', status: '관심', size: 'medium' },
-    { name: '뇌기억력', status: '양호', size: 'small' },
+    { name: t('health.statusResults.items.obesity'), status: t('health.statusResults.status.danger'), size: 'large', statusKey: 'danger' },
+    { name: t('health.statusResults.items.metabolism'), status: t('health.statusResults.status.caution'), size: 'large', statusKey: 'caution' },
+    { name: t('health.statusResults.items.scalp'), status: t('health.statusResults.status.caution'), size: 'large', statusKey: 'caution' },
+    { name: t('health.statusResults.items.liver'), status: t('health.statusResults.status.caution'), size: 'medium', statusKey: 'caution' },
+    { name: t('health.statusResults.items.bone'), status: t('health.statusResults.status.interest'), size: 'medium', statusKey: 'interest' },
+    { name: t('health.statusResults.items.sleep'), status: t('health.statusResults.status.interest'), size: 'medium', statusKey: 'interest' },
+    { name: t('health.statusResults.items.circulation'), status: t('health.statusResults.status.caution'), size: 'medium', statusKey: 'caution' },
+    { name: t('health.statusResults.items.immunity'), status: t('health.statusResults.status.caution'), size: 'medium', statusKey: 'caution' },
+    { name: t('health.statusResults.items.acne'), status: t('health.statusResults.status.caution'), size: 'medium', statusKey: 'caution' },
+    { name: t('health.statusResults.items.digestion'), status: t('health.statusResults.status.caution'), size: 'medium', statusKey: 'caution' },
+    { name: t('health.statusResults.items.eye'), status: t('health.statusResults.status.caution'), size: 'medium', statusKey: 'caution' },
+    { name: t('health.statusResults.items.muscle'), status: t('health.statusResults.status.interest'), size: 'medium', statusKey: 'interest' },
+    { name: t('health.statusResults.items.brain'), status: t('health.statusResults.status.good'), size: 'small', statusKey: 'good' },
   ];
 
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case '위험': return '#EF4444';
-      case '주의': return '#F59E0B';
-      case '관심': return '#3B82F6';
-      case '양호': return '#10B981';
+  const getStatusColor = (statusKey: string) => {
+    switch (statusKey) {
+      case 'danger': return '#EF4444';
+      case 'caution': return '#F59E0B';
+      case 'interest': return '#3B82F6';
+      case 'good': return '#10B981';
       default: return '#6B7280';
     }
   };
@@ -74,7 +76,7 @@ export default function HealthStatusResultsScreen() {
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>전체결과</Text>
+        <Text style={styles.headerTitle}>{t('health.statusResults.title')}</Text>
         <TouchableOpacity style={styles.graphButton} onPress={handleStatistics}>
           <Ionicons name="bar-chart" size={24} color="#8B5CF6" />
         </TouchableOpacity>
@@ -91,10 +93,10 @@ export default function HealthStatusResultsScreen() {
         {/* 건강레벨 요약 */}
         <View style={styles.summarySection}>
           <Text style={styles.summaryText}>
-            Ted님의 건강레벨은 Level {userLevel}단계로,
+            {t('health.statusResults.summary', { name: 'Ted', level: userLevel })}
           </Text>
           <Text style={styles.summaryHighlight}>
-            내 또래 남성 평균이상입니다
+            {t('health.statusResults.summaryHighlight')}
           </Text>
         </View>
 
@@ -108,7 +110,7 @@ export default function HealthStatusResultsScreen() {
               <Text style={styles.comparisonLabel}>0</Text>
               <View style={styles.averageMarker}>
                 <View style={styles.averageTriangle} />
-                <Text style={styles.averageLabel}>평균</Text>
+                <Text style={styles.averageLabel}>{t('health.statusResults.average')}</Text>
               </View>
               <Text style={styles.userLevelLabel}>{userLevel}</Text>
               <Text style={styles.comparisonLabel}>10</Text>
@@ -118,7 +120,7 @@ export default function HealthStatusResultsScreen() {
 
         {/* 항목별 분석결과 */}
         <View style={styles.itemsSection}>
-          <Text style={styles.sectionTitle}>항목별 분석결과</Text>
+          <Text style={styles.sectionTitle}>{t('health.statusResults.itemsTitle')}</Text>
           
           {/* 버블 차트 */}
           <View style={styles.bubbleChart}>
@@ -131,8 +133,8 @@ export default function HealthStatusResultsScreen() {
                     width: getBubbleSize(item.size),
                     height: getBubbleSize(item.size),
                     borderRadius: getBubbleSize(item.size) / 2,
-                    backgroundColor: getStatusColor(item.status) + '20',
-                    borderColor: getStatusColor(item.status),
+                    backgroundColor: getStatusColor(item.statusKey) + '20',
+                    borderColor: getStatusColor(item.statusKey),
                     borderWidth: 2,
                   },
                 ]}
@@ -140,7 +142,7 @@ export default function HealthStatusResultsScreen() {
                 <Text style={[styles.bubbleText, { fontSize: item.size === 'large' ? 12 : item.size === 'medium' ? 10 : 8 }]}>
                   {item.name}
                 </Text>
-                <Text style={[styles.bubbleStatus, { color: getStatusColor(item.status), fontSize: item.size === 'large' ? 10 : 8 }]}>
+                <Text style={[styles.bubbleStatus, { color: getStatusColor(item.statusKey), fontSize: item.size === 'large' ? 10 : 8 }]}>
                   {item.status}
                 </Text>
               </View>
@@ -150,7 +152,7 @@ export default function HealthStatusResultsScreen() {
 
         {/* 서비스별 분석결과 */}
         <View style={styles.serviceSection}>
-          <Text style={styles.sectionTitle}>서비스별 분석결과</Text>
+          <Text style={styles.sectionTitle}>{t('health.statusResults.serviceTitle')}</Text>
           
           <TouchableOpacity 
             style={styles.serviceCard}
@@ -159,7 +161,7 @@ export default function HealthStatusResultsScreen() {
             <View style={styles.serviceIcon}>
               <Ionicons name="document-text" size={24} color="#8B5CF6" />
             </View>
-            <Text style={styles.serviceName}>자가진단</Text>
+            <Text style={styles.serviceName}>{t('health.statusResults.serviceName')}</Text>
             <Ionicons name="chevron-forward" size={20} color="#6B7280" />
           </TouchableOpacity>
         </View>

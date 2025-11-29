@@ -231,6 +231,678 @@
         "dailyTrue": "每天是"
       }
     }
+  },
+  "food": {
+    "search": {
+      "title": "食品搜索",
+      "placeholder": "请输入食品名称",
+      "info": {
+        "registered": "• 我们分析在食品药品安全处注册的产品",
+        "unregistered": "• 未在食品药品安全处注册的海外直购食品无法搜索",
+        "input": "• 输入产品名称时，请注意空格和拼写，准确输入"
+      },
+      "empty": {
+        "noResults": "没有搜索结果",
+        "enterFood": "请输入食品名称进行搜索"
+      },
+      "loading": "搜索中...",
+      "manufacturer": "制造商:",
+      "analyzeButton": "申请分析"
+    },
+    "searchResult": {
+      "title": "食品搜索结果",
+      "tabs": {
+        "detail": "详细信息",
+        "ranking": "营养排名"
+      },
+      "category": "分类类别",
+      "categoryCount": "类别食品数量",
+      "analysisResult": "分析结果",
+      "topPercent": "上位",
+      "analysisTitle": "主要成分分析",
+      "analysisLabels": {
+        "lowCalorie": "低卡路里",
+        "lowCarb": "低碳水",
+        "highProtein": "高蛋白",
+        "lowFat": "低脂肪",
+        "lowSodium": "低钠",
+        "lowSugar": "低糖"
+      },
+      "scale": {
+        "top": "上位",
+        "bottom": "下位"
+      },
+      "footerNote": "基于食品一次提供量进行分析。",
+      "rankingTitle": "果蔬汁类别 TOP 10",
+      "serving": "一次提供量:",
+      "viewAllButton": "查看全部营养成分",
+      "compareButton": "比较营养成分"
+    },
+    "nutritionDetail": {
+      "title": "查看全部营养成分",
+      "serving": {
+        "perServing": "一次提供量",
+        "totalContent": "总含量"
+      },
+      "guide": {
+        "title": "如何阅读营养成分表",
+        "text": "营养成分表以一次提供量为基准显示，表示每日营养素标准值的百分比(%)。"
+      },
+      "sections": {
+        "caloriesMajor": "热量及三大营养素(3个)",
+        "minerals": "矿物质(1个)"
+      },
+      "nutrients": {
+        "energy": "能量",
+        "carbs": "碳水化合物",
+        "totalFiber": "总膳食纤维"
+      }
+    },
+    "nutritionCompare": {
+      "title": "比较营养成分",
+      "vs": "VS",
+      "servingLabel": "一次提供量",
+      "sections": {
+        "caloriesMajor": "热量及三大营养素",
+        "minerals": "矿物质"
+      },
+      "nutrients": {
+        "energy": "能量",
+        "carbs": "碳水化合物",
+        "totalSugar": "总糖类",
+        "totalFiber": "总膳食纤维",
+        "sodium": "钠",
+        "calcium": "钙",
+        "iron": "铁"
+      },
+      "addFoodButton": "添加食品"
+    }
+  },
+  "health": {
+    "geneticTest": {
+      "title": "基因检测",
+      "noData": "没有检测信息。",
+      "addMessage": "请添加您的基因检测结果。",
+      "addButton": "添加检测",
+      "note": "※ 此服务面向提示合作伙伴会员提供。\n未来将向普通会员提供服务。"
+    },
+    "checkupAuth": {
+      "title": "加载健康检查结果",
+      "message": "加载健康检查结果\n需要认证！",
+      "kakaoButton": "Kakao简易认证",
+      "certificateButton": "共同认证书认证"
+    },
+    "checkupLoad": {
+      "title": "加载健康检查结果",
+      "message": "请添加您的健康检查结果。",
+      "addButton": "添加检查结果"
+    },
+    "statusMain": {
+      "title": "了解我的健康状况",
+      "userLevel": "{name}的健康水平？",
+      "levelText": "健康水平",
+      "levelBadge": "水平{level}注意阶段",
+      "levelDescription": "需要仔细管理以改善状态",
+      "manageTitle": "我应该先管理什么？",
+      "status": {
+        "danger": "危险",
+        "caution": "注意"
+      },
+      "items": {
+        "obesity": "肥胖/体脂肪",
+        "metabolism": "代谢调节",
+        "scalp": "头皮屑头皮"
+      },
+      "addTitle": "您想添加健康信息吗？",
+      "timeRequired": "大约需要{time}",
+      "addItems": {
+        "selfDiagnosis": "自我诊断",
+        "healthCheckup": "健康检查结果",
+        "detailedAnalysis": "其他精密分析"
+      },
+      "habitTitle": "建立健康习惯",
+      "habitDescription": "With是建立健康习惯的挑战活动",
+      "habitItems": {
+        "recruiting": "招募中的With",
+        "recruitingSubtitle": "免费参加并获得奖励",
+        "ended": "已结束的With",
+        "endedSubtitle": "查看结果并获得奖励"
+      }
+    },
+    "statusResults": {
+      "title": "全部结果",
+      "summary": "{name}的健康水平是水平{level}，",
+      "summaryHighlight": "高于同龄男性平均水平",
+      "average": "平均",
+      "itemsTitle": "项目分析结果",
+      "items": {
+        "obesity": "肥胖/体脂肪",
+        "metabolism": "代谢调节",
+        "scalp": "头皮屑头皮",
+        "liver": "肝脏健康",
+        "bone": "骨骼/关节健康",
+        "sleep": "睡眠/压力",
+        "circulation": "血液循环改善",
+        "immunity": "免疫/抗氧化",
+        "acne": "炎症性痤疮",
+        "digestion": "消化健康",
+        "eye": "眼部健康",
+        "muscle": "肌肉代谢",
+        "brain": "大脑/记忆力"
+      },
+      "status": {
+        "danger": "危险",
+        "caution": "注意",
+        "interest": "关注",
+        "good": "良好"
+      },
+      "serviceTitle": "服务分析结果",
+      "serviceName": "自我诊断"
+    }
+  },
+  "medication": {
+    "add": {
+      "title": "药品注册",
+      "scanButton": "追加扫描",
+      "searchButton": "药品搜索",
+      "prescribedLabel": "处方药",
+      "prescriptionDate": "处方日期",
+      "medicationPeriod": "服药期间",
+      "datePlaceholder": "选择日期",
+      "periodPlaceholder": "选择服药期间",
+      "saveButton": "保存",
+      "alertTitle": "通知",
+      "alertMessage": "处理成功",
+      "alertConfirm": "确认",
+      "errorTitle": "输入错误",
+      "errorMessage": "请填写所有字段。",
+      "scanAlert": "追加扫描",
+      "scanAlertMessage": "请实现追加扫描功能。"
+    },
+    "detail": {
+      "title": "详细信息",
+      "registeredTitle": "已注册药品",
+      "period": "服药期间",
+      "description": "该药品没有关于营养素相互作用的信息",
+      "source": "(来源: NIH, Drugs.com, 处方药物指南, 维生素治疗)"
+    },
+    "record": {
+      "title": "服药记录",
+      "months": {
+        "1": "1月",
+        "2": "2月",
+        "3": "3月",
+        "4": "4月",
+        "5": "5月",
+        "6": "6月",
+        "7": "7月",
+        "8": "8月",
+        "9": "9月",
+        "10": "10月",
+        "11": "11月",
+        "12": "12月"
+      },
+      "weekDays": {
+        "sun": "日",
+        "mon": "一",
+        "tue": "二",
+        "wed": "三",
+        "thu": "四",
+        "fri": "五",
+        "sat": "六"
+      },
+      "dateInfo": "{day}日({dayOfWeek})",
+      "emptyMessage": "没有正在服用的药品",
+      "addButton": "添加记录"
+    },
+    "search": {
+      "title": "药品搜索",
+      "placeholder": "请输入药品名称（例如：泰诺）",
+      "empty": {
+        "noResults": "没有搜索结果",
+        "enterMedication": "请输入药品名称进行搜索"
+      },
+      "loading": "搜索中...",
+      "addButton": "添加"
+    }
+  },
+  "nutrition": {
+    "search": {
+      "title": "定制搜索",
+      "guideText": "请选择以下项目进行定制搜索",
+      "infoLink": "什么是定制护理搜索？",
+      "managementLabel": "选择管理项目",
+      "managementHint": "请选择所需项目",
+      "categoryLabel": "要分析的产品/服务类别",
+      "categoryInfo": "搜索产品和服务信息 >",
+      "managementModalTitle": "选择管理项目",
+      "categoryModalTitle": "选择产品/服务类别项目",
+      "scanButton": "扫描产品名称",
+      "searchButton": "搜索产品名称",
+      "managementOptions": {
+        "oilySkin": "皮脂过多（护肤算法推荐）",
+        "redness": "红潮",
+        "dryness": "干燥",
+        "sensitivity": "敏感性",
+        "trouble": "问题",
+        "antiAging": "抗衰老"
+      },
+      "categoryOptions": {
+        "healthFood": "健康功能食品",
+        "cosmetics": "化妆品",
+        "medicalDevice": "医疗器械",
+        "food": "食品",
+        "dailyGoods": "日用品"
+      }
+    }
+  },
+  "family": {
+    "myFamily": {
+      "title": "我的家庭",
+      "tabs": {
+        "parents": "父母",
+        "friends": "朋友"
+      },
+      "empty": "还没有添加家庭成员",
+      "description": "从定制健康管理到服药期间的营养管理\n用数据来管理吧 😊",
+      "addButton": "添加"
+    }
+  },
+  "obesity": {
+    "overview": {
+      "title": "肥胖/体脂肪",
+      "info": "肥胖是指体脂肪异常过多的状态，分为继发性肥胖（由疾病、遗传、药物等引起）和原发性肥胖（由生活习惯引起），其中原发性肥胖占90%以上。它可能引起2型糖尿病、高血压、高脂血症等多种健康问题，因此需要通过饮食疗法、运动和行为控制来预防和改善。",
+      "illustrationLabel": "人体插图",
+      "statusSummary": "{name}的肥胖/体脂肪状态处于危险水平\n低于同龄男性平均水平。",
+      "riskLabels": {
+        "danger": "危险",
+        "average": "平均",
+        "good": "良好"
+      },
+      "analysisTitle": "肥胖/体脂肪状态分析",
+      "analysisItems": {
+        "lifestyle": "生活习惯",
+        "chronicDisease": "慢性疾病"
+      }
+    }
+  },
+  "previousResult": {
+    "title": "之前的结果",
+    "scoreGood": "{percentage}%良好",
+    "productName": "产品名称",
+    "healthItem": "健康项目",
+    "detailsButton": "查看详细结果",
+    "guideTitle": "结果解读指南",
+    "interpretation": {
+      "high": {
+        "title": "高 (80-100%)",
+        "description": "与个人健康状况非常匹配的产品。"
+      },
+      "good": {
+        "title": "良好 (60-79%)",
+        "description": "与个人健康状况匹配的产品。"
+      },
+      "normal": {
+        "title": "普通 (40-59%)",
+        "description": "与个人健康状况中等匹配的产品。"
+      },
+      "low": {
+        "title": "低 (0-39%)",
+        "description": "与个人健康状况不匹配的产品。"
+      }
+    },
+    "recommendationTitle": "推荐事项",
+    "recommendations": {
+      "1": "当前产品适合管理皮脂过多。",
+      "2": "定期服用可以最大化效果。",
+      "3": "3个月后通过重新检查来确认效果。"
+    },
+    "newSearchButton": "新搜索"
+  },
+  "productScan": {
+    "title": "扫描产品名称",
+    "instruction": "请拍摄包含产品包装上[产品名称]文字的照片。",
+    "dontShowAgain": "不再显示",
+    "next": "下一步",
+    "scanComplete": "扫描完成",
+    "scanCompleteMessage": "产品已被识别。",
+    "cancel": "取消",
+    "confirm": "确认",
+    "resultTitle": "扫描结果",
+    "productName": "产品名称",
+    "foodType": "食品类型",
+    "reportNumber": "项目报告编号",
+    "distributor": "流通专业销售商"
+  },
+  "productSearch": {
+    "title": "产品选择",
+    "placeholder": "请输入产品名称（例如：益生菌）",
+    "infoTitle": "以下情况产品将无法搜索",
+    "infoItems": {
+      "1": "• 注册为一般药品的营养品",
+      "2": "• 未在食品药品安全处注册的海外直购营养品",
+      "3": "• 2018年之前注册的产品"
+    },
+    "inputNote": "输入产品名称时，请注意空格和拼写，准确输入",
+    "searching": "搜索中...",
+    "analyzeButton": "申请分析"
+  },
+  "profileEdit": {
+    "title": "修改我的信息",
+    "saveButton": "保存",
+    "saveSuccess": "保存完成",
+    "saveSuccessMessage": "信息已成功保存。",
+    "phoneNumber": "手机号码",
+    "phonePlaceholder": "请输入手机号码",
+    "birthDate": "出生日期",
+    "birthPlaceholder": "YYYY-MM-DD",
+    "gender": "性别",
+    "male": "男性",
+    "female": "女性",
+    "nickname": "昵称",
+    "nicknamePlaceholder": "请输入昵称",
+    "nicknameHint": "请输入2-6个字符的韩文或英文。",
+    "bodyInfo": "身体信息",
+    "height": "身高",
+    "weight": "体重",
+    "changeButton": "更改",
+    "email": "电子邮件",
+    "emailPlaceholder": "请输入电子邮件",
+    "address": "地址",
+    "addressPlaceholder": "请输入地址",
+    "channel": "频道设置",
+    "snsLink": "SNS账户关联",
+    "kakao": "Kakao",
+    "apple": "Apple",
+    "linked": "关联完成",
+    "connect": "连接",
+    "findPassword": "找回密码",
+    "findPasswordMessage": "请实现找回密码功能。",
+    "logout": "登出",
+    "logoutMessage": "您确定要登出吗？",
+    "withdrawal": "退出会员",
+    "withdrawalMessage": "您确定要退出会员吗？",
+    "withdraw": "退出"
+  },
+  "resultComparison": {
+    "title": "结果比较",
+    "tabs": {
+      "health": "健康",
+      "skin": "皮肤",
+      "scalp": "头皮脱发"
+    },
+    "comparison": {
+      "previous": "之前",
+      "recent": "最近"
+    },
+    "chartPlaceholder": "雷达图",
+    "chartDescriptions": {
+      "health": "血液循环改善、代谢调节、免疫抗氧化、肥胖体脂肪",
+      "skin": "油性皮肤、色素皮肤、敏感皮肤、干燥皮肤、老化皮肤",
+      "scalp": "干燥头皮、脱发、油性头皮、头皮屑、敏感头皮"
+    },
+    "table": {
+      "item": "项目",
+      "previous": "之前",
+      "recent": "最近"
+    },
+    "status": {
+      "danger": "危险",
+      "caution": "注意",
+      "interest": "关注",
+      "good": "良好"
+    },
+    "healthItems": {
+      "circulation": "血液循环改善",
+      "metabolism": "代谢调节",
+      "immunity": "免疫抗氧化",
+      "obesity": "肥胖体脂肪"
+    },
+    "skinItems": {
+      "oily": "油性皮肤",
+      "pigment": "色素皮肤",
+      "sensitive": "敏感皮肤",
+      "dry": "干燥皮肤",
+      "aging": "老化皮肤"
+    },
+    "scalpItems": {
+      "dry": "干燥头皮",
+      "hairLoss": "脱发",
+      "oily": "油性头皮",
+      "dandruff": "头皮屑",
+      "sensitive": "敏感头皮"
+    }
+  },
+  "selfDiagnosis": {
+    "add": {
+      "title": "添加自我诊断",
+      "infoText": "如果您勾选以下项目，我们可以提供更精确的营养管理",
+      "nextButton": "下一步",
+      "cards": {
+        "basicHealth": {
+          "title": "基础健康",
+          "description": "我想检查我的基础健康状况",
+          "duration": "约30秒"
+        },
+        "chronicDisease": {
+          "title": "慢性疾病",
+          "description": "我目前患有疾病，正在服药（管理中）",
+          "duration": "约15秒"
+        },
+        "lifestyle": {
+          "title": "饮食/生活习惯",
+          "description": "我想了解我当前的饮食/生活习惯状态",
+          "duration": "约2分30秒"
+        },
+        "symptoms": {
+          "title": "自觉症状",
+          "description": "我有目前感觉到的自觉症状",
+          "duration": "约5分钟"
+        },
+        "skinHealth": {
+          "title": "皮肤健康",
+          "description": "我想了解我当前的皮肤状况",
+          "duration": "约3分钟"
+        },
+        "scalpHealth": {
+          "title": "头皮健康",
+          "description": "我想了解我当前的头皮状况",
+          "duration": "约2分钟"
+        }
+      }
+    },
+    "addModify": {
+      "title": "添加和修改自我诊断",
+      "instruction": "请选择要修改的项目",
+      "additionalInstruction": "如果您勾选以下项目，我们可以提供更精确的营养管理",
+      "nextButton": "下一步"
+    },
+    "complete": {
+      "title": "自我诊断",
+      "addModifyButton": "添加和修改",
+      "diagnosisMonth": "诊断月份",
+      "diagnosisItem": "诊断项目",
+      "detailedResults": "详细结果"
+    },
+    "detail": {
+      "title": "自我诊断结果",
+      "skinHealth": "皮肤健康",
+      "status": {
+        "good": "良好",
+        "warning": "注意"
+      },
+      "indicators": {
+        "tZoneSebum": "T区皮脂状态",
+        "uZoneSebum": "U区皮脂状态",
+        "skinBarrier": "皮肤屏障功能",
+        "eyeMuscles": "眼部肌肉",
+        "skinExfoliation": "皮肤角质周期",
+        "skinMoisture": "皮肤保湿因子",
+        "skinDamage": "皮肤损伤",
+        "uvDamage": "紫外线皮肤损伤",
+        "skinSebum": "皮肤皮脂状态",
+        "skinDensity": "皮肤密度",
+        "melanin": "黑色素",
+        "skinRedness": "皮肤红潮",
+        "neckMuscles": "颈部肌肉",
+        "expressionWrinkles": "表情皱纹"
+      }
+    },
+    "results": {
+      "title": "自我诊断结果",
+      "categories": {
+        "diet": "饮食习惯",
+        "lifestyle": "生活习惯",
+        "skinHealth": "皮肤健康"
+      },
+      "status": {
+        "danger": "危险",
+        "caution": "注意",
+        "interest": "关注",
+        "good": "良好"
+      },
+      "dietItems": {
+        "carbDiet": "碳水化合物饮食",
+        "transFatDiet": "反式脂肪饮食",
+        "saturatedFatDiet": "饱和脂肪饮食",
+        "sugarDiet": "糖饮食",
+        "eatingSpeed": "进食速度习惯",
+        "afterMealSnack": "餐后零食习惯",
+        "overeating": "暴食习惯",
+        "sodiumDiet": "钠饮食",
+        "lateNightMeal": "夜宵习惯",
+        "essentialFattyAcidDiet": "必需脂肪酸饮食",
+        "nutritionDiet": "营养饮食",
+        "proteinDiet": "蛋白质饮食"
+      },
+      "lifestyleItems": {
+        "smoking": "吸烟状态",
+        "activityMetabolism": "活动代谢量",
+        "brainActivity": "大脑活动",
+        "sleepRhythm": "睡眠生物节律",
+        "waterIntake": "水分摄入",
+        "uvExposure": "紫外线暴露",
+        "basalMetabolism": "基础代谢量",
+        "caffeineIntake": "咖啡因摄入",
+        "jointFunction": "关节功能",
+        "alcoholIntake": "酒精摄入"
+      },
+      "skinHealthItems": {
+        "uZoneSebum": "U区皮脂状态",
+        "tZoneSebum": "T区皮脂状态",
+        "skinBarrier": "皮肤屏障功能",
+        "skinSebum": "皮肤皮脂状态",
+        "uvDamage": "紫外线皮肤损伤",
+        "skinDamage": "皮肤损伤",
+        "skinMoisture": "皮肤保湿因子",
+        "skinExfoliation": "皮肤角质周期",
+        "eyeMuscles": "眼部肌肉",
+        "skinRedness": "皮肤红潮",
+        "melanin": "黑色素",
+        "skinDensity": "皮肤密度",
+        "photoAging": "光老化",
+        "expressionWrinkles": "表情皱纹"
+      }
+    }
+  },
+  "stressHeartrate": {
+    "statistics": {
+      "title": "压力/心率统计",
+      "tabs": {
+        "daily": "日间",
+        "weekly": "周间",
+        "monthly": "月间"
+      },
+      "emptyTitle": "至少3天以上",
+      "emptyText": "请测量压力/心率。"
+    },
+    "main": {
+      "title": "压力/心率",
+      "noRecord": "还没有记录。",
+      "fingerMeasurement": "手指测量",
+      "faceMeasurement": "面部测量",
+      "months": {
+        "1": "1月",
+        "2": "2月",
+        "3": "3月",
+        "4": "4月",
+        "5": "5月",
+        "6": "6月",
+        "7": "7月",
+        "8": "8月",
+        "9": "9月",
+        "10": "10月",
+        "11": "11月",
+        "12": "12月"
+      },
+      "weekDays": {
+        "sun": "日",
+        "mon": "一",
+        "tue": "二",
+        "wed": "三",
+        "thu": "四",
+        "fri": "五",
+        "sat": "六"
+      },
+      "dateInfo": "{day}日({dayOfWeek})"
+    },
+    "measurement": {
+      "title": "压力/心率测量",
+      "active": {
+        "coverCamera": "遮挡后置摄像头",
+        "coverInstruction": "看着圆圈内的屏幕，用手指遮挡后置摄像头",
+        "startButton": "开始测量",
+        "warningText": "中间圆圈区域必须全部填满红色！",
+        "iosWarning": "* iOS设备的摄像头传感器很敏感，为了准确测量，请尽量减少移动。",
+        "viewMethodAgain": "再次查看测量方法"
+      },
+      "guide": {
+        "mainInstruction": "用食指遮挡后置摄像头",
+        "subInstruction": "用食指遮挡后置摄像头时，测量会自动开始",
+        "dontShowAgain": "不再显示",
+        "close": "关闭"
+      },
+      "prep": {
+        "step1Title": "坐下",
+        "step1Instruction": "测量期间请坐下并保持平静地测量",
+        "step2Title": "将手放在桌子上，肘部支撑",
+        "step2Instruction": "按照图示调整手臂姿势，使手的高度与心脏位置相似",
+        "next": "下一步",
+        "dontShowAgain": "不再显示"
+      },
+      "result": {
+        "title": "压力/心率结果",
+        "stressScore": "压力分数",
+        "scoreAdvice": "保持心情放松会更好",
+        "heartRate": "心率",
+        "heartRateUnit": "次/分",
+        "status": {
+          "interest": "关注",
+          "good": "良好"
+        },
+        "rangeDescription": "我同龄人的静息心率范围",
+        "stressAccumulation": "压力积累会怎样？",
+        "symptomsTitle": "压力症状:",
+        "symptoms": {
+          "1": "焦虑和紧张",
+          "2": "失眠",
+          "3": "内疚、自责",
+          "4": "过度沉迷于刺激性活动（游戏、手机）",
+          "5": "无精打采",
+          "6": "消化不良",
+          "7": "头痛和头晕"
+        },
+        "specialistAdvice": "如果上述症状持续出现，请咨询专家",
+        "accuracyTitle": "准确性信息",
+        "accuracyText": "上述结果通过DeepMedi提供，并按以下准确性进行分析。",
+        "accuracyItems": {
+          "stress": "压力指数: 95%准确性（KCL认证测试成绩）",
+          "heartRate": "心率: 98%准确性（KTL和KCL认证测试成绩）"
+        },
+        "disclaimer": "压力指数/心率测量服务不是医疗设备，本服务的目的不是用于疾病的诊断、治疗、缓解、处理或预防。",
+        "completeButton": "分析完成"
+      }
+    }
   }
 }
 

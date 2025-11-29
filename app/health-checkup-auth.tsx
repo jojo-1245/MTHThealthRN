@@ -1,18 +1,20 @@
+import { useTranslation } from '@/i18n';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React from 'react';
 import {
-    Dimensions,
-    StatusBar,
-    StyleSheet,
-    Text,
-    TouchableOpacity,
-    View
+  Dimensions,
+  StatusBar,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View
 } from 'react-native';
 
 const { width, height } = Dimensions.get('window');
 
 export default function HealthCheckupAuthScreen() {
+  const { t } = useTranslation();
   const handleBack = () => {
     router.back();
   };
@@ -36,7 +38,7 @@ export default function HealthCheckupAuthScreen() {
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>건강검진 결과 불러오기</Text>
+        <Text style={styles.headerTitle}>{t('health.checkupAuth.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
@@ -52,8 +54,7 @@ export default function HealthCheckupAuthScreen() {
         {/* 안내 메시지 */}
         <View style={styles.messageContainer}>
           <Text style={styles.messageText}>
-            건강검진 결과를 불러오려면{'\n'}
-            인증이 필요해요!
+            {t('health.checkupAuth.message')}
           </Text>
         </View>
 
@@ -64,13 +65,13 @@ export default function HealthCheckupAuthScreen() {
             <View style={styles.kakaoIcon}>
               <Text style={styles.kakaoIconText}>K</Text>
             </View>
-            <Text style={styles.kakaoButtonText}>카카오 간편인증하기</Text>
+            <Text style={styles.kakaoButtonText}>{t('health.checkupAuth.kakaoButton')}</Text>
           </TouchableOpacity>
 
           {/* 공동 인증서 인증 버튼 */}
           <TouchableOpacity style={styles.certificateButton} onPress={handleCertificateAuth}>
             <Ionicons name="shield-checkmark" size={24} color="#fff" />
-            <Text style={styles.certificateButtonText}>공동 인증서 인증하기</Text>
+            <Text style={styles.certificateButtonText}>{t('health.checkupAuth.certificateButton')}</Text>
           </TouchableOpacity>
         </View>
       </View>

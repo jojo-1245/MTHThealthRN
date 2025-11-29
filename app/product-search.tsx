@@ -1,16 +1,18 @@
+import { useTranslation } from '@/i18n';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React, { useState } from 'react';
 import {
-    ScrollView,
-    StyleSheet,
-    Text,
-    TextInput,
-    TouchableOpacity,
-    View,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
 } from 'react-native';
 
 export default function ProductSearch() {
+  const { t } = useTranslation();
   const [searchQuery, setSearchQuery] = useState('');
   const [isSearching, setIsSearching] = useState(false);
 
@@ -39,7 +41,7 @@ export default function ProductSearch() {
         <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>제품선택</Text>
+        <Text style={styles.headerTitle}>{t('productSearch.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
@@ -52,7 +54,7 @@ export default function ProductSearch() {
               style={styles.searchInput}
               value={searchQuery}
               onChangeText={setSearchQuery}
-              placeholder="제품명을 입력하세요. (ex 프로바이오)"
+              placeholder={t('productSearch.placeholder')}
               placeholderTextColor="#999"
               autoFocus={true}
               returnKeyType="search"
@@ -72,12 +74,12 @@ export default function ProductSearch() {
           <View style={styles.infoItem}>
             <View style={styles.infoHeader}>
               <Ionicons name="information-circle" size={16} color="#666" />
-              <Text style={styles.infoTitle}>아래 경우에는 제품이 검색되지 않아요</Text>
+              <Text style={styles.infoTitle}>{t('productSearch.infoTitle')}</Text>
             </View>
             <View style={styles.infoList}>
-              <Text style={styles.infoListItem}>• 일반 의약품으로 등록된 영양제</Text>
-              <Text style={styles.infoListItem}>• 식약처에 등록되지 않은 해외 직구 영양제</Text>
-              <Text style={styles.infoListItem}>• 2018년 이전에 등록된 제품</Text>
+              <Text style={styles.infoListItem}>{t('productSearch.infoItems.1')}</Text>
+              <Text style={styles.infoListItem}>{t('productSearch.infoItems.2')}</Text>
+              <Text style={styles.infoListItem}>{t('productSearch.infoItems.3')}</Text>
             </View>
           </View>
 
@@ -85,7 +87,7 @@ export default function ProductSearch() {
           <View style={styles.infoItem}>
             <View style={styles.infoHeader}>
               <Ionicons name="information-circle" size={16} color="#666" />
-              <Text style={styles.infoTitle}>제품명 입력 시 띄어쓰기, 맞춤법에 유의하여 정확하게 입력하세요</Text>
+              <Text style={styles.infoTitle}>{t('productSearch.inputNote')}</Text>
             </View>
           </View>
         </View>
@@ -99,7 +101,7 @@ export default function ProductSearch() {
           disabled={!searchQuery.trim() || isSearching}
         >
           <Text style={[styles.analyzeButtonText, (!searchQuery.trim() || isSearching) && styles.analyzeButtonTextDisabled]}>
-            {isSearching ? '검색 중...' : '분석신청'}
+            {isSearching ? t('productSearch.searching') : t('productSearch.analyzeButton')}
           </Text>
         </TouchableOpacity>
       </View>

@@ -1,3 +1,4 @@
+import { useTranslation } from '@/i18n';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React, { useState } from 'react';
@@ -14,6 +15,7 @@ import {
 const { width, height } = Dimensions.get('window');
 
 export default function MyFamilyScreen() {
+  const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState<'parents' | 'friends'>('parents');
 
   const handleBack = () => {
@@ -33,7 +35,7 @@ export default function MyFamilyScreen() {
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>나의 패밀리</Text>
+        <Text style={styles.headerTitle}>{t('family.myFamily.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
@@ -44,7 +46,7 @@ export default function MyFamilyScreen() {
           onPress={() => setActiveTab('parents')}
         >
           <Text style={[styles.tabText, activeTab === 'parents' && styles.activeTabText]}>
-            부모님
+            {t('family.myFamily.tabs.parents')}
           </Text>
         </TouchableOpacity>
         <TouchableOpacity
@@ -52,7 +54,7 @@ export default function MyFamilyScreen() {
           onPress={() => setActiveTab('friends')}
         >
           <Text style={[styles.tabText, activeTab === 'friends' && styles.activeTabText]}>
-            프렌즈
+            {t('family.myFamily.tabs.friends')}
           </Text>
         </TouchableOpacity>
       </View>
@@ -65,11 +67,10 @@ export default function MyFamilyScreen() {
             <Ionicons name="warning" size={60} color="#F59E0B" />
           </View>
           
-          <Text style={styles.emptyText}>아직 추가된 패밀리가 없어요</Text>
+          <Text style={styles.emptyText}>{t('family.myFamily.empty')}</Text>
           
           <Text style={styles.descriptionText}>
-            맞춤 건강관리부터 복약 중 영양관리까지{'\n'}
-            데이터로 관리해보세요 😊
+            {t('family.myFamily.description')}
           </Text>
         </View>
       </ScrollView>
@@ -77,7 +78,7 @@ export default function MyFamilyScreen() {
       {/* 하단 추가 버튼 */}
       <View style={styles.bottomContainer}>
         <TouchableOpacity style={styles.addButton} onPress={handleAddFamily}>
-          <Text style={styles.addButtonText}>추가하기</Text>
+          <Text style={styles.addButtonText}>{t('family.myFamily.addButton')}</Text>
         </TouchableOpacity>
       </View>
     </View>
