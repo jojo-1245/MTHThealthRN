@@ -26,6 +26,11 @@
     "search": "Cari",
     "selfDiagnosis": "Diagnosis Mandiri"
   },
+  "surveyResult": {
+    "title": "Diagnosis",
+    "completionMessage": "Pemeriksaan kesehatan kulit{'\n'}telah selesai.",
+    "saveButton": "Simpan"
+  },
   "breathing": {
     "title": "Pengukuran Pernapasan",
     "breathingRateTitle": "Pengukuran Laju Pernapasan",
@@ -902,6 +907,68 @@
         "disclaimer": "Layanan pengukuran indeks stres / detak jantung bukanlah perangkat medis, dan tujuan layanan ini bukan untuk diagnosis, pengobatan, peredaan, penanganan, atau pencegahan penyakit.",
         "completeButton": "Analisis Selesai"
       }
+    }
+  },
+  "weight": {
+    "title": "Berat Badan",
+    "detailRecord": {
+      "title": "Catatan Detail",
+      "instruction": "Silakan masukkan berat badan hari ini.",
+      "infoMorning": "Kami merekomendasikan pengukuran di pagi hari untuk pengukuran yang akurat",
+      "infoDecimal": "Anda dapat memasukkan hingga satu desimal",
+      "cancel": "Batal",
+      "save": "Simpan"
+    },
+    "main": {
+      "title": "Berat Badan",
+      "year": "",
+      "month": "",
+      "weekDays": {
+        "sun": "MING",
+        "mon": "SEN",
+        "tue": "SEL",
+        "wed": "RAB",
+        "thu": "KAM",
+        "fri": "JUM",
+        "sat": "SAB"
+      },
+      "dayFormat": "",
+      "connectScale": "Hubungkan Timbangan",
+      "edit": "Edit",
+      "measurementDetail": "Hasil Detail Pengukuran Berat Badan"
+    },
+    "measurement": {
+      "title": "Ukur Berat Badan",
+      "instruction": "Nyalakan Bluetooth di smartphone Anda{'\n'}dan tekan tombol 'Ukur'",
+      "infoBluetooth": "Harap periksa apakah Bluetooth sudah menyala",
+      "infoScale": "Harap periksa apakah timbangan sudah menyala",
+      "infoStand": "Harap naik ke timbangan untuk mengukur",
+      "measureButton": "Ukur"
+    },
+    "statistics": {
+      "title": "Statistik Catatan Berat Badan",
+      "tabs": {
+        "daily": "Harian",
+        "weekly": "Mingguan",
+        "monthly": "Bulanan"
+      },
+      "chartTitle": "Berat Badan(kg)",
+      "emptyText": "Belum ada catatan.",
+      "emptySubText": "Mulai mencatat berat badan Anda.",
+      "smartScaleTitle": "Hubungkan timbangan pintar",
+      "smartScaleSubtitle1": "untuk mengelola BMI, persentase lemak tubuh,",
+      "smartScaleSubtitle2": "dan kadar air tubuh bersama-sama."
+    }
+  },
+  "with": {
+    "event": {
+      "title": "Acara With",
+      "tabs": {
+        "recruiting": "Merekrut",
+        "ongoing": "Berlangsung"
+      },
+      "emptyRecruiting": "Tidak ada acara With yang sedang direkrut",
+      "emptyOngoing": "Tidak ada acara With yang sedang berlangsung"
     }
   }
 }

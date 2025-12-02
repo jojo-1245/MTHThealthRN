@@ -26,6 +26,11 @@
     "search": "搜索",
     "selfDiagnosis": "自我诊断"
   },
+  "surveyResult": {
+    "title": "诊断",
+    "completionMessage": "皮肤健康检查{'\n'}已完成。",
+    "saveButton": "保存"
+  },
   "breathing": {
     "title": "呼吸测量",
     "breathingRateTitle": "呼吸频率测量",
@@ -902,6 +907,68 @@
         "disclaimer": "压力指数/心率测量服务不是医疗设备，本服务的目的不是用于疾病的诊断、治疗、缓解、处理或预防。",
         "completeButton": "分析完成"
       }
+    }
+  },
+  "weight": {
+    "title": "体重",
+    "detailRecord": {
+      "title": "详细记录",
+      "instruction": "请输入今天的体重。",
+      "infoMorning": "建议在早上测量以获得准确的测量结果",
+      "infoDecimal": "可以输入到小数点后一位",
+      "cancel": "取消",
+      "save": "保存"
+    },
+    "main": {
+      "title": "体重",
+      "year": "年",
+      "month": "月",
+      "weekDays": {
+        "sun": "日",
+        "mon": "月",
+        "tue": "火",
+        "wed": "水",
+        "thu": "木",
+        "fri": "金",
+        "sat": "土"
+      },
+      "dayFormat": "日",
+      "connectScale": "连接体重秤",
+      "edit": "编辑",
+      "measurementDetail": "体重测量详细结果"
+    },
+    "measurement": {
+      "title": "测量体重",
+      "instruction": "打开智能手机的蓝牙{'\n'}然后按'测量'按钮",
+      "infoBluetooth": "请检查蓝牙是否已打开",
+      "infoScale": "请检查体重秤是否已打开",
+      "infoStand": "请站在体重秤上进行测量",
+      "measureButton": "测量"
+    },
+    "statistics": {
+      "title": "体重记录统计",
+      "tabs": {
+        "daily": "每日",
+        "weekly": "每周",
+        "monthly": "每月"
+      },
+      "chartTitle": "体重(kg)",
+      "emptyText": "还没有记录。",
+      "emptySubText": "开始记录您的体重。",
+      "smartScaleTitle": "连接智能体重秤",
+      "smartScaleSubtitle1": "以管理BMI、体脂率、",
+      "smartScaleSubtitle2": "和体水分含量。"
+    }
+  },
+  "with": {
+    "event": {
+      "title": "With活动",
+      "tabs": {
+        "recruiting": "招募中",
+        "ongoing": "进行中"
+      },
+      "emptyRecruiting": "没有招募中的With活动",
+      "emptyOngoing": "没有进行中的With活动"
     }
   }
 }

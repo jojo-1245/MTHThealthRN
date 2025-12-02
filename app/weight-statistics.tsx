@@ -1,3 +1,4 @@
+import { useTranslation } from '@/i18n';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React, { useState } from 'react';
@@ -14,7 +15,8 @@ import {
 const { width, height } = Dimensions.get('window');
 
 export default function WeightStatisticsScreen() {
-  const [activeTab, setActiveTab] = useState('일간');
+  const { t } = useTranslation();
+  const [activeTab, setActiveTab] = useState(t('weight.statistics.tabs.daily'));
 
   const handleBack = () => {
     router.back();
@@ -26,9 +28,9 @@ export default function WeightStatisticsScreen() {
 
   // Mock 데이터
   const weightData = {
-    일간: [69.2, 67.3, 72.2, 68.2, 62.2, 66.5],
-    주간: [68.5, 69.1, 67.8, 70.2, 69.5, 68.9, 69.3],
-    월간: [69.2, 68.8, 69.5, 68.1, 69.0]
+    [t('weight.statistics.tabs.daily')]: [69.2, 67.3, 72.2, 68.2, 62.2, 66.5],
+    [t('weight.statistics.tabs.weekly')]: [68.5, 69.1, 67.8, 70.2, 69.5, 68.9, 69.3],
+    [t('weight.statistics.tabs.monthly')]: [69.2, 68.8, 69.5, 68.1, 69.0]
   };
 
   const currentData = weightData[activeTab as keyof typeof weightData] || [];
@@ -38,8 +40,8 @@ export default function WeightStatisticsScreen() {
       return (
         <View style={styles.emptyChartContainer}>
           <Ionicons name="warning" size={24} color="#F59E0B" />
-          <Text style={styles.emptyText}>아직 기록이 없습니다.</Text>
-          <Text style={styles.emptySubText}>체중기록을 시작해 보세요.</Text>
+          <Text style={styles.emptyText}>{t('weight.statistics.emptyText')}</Text>
+          <Text style={styles.emptySubText}>{t('weight.statistics.emptySubText')}</Text>
         </View>
       );
     }
@@ -74,7 +76,7 @@ export default function WeightStatisticsScreen() {
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>체중기록 통계</Text>
+        <Text style={styles.headerTitle}>{t('weight.statistics.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
@@ -82,7 +84,11 @@ export default function WeightStatisticsScreen() {
       <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
         {/* 탭 메뉴 */}
         <View style={styles.tabContainer}>
-          {['일간', '주간', '월간'].map((tab) => (
+          {[
+            t('weight.statistics.tabs.daily'),
+            t('weight.statistics.tabs.weekly'),
+            t('weight.statistics.tabs.monthly')
+          ].map((tab) => (
             <TouchableOpacity
               key={tab}
               style={[styles.tab, activeTab === tab && styles.activeTab]}
@@ -97,7 +103,7 @@ export default function WeightStatisticsScreen() {
 
         {/* 체중 그래프 */}
         <View style={styles.chartSection}>
-          <Text style={styles.chartTitle}>체중(kg)</Text>
+          <Text style={styles.chartTitle}>{t('weight.statistics.chartTitle')}</Text>
           {renderChart()}
         </View>
 
@@ -107,9 +113,9 @@ export default function WeightStatisticsScreen() {
             <Ionicons name="scale" size={40} color="#8B5CF6" />
           </View>
           <View style={styles.scaleTextContainer}>
-            <Text style={styles.scaleTitle}>스마트 체중계를 연결해</Text>
-            <Text style={styles.scaleSubtitle}>BMI, 체지방률, 체수분량도</Text>
-            <Text style={styles.scaleSubtitle}>함께 관리하세요.</Text>
+            <Text style={styles.scaleTitle}>{t('weight.statistics.smartScaleTitle')}</Text>
+            <Text style={styles.scaleSubtitle}>{t('weight.statistics.smartScaleSubtitle1')}</Text>
+            <Text style={styles.scaleSubtitle}>{t('weight.statistics.smartScaleSubtitle2')}</Text>
           </View>
         </View>
       </ScrollView>

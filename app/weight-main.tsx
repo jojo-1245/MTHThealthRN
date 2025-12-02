@@ -1,3 +1,4 @@
+import { useTranslation } from '@/i18n';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React, { useState } from 'react';
@@ -14,6 +15,7 @@ import {
 const { width, height } = Dimensions.get('window');
 
 export default function WeightMainScreen() {
+  const { t } = useTranslation();
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [currentWeight, setCurrentWeight] = useState(91); // kg
 
@@ -41,11 +43,19 @@ export default function WeightMainScreen() {
   const formatDate = (date: Date) => {
     const year = date.getFullYear();
     const month = date.getMonth() + 1;
-    return `${year}년 ${month}월`;
+    return `${year}${t('weight.main.year')} ${month}${t('weight.main.month')}`;
   };
 
   const getDayOfWeek = (date: Date) => {
-    const days = ['일', '월', '화', '수', '목', '금', '토'];
+    const days = [
+      t('weight.main.weekDays.sun'),
+      t('weight.main.weekDays.mon'),
+      t('weight.main.weekDays.tue'),
+      t('weight.main.weekDays.wed'),
+      t('weight.main.weekDays.thu'),
+      t('weight.main.weekDays.fri'),
+      t('weight.main.weekDays.sat')
+    ];
     return days[date.getDay()];
   };
 
@@ -84,7 +94,7 @@ export default function WeightMainScreen() {
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>체중</Text>
+        <Text style={styles.headerTitle}>{t('weight.main.title')}</Text>
         <TouchableOpacity style={styles.statisticsButton} onPress={handleStatistics}>
           <Ionicons name="bar-chart" size={24} color="#8B5CF6" />
         </TouchableOpacity>
@@ -106,7 +116,15 @@ export default function WeightMainScreen() {
 
           {/* 요일 헤더 */}
           <View style={styles.weekdayHeader}>
-            {['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'].map((day, index) => (
+            {[
+              t('weight.main.weekDays.sun'),
+              t('weight.main.weekDays.mon'),
+              t('weight.main.weekDays.tue'),
+              t('weight.main.weekDays.wed'),
+              t('weight.main.weekDays.thu'),
+              t('weight.main.weekDays.fri'),
+              t('weight.main.weekDays.sat')
+            ].map((day, index) => (
               <Text key={index} style={styles.weekdayText}>{day}</Text>
             ))}
           </View>
@@ -140,10 +158,10 @@ export default function WeightMainScreen() {
         <View style={styles.weightInfoContainer}>
           <View style={styles.dateContainer}>
             <Text style={styles.selectedDateText}>
-              {selectedDay}일({getDayOfWeek(selectedDate)})
+              {selectedDay}{t('weight.main.dayFormat')}({getDayOfWeek(selectedDate)})
             </Text>
             <TouchableOpacity style={styles.connectButton} onPress={handleWeightScaleConnect}>
-              <Text style={styles.connectButtonText}>체중계 연결</Text>
+              <Text style={styles.connectButtonText}>{t('weight.main.connectScale')}</Text>
             </TouchableOpacity>
           </View>
 
@@ -161,10 +179,10 @@ export default function WeightMainScreen() {
       {/* 하단 버튼들 */}
       <View style={styles.bottomContainer}>
         <TouchableOpacity style={styles.editButton} onPress={handleEdit}>
-          <Text style={styles.editButtonText}>수정하기</Text>
+          <Text style={styles.editButtonText}>{t('weight.main.edit')}</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.detailButton} onPress={handleRecord}>
-          <Text style={styles.detailButtonText}>체중 측정 상세 결과</Text>
+          <Text style={styles.detailButtonText}>{t('weight.main.measurementDetail')}</Text>
         </TouchableOpacity>
       </View>
     </View>

@@ -82,6 +82,11 @@
       "shallow": "얕게 보인다"
     }
   },
+  "surveyResult": {
+    "title": "진단하기",
+    "completionMessage": "피부건강 체크가{'\n'}완료되었습니다.",
+    "saveButton": "저장하기"
+  },
   "breathing": {
     "title": "호흡 측정",
     "breathingRateTitle": "호흡수 측정",
@@ -1250,6 +1255,68 @@
         "disclaimer": "스트레스 지수 / 심박수 측정 서비스는 의료기기가 아니며, 본 서비스의 목적은 질병의 진단, 치료, 경감, 처치, 예방에 있지 않습니다.",
         "completeButton": "분석 완료"
       }
+    }
+  },
+  "weight": {
+    "title": "체중",
+    "detailRecord": {
+      "title": "상세 기록",
+      "instruction": "오늘 체중을 입력해 주세요.",
+      "infoMorning": "정확한 측정을 위해 아침에 측정하는 것을 권장합니다",
+      "infoDecimal": "소수점 첫째 자리까지 입력 가능합니다",
+      "cancel": "취소",
+      "save": "저장"
+    },
+    "main": {
+      "title": "체중",
+      "year": "년",
+      "month": "월",
+      "weekDays": {
+        "sun": "일",
+        "mon": "월",
+        "tue": "화",
+        "wed": "수",
+        "thu": "목",
+        "fri": "금",
+        "sat": "토"
+      },
+      "dayFormat": "일",
+      "connectScale": "체중계 연결",
+      "edit": "수정하기",
+      "measurementDetail": "체중 측정 상세 결과"
+    },
+    "measurement": {
+      "title": "체중 측정하기",
+      "instruction": "스마트폰의 블루투스를 켜고{'\n'}'측정하기' 버튼을 눌러주세요",
+      "infoBluetooth": "블루투스가 켜져 있는지 확인해주세요",
+      "infoScale": "체중계가 켜져 있는지 확인해주세요",
+      "infoStand": "체중계 위에 올라가서 측정해주세요",
+      "measureButton": "측정하기"
+    },
+    "statistics": {
+      "title": "체중기록 통계",
+      "tabs": {
+        "daily": "일간",
+        "weekly": "주간",
+        "monthly": "월간"
+      },
+      "chartTitle": "체중(kg)",
+      "emptyText": "아직 기록이 없습니다.",
+      "emptySubText": "체중기록을 시작해 보세요.",
+      "smartScaleTitle": "스마트 체중계를 연결해",
+      "smartScaleSubtitle1": "BMI, 체지방률, 체수분량도",
+      "smartScaleSubtitle2": "함께 관리하세요."
+    }
+  },
+  "with": {
+    "event": {
+      "title": "위드 이벤트",
+      "tabs": {
+        "recruiting": "모집중",
+        "ongoing": "진행중"
+      },
+      "emptyRecruiting": "모집중인 위드가 없어요",
+      "emptyOngoing": "진행중인 위드가 없어요"
     }
   }
 }
