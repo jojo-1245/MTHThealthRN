@@ -171,7 +171,7 @@ const styles = StyleSheet.create({
   },
   questionText: {
     fontSize: 18,
-    fontWeight: 'bold',
+    fontWeight: '700',
     color: '#000',
     marginBottom: 8,
     lineHeight: 24,
