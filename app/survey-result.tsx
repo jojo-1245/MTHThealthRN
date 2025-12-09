@@ -1,3 +1,4 @@
+import { useTranslation } from '@/i18n';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React from 'react';
@@ -13,6 +14,8 @@ import {
 const { width, height } = Dimensions.get('window');
 
 export default function SurveyResultScreen() {
+  const { t } = useTranslation();
+  
   const handleSave = () => {
     console.log('설문 결과 저장 완료');
     // 자가진단 마무리 페이지로 이동
@@ -32,7 +35,7 @@ export default function SurveyResultScreen() {
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>진단하기</Text>
+        <Text style={styles.headerTitle}>{t('surveyResult.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
@@ -48,7 +51,7 @@ export default function SurveyResultScreen() {
         {/* 완료 메시지 */}
         <View style={styles.messageContainer}>
           <Text style={styles.completionMessage}>
-            피부건강 체크가{'\n'}완료되었습니다.
+            {t('surveyResult.completionMessage')}
           </Text>
         </View>
       </View>
@@ -59,7 +62,7 @@ export default function SurveyResultScreen() {
           style={styles.saveButton}
           onPress={handleSave}
         >
-          <Text style={styles.saveButtonText}>저장하기</Text>
+          <Text style={styles.saveButtonText}>{t('surveyResult.saveButton')}</Text>
         </TouchableOpacity>
       </View>
     </View>

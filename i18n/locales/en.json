@@ -26,6 +26,11 @@
     "search": "Search",
     "selfDiagnosis": "Self Diagnosis"
   },
+  "surveyResult": {
+    "title": "Diagnosis",
+    "completionMessage": "Skin health check{'\n'}has been completed.",
+    "saveButton": "Save"
+  },
   "breathing": {
     "title": "Breathing Measurement",
     "breathingRateTitle": "Breathing Rate Measurement",
@@ -902,6 +907,68 @@
         "disclaimer": "The stress index / heart rate measurement service is not a medical device, and the purpose of this service is not for diagnosis, treatment, relief, handling, or prevention of diseases.",
         "completeButton": "Analysis Complete"
       }
+    }
+  },
+  "weight": {
+    "title": "Weight",
+    "detailRecord": {
+      "title": "Detail Record",
+      "instruction": "Please enter today's weight.",
+      "infoMorning": "We recommend measuring in the morning for accurate measurement",
+      "infoDecimal": "You can enter up to the first decimal place",
+      "cancel": "Cancel",
+      "save": "Save"
+    },
+    "main": {
+      "title": "Weight",
+      "year": "",
+      "month": "",
+      "weekDays": {
+        "sun": "SUN",
+        "mon": "MON",
+        "tue": "TUE",
+        "wed": "WED",
+        "thu": "THU",
+        "fri": "FRI",
+        "sat": "SAT"
+      },
+      "dayFormat": "",
+      "connectScale": "Connect Scale",
+      "edit": "Edit",
+      "measurementDetail": "Weight Measurement Detail Result"
+    },
+    "measurement": {
+      "title": "Measure Weight",
+      "instruction": "Turn on Bluetooth on your smartphone{'\n'}and press the 'Measure' button",
+      "infoBluetooth": "Please check if Bluetooth is turned on",
+      "infoScale": "Please check if the scale is turned on",
+      "infoStand": "Please step on the scale to measure",
+      "measureButton": "Measure"
+    },
+    "statistics": {
+      "title": "Weight Record Statistics",
+      "tabs": {
+        "daily": "Daily",
+        "weekly": "Weekly",
+        "monthly": "Monthly"
+      },
+      "chartTitle": "Weight(kg)",
+      "emptyText": "No records yet.",
+      "emptySubText": "Start recording your weight.",
+      "smartScaleTitle": "Connect a smart scale",
+      "smartScaleSubtitle1": "to manage BMI, body fat percentage,",
+      "smartScaleSubtitle2": "and body water content together."
+    }
+  },
+  "with": {
+    "event": {
+      "title": "With Event",
+      "tabs": {
+        "recruiting": "Recruiting",
+        "ongoing": "Ongoing"
+      },
+      "emptyRecruiting": "No recruiting With events",
+      "emptyOngoing": "No ongoing With events"
     }
   }
 }

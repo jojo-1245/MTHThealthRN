@@ -1,3 +1,4 @@
+import { useTranslation } from '@/i18n';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React from 'react';
@@ -14,6 +15,8 @@ import {
 const { width, height } = Dimensions.get('window');
 
 export default function WeightMeasurementScreen() {
+  const { t } = useTranslation();
+  
   const handleBack = () => {
     router.back();
   };
@@ -34,7 +37,7 @@ export default function WeightMeasurementScreen() {
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>체중 측정하기</Text>
+        <Text style={styles.headerTitle}>{t('weight.measurement.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
@@ -50,8 +53,7 @@ export default function WeightMeasurementScreen() {
         {/* 안내 텍스트 */}
         <View style={styles.instructionContainer}>
           <Text style={styles.instructionText}>
-            스마트폰의 블루투스를 켜고{'\n'}
-            '측정하기' 버튼을 눌러주세요
+            {t('weight.measurement.instruction')}
           </Text>
         </View>
 
@@ -60,21 +62,21 @@ export default function WeightMeasurementScreen() {
           <View style={styles.infoBox}>
             <Ionicons name="bluetooth" size={24} color="#8B5CF6" />
             <Text style={styles.infoText}>
-              블루투스가 켜져 있는지 확인해주세요
+              {t('weight.measurement.infoBluetooth')}
             </Text>
           </View>
           
           <View style={styles.infoBox}>
             <Ionicons name="scale" size={24} color="#8B5CF6" />
             <Text style={styles.infoText}>
-              체중계가 켜져 있는지 확인해주세요
+              {t('weight.measurement.infoScale')}
             </Text>
           </View>
           
           <View style={styles.infoBox}>
             <Ionicons name="person" size={24} color="#8B5CF6" />
             <Text style={styles.infoText}>
-              체중계 위에 올라가서 측정해주세요
+              {t('weight.measurement.infoStand')}
             </Text>
           </View>
         </View>
@@ -83,7 +85,7 @@ export default function WeightMeasurementScreen() {
       {/* 하단 버튼 */}
       <View style={styles.bottomContainer}>
         <TouchableOpacity style={styles.measureButton} onPress={handleMeasure}>
-          <Text style={styles.measureButtonText}>측정하기</Text>
+          <Text style={styles.measureButtonText}>{t('weight.measurement.measureButton')}</Text>
         </TouchableOpacity>
       </View>
     </View>

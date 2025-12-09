@@ -1,20 +1,22 @@
+import { useTranslation } from '@/i18n';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React, { useState } from 'react';
 import {
-    Dimensions,
-    ScrollView,
-    StatusBar,
-    StyleSheet,
-    Text,
-    TextInput,
-    TouchableOpacity,
-    View,
+  Dimensions,
+  ScrollView,
+  StatusBar,
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
 } from 'react-native';
 
 const { width, height } = Dimensions.get('window');
 
 export default function WeightDetailRecordScreen() {
+  const { t } = useTranslation();
   const [weight, setWeight] = useState('0.0');
 
   const handleBack = () => {
@@ -46,7 +48,7 @@ export default function WeightDetailRecordScreen() {
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>상세 기록</Text>
+        <Text style={styles.headerTitle}>{t('weight.detailRecord.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
@@ -55,7 +57,7 @@ export default function WeightDetailRecordScreen() {
         {/* 안내 텍스트 */}
         <View style={styles.instructionContainer}>
           <Text style={styles.instructionText}>
-            오늘 체중을 입력해 주세요.
+            {t('weight.detailRecord.instruction')}
           </Text>
         </View>
 
@@ -81,14 +83,14 @@ export default function WeightDetailRecordScreen() {
           <View style={styles.infoBox}>
             <Ionicons name="information-circle" size={20} color="#6B7280" />
             <Text style={styles.infoText}>
-              정확한 측정을 위해 아침에 측정하는 것을 권장합니다
+              {t('weight.detailRecord.infoMorning')}
             </Text>
           </View>
           
           <View style={styles.infoBox}>
             <Ionicons name="information-circle" size={20} color="#6B7280" />
             <Text style={styles.infoText}>
-              소수점 첫째 자리까지 입력 가능합니다
+              {t('weight.detailRecord.infoDecimal')}
             </Text>
           </View>
         </View>
@@ -97,14 +99,14 @@ export default function WeightDetailRecordScreen() {
       {/* 하단 버튼들 */}
       <View style={styles.bottomContainer}>
         <TouchableOpacity style={styles.cancelButton} onPress={handleCancel}>
-          <Text style={styles.cancelButtonText}>취소</Text>
+          <Text style={styles.cancelButtonText}>{t('weight.detailRecord.cancel')}</Text>
         </TouchableOpacity>
         <TouchableOpacity 
           style={[styles.saveButton, weight === '0.0' || weight === '' ? styles.disabledButton : null]} 
           onPress={handleSave}
           disabled={weight === '0.0' || weight === ''}
         >
-          <Text style={[styles.saveButtonText, weight === '0.0' || weight === '' ? styles.disabledButtonText : null]}>저장</Text>
+          <Text style={[styles.saveButtonText, weight === '0.0' || weight === '' ? styles.disabledButtonText : null]}>{t('weight.detailRecord.save')}</Text>
         </TouchableOpacity>
       </View>
     </View>

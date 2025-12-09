@@ -1,3 +1,4 @@
+import { useTranslation } from '@/i18n';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React, { useState } from 'react';
@@ -14,6 +15,7 @@ import {
 const { width, height } = Dimensions.get('window');
 
 export default function WithEventScreen() {
+  const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState<'recruiting' | 'ongoing'>('recruiting');
 
   const handleBack = () => {
@@ -29,7 +31,7 @@ export default function WithEventScreen() {
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
           <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>위드 이벤트</Text>
+        <Text style={styles.headerTitle}>{t('with.event.title')}</Text>
         <View style={styles.headerRight} />
       </View>
 
@@ -40,7 +42,7 @@ export default function WithEventScreen() {
           onPress={() => setActiveTab('recruiting')}
         >
           <Text style={[styles.tabText, activeTab === 'recruiting' && styles.activeTabText]}>
-            모집중
+            {t('with.event.tabs.recruiting')}
           </Text>
         </TouchableOpacity>
         <TouchableOpacity
@@ -48,7 +50,7 @@ export default function WithEventScreen() {
           onPress={() => setActiveTab('ongoing')}
         >
           <Text style={[styles.tabText, activeTab === 'ongoing' && styles.activeTabText]}>
-            진행중
+            {t('with.event.tabs.ongoing')}
           </Text>
         </TouchableOpacity>
       </View>
@@ -58,7 +60,7 @@ export default function WithEventScreen() {
         {/* 빈 상태 */}
         <View style={styles.emptyContainer}>
           <Text style={styles.emptyText}>
-            {activeTab === 'recruiting' ? '모집중인 위드가 없어요' : '진행중인 위드가 없어요'}
+            {activeTab === 'recruiting' ? t('with.event.emptyRecruiting') : t('with.event.emptyOngoing')}
           </Text>
         </View>
       </View>

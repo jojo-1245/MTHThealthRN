@@ -82,43 +82,48 @@
       "shallow": "얕게 보인다"
     }
   },
+  "surveyResult": {
+    "title": "진단하기",
+    "completionMessage": "피부건강 체크가{'\n'}완료되었습니다.",
+    "saveButton": "저장하기"
+  },
   "breathing": {
     "title": "호흡 측정",
     "breathingRateTitle": "호흡수 측정",
     "breathingRateMeasurement": "호흡수 측정",
     "breathingExerciseResult": "호흡 운동 결과",
     "breathingStatistics": "호흡 통계",
-    "introDescription": "얼굴 인식을 통해 정확한 호흡수를 측정하고\n건강한 호흡 패턴을 관리해보세요",
+    "introDescription": "얼굴 인식을 통해 정확한 호흡수를 측정하고\n건강한 호흡 패턴을 관리해 보시기 바랍니다",
     "startMeasurement": "호흡 측정 시작",
-    "startMeasurementDescription": "얼굴을 인식하여 실시간으로 호흡수를 측정합니다",
+    "startMeasurementDescription": "얼굴을 인식하여 실시간으로 호흡수를 측정해 드립니다",
     "viewStatistics": "호흡 통계",
-    "viewStatisticsDescription": "일간, 주간, 월간 호흡 패턴을 확인하고 분석합니다",
+    "viewStatisticsDescription": "일간, 주간, 월간 호흡 패턴을 확인하고 분석해 드립니다",
     "measurementWarnings": {
       "title": "측정 시 주의사항",
-      "item1": "• 측정 중에는 움직임을 자제해주세요",
-      "item2": "• 밝은 곳에서 측정해주세요",
-      "item3": "• 카메라와 얼굴 사이의 거리를 적절히 유지해주세요",
+      "item1": "• 측정 중에는 움직임을 자제해 주시기 바랍니다",
+      "item2": "• 밝은 곳에서 측정해 주시기 바랍니다",
+      "item3": "• 카메라와 얼굴 사이의 거리를 적절히 유지해 주시기 바랍니다",
       "item4": "• 이 서비스는 의료기기가 아닙니다"
     },
     "guide": {
       "title": "측정 시 움직임 자제하기",
-      "subtitle": "원 영역 안에 얼굴을 위치시키고\n밝은 곳에서 측정 해주세요",
-      "warning": "카메라와 얼굴이 너무 가까우면 측정 되지 않을 수 있어요",
+      "subtitle": "원 영역 안에 얼굴을 위치시키고\n밝은 곳에서 측정해 주시기 바랍니다",
+      "warning": "카메라와 얼굴이 너무 가까우면 측정이 되지 않을 수 있습니다",
       "startButton": "측정 시작",
       "dontShowAgain": "다시 보지 않기",
       "close": "닫기"
     },
     "active": {
       "measuring": "측정 중...",
-      "ready": "측정 준비 완료",
-      "instruction": "얼굴을 원형 프레임 안에 맞추고\n자연스럽게 호흡하세요",
+      "ready": "측정 준비가 완료되었습니다",
+      "instruction": "얼굴을 원형 프레임 안에 맞추고\n자연스럽게 호흡해 주시기 바랍니다",
       "currentRate": "현재 호흡수",
       "perMinute": "회/분",
       "startButton": "측정 시작",
       "stopButton": "측정 중지"
     },
     "result": {
-      "graphTitle": "얼마나 잘 따라했을까요?",
+      "graphTitle": "얼마나 잘 따라하셨나요?",
       "myBreathing": "나의 호흡",
       "targetBreathing": "목표 호흡",
       "effectsTitle": "지속적인 호흡 관리의 효과",
@@ -140,7 +145,7 @@
         "monthly": "월간"
       },
       "emptyState": {
-        "title": "최소 3일이상 호흡 측정을 해 주세요.",
+        "title": "최소 3일 이상 호흡 측정을 해 주시기 바랍니다.",
         "subtitle": "정확한 통계를 위해 더 많은 데이터가 필요합니다.",
         "startButton": "측정 시작하기"
       }
@@ -148,11 +153,11 @@
     "prep": {
       "step1": {
         "title": "자리에 앉기",
-        "description": "측정하는 동안 자리에 앉아 차분하게 측정 해주세요"
+        "description": "측정하는 동안 자리에 앉아 차분하게 측정해 주시기 바랍니다"
       },
       "step2": {
         "title": "얼굴을 원 안에 위치시키기",
-        "description": "얼굴을 원 안에 위치시키고 측정을 시작해주세요"
+        "description": "얼굴을 원 안에 위치시키고 측정을 시작해 주시기 바랍니다"
       },
       "dontShowAgain": "다시 보지 않기",
       "next": "다음"
@@ -1250,6 +1255,68 @@
         "disclaimer": "스트레스 지수 / 심박수 측정 서비스는 의료기기가 아니며, 본 서비스의 목적은 질병의 진단, 치료, 경감, 처치, 예방에 있지 않습니다.",
         "completeButton": "분석 완료"
       }
+    }
+  },
+  "weight": {
+    "title": "체중",
+    "detailRecord": {
+      "title": "상세 기록",
+      "instruction": "오늘 체중을 입력해 주세요.",
+      "infoMorning": "정확한 측정을 위해 아침에 측정하는 것을 권장합니다",
+      "infoDecimal": "소수점 첫째 자리까지 입력 가능합니다",
+      "cancel": "취소",
+      "save": "저장"
+    },
+    "main": {
+      "title": "체중",
+      "year": "년",
+      "month": "월",
+      "weekDays": {
+        "sun": "일",
+        "mon": "월",
+        "tue": "화",
+        "wed": "수",
+        "thu": "목",
+        "fri": "금",
+        "sat": "토"
+      },
+      "dayFormat": "일",
+      "connectScale": "체중계 연결",
+      "edit": "수정하기",
+      "measurementDetail": "체중 측정 상세 결과"
+    },
+    "measurement": {
+      "title": "체중 측정하기",
+      "instruction": "스마트폰의 블루투스를 켜고{'\n'}'측정하기' 버튼을 눌러주세요",
+      "infoBluetooth": "블루투스가 켜져 있는지 확인해주세요",
+      "infoScale": "체중계가 켜져 있는지 확인해주세요",
+      "infoStand": "체중계 위에 올라가서 측정해주세요",
+      "measureButton": "측정하기"
+    },
+    "statistics": {
+      "title": "체중기록 통계",
+      "tabs": {
+        "daily": "일간",
+        "weekly": "주간",
+        "monthly": "월간"
+      },
+      "chartTitle": "체중(kg)",
+      "emptyText": "아직 기록이 없습니다.",
+      "emptySubText": "체중기록을 시작해 보세요.",
+      "smartScaleTitle": "스마트 체중계를 연결해",
+      "smartScaleSubtitle1": "BMI, 체지방률, 체수분량도",
+      "smartScaleSubtitle2": "함께 관리하세요."
+    }
+  },
+  "with": {
+    "event": {
+      "title": "위드 이벤트",
+      "tabs": {
+        "recruiting": "모집중",
+        "ongoing": "진행중"
+      },
+      "emptyRecruiting": "모집중인 위드가 없어요",
+      "emptyOngoing": "진행중인 위드가 없어요"
     }
   }
 }

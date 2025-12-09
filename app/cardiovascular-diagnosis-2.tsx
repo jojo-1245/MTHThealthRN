@@ -167,7 +167,7 @@ export default function CardiovascularDiagnosis2Screen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#0F0F0F',
   },
   header: {
     backgroundColor: '#fff',

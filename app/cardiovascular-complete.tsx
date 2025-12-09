@@ -81,7 +81,7 @@ export default function CardiovascularCompleteScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#0F0F0F',
   },
   header: {
     backgroundColor: '#fff',

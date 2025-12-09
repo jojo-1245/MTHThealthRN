@@ -26,6 +26,11 @@
     "search": "検索",
     "selfDiagnosis": "自己診断"
   },
+  "surveyResult": {
+    "title": "診断",
+    "completionMessage": "肌の健康チェックが{'\n'}完了しました。",
+    "saveButton": "保存"
+  },
   "breathing": {
     "title": "呼吸測定",
     "breathingRateTitle": "呼吸数測定",
@@ -902,6 +907,68 @@
         "disclaimer": "ストレス指数/心拍数測定サービスは医療機器ではなく、本サービスの目的は疾病の診断、治療、軽減、処置、予防にありません。",
         "completeButton": "分析完了"
       }
+    }
+  },
+  "weight": {
+    "title": "体重",
+    "detailRecord": {
+      "title": "詳細記録",
+      "instruction": "今日の体重を入力してください。",
+      "infoMorning": "正確な測定のために朝に測定することをお勧めします",
+      "infoDecimal": "小数点第一位まで入力可能です",
+      "cancel": "キャンセル",
+      "save": "保存"
+    },
+    "main": {
+      "title": "体重",
+      "year": "年",
+      "month": "月",
+      "weekDays": {
+        "sun": "日",
+        "mon": "月",
+        "tue": "火",
+        "wed": "水",
+        "thu": "木",
+        "fri": "金",
+        "sat": "土"
+      },
+      "dayFormat": "日",
+      "connectScale": "体重計を接続",
+      "edit": "編集",
+      "measurementDetail": "体重測定詳細結果"
+    },
+    "measurement": {
+      "title": "体重測定",
+      "instruction": "スマートフォンの Bluetooth をオンにして{'\n'}'測定'ボタンを押してください",
+      "infoBluetooth": "Bluetooth がオンになっているか確認してください",
+      "infoScale": "体重計がオンになっているか確認してください",
+      "infoStand": "体重計の上に乗って測定してください",
+      "measureButton": "測定"
+    },
+    "statistics": {
+      "title": "体重記録統計",
+      "tabs": {
+        "daily": "日間",
+        "weekly": "週間",
+        "monthly": "月間"
+      },
+      "chartTitle": "体重(kg)",
+      "emptyText": "まだ記録がありません。",
+      "emptySubText": "体重記録を始めましょう。",
+      "smartScaleTitle": "スマート体重計を接続して",
+      "smartScaleSubtitle1": "BMI、体脂肪率、体水分量も",
+      "smartScaleSubtitle2": "一緒に管理しましょう。"
+    }
+  },
+  "with": {
+    "event": {
+      "title": "ウィズイベント",
+      "tabs": {
+        "recruiting": "募集中",
+        "ongoing": "進行中"
+      },
+      "emptyRecruiting": "募集中のウィズがありません",
+      "emptyOngoing": "進行中のウィズがありません"
     }
   }
 }
