@@ -17,7 +17,7 @@ export default function MedicationDetail() {
       {/* 헤더 */}
       <View style={styles.header}>
         <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
-          <Ionicons name="arrow-back" size={24} color="#000" />
+          <Ionicons name="arrow-back" size={24} color="#fff" />
         </TouchableOpacity>
         <Text style={styles.headerTitle}>{t('medication.detail.title')}</Text>
         <View style={styles.headerRight} />
@@ -60,7 +60,7 @@ export default function MedicationDetail() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#000',
   },
   header: {
     flexDirection: 'row',
@@ -70,7 +70,8 @@ const styles = StyleSheet.create({
     paddingTop: 60,
     paddingBottom: 20,
     borderBottomWidth: 1,
-    borderBottomColor: '#f0f0f0',
+    borderBottomColor: '#333',
+    backgroundColor: '#000',
   },
   backButton: {
     padding: 5,
@@ -78,7 +79,7 @@ const styles = StyleSheet.create({
   headerTitle: {
     fontSize: 18,
     fontWeight: '600',
-    color: '#000',
+    color: '#fff',
   },
   headerRight: {
     width: 34, // 뒤로가기 버튼과 동일한 너비로 중앙 정렬
@@ -93,7 +94,7 @@ const styles = StyleSheet.create({
   sectionTitle: {
     fontSize: 18,
     fontWeight: '600',
-    color: '#000',
+    color: '#fff',
     marginBottom: 16,
   },
   periodInfo: {
@@ -101,7 +102,7 @@ const styles = StyleSheet.create({
   },
   periodText: {
     fontSize: 14,
-    color: '#666',
+    color: '#fff',
   },
   medicationInfo: {
     marginBottom: 20,
@@ -109,16 +110,16 @@ const styles = StyleSheet.create({
   medicationName: {
     fontSize: 20,
     fontWeight: '600',
-    color: '#000',
+    color: '#fff',
   },
   description: {
     fontSize: 16,
-    color: '#333',
+    color: '#fff',
     lineHeight: 24,
   },
   sourceText: {
     fontSize: 12,
-    color: '#999',
+    color: '#fff',
     lineHeight: 18,
   },
 });
