@@ -180,7 +180,7 @@ export default function Asking22Screen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#000',
   },
   header: {
     backgroundColor: '#8B5CF6',
@@ -223,7 +223,7 @@ const styles = StyleSheet.create({
   },
   imageDescription: {
     fontSize: 12,
-    color: '#9CA3AF',
+    color: '#fff',
     marginTop: 8,
     textAlign: 'center',
   },
@@ -253,13 +253,13 @@ const styles = StyleSheet.create({
   questionText: {
     fontSize: 18,
     fontWeight: '600',
-    color: '#374151',
+    color: '#fff',
     lineHeight: 26,
     flex: 1,
   },
   questionSubtext: {
     fontSize: 14,
-    color: '#9CA3AF',
+    color: '#fff',
     textAlign: 'center',
     marginTop: 8,
     fontStyle: 'italic',
@@ -317,7 +317,7 @@ const styles = StyleSheet.create({
   optionLabel: {
     fontSize: 14,
     fontWeight: '500',
-    color: '#6B7280',
+    color: '#fff',
     textAlign: 'center',
   },
   optionLabelSelected: {
@@ -328,7 +328,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 20,
     paddingBottom: 40,
-    backgroundColor: '#fff',
+    backgroundColor: '#000',
     borderTopWidth: 1,
     borderTopColor: '#E5E7EB',
   },
@@ -339,7 +339,7 @@ const styles = StyleSheet.create({
   pageText: {
     fontSize: 16,
     fontWeight: '500',
-    color: '#6B7280',
+    color: '#fff',
   },
   buttonsContainer: {
     flexDirection: 'row',
