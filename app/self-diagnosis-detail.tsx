@@ -91,19 +91,19 @@ export default function SelfDiagnosisDetailScreen() {
         <Text style={styles.indicatorName}>{indicator.name}</Text>
         {renderProgressBar(indicator.progress)}
         {renderStatusButton(indicator.status)}
-        <Ionicons name="chevron-forward" size={16} color="#9CA3AF" />
+        <Ionicons name="chevron-forward" size={16} color="#fff" />
       </TouchableOpacity>
     );
   };
 
   return (
     <View style={styles.container}>
-      <StatusBar barStyle="dark-content" backgroundColor="#fff" />
+      <StatusBar barStyle="light-content" backgroundColor="#000" />
       
       {/* 헤더 */}
       <View style={styles.header}>
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
-          <Ionicons name="arrow-back" size={24} color="#000" />
+          <Ionicons name="arrow-back" size={24} color="#fff" />
         </TouchableOpacity>
         <Text style={styles.headerTitle}>{t('selfDiagnosis.detail.title')}</Text>
         <View style={styles.headerRight} />
@@ -134,10 +134,10 @@ export default function SelfDiagnosisDetailScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#000',
   },
   header: {
-    backgroundColor: '#fff',
+    backgroundColor: '#000',
     paddingTop: 50,
     paddingBottom: 20,
     paddingHorizontal: 20,
@@ -145,7 +145,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     borderBottomWidth: 1,
-    borderBottomColor: '#E5E7EB',
+    borderBottomColor: '#333',
   },
   backButton: {
     padding: 8,
@@ -153,7 +153,7 @@ const styles = StyleSheet.create({
   headerTitle: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#000',
+    color: '#fff',
   },
   headerRight: {
     width: 40,
@@ -164,7 +164,7 @@ const styles = StyleSheet.create({
     paddingTop: 20,
   },
   sectionContainer: {
-    backgroundColor: '#fff',
+    backgroundColor: '#1a1a1a',
     borderRadius: 12,
     padding: 20,
     shadowColor: '#000',
@@ -176,7 +176,7 @@ const styles = StyleSheet.create({
     shadowRadius: 8,
     elevation: 4,
     borderWidth: 1,
-    borderColor: '#E5E7EB',
+    borderColor: '#333',
   },
   sectionHeader: {
     flexDirection: 'row',
@@ -187,7 +187,7 @@ const styles = StyleSheet.create({
   sectionTitle: {
     fontSize: 20,
     fontWeight: 'bold',
-    color: '#000',
+    color: '#fff',
   },
   sectionStatusButton: {
     backgroundColor: '#8B5CF6',
@@ -214,7 +214,7 @@ const styles = StyleSheet.create({
   indicatorName: {
     fontSize: 16,
     fontWeight: '500',
-    color: '#374151',
+    color: '#fff',
     width: 100,
     marginRight: 12,
   },
@@ -224,7 +224,7 @@ const styles = StyleSheet.create({
   },
   progressBarBackground: {
     height: 8,
-    backgroundColor: '#E5E7EB',
+    backgroundColor: '#333',
     borderRadius: 4,
     overflow: 'hidden',
   },
@@ -240,7 +240,9 @@ const styles = StyleSheet.create({
     marginRight: 8,
   },
   warningButton: {
-    backgroundColor: '#FEF3C7',
+    backgroundColor: '#1a1a1a',
+    borderWidth: 1,
+    borderColor: '#F59E0B',
   },
   goodButton: {
     backgroundColor: '#8B5CF6',
@@ -250,7 +252,7 @@ const styles = StyleSheet.create({
     fontWeight: '500',
   },
   warningText: {
-    color: '#000',
+    color: '#F59E0B',
   },
   goodText: {
     color: '#fff',
