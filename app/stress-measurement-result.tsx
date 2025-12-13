@@ -26,7 +26,7 @@ export default function StressMeasurementResult() {
       {/* 헤더 */}
       <View style={styles.header}>
         <TouchableOpacity onPress={handleBack} style={styles.backButton}>
-          <Ionicons name="arrow-back" size={24} color="#000" />
+          <Ionicons name="arrow-back" size={24} color="#fff" />
         </TouchableOpacity>
         <Text style={styles.headerTitle}>{t('stressHeartrate.measurement.result.title')}</Text>
         <View style={styles.headerRight} />
@@ -162,7 +162,7 @@ export default function StressMeasurementResult() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f5f5f5',
+    backgroundColor: '#000',
   },
   header: {
     flexDirection: 'row',
@@ -171,9 +171,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingTop: 60,
     paddingBottom: 20,
-    backgroundColor: '#fff',
+    backgroundColor: '#000',
     borderBottomWidth: 1,
-    borderBottomColor: '#f0f0f0',
+    borderBottomColor: '#333',
   },
   backButton: {
     padding: 5,
@@ -181,7 +181,7 @@ const styles = StyleSheet.create({
   headerTitle: {
     fontSize: 18,
     fontWeight: '600',
-    color: '#000',
+    color: '#fff',
   },
   headerRight: {
     width: 34,
@@ -192,7 +192,7 @@ const styles = StyleSheet.create({
     paddingVertical: 20,
   },
   resultCard: {
-    backgroundColor: '#fff',
+    backgroundColor: '#1a1a1a',
     borderRadius: 12,
     padding: 20,
     marginBottom: 16,
@@ -200,7 +200,7 @@ const styles = StyleSheet.create({
   resultTitle: {
     fontSize: 18,
     fontWeight: '600',
-    color: '#000',
+    color: '#fff',
     marginBottom: 16,
   },
   scoreContainer: {
@@ -211,7 +211,7 @@ const styles = StyleSheet.create({
   scoreValue: {
     fontSize: 32,
     fontWeight: '700',
-    color: '#000',
+    color: '#fff',
     marginRight: 12,
   },
   scoreBadge: {
@@ -227,7 +227,7 @@ const styles = StyleSheet.create({
   },
   scoreAdvice: {
     fontSize: 16,
-    color: '#666',
+    color: '#fff',
     lineHeight: 24,
   },
   heartRateContainer: {
@@ -238,7 +238,7 @@ const styles = StyleSheet.create({
   heartRateValue: {
     fontSize: 32,
     fontWeight: '700',
-    color: '#000',
+    color: '#fff',
     marginRight: 12,
   },
   heartRateBadge: {
@@ -257,7 +257,7 @@ const styles = StyleSheet.create({
   },
   rangeBar: {
     height: 8,
-    backgroundColor: '#e0e0e0',
+    backgroundColor: '#333',
     borderRadius: 4,
     position: 'relative',
     marginBottom: 8,
@@ -298,7 +298,7 @@ const styles = StyleSheet.create({
   },
   rangeLabel: {
     fontSize: 12,
-    color: '#666',
+    color: '#fff',
   },
   rangeDescription: {
     flexDirection: 'row',
@@ -313,7 +313,7 @@ const styles = StyleSheet.create({
   },
   rangeDescriptionText: {
     fontSize: 12,
-    color: '#666',
+    color: '#fff',
   },
   stressIllustration: {
     alignItems: 'center',
@@ -360,7 +360,7 @@ const styles = StyleSheet.create({
   symptomsTitle: {
     fontSize: 16,
     fontWeight: '600',
-    color: '#000',
+    color: '#fff',
     marginBottom: 12,
   },
   symptomItem: {
@@ -368,17 +368,17 @@ const styles = StyleSheet.create({
   },
   symptomText: {
     fontSize: 14,
-    color: '#333',
+    color: '#fff',
     lineHeight: 20,
   },
   specialistAdvice: {
     fontSize: 14,
-    color: '#666',
+    color: '#fff',
     fontStyle: 'italic',
     lineHeight: 20,
   },
   accuracyCard: {
-    backgroundColor: '#fff',
+    backgroundColor: '#1a1a1a',
     borderRadius: 12,
     padding: 20,
     marginBottom: 20,
@@ -386,12 +386,12 @@ const styles = StyleSheet.create({
   accuracyTitle: {
     fontSize: 16,
     fontWeight: '600',
-    color: '#000',
+    color: '#fff',
     marginBottom: 12,
   },
   accuracyText: {
     fontSize: 14,
-    color: '#666',
+    color: '#fff',
     lineHeight: 20,
     marginBottom: 12,
   },
@@ -400,13 +400,13 @@ const styles = StyleSheet.create({
   },
   accuracyItem: {
     fontSize: 14,
-    color: '#333',
+    color: '#fff',
     lineHeight: 20,
     marginBottom: 4,
   },
   disclaimer: {
     fontSize: 12,
-    color: '#999',
+    color: '#fff',
     lineHeight: 18,
     fontStyle: 'italic',
   },
@@ -414,7 +414,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 20,
     paddingBottom: 40,
-    backgroundColor: '#fff',
+    backgroundColor: '#000',
   },
   completeButton: {
     backgroundColor: '#8B5CF6',

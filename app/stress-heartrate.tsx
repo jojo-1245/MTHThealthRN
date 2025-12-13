@@ -109,11 +109,11 @@ export default function StressHeartrate() {
       {/* 헤더 */}
       <View style={styles.header}>
         <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
-          <Ionicons name="arrow-back" size={24} color="#000" />
+          <Ionicons name="arrow-back" size={24} color="#fff" />
         </TouchableOpacity>
         <Text style={styles.headerTitle}>{t('stressHeartrate.main.title')}</Text>
         <TouchableOpacity onPress={handleStatistics} style={styles.statsButton}>
-          <Ionicons name="stats-chart" size={24} color="#000" />
+          <Ionicons name="stats-chart" size={24} color="#fff" />
         </TouchableOpacity>
       </View>
 
@@ -123,13 +123,13 @@ export default function StressHeartrate() {
           {/* 월 네비게이션 */}
           <View style={styles.monthNavigation}>
             <TouchableOpacity onPress={goToPreviousMonth} style={styles.monthButton}>
-              <Ionicons name="chevron-back" size={20} color="#666" />
+              <Ionicons name="chevron-back" size={20} color="#fff" />
             </TouchableOpacity>
             <Text style={styles.monthText}>
               {currentDate.getFullYear()}년 {monthNames[currentDate.getMonth()]}
             </Text>
             <TouchableOpacity onPress={goToNextMonth} style={styles.monthButton}>
-              <Ionicons name="chevron-forward" size={20} color="#666" />
+              <Ionicons name="chevron-forward" size={20} color="#fff" />
             </TouchableOpacity>
           </View>
 
@@ -182,12 +182,12 @@ export default function StressHeartrate() {
           <View style={styles.recordArea}>
             {selectedDate === 9 ? (
               <View style={styles.noRecordState}>
-                <Ionicons name="warning" size={48} color="#ccc" />
+                <Ionicons name="warning" size={48} color="#666" />
                 <Text style={styles.noRecordText}>{t('stressHeartrate.main.noRecord')}</Text>
               </View>
             ) : (
               <View style={styles.noRecordState}>
-                <Ionicons name="warning" size={48} color="#ccc" />
+                <Ionicons name="warning" size={48} color="#666" />
                 <Text style={styles.noRecordText}>{t('stressHeartrate.main.noRecord')}</Text>
               </View>
             )}
@@ -214,7 +214,7 @@ export default function StressHeartrate() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#000',
   },
   header: {
     flexDirection: 'row',
@@ -224,7 +224,8 @@ const styles = StyleSheet.create({
     paddingTop: 60,
     paddingBottom: 20,
     borderBottomWidth: 1,
-    borderBottomColor: '#f0f0f0',
+    borderBottomColor: '#333',
+    backgroundColor: '#000',
   },
   backButton: {
     padding: 5,
@@ -232,7 +233,7 @@ const styles = StyleSheet.create({
   headerTitle: {
     fontSize: 18,
     fontWeight: '600',
-    color: '#000',
+    color: '#fff',
   },
   statsButton: {
     padding: 5,
@@ -256,7 +257,7 @@ const styles = StyleSheet.create({
   monthText: {
     fontSize: 18,
     fontWeight: '600',
-    color: '#000',
+    color: '#fff',
   },
   dayHeader: {
     flexDirection: 'row',
@@ -270,7 +271,7 @@ const styles = StyleSheet.create({
   dayHeaderText: {
     fontSize: 12,
     fontWeight: '500',
-    color: '#666',
+    color: '#fff',
   },
   sundayText: {
     color: '#ff6b6b',
@@ -293,7 +294,7 @@ const styles = StyleSheet.create({
     // 현재 달 날짜 스타일
   },
   selectedDay: {
-    backgroundColor: '#e0e0e0',
+    backgroundColor: '#333',
     borderRadius: 20,
   },
   todayDay: {
@@ -301,10 +302,10 @@ const styles = StyleSheet.create({
   },
   calendarDayText: {
     fontSize: 16,
-    color: '#000',
+    color: '#fff',
   },
   otherMonthText: {
-    color: '#ccc',
+    color: '#666',
   },
   selectedDayText: {
     fontWeight: '600',
@@ -325,7 +326,7 @@ const styles = StyleSheet.create({
   },
   recordArea: {
     minHeight: 200,
-    backgroundColor: '#f9f9f9',
+    backgroundColor: '#1a1a1a',
     borderRadius: 12,
     alignItems: 'center',
     justifyContent: 'center',
@@ -336,7 +337,7 @@ const styles = StyleSheet.create({
   },
   noRecordText: {
     fontSize: 16,
-    color: '#999',
+    color: '#fff',
     marginTop: 10,
   },
   bottomButtonContainer: {
@@ -360,7 +361,7 @@ const styles = StyleSheet.create({
     marginLeft: 8,
   },
   faceButton: {
-    backgroundColor: '#fff',
+    backgroundColor: '#1a1a1a',
     borderWidth: 1,
     borderColor: '#8B5CF6',
     paddingVertical: 16,
