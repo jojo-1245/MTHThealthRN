@@ -31,12 +31,12 @@ export default function BreathingScreen() {
 
   return (
     <View style={styles.container}>
-      <StatusBar barStyle="dark-content" backgroundColor="#fff" />
+      <StatusBar barStyle="light-content" backgroundColor="#000" />
       
       {/* 헤더 */}
       <View style={styles.header}>
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
-          <Ionicons name="arrow-back" size={24} color="#000" />
+          <Ionicons name="arrow-back" size={24} color="#fff" />
         </TouchableOpacity>
         <Text style={styles.headerTitle}>{t('breathing.title')}</Text>
         <View style={styles.headerRight} />
@@ -107,10 +107,10 @@ export default function BreathingScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#000',
   },
   header: {
-    backgroundColor: '#fff',
+    backgroundColor: '#000',
     paddingTop: 50,
     paddingBottom: 20,
     paddingHorizontal: 20,
@@ -126,7 +126,7 @@ const styles = StyleSheet.create({
   headerTitle: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#000',
+    color: '#fff',
   },
   headerRight: {
     width: 40,
@@ -153,12 +153,12 @@ const styles = StyleSheet.create({
   introTitle: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: '#000',
+    color: '#fff',
     marginBottom: 12,
   },
   introDescription: {
     fontSize: 16,
-    color: '#6B7280',
+    color: '#fff',
     textAlign: 'center',
     lineHeight: 24,
   },
@@ -167,7 +167,7 @@ const styles = StyleSheet.create({
     marginBottom: 30,
   },
   card: {
-    backgroundColor: '#fff',
+    backgroundColor: '#1a1a1a',
     borderRadius: 12,
     padding: 20,
     shadowColor: '#000',
@@ -179,7 +179,7 @@ const styles = StyleSheet.create({
     shadowRadius: 8,
     elevation: 4,
     borderWidth: 1,
-    borderColor: '#E5E7EB',
+    borderColor: '#333',
   },
   cardHeader: {
     flexDirection: 'row',
@@ -189,12 +189,12 @@ const styles = StyleSheet.create({
   cardTitle: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#000',
+    color: '#fff',
     marginLeft: 12,
   },
   cardDescription: {
     fontSize: 14,
-    color: '#6B7280',
+    color: '#fff',
     lineHeight: 20,
     marginBottom: 16,
   },
@@ -202,7 +202,7 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-end',
   },
   warningSection: {
-    backgroundColor: '#F8FAFC',
+    backgroundColor: '#1a1a1a',
     borderRadius: 12,
     padding: 20,
     marginBottom: 20,
@@ -215,7 +215,7 @@ const styles = StyleSheet.create({
   warningTitle: {
     fontSize: 16,
     fontWeight: 'bold',
-    color: '#000',
+    color: '#fff',
     marginLeft: 8,
   },
   warningList: {
@@ -223,7 +223,7 @@ const styles = StyleSheet.create({
   },
   warningItem: {
     fontSize: 14,
-    color: '#6B7280',
+    color: '#fff',
     lineHeight: 20,
   },
 });

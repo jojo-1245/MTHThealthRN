@@ -1,15 +1,15 @@
+import { useTranslation } from '@/i18n';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import {
-    Dimensions,
-    StatusBar,
-    StyleSheet,
-    Text,
-    TouchableOpacity,
-    View,
+  Dimensions,
+  StatusBar,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
 } from 'react-native';
-import { useTranslation } from '@/i18n';
 
 const { width, height } = Dimensions.get('window');
 
@@ -55,12 +55,12 @@ export default function BreathingMeasurementActiveScreen() {
 
   return (
     <View style={styles.container}>
-      <StatusBar barStyle="dark-content" backgroundColor="#fff" />
+      <StatusBar barStyle="light-content" backgroundColor="#000" />
       
       {/* 헤더 */}
       <View style={styles.header}>
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
-          <Ionicons name="arrow-back" size={24} color="#000" />
+          <Ionicons name="arrow-back" size={24} color="#fff" />
         </TouchableOpacity>
         <Text style={styles.headerTitle}>{t('breathing.breathingRateMeasurement')}</Text>
         <View style={styles.headerRight} />
@@ -126,10 +126,10 @@ export default function BreathingMeasurementActiveScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#000',
   },
   header: {
-    backgroundColor: '#fff',
+    backgroundColor: '#000',
     paddingTop: 50,
     paddingBottom: 20,
     paddingHorizontal: 20,
@@ -145,7 +145,7 @@ const styles = StyleSheet.create({
   headerTitle: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#000',
+    color: '#fff',
   },
   headerRight: {
     width: 40,
@@ -192,12 +192,12 @@ const styles = StyleSheet.create({
   readyText: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#000',
+    color: '#fff',
     marginBottom: 8,
   },
   instructionText: {
     fontSize: 14,
-    color: '#6B7280',
+    color: '#fff',
     textAlign: 'center',
     lineHeight: 20,
   },
@@ -214,7 +214,7 @@ const styles = StyleSheet.create({
     borderStyle: 'dashed',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#F8FAFC',
+    backgroundColor: '#1a1a1a',
   },
   resultContainer: {
     alignItems: 'center',
@@ -222,7 +222,7 @@ const styles = StyleSheet.create({
   },
   resultLabel: {
     fontSize: 14,
-    color: '#6B7280',
+    color: '#fff',
     marginBottom: 4,
   },
   resultValue: {
