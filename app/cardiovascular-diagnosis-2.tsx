@@ -104,12 +104,12 @@ export default function CardiovascularDiagnosis2Screen() {
 
   return (
     <View style={styles.container}>
-      <StatusBar barStyle="dark-content" backgroundColor="#fff" />
+      <StatusBar barStyle="light-content" backgroundColor="#000" />
       
       {/* 헤더 */}
       <View style={styles.header}>
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
-          <Ionicons name="arrow-back" size={24} color="#000" />
+          <Ionicons name="arrow-back" size={24} color="#fff" />
         </TouchableOpacity>
         <Text style={styles.headerTitle}>{t('cardiovascular.title')}</Text>
         <View style={styles.headerRight} />
@@ -167,10 +167,10 @@ export default function CardiovascularDiagnosis2Screen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#0F0F0F',
+    backgroundColor: '#000',
   },
   header: {
-    backgroundColor: '#fff',
+    backgroundColor: '#000',
     paddingTop: 50,
     paddingBottom: 20,
     paddingHorizontal: 20,
@@ -186,7 +186,7 @@ const styles = StyleSheet.create({
   headerTitle: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#000',
+    color: '#fff',
   },
   headerRight: {
     width: 40,
@@ -204,7 +204,7 @@ const styles = StyleSheet.create({
     width: 60,
     height: 60,
     borderRadius: 30,
-    backgroundColor: '#F3E8FF',
+    backgroundColor: '#1a1a1a',
     alignItems: 'center',
     justifyContent: 'center',
     marginBottom: 16,
@@ -212,13 +212,13 @@ const styles = StyleSheet.create({
   questionText: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#000',
+    color: '#fff',
     textAlign: 'center',
     marginBottom: 8,
   },
   questionNote: {
     fontSize: 14,
-    color: '#6B7280',
+    color: '#fff',
     textAlign: 'center',
   },
   categoriesContainer: {
@@ -226,7 +226,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   categorySection: {
-    backgroundColor: '#fff',
+    backgroundColor: '#1a1a1a',
     borderRadius: 12,
     padding: 20,
     shadowColor: '#000',
@@ -238,12 +238,12 @@ const styles = StyleSheet.create({
     shadowRadius: 8,
     elevation: 4,
     borderWidth: 1,
-    borderColor: '#E5E7EB',
+    borderColor: '#333',
   },
   categoryTitle: {
     fontSize: 16,
     fontWeight: 'bold',
-    color: '#000',
+    color: '#fff',
     marginBottom: 16,
   },
   conditionsContainer: {
@@ -255,10 +255,10 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     paddingVertical: 12,
     paddingHorizontal: 16,
-    backgroundColor: '#F8FAFC',
+    backgroundColor: '#0a0a0a',
     borderRadius: 8,
     borderWidth: 1,
-    borderColor: '#E5E7EB',
+    borderColor: '#333',
   },
   selectedConditionItem: {
     backgroundColor: '#F3E8FF',
@@ -266,14 +266,14 @@ const styles = StyleSheet.create({
   },
   conditionText: {
     fontSize: 16,
-    color: '#374151',
+    color: '#fff',
   },
   selectedConditionText: {
     color: '#8B5CF6',
     fontWeight: '500',
   },
   noneButton: {
-    backgroundColor: '#F3F4F6',
+    backgroundColor: '#1a1a1a',
     paddingVertical: 16,
     borderRadius: 8,
     alignItems: 'center',
@@ -281,7 +281,7 @@ const styles = StyleSheet.create({
   },
   noneButtonText: {
     fontSize: 16,
-    color: '#6B7280',
+    color: '#fff',
     fontWeight: '500',
   },
   bottomContainer: {
@@ -310,7 +310,7 @@ const styles = StyleSheet.create({
   },
   pageText: {
     fontSize: 14,
-    color: '#6B7280',
+    color: '#fff',
   },
   nextButton: {
     backgroundColor: '#8B5CF6',
