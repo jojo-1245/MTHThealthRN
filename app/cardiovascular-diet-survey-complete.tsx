@@ -27,12 +27,12 @@ export default function CardiovascularDietSurveyCompleteScreen() {
 
   return (
     <View style={styles.container}>
-      <StatusBar barStyle="dark-content" backgroundColor="#fff" />
+      <StatusBar barStyle="light-content" backgroundColor="#000" />
       
       {/* 헤더 */}
       <View style={styles.header}>
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
-          <Ionicons name="arrow-back" size={24} color="#000" />
+          <Ionicons name="arrow-back" size={24} color="#fff" />
         </TouchableOpacity>
         <Text style={styles.headerTitle}>{t('cardiovascular.title')}</Text>
         <View style={styles.headerRight} />
@@ -90,10 +90,10 @@ export default function CardiovascularDietSurveyCompleteScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#000',
   },
   header: {
-    backgroundColor: '#fff',
+    backgroundColor: '#000',
     paddingTop: 50,
     paddingBottom: 20,
     paddingHorizontal: 20,
@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     borderBottomWidth: 1,
-    borderBottomColor: '#E5E7EB',
+    borderBottomColor: '#333',
   },
   backButton: {
     padding: 8,
@@ -109,7 +109,7 @@ const styles = StyleSheet.create({
   headerTitle: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#000',
+    color: '#fff',
   },
   headerRight: {
     width: 40,
@@ -127,7 +127,7 @@ const styles = StyleSheet.create({
     width: 160,
     height: 160,
     borderRadius: 80,
-    backgroundColor: '#F3E8FF',
+    backgroundColor: '#1a1a1a',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -138,14 +138,14 @@ const styles = StyleSheet.create({
   messageTitle: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: '#000',
+    color: '#fff',
     textAlign: 'center',
     marginBottom: 16,
     lineHeight: 32,
   },
   messageDescription: {
     fontSize: 16,
-    color: '#6B7280',
+    color: '#fff',
     textAlign: 'center',
     lineHeight: 24,
   },
@@ -153,16 +153,16 @@ const styles = StyleSheet.create({
     marginBottom: 40,
   },
   summaryBox: {
-    backgroundColor: '#F8F9FF',
+    backgroundColor: '#1a1a1a',
     padding: 24,
     borderRadius: 16,
     borderWidth: 1,
-    borderColor: '#E5E7EB',
+    borderColor: '#333',
   },
   summaryTitle: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#000',
+    color: '#fff',
     marginBottom: 20,
   },
   summaryItem: {
@@ -173,12 +173,12 @@ const styles = StyleSheet.create({
   },
   summaryLabel: {
     fontSize: 16,
-    color: '#6B7280',
+    color: '#fff',
   },
   summaryValue: {
     fontSize: 16,
     fontWeight: '500',
-    color: '#000',
+    color: '#fff',
   },
   bottomContainer: {
     paddingHorizontal: 20,
