@@ -93,7 +93,7 @@ export default function FoodSearch() {
 
   const renderEmptyState = () => (
     <View style={styles.emptyState}>
-      <Ionicons name="search-outline" size={48} color="#ccc" />
+      <Ionicons name="search-outline" size={48} color="#666" />
       <Text style={styles.emptyStateText}>
         {searchQuery ? t('food.search.empty.noResults') : t('food.search.empty.enterFood')}
       </Text>
@@ -129,7 +129,7 @@ export default function FoodSearch() {
       {/* 헤더 */}
       <View style={styles.header}>
         <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
-          <Ionicons name="arrow-back" size={24} color="#000" />
+          <Ionicons name="arrow-back" size={24} color="#fff" />
         </TouchableOpacity>
         <Text style={styles.headerTitle}>{t('food.search.title')}</Text>
         <View style={styles.headerRight} />
@@ -139,19 +139,19 @@ export default function FoodSearch() {
         {/* 검색 입력 필드 */}
         <View style={styles.searchContainer}>
           <View style={styles.searchInputContainer}>
-            <Ionicons name="search" size={20} color="#999" style={styles.searchIcon} />
+            <Ionicons name="search" size={20} color="#fff" style={styles.searchIcon} />
             <TextInput
               style={styles.searchInput}
               value={searchQuery}
               onChangeText={handleSearch}
               placeholder={t('food.search.placeholder')}
-              placeholderTextColor="#999"
+              placeholderTextColor="#666"
               autoFocus={true}
               returnKeyType="search"
             />
             {searchQuery.length > 0 && (
               <TouchableOpacity onPress={handleClearSearch} style={styles.clearButton}>
-                <Ionicons name="close-circle" size={20} color="#999" />
+                <Ionicons name="close-circle" size={20} color="#fff" />
               </TouchableOpacity>
             )}
           </View>
@@ -195,7 +195,7 @@ export default function FoodSearch() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#000',
   },
   header: {
     flexDirection: 'row',
@@ -205,7 +205,8 @@ const styles = StyleSheet.create({
     paddingTop: 60,
     paddingBottom: 20,
     borderBottomWidth: 1,
-    borderBottomColor: '#f0f0f0',
+    borderBottomColor: '#333',
+    backgroundColor: '#000',
   },
   backButton: {
     padding: 5,
@@ -213,7 +214,7 @@ const styles = StyleSheet.create({
   headerTitle: {
     fontSize: 18,
     fontWeight: '600',
-    color: '#000',
+    color: '#fff',
   },
   headerRight: {
     width: 34,
@@ -228,7 +229,7 @@ const styles = StyleSheet.create({
   searchInputContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#f5f5f5',
+    backgroundColor: '#1a1a1a',
     borderRadius: 12,
     paddingHorizontal: 16,
     paddingVertical: 12,
@@ -239,7 +240,7 @@ const styles = StyleSheet.create({
   searchInput: {
     flex: 1,
     fontSize: 16,
-    color: '#000',
+    color: '#fff',
   },
   clearButton: {
     marginLeft: 8,
@@ -254,7 +255,7 @@ const styles = StyleSheet.create({
   },
   infoText: {
     fontSize: 14,
-    color: '#666',
+    color: '#fff',
     lineHeight: 20,
   },
   resultsContainer: {
@@ -270,7 +271,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     paddingVertical: 16,
     borderBottomWidth: 1,
-    borderBottomColor: '#f0f0f0',
+    borderBottomColor: '#333',
   },
   foodInfo: {
     flex: 1,
@@ -278,12 +279,12 @@ const styles = StyleSheet.create({
   foodName: {
     fontSize: 16,
     fontWeight: '600',
-    color: '#000',
+    color: '#fff',
     marginBottom: 4,
   },
   foodManufacturer: {
     fontSize: 14,
-    color: '#666',
+    color: '#fff',
   },
   checkbox: {
     width: 24,
@@ -306,7 +307,7 @@ const styles = StyleSheet.create({
   },
   emptyStateText: {
     fontSize: 16,
-    color: '#999',
+    color: '#fff',
     marginTop: 16,
     textAlign: 'center',
   },
@@ -318,7 +319,7 @@ const styles = StyleSheet.create({
   },
   loadingText: {
     fontSize: 16,
-    color: '#666',
+    color: '#fff',
   },
   bottomButtonContainer: {
     paddingHorizontal: 20,
@@ -333,7 +334,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   analyzeButtonDisabled: {
-    backgroundColor: '#f5f5f5',
+    backgroundColor: '#333',
   },
   analyzeButtonText: {
     fontSize: 16,
@@ -341,6 +342,6 @@ const styles = StyleSheet.create({
     color: '#fff',
   },
   analyzeButtonTextDisabled: {
-    color: '#999',
+    color: '#666',
   },
 });

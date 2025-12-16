@@ -45,7 +45,7 @@ export default function FoodNutritionDetail() {
           <Ionicons
             name={expandedSections[label] ? "chevron-up" : "chevron-down"}
             size={16}
-            color="#999"
+            color="#fff"
           />
         )}
       </TouchableOpacity>
@@ -63,7 +63,7 @@ export default function FoodNutritionDetail() {
       {/* 헤더 */}
       <View style={styles.header}>
         <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
-          <Ionicons name="arrow-back" size={24} color="#000" />
+          <Ionicons name="arrow-back" size={24} color="#fff" />
         </TouchableOpacity>
         <Text style={styles.headerTitle}>{t('food.nutritionDetail.title')}</Text>
         <View style={styles.headerRight} />
@@ -153,7 +153,7 @@ export default function FoodNutritionDetail() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#000',
   },
   header: {
     flexDirection: 'row',
@@ -163,7 +163,8 @@ const styles = StyleSheet.create({
     paddingTop: 60,
     paddingBottom: 20,
     borderBottomWidth: 1,
-    borderBottomColor: '#f0f0f0',
+    borderBottomColor: '#333',
+    backgroundColor: '#000',
   },
   backButton: {
     padding: 5,
@@ -171,7 +172,7 @@ const styles = StyleSheet.create({
   headerTitle: {
     fontSize: 18,
     fontWeight: '600',
-    color: '#000',
+    color: '#fff',
   },
   headerRight: {
     width: 34,
@@ -187,11 +188,11 @@ const styles = StyleSheet.create({
   foodName: {
     fontSize: 24,
     fontWeight: '700',
-    color: '#000',
+    color: '#fff',
   },
   servingSelector: {
     flexDirection: 'row',
-    backgroundColor: '#f5f5f5',
+    backgroundColor: '#1a1a1a',
     borderRadius: 8,
     padding: 4,
     marginBottom: 20,
@@ -208,7 +209,7 @@ const styles = StyleSheet.create({
   servingButtonText: {
     fontSize: 14,
     fontWeight: '600',
-    color: '#666',
+    color: '#fff',
   },
   activeServingButtonText: {
     color: '#fff',
@@ -224,7 +225,7 @@ const styles = StyleSheet.create({
   },
   nutritionItem: {
     borderBottomWidth: 1,
-    borderBottomColor: '#f0f0f0',
+    borderBottomColor: '#333',
   },
   nutritionHeader: {
     flexDirection: 'row',
@@ -236,12 +237,12 @@ const styles = StyleSheet.create({
   },
   nutritionLabel: {
     fontSize: 16,
-    color: '#333',
+    color: '#fff',
     marginBottom: 4,
   },
   nutritionValue: {
     fontSize: 14,
-    color: '#666',
+    color: '#fff',
   },
   nutritionPercentage: {
     marginRight: 12,
@@ -256,13 +257,13 @@ const styles = StyleSheet.create({
     paddingBottom: 16,
   },
   guideContent: {
-    backgroundColor: '#f9f9f9',
+    backgroundColor: '#1a1a1a',
     padding: 16,
     borderRadius: 8,
   },
   guideText: {
     fontSize: 14,
-    color: '#666',
+    color: '#fff',
     lineHeight: 20,
   },
   majorNutrients: {

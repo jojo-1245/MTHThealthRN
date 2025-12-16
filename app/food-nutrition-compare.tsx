@@ -60,7 +60,7 @@ export default function FoodNutritionCompare() {
         <Ionicons
           name={expandedSections[sectionKey] ? "chevron-up" : "chevron-down"}
           size={20}
-          color="#666"
+          color="#fff"
         />
       </TouchableOpacity>
       
@@ -77,7 +77,7 @@ export default function FoodNutritionCompare() {
       {/* 헤더 */}
       <View style={styles.header}>
         <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
-          <Ionicons name="arrow-back" size={24} color="#000" />
+          <Ionicons name="arrow-back" size={24} color="#fff" />
         </TouchableOpacity>
         <Text style={styles.headerTitle}>{t('food.nutritionCompare.title')}</Text>
         <View style={styles.headerRight} />
@@ -91,7 +91,7 @@ export default function FoodNutritionCompare() {
             <View style={styles.foodCardHeader}>
               <Text style={styles.foodCardTitle}>당근</Text>
               <TouchableOpacity onPress={() => handleRemoveFood('left')}>
-                <Ionicons name="close-circle" size={24} color="#999" />
+                <Ionicons name="close-circle" size={24} color="#fff" />
               </TouchableOpacity>
             </View>
             <Text style={styles.foodCardServing}>120mL</Text>
@@ -107,7 +107,7 @@ export default function FoodNutritionCompare() {
             <View style={styles.foodCardHeader}>
               <Text style={styles.foodCardTitle}>비트</Text>
               <TouchableOpacity onPress={() => handleRemoveFood('right')}>
-                <Ionicons name="close-circle" size={24} color="#999" />
+                <Ionicons name="close-circle" size={24} color="#fff" />
               </TouchableOpacity>
             </View>
             <Text style={styles.foodCardServing}>{t('food.nutritionCompare.servingLabel')}</Text>
@@ -164,7 +164,7 @@ export default function FoodNutritionCompare() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#000',
   },
   header: {
     flexDirection: 'row',
@@ -174,7 +174,8 @@ const styles = StyleSheet.create({
     paddingTop: 60,
     paddingBottom: 20,
     borderBottomWidth: 1,
-    borderBottomColor: '#f0f0f0',
+    borderBottomColor: '#333',
+    backgroundColor: '#000',
   },
   backButton: {
     padding: 5,
@@ -182,7 +183,7 @@ const styles = StyleSheet.create({
   headerTitle: {
     fontSize: 18,
     fontWeight: '600',
-    color: '#000',
+    color: '#fff',
   },
   headerRight: {
     width: 34,
@@ -198,7 +199,7 @@ const styles = StyleSheet.create({
   },
   foodCard: {
     flex: 1,
-    backgroundColor: '#f9f9f9',
+    backgroundColor: '#1a1a1a',
     borderRadius: 12,
     padding: 16,
   },
@@ -211,11 +212,11 @@ const styles = StyleSheet.create({
   foodCardTitle: {
     fontSize: 18,
     fontWeight: '600',
-    color: '#000',
+    color: '#fff',
   },
   foodCardServing: {
     fontSize: 14,
-    color: '#666',
+    color: '#fff',
   },
   vsContainer: {
     marginHorizontal: 20,
@@ -240,14 +241,14 @@ const styles = StyleSheet.create({
   },
   servingInfoLabel: {
     fontSize: 14,
-    color: '#666',
+    color: '#fff',
   },
   comparisonTable: {
     marginBottom: 20,
   },
   expandableSection: {
     borderBottomWidth: 1,
-    borderBottomColor: '#f0f0f0',
+    borderBottomColor: '#333',
   },
   sectionHeader: {
     flexDirection: 'row',
@@ -258,7 +259,7 @@ const styles = StyleSheet.create({
   sectionTitle: {
     fontSize: 16,
     fontWeight: '600',
-    color: '#000',
+    color: '#fff',
   },
   sectionContent: {
     paddingBottom: 16,
@@ -277,11 +278,11 @@ const styles = StyleSheet.create({
   comparisonValue: {
     fontSize: 16,
     fontWeight: '600',
-    color: '#000',
+    color: '#fff',
   },
   comparisonUnit: {
     fontSize: 12,
-    color: '#666',
+    color: '#fff',
     marginTop: 2,
   },
   comparisonLabel: {
@@ -290,7 +291,7 @@ const styles = StyleSheet.create({
   },
   comparisonLabelText: {
     fontSize: 14,
-    color: '#666',
+    color: '#fff',
   },
   bottomButtonContainer: {
     paddingHorizontal: 20,
@@ -301,7 +302,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#fff',
+    backgroundColor: '#1a1a1a',
     borderWidth: 1,
     borderColor: '#8B5CF6',
     paddingVertical: 16,

@@ -76,7 +76,7 @@ export default function FoodSearchResult() {
       <View style={styles.analysisCard}>
         <View style={styles.analysisHeader}>
             <Text style={styles.analysisTitle}>{t('food.searchResult.analysisTitle')}</Text>
-          <Ionicons name="help-circle-outline" size={20} color="#999" />
+          <Ionicons name="help-circle-outline" size={20} color="#fff" />
         </View>
         
         <View style={styles.analysisItems}>
@@ -145,7 +145,7 @@ export default function FoodSearchResult() {
     <View style={styles.tabContent}>
       <View style={styles.rankingHeader}>
         <Text style={styles.rankingTitle}>{t('food.searchResult.rankingTitle')}</Text>
-        <Ionicons name="help-circle-outline" size={20} color="#999" />
+        <Ionicons name="help-circle-outline" size={20} color="#fff" />
       </View>
       
       <FlatList
@@ -173,7 +173,7 @@ export default function FoodSearchResult() {
       {/* 헤더 */}
       <View style={styles.header}>
         <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
-          <Ionicons name="arrow-back" size={24} color="#000" />
+          <Ionicons name="arrow-back" size={24} color="#fff" />
         </TouchableOpacity>
         <Text style={styles.headerTitle}>{t('food.searchResult.title')}</Text>
         <View style={styles.headerRight} />
@@ -221,7 +221,7 @@ export default function FoodSearchResult() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#000',
   },
   header: {
     flexDirection: 'row',
@@ -231,7 +231,8 @@ const styles = StyleSheet.create({
     paddingTop: 60,
     paddingBottom: 20,
     borderBottomWidth: 1,
-    borderBottomColor: '#f0f0f0',
+    borderBottomColor: '#333',
+    backgroundColor: '#000',
   },
   backButton: {
     padding: 5,
@@ -239,7 +240,7 @@ const styles = StyleSheet.create({
   headerTitle: {
     fontSize: 18,
     fontWeight: '600',
-    color: '#000',
+    color: '#fff',
   },
   headerRight: {
     width: 34,
@@ -249,7 +250,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 10,
     borderBottomWidth: 1,
-    borderBottomColor: '#f0f0f0',
+    borderBottomColor: '#333',
+    backgroundColor: '#000',
   },
   tabButton: {
     flex: 1,
@@ -262,7 +264,7 @@ const styles = StyleSheet.create({
   },
   tabButtonText: {
     fontSize: 16,
-    color: '#666',
+    color: '#fff',
   },
   activeTabButtonText: {
     color: '#8B5CF6',
@@ -276,7 +278,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
   },
   foodInfoCard: {
-    backgroundColor: '#f9f9f9',
+    backgroundColor: '#1a1a1a',
     borderRadius: 12,
     padding: 20,
     marginVertical: 20,
@@ -284,7 +286,7 @@ const styles = StyleSheet.create({
   foodName: {
     fontSize: 24,
     fontWeight: '700',
-    color: '#000',
+    color: '#fff',
     marginBottom: 16,
   },
   foodDetails: {
@@ -294,12 +296,12 @@ const styles = StyleSheet.create({
   },
   foodDetailLabel: {
     fontSize: 14,
-    color: '#666',
+    color: '#fff',
   },
   foodDetailValue: {
     fontSize: 14,
     fontWeight: '600',
-    color: '#000',
+    color: '#fff',
   },
   analysisResult: {
     flexDirection: 'row',
@@ -323,7 +325,7 @@ const styles = StyleSheet.create({
     borderRadius: 4,
   },
   analysisCard: {
-    backgroundColor: '#f9f9f9',
+    backgroundColor: '#1a1a1a',
     borderRadius: 12,
     padding: 20,
     marginBottom: 20,
@@ -336,7 +338,7 @@ const styles = StyleSheet.create({
   analysisTitle: {
     fontSize: 18,
     fontWeight: '600',
-    color: '#000',
+    color: '#fff',
     marginRight: 8,
   },
   analysisItems: {
@@ -347,7 +349,7 @@ const styles = StyleSheet.create({
   },
   analysisItemLabel: {
     fontSize: 14,
-    color: '#333',
+    color: '#fff',
     marginBottom: 8,
   },
   analysisBar: {
@@ -375,7 +377,7 @@ const styles = StyleSheet.create({
   },
   scaleLabel: {
     fontSize: 12,
-    color: '#666',
+    color: '#fff',
   },
   scaleNumbers: {
     flexDirection: 'row',
@@ -385,7 +387,7 @@ const styles = StyleSheet.create({
   },
   scaleNumber: {
     fontSize: 12,
-    color: '#666',
+    color: '#fff',
   },
   footerNote: {
     paddingVertical: 20,
@@ -393,7 +395,7 @@ const styles = StyleSheet.create({
   },
   footerText: {
     fontSize: 12,
-    color: '#999',
+    color: '#fff',
   },
   rankingHeader: {
     flexDirection: 'row',
@@ -403,7 +405,7 @@ const styles = StyleSheet.create({
   rankingTitle: {
     fontSize: 18,
     fontWeight: '600',
-    color: '#000',
+    color: '#fff',
     marginRight: 8,
   },
   rankingItem: {
@@ -411,7 +413,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     paddingVertical: 16,
     borderBottomWidth: 1,
-    borderBottomColor: '#f0f0f0',
+    borderBottomColor: '#333',
   },
   rankingInfo: {
     flex: 1,
@@ -419,12 +421,12 @@ const styles = StyleSheet.create({
   rankingName: {
     fontSize: 16,
     fontWeight: '600',
-    color: '#000',
+    color: '#fff',
     marginBottom: 4,
   },
   rankingManufacturer: {
     fontSize: 14,
-    color: '#666',
+    color: '#fff',
   },
   rankingNutrition: {
     alignItems: 'flex-end',
@@ -437,7 +439,7 @@ const styles = StyleSheet.create({
   },
   rankingServing: {
     fontSize: 12,
-    color: '#666',
+    color: '#fff',
   },
   bottomButtonContainer: {
     paddingHorizontal: 20,
@@ -458,7 +460,7 @@ const styles = StyleSheet.create({
     color: '#fff',
   },
   compareButton: {
-    backgroundColor: '#fff',
+    backgroundColor: '#1a1a1a',
     borderWidth: 1,
     borderColor: '#8B5CF6',
     paddingVertical: 16,

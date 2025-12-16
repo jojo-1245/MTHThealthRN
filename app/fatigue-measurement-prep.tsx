@@ -1,15 +1,14 @@
 import { useTranslation } from '@/i18n';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
-import React from 'react';
 import {
-    Dimensions,
-    ScrollView,
-    StatusBar,
-    StyleSheet,
-    Text,
-    TouchableOpacity,
-    View,
+  Dimensions,
+  ScrollView,
+  StatusBar,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
 } from 'react-native';
 
 const { width, height } = Dimensions.get('window');
@@ -33,12 +32,12 @@ export default function FatigueMeasurementPrepScreen() {
 
   return (
     <View style={styles.container}>
-      <StatusBar barStyle="dark-content" backgroundColor="#fff" />
+      <StatusBar barStyle="light-content" backgroundColor="#000" />
       
       {/* 헤더 */}
       <View style={styles.header}>
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
-          <Ionicons name="arrow-back" size={24} color="#000" />
+          <Ionicons name="arrow-back" size={24} color="#fff" />
         </TouchableOpacity>
         <Text style={styles.headerTitle}>{t('fatigue.measurementPrep.title')}</Text>
         <View style={styles.headerRight} />
@@ -84,10 +83,10 @@ export default function FatigueMeasurementPrepScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#000',
   },
   header: {
-    backgroundColor: '#fff',
+    backgroundColor: '#000',
     paddingTop: 50,
     paddingBottom: 20,
     paddingHorizontal: 20,
@@ -95,7 +94,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     borderBottomWidth: 1,
-    borderBottomColor: '#E5E7EB',
+    borderBottomColor: '#333',
   },
   backButton: {
     padding: 8,
@@ -103,7 +102,7 @@ const styles = StyleSheet.create({
   headerTitle: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#000',
+    color: '#fff',
   },
   headerRight: {
     width: 40,
@@ -120,12 +119,12 @@ const styles = StyleSheet.create({
   instructionTitle: {
     fontSize: 20,
     fontWeight: 'bold',
-    color: '#000',
+    color: '#fff',
     marginBottom: 12,
   },
   instructionText: {
     fontSize: 16,
-    color: '#6B7280',
+    color: '#fff',
     textAlign: 'center',
     lineHeight: 24,
   },
@@ -141,13 +140,13 @@ const styles = StyleSheet.create({
     borderColor: '#8B5CF6',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#F8F9FF',
+    backgroundColor: '#1a1a1a',
   },
   faceDetectionArea: {
     width: 200,
     height: 200,
     borderRadius: 100,
-    backgroundColor: '#E5E7EB',
+    backgroundColor: '#333',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -157,7 +156,7 @@ const styles = StyleSheet.create({
   },
   guidanceText: {
     fontSize: 16,
-    color: '#374151',
+    color: '#fff',
     textAlign: 'center',
     lineHeight: 24,
   },
@@ -167,7 +166,7 @@ const styles = StyleSheet.create({
     paddingTop: 20,
   },
   helpButton: {
-    backgroundColor: '#F3E8FF',
+    backgroundColor: '#1a1a1a',
     paddingVertical: 16,
     borderRadius: 12,
     alignItems: 'center',

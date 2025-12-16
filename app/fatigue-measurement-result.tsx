@@ -35,12 +35,12 @@ export default function FatigueMeasurementResultScreen() {
 
   return (
     <View style={styles.container}>
-      <StatusBar barStyle="dark-content" backgroundColor="#fff" />
+      <StatusBar barStyle="light-content" backgroundColor="#000" />
       
       {/* 헤더 */}
       <View style={styles.header}>
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
-          <Ionicons name="arrow-back" size={24} color="#000" />
+          <Ionicons name="arrow-back" size={24} color="#fff" />
         </TouchableOpacity>
         <Text style={styles.headerTitle}>{t('fatigue.measurementResult.title')}</Text>
         <View style={styles.headerRight} />
@@ -72,7 +72,7 @@ export default function FatigueMeasurementResultScreen() {
           
           <View style={styles.warningIconContainer}>
             <View style={styles.personIcon}>
-              <Ionicons name="person" size={40} color="#6B7280" />
+              <Ionicons name="person" size={40} color="#fff" />
             </View>
             <View style={styles.batteryIcon}>
               <Ionicons name="battery-dead" size={24} color="#EF4444" />
@@ -111,10 +111,10 @@ export default function FatigueMeasurementResultScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#000',
   },
   header: {
-    backgroundColor: '#fff',
+    backgroundColor: '#000',
     paddingTop: 50,
     paddingBottom: 20,
     paddingHorizontal: 20,
@@ -122,7 +122,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     borderBottomWidth: 1,
-    borderBottomColor: '#E5E7EB',
+    borderBottomColor: '#333',
   },
   backButton: {
     padding: 8,
@@ -130,7 +130,7 @@ const styles = StyleSheet.create({
   headerTitle: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#000',
+    color: '#fff',
   },
   headerRight: {
     width: 40,
@@ -147,7 +147,7 @@ const styles = StyleSheet.create({
   scoreTitle: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#000',
+    color: '#fff',
     marginBottom: 16,
   },
   scoreDisplay: {
@@ -157,7 +157,7 @@ const styles = StyleSheet.create({
   scoreValue: {
     fontSize: 48,
     fontWeight: 'bold',
-    color: '#000',
+    color: '#fff',
     marginRight: 16,
   },
   scoreBadge: {
@@ -177,22 +177,22 @@ const styles = StyleSheet.create({
   },
   messageText: {
     fontSize: 16,
-    color: '#374151',
+    color: '#fff',
     textAlign: 'center',
     lineHeight: 24,
   },
   warningContainer: {
-    backgroundColor: '#F8F9FF',
+    backgroundColor: '#1a1a1a',
     borderRadius: 12,
     padding: 20,
     marginBottom: 40,
     borderWidth: 1,
-    borderColor: '#E5E7EB',
+    borderColor: '#333',
   },
   warningTitle: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#000',
+    color: '#fff',
     marginBottom: 20,
     textAlign: 'center',
   },
@@ -205,7 +205,7 @@ const styles = StyleSheet.create({
     width: 80,
     height: 80,
     borderRadius: 40,
-    backgroundColor: '#E5E7EB',
+    backgroundColor: '#333',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -216,7 +216,7 @@ const styles = StyleSheet.create({
     width: 30,
     height: 30,
     borderRadius: 15,
-    backgroundColor: '#FEF2F2',
+    backgroundColor: '#1a1a1a',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -231,16 +231,16 @@ const styles = StyleSheet.create({
   symptomNumber: {
     fontSize: 16,
     fontWeight: 'bold',
-    color: '#6B7280',
+    color: '#fff',
     width: 20,
   },
   symptomText: {
     fontSize: 16,
-    color: '#374151',
+    color: '#fff',
     marginLeft: 8,
   },
   disclaimerContainer: {
-    backgroundColor: '#FEF3C7',
+    backgroundColor: '#1a1a1a',
     padding: 16,
     borderRadius: 8,
     borderWidth: 1,
@@ -248,7 +248,7 @@ const styles = StyleSheet.create({
   },
   disclaimerText: {
     fontSize: 14,
-    color: '#92400E',
+    color: '#fff',
     textAlign: 'center',
     lineHeight: 20,
   },
