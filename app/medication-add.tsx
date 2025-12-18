@@ -77,7 +77,7 @@ export default function MedicationAdd() {
       {/* 헤더 */}
       <View style={styles.header}>
         <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
-          <Ionicons name="arrow-back" size={24} color="#000" />
+          <Ionicons name="arrow-back" size={24} color="#fff" />
         </TouchableOpacity>
         <Text style={styles.headerTitle}>{t('medication.add.title')}</Text>
         <View style={styles.headerRight} />
@@ -110,7 +110,7 @@ export default function MedicationAdd() {
             <View style={styles.selectedMedicationItem}>
               <Text style={styles.selectedMedicationName}>타이론정</Text>
               <TouchableOpacity onPress={handleMedicationRemove} style={styles.removeButton}>
-                <Ionicons name="close" size={16} color="#999" />
+                <Ionicons name="close" size={16} color="#fff" />
               </TouchableOpacity>
             </View>
           </View>
@@ -127,10 +127,10 @@ export default function MedicationAdd() {
                 value={prescriptionDate}
                 onChangeText={setPrescriptionDate}
                 placeholder={t('medication.add.datePlaceholder')}
-                placeholderTextColor="#999"
+                placeholderTextColor="#666"
                 editable={false}
               />
-              <Ionicons name="calendar-outline" size={20} color="#999" />
+              <Ionicons name="calendar-outline" size={20} color="#fff" />
             </TouchableOpacity>
           </View>
 
@@ -143,10 +143,10 @@ export default function MedicationAdd() {
                 value={medicationPeriod}
                 onChangeText={setMedicationPeriod}
                 placeholder={t('medication.add.periodPlaceholder')}
-                placeholderTextColor="#999"
+                placeholderTextColor="#666"
                 editable={false}
               />
-              <Ionicons name="chevron-down" size={20} color="#999" />
+              <Ionicons name="chevron-down" size={20} color="#fff" />
             </TouchableOpacity>
           </View>
         </View>
@@ -206,7 +206,7 @@ export default function MedicationAdd() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#000',
   },
   header: {
     flexDirection: 'row',
@@ -216,7 +216,8 @@ const styles = StyleSheet.create({
     paddingTop: 60,
     paddingBottom: 20,
     borderBottomWidth: 1,
-    borderBottomColor: '#f0f0f0',
+    borderBottomColor: '#333',
+    backgroundColor: '#000',
   },
   backButton: {
     padding: 5,
@@ -224,7 +225,7 @@ const styles = StyleSheet.create({
   headerTitle: {
     fontSize: 18,
     fontWeight: '600',
-    color: '#000',
+    color: '#fff',
   },
   headerRight: {
     width: 34, // 뒤로가기 버튼과 동일한 너비로 중앙 정렬
@@ -255,7 +256,7 @@ const styles = StyleSheet.create({
   },
   searchButton: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#1a1a1a',
     borderWidth: 1,
     borderColor: '#8B5CF6',
     paddingVertical: 16,
@@ -283,38 +284,38 @@ const styles = StyleSheet.create({
   inputLabel: {
     fontSize: 16,
     fontWeight: '600',
-    color: '#000',
+    color: '#fff',
     marginBottom: 10,
   },
   dateInputContainer: {
     flexDirection: 'row',
     alignItems: 'center',
     borderWidth: 1,
-    borderColor: '#e0e0e0',
+    borderColor: '#333',
     borderRadius: 8,
     paddingHorizontal: 16,
     paddingVertical: 12,
-    backgroundColor: '#fff',
+    backgroundColor: '#1a1a1a',
   },
   dateInput: {
     flex: 1,
     fontSize: 16,
-    color: '#000',
+    color: '#fff',
   },
   periodInputContainer: {
     flexDirection: 'row',
     alignItems: 'center',
     borderWidth: 1,
-    borderColor: '#e0e0e0',
+    borderColor: '#333',
     borderRadius: 8,
     paddingHorizontal: 16,
     paddingVertical: 12,
-    backgroundColor: '#fff',
+    backgroundColor: '#1a1a1a',
   },
   periodInput: {
     flex: 1,
     fontSize: 16,
-    color: '#000',
+    color: '#fff',
   },
   bottomButtonContainer: {
     paddingHorizontal: 20,
@@ -329,7 +330,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   saveButtonDisabled: {
-    backgroundColor: '#f5f5f5',
+    backgroundColor: '#333',
   },
   saveButtonText: {
     fontSize: 16,
@@ -337,7 +338,7 @@ const styles = StyleSheet.create({
     color: '#fff',
   },
   saveButtonTextDisabled: {
-    color: '#999',
+    color: '#666',
   },
   activeButton: {
     backgroundColor: '#8B5CF6',
@@ -353,12 +354,12 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 15,
     borderBottomWidth: 1,
-    borderBottomColor: '#f0f0f0',
+    borderBottomColor: '#333',
   },
   selectedMedicationLabel: {
     fontSize: 16,
     fontWeight: '600',
-    color: '#000',
+    color: '#fff',
     marginBottom: 10,
   },
   selectedMedicationItem: {
@@ -369,7 +370,7 @@ const styles = StyleSheet.create({
   },
   selectedMedicationName: {
     fontSize: 16,
-    color: '#000',
+    color: '#fff',
   },
   removeButton: {
     padding: 4,
@@ -381,21 +382,23 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   successModalContainer: {
-    backgroundColor: '#fff',
+    backgroundColor: '#1a1a1a',
     borderRadius: 12,
     padding: 24,
     alignItems: 'center',
     marginHorizontal: 40,
+    borderWidth: 1,
+    borderColor: '#333',
   },
   successModalTitle: {
     fontSize: 18,
     fontWeight: '600',
-    color: '#000',
+    color: '#fff',
     marginBottom: 16,
   },
   successModalMessage: {
     fontSize: 16,
-    color: '#666',
+    color: '#fff',
     marginBottom: 24,
     textAlign: 'center',
   },

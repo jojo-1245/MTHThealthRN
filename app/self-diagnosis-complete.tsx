@@ -35,12 +35,12 @@ export default function SelfDiagnosisCompleteScreen() {
 
   return (
     <View style={styles.container}>
-      <StatusBar barStyle="dark-content" backgroundColor="#fff" />
+      <StatusBar barStyle="light-content" backgroundColor="#000" />
       
       {/* 헤더 */}
       <View style={styles.header}>
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
-          <Ionicons name="arrow-back" size={24} color="#000" />
+          <Ionicons name="arrow-back" size={24} color="#fff" />
         </TouchableOpacity>
         <Text style={styles.headerTitle}>{t('selfDiagnosis.complete.title')}</Text>
         <View style={styles.headerRight} />
@@ -67,7 +67,7 @@ export default function SelfDiagnosisCompleteScreen() {
               onPress={handleMonthChange}
             >
               <Text style={styles.monthText}>2025-10</Text>
-              <Ionicons name="chevron-up" size={16} color="#9CA3AF" />
+              <Ionicons name="chevron-up" size={16} color="#fff" />
             </TouchableOpacity>
           </View>
 
@@ -94,10 +94,10 @@ export default function SelfDiagnosisCompleteScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#000',
   },
   header: {
-    backgroundColor: '#fff',
+    backgroundColor: '#000',
     paddingTop: 50,
     paddingBottom: 20,
     paddingHorizontal: 20,
@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     borderBottomWidth: 1,
-    borderBottomColor: '#E5E7EB',
+    borderBottomColor: '#333',
   },
   backButton: {
     padding: 8,
@@ -113,7 +113,7 @@ const styles = StyleSheet.create({
   headerTitle: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#000',
+    color: '#fff',
   },
   headerRight: {
     width: 40,
@@ -124,7 +124,7 @@ const styles = StyleSheet.create({
     paddingTop: 20,
   },
   resultCard: {
-    backgroundColor: '#fff',
+    backgroundColor: '#1a1a1a',
     borderRadius: 12,
     padding: 20,
     shadowColor: '#000',
@@ -136,7 +136,7 @@ const styles = StyleSheet.create({
     shadowRadius: 8,
     elevation: 4,
     borderWidth: 1,
-    borderColor: '#E5E7EB',
+    borderColor: '#333',
   },
   addModifyButton: {
     backgroundColor: '#8B5CF6',
@@ -163,7 +163,7 @@ const styles = StyleSheet.create({
   infoLabel: {
     fontSize: 16,
     fontWeight: '500',
-    color: '#374151',
+    color: '#fff',
   },
   monthContainer: {
     flexDirection: 'row',
@@ -172,13 +172,13 @@ const styles = StyleSheet.create({
   monthText: {
     fontSize: 16,
     fontWeight: '500',
-    color: '#374151',
+    color: '#fff',
     marginRight: 8,
   },
   diagnosisItem: {
     fontSize: 16,
     fontWeight: '500',
-    color: '#374151',
+    color: '#fff',
   },
   detailedResultsButton: {
     backgroundColor: '#6B7280',

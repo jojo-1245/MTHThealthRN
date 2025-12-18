@@ -101,7 +101,7 @@ export default function StressMeasurementPrep() {
       {/* 헤더 */}
       <View style={styles.header}>
         <TouchableOpacity onPress={handleBack} style={styles.backButton}>
-          <Ionicons name="arrow-back" size={24} color="#000" />
+          <Ionicons name="arrow-back" size={24} color="#fff" />
         </TouchableOpacity>
         <Text style={styles.headerTitle}>{t('stressHeartrate.measurement.title')}</Text>
         <View style={styles.headerRight} />
@@ -137,7 +137,7 @@ export default function StressMeasurementPrep() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#000',
   },
   header: {
     flexDirection: 'row',
@@ -147,7 +147,8 @@ const styles = StyleSheet.create({
     paddingTop: 60,
     paddingBottom: 20,
     borderBottomWidth: 1,
-    borderBottomColor: '#f0f0f0',
+    borderBottomColor: '#333',
+    backgroundColor: '#000',
   },
   backButton: {
     padding: 5,
@@ -155,7 +156,7 @@ const styles = StyleSheet.create({
   headerTitle: {
     fontSize: 18,
     fontWeight: '600',
-    color: '#000',
+    color: '#fff',
   },
   headerRight: {
     width: 34,
@@ -172,7 +173,7 @@ const styles = StyleSheet.create({
     width: 8,
     height: 8,
     borderRadius: 4,
-    backgroundColor: '#e0e0e0',
+    backgroundColor: '#666',
   },
   progressDotActive: {
     backgroundColor: '#8B5CF6',
@@ -309,13 +310,13 @@ const styles = StyleSheet.create({
   mainInstruction: {
     fontSize: 24,
     fontWeight: '700',
-    color: '#000',
+    color: '#fff',
     marginBottom: 16,
     textAlign: 'center',
   },
   subInstruction: {
     fontSize: 16,
-    color: '#666',
+    color: '#fff',
     textAlign: 'center',
     lineHeight: 24,
   },
@@ -332,7 +333,7 @@ const styles = StyleSheet.create({
   },
   dontShowButtonText: {
     fontSize: 16,
-    color: '#666',
+    color: '#fff',
   },
   nextButton: {
     flex: 1,

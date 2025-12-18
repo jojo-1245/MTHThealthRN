@@ -95,7 +95,7 @@ export default function SelfDiagnosisAdd({
 
   return (
     <View style={styles.container}>
-      <StatusBar barStyle="light-content" backgroundColor="#8B5CF6" />
+      <StatusBar barStyle="light-content" backgroundColor="#000" />
       
       {/* 헤더 */}
       <View style={styles.header}>
@@ -169,10 +169,10 @@ export default function SelfDiagnosisAdd({
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#000',
   },
   header: {
-    backgroundColor: '#8B5CF6',
+    backgroundColor: '#000',
     paddingTop: 50,
     paddingBottom: 20,
     paddingHorizontal: 20,
@@ -202,7 +202,7 @@ const styles = StyleSheet.create({
   },
   infoText: {
     fontSize: 16,
-    color: '#374151',
+    color: '#fff',
     lineHeight: 24,
     textAlign: 'center',
   },
@@ -210,11 +210,11 @@ const styles = StyleSheet.create({
     gap: 12,
   },
   card: {
-    backgroundColor: '#fff',
+    backgroundColor: '#1a1a1a',
     borderRadius: 12,
     padding: 20,
     borderWidth: 1,
-    borderColor: '#E5E7EB',
+    borderColor: '#333',
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
@@ -240,12 +240,12 @@ const styles = StyleSheet.create({
   cardTitle: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#1F2937',
+    color: '#fff',
     marginBottom: 8,
   },
   cardDescription: {
     fontSize: 14,
-    color: '#6B7280',
+    color: '#fff',
     lineHeight: 20,
     marginBottom: 12,
   },
@@ -268,7 +268,7 @@ const styles = StyleSheet.create({
     height: 24,
     borderRadius: 12,
     borderWidth: 2,
-    borderColor: '#D1D5DB',
+    borderColor: '#666',
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -280,9 +280,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 20,
     paddingBottom: 40,
-    backgroundColor: '#fff',
+    backgroundColor: '#000',
     borderTopWidth: 1,
-    borderTopColor: '#E5E7EB',
+    borderTopColor: '#333',
   },
   nextButton: {
     backgroundColor: '#8B5CF6',

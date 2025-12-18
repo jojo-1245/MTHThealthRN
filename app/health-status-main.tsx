@@ -44,12 +44,12 @@ export default function HealthStatusMainScreen() {
 
   return (
     <View style={styles.container}>
-      <StatusBar barStyle="dark-content" backgroundColor="#fff" />
+      <StatusBar barStyle="light-content" backgroundColor="#000" />
       
       {/* 헤더 */}
       <View style={styles.header}>
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
-          <Ionicons name="arrow-back" size={24} color="#000" />
+          <Ionicons name="arrow-back" size={24} color="#fff" />
         </TouchableOpacity>
         <Text style={styles.headerTitle}>{t('health.statusMain.title')}</Text>
         <View style={styles.headerRight} />
@@ -181,7 +181,7 @@ export default function HealthStatusMainScreen() {
                 <Text style={styles.habitLabel}>{t('health.statusMain.habitItems.recruiting')}</Text>
                 <Text style={styles.habitSubtitle}>{t('health.statusMain.habitItems.recruitingSubtitle')}</Text>
               </View>
-              <Ionicons name="chevron-forward" size={16} color="#9CA3AF" />
+              <Ionicons name="chevron-forward" size={16} color="#fff" />
             </TouchableOpacity>
             <TouchableOpacity 
               style={styles.habitItem}
@@ -192,7 +192,7 @@ export default function HealthStatusMainScreen() {
                 <Text style={styles.habitLabel}>{t('health.statusMain.habitItems.ended')}</Text>
                 <Text style={styles.habitSubtitle}>{t('health.statusMain.habitItems.endedSubtitle')}</Text>
               </View>
-              <Ionicons name="chevron-forward" size={16} color="#9CA3AF" />
+              <Ionicons name="chevron-forward" size={16} color="#fff" />
             </TouchableOpacity>
           </View>
         </View>
@@ -204,10 +204,10 @@ export default function HealthStatusMainScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#000',
   },
   header: {
-    backgroundColor: '#fff',
+    backgroundColor: '#000',
     paddingTop: 50,
     paddingBottom: 20,
     paddingHorizontal: 20,
@@ -215,7 +215,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     borderBottomWidth: 1,
-    borderBottomColor: '#E5E7EB',
+    borderBottomColor: '#333',
   },
   backButton: {
     padding: 8,
@@ -223,7 +223,7 @@ const styles = StyleSheet.create({
   headerTitle: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#000',
+    color: '#fff',
   },
   headerRight: {
     width: 40,
@@ -240,7 +240,7 @@ const styles = StyleSheet.create({
   userName: {
     fontSize: 20,
     fontWeight: 'bold',
-    color: '#000',
+    color: '#fff',
     marginBottom: 24,
   },
   levelContainer: {
@@ -258,7 +258,7 @@ const styles = StyleSheet.create({
     height: 150,
     borderRadius: 75,
     borderWidth: 12,
-    borderColor: '#E5E7EB',
+    borderColor: '#333',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -277,18 +277,18 @@ const styles = StyleSheet.create({
   },
   levelText: {
     fontSize: 14,
-    color: '#6B7280',
+    color: '#fff',
     marginBottom: 4,
   },
   levelNumber: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: '#000',
+    color: '#fff',
   },
   levelBadge: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#FEF3C7',
+    backgroundColor: '#1a1a1a',
     paddingHorizontal: 16,
     paddingVertical: 10,
     borderRadius: 20,
@@ -298,12 +298,12 @@ const styles = StyleSheet.create({
   levelBadgeText: {
     fontSize: 16,
     fontWeight: 'bold',
-    color: '#92400E',
+    color: '#F59E0B',
     marginRight: 4,
   },
   levelDescription: {
     fontSize: 14,
-    color: '#6B7280',
+    color: '#fff',
     textAlign: 'center',
     lineHeight: 20,
   },
@@ -313,7 +313,7 @@ const styles = StyleSheet.create({
   sectionTitle: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#000',
+    color: '#fff',
     marginBottom: 16,
   },
   cardRow: {
@@ -322,13 +322,13 @@ const styles = StyleSheet.create({
   },
   manageCard: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#1a1a1a',
     borderRadius: 12,
     padding: 16,
     alignItems: 'center',
     marginHorizontal: 4,
     borderWidth: 1,
-    borderColor: '#E5E7EB',
+    borderColor: '#333',
   },
   cardIcon: {
     width: 60,
@@ -339,18 +339,18 @@ const styles = StyleSheet.create({
     marginBottom: 12,
   },
   orangeIcon: {
-    backgroundColor: '#FEF3C7',
+    backgroundColor: '#1a1a1a',
   },
   blueIcon: {
-    backgroundColor: '#DBEAFE',
+    backgroundColor: '#1a1a1a',
   },
   brownIcon: {
-    backgroundColor: '#FEF3C7',
+    backgroundColor: '#1a1a1a',
   },
   cardTitle: {
     fontSize: 14,
     fontWeight: '500',
-    color: '#000',
+    color: '#fff',
     marginBottom: 8,
     textAlign: 'center',
   },
@@ -366,24 +366,24 @@ const styles = StyleSheet.create({
   },
   addCard: {
     flex: 1,
-    backgroundColor: '#F8F9FF',
+    backgroundColor: '#1a1a1a',
     borderRadius: 12,
     padding: 16,
     alignItems: 'center',
     marginHorizontal: 4,
     borderWidth: 1,
-    borderColor: '#E5E7EB',
+    borderColor: '#333',
   },
   addCardTime: {
     fontSize: 12,
-    color: '#6B7280',
+    color: '#fff',
     marginBottom: 8,
   },
   addCardIcon: {
     width: 60,
     height: 60,
     borderRadius: 30,
-    backgroundColor: '#F3E8FF',
+    backgroundColor: '#0a0a0a',
     alignItems: 'center',
     justifyContent: 'center',
     marginBottom: 12,
@@ -391,13 +391,13 @@ const styles = StyleSheet.create({
   addCardTitle: {
     fontSize: 14,
     fontWeight: '500',
-    color: '#000',
+    color: '#fff',
     textAlign: 'center',
   },
   // 건강 습관 만들기 섹션
   habitDescription: {
     fontSize: 14,
-    color: '#6B7280',
+    color: '#fff',
     marginBottom: 16,
     lineHeight: 20,
   },
@@ -407,12 +407,12 @@ const styles = StyleSheet.create({
   habitItem: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#fff',
+    backgroundColor: '#1a1a1a',
     borderRadius: 12,
     padding: 16,
     marginBottom: 12,
     borderWidth: 1,
-    borderColor: '#E5E7EB',
+    borderColor: '#333',
   },
   habitStatusDot: {
     width: 8,
@@ -426,11 +426,11 @@ const styles = StyleSheet.create({
   habitLabel: {
     fontSize: 16,
     fontWeight: '600',
-    color: '#374151',
+    color: '#fff',
     marginBottom: 4,
   },
   habitSubtitle: {
     fontSize: 14,
-    color: '#6B7280',
+    color: '#fff',
   },
 });

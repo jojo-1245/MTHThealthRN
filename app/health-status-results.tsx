@@ -69,12 +69,12 @@ export default function HealthStatusResultsScreen() {
 
   return (
     <View style={styles.container}>
-      <StatusBar barStyle="dark-content" backgroundColor="#fff" />
+      <StatusBar barStyle="light-content" backgroundColor="#000" />
       
       {/* 헤더 */}
       <View style={styles.header}>
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
-          <Ionicons name="arrow-back" size={24} color="#000" />
+          <Ionicons name="arrow-back" size={24} color="#fff" />
         </TouchableOpacity>
         <Text style={styles.headerTitle}>{t('health.statusResults.title')}</Text>
         <TouchableOpacity style={styles.graphButton} onPress={handleStatistics}>
@@ -162,7 +162,7 @@ export default function HealthStatusResultsScreen() {
               <Ionicons name="document-text" size={24} color="#8B5CF6" />
             </View>
             <Text style={styles.serviceName}>{t('health.statusResults.serviceName')}</Text>
-            <Ionicons name="chevron-forward" size={20} color="#6B7280" />
+            <Ionicons name="chevron-forward" size={20} color="#fff" />
           </TouchableOpacity>
         </View>
       </ScrollView>
@@ -173,10 +173,10 @@ export default function HealthStatusResultsScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#000',
   },
   header: {
-    backgroundColor: '#fff',
+    backgroundColor: '#000',
     paddingTop: 50,
     paddingBottom: 20,
     paddingHorizontal: 20,
@@ -184,7 +184,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     borderBottomWidth: 1,
-    borderBottomColor: '#E5E7EB',
+    borderBottomColor: '#333',
   },
   backButton: {
     padding: 8,
@@ -192,7 +192,7 @@ const styles = StyleSheet.create({
   headerTitle: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#000',
+    color: '#fff',
   },
   graphButton: {
     padding: 8,
@@ -207,7 +207,7 @@ const styles = StyleSheet.create({
     width: 8,
     height: 8,
     borderRadius: 4,
-    backgroundColor: '#D1D5DB',
+    backgroundColor: '#666',
     marginHorizontal: 4,
   },
   activeIndicator: {
@@ -224,7 +224,7 @@ const styles = StyleSheet.create({
   },
   summaryText: {
     fontSize: 18,
-    color: '#000',
+    color: '#fff',
     lineHeight: 26,
     marginBottom: 4,
   },
@@ -243,7 +243,7 @@ const styles = StyleSheet.create({
   comparisonBar: {
     width: '100%',
     height: 24,
-    backgroundColor: '#E5E7EB',
+    backgroundColor: '#333',
     borderRadius: 12,
     overflow: 'hidden',
   },
@@ -261,7 +261,7 @@ const styles = StyleSheet.create({
   },
   comparisonLabel: {
     fontSize: 12,
-    color: '#6B7280',
+    color: '#fff',
   },
   averageMarker: {
     position: 'absolute',
@@ -281,7 +281,7 @@ const styles = StyleSheet.create({
   },
   averageLabel: {
     fontSize: 12,
-    color: '#6B7280',
+    color: '#fff',
     fontWeight: '500',
   },
   userLevelLabel: {
@@ -295,7 +295,7 @@ const styles = StyleSheet.create({
   sectionTitle: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#000',
+    color: '#fff',
     marginBottom: 20,
   },
   bubbleChart: {
@@ -312,7 +312,7 @@ const styles = StyleSheet.create({
   },
   bubbleText: {
     fontWeight: '500',
-    color: '#000',
+    color: '#fff',
     textAlign: 'center',
     marginBottom: 2,
   },
@@ -326,17 +326,17 @@ const styles = StyleSheet.create({
   serviceCard: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#F8F9FF',
+    backgroundColor: '#1a1a1a',
     padding: 16,
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: '#E5E7EB',
+    borderColor: '#333',
   },
   serviceIcon: {
     width: 40,
     height: 40,
     borderRadius: 20,
-    backgroundColor: '#F3E8FF',
+    backgroundColor: '#0a0a0a',
     alignItems: 'center',
     justifyContent: 'center',
     marginRight: 12,
@@ -345,6 +345,6 @@ const styles = StyleSheet.create({
     flex: 1,
     fontSize: 16,
     fontWeight: '500',
-    color: '#000',
+    color: '#fff',
   },
 });

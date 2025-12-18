@@ -118,12 +118,12 @@ export default function SelfDiagnosisResultsScreen() {
 
   return (
     <View style={styles.container}>
-      <StatusBar barStyle="dark-content" backgroundColor="#fff" />
+      <StatusBar barStyle="light-content" backgroundColor="#000" />
       
       {/* 헤더 */}
       <View style={styles.header}>
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
-          <Ionicons name="arrow-back" size={24} color="#000" />
+          <Ionicons name="arrow-back" size={24} color="#fff" />
         </TouchableOpacity>
         <Text style={styles.headerTitle}>{t('selfDiagnosis.results.title')}</Text>
         <View style={styles.headerRight} />
@@ -152,7 +152,7 @@ export default function SelfDiagnosisResultsScreen() {
                 <Ionicons
                   name={isExpanded ? 'chevron-up' : 'chevron-down'}
                   size={24}
-                  color="#6B7280"
+                  color="#fff"
                 />
               </TouchableOpacity>
 
@@ -187,7 +187,7 @@ export default function SelfDiagnosisResultsScreen() {
                             {item.status}
                           </Text>
                         </View>
-                        <Ionicons name="chevron-forward" size={20} color="#9CA3AF" />
+                        <Ionicons name="chevron-forward" size={20} color="#fff" />
                       </View>
                     </TouchableOpacity>
                   ))}
@@ -204,10 +204,10 @@ export default function SelfDiagnosisResultsScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#000',
   },
   header: {
-    backgroundColor: '#fff',
+    backgroundColor: '#000',
     paddingTop: 50,
     paddingBottom: 20,
     paddingHorizontal: 20,
@@ -223,7 +223,7 @@ const styles = StyleSheet.create({
   headerTitle: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#000',
+    color: '#fff',
   },
   headerRight: {
     width: 40,
@@ -235,10 +235,10 @@ const styles = StyleSheet.create({
   },
   categoryContainer: {
     marginBottom: 12,
-    backgroundColor: '#F8F9FF',
+    backgroundColor: '#1a1a1a',
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: '#E5E7EB',
+    borderColor: '#333',
     overflow: 'hidden',
   },
   categoryHeader: {
@@ -246,7 +246,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     padding: 16,
-    backgroundColor: '#fff',
+    backgroundColor: '#0a0a0a',
   },
   categoryHeaderLeft: {
     flexDirection: 'row',
@@ -255,7 +255,7 @@ const styles = StyleSheet.create({
   categoryName: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#000',
+    color: '#fff',
     marginRight: 12,
   },
   statusBadge: {
@@ -277,7 +277,7 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     paddingHorizontal: 8,
     borderBottomWidth: 1,
-    borderBottomColor: '#E5E7EB',
+    borderBottomColor: '#333',
   },
   itemContent: {
     flex: 1,
@@ -285,7 +285,7 @@ const styles = StyleSheet.create({
   },
   itemName: {
     fontSize: 14,
-    color: '#000',
+    color: '#fff',
     marginBottom: 8,
   },
   progressBarContainer: {
@@ -293,7 +293,7 @@ const styles = StyleSheet.create({
   },
   progressBarBackground: {
     height: 8,
-    backgroundColor: '#E5E7EB',
+    backgroundColor: '#333',
     borderRadius: 4,
     overflow: 'hidden',
   },

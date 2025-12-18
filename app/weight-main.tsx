@@ -87,12 +87,12 @@ export default function WeightMainScreen() {
 
   return (
     <View style={styles.container}>
-      <StatusBar barStyle="dark-content" backgroundColor="#fff" />
+      <StatusBar barStyle="light-content" backgroundColor="#000" />
       
       {/* 헤더 */}
       <View style={styles.header}>
         <TouchableOpacity style={styles.backButton} onPress={handleBack}>
-          <Ionicons name="arrow-back" size={24} color="#000" />
+          <Ionicons name="arrow-back" size={24} color="#fff" />
         </TouchableOpacity>
         <Text style={styles.headerTitle}>{t('weight.main.title')}</Text>
         <TouchableOpacity style={styles.statisticsButton} onPress={handleStatistics}>
@@ -106,11 +106,11 @@ export default function WeightMainScreen() {
         <View style={styles.calendarContainer}>
           <View style={styles.calendarHeader}>
             <TouchableOpacity style={styles.monthButton}>
-              <Ionicons name="chevron-back" size={20} color="#6B7280" />
+              <Ionicons name="chevron-back" size={20} color="#fff" />
             </TouchableOpacity>
             <Text style={styles.monthText}>{formatDate(selectedDate)}</Text>
             <TouchableOpacity style={styles.monthButton}>
-              <Ionicons name="chevron-forward" size={20} color="#6B7280" />
+              <Ionicons name="chevron-forward" size={20} color="#fff" />
             </TouchableOpacity>
           </View>
 
@@ -192,10 +192,10 @@ export default function WeightMainScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#000',
   },
   header: {
-    backgroundColor: '#fff',
+    backgroundColor: '#000',
     paddingTop: 50,
     paddingBottom: 20,
     paddingHorizontal: 20,
@@ -203,7 +203,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     borderBottomWidth: 1,
-    borderBottomColor: '#E5E7EB',
+    borderBottomColor: '#333',
   },
   backButton: {
     padding: 8,
@@ -211,7 +211,7 @@ const styles = StyleSheet.create({
   headerTitle: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#000',
+    color: '#fff',
   },
   statisticsButton: {
     padding: 8,
@@ -222,12 +222,12 @@ const styles = StyleSheet.create({
     paddingTop: 20,
   },
   calendarContainer: {
-    backgroundColor: '#fff',
+    backgroundColor: '#1a1a1a',
     borderRadius: 12,
     padding: 20,
     marginBottom: 20,
     borderWidth: 1,
-    borderColor: '#E5E7EB',
+    borderColor: '#333',
   },
   calendarHeader: {
     flexDirection: 'row',
@@ -241,7 +241,7 @@ const styles = StyleSheet.create({
   monthText: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#000',
+    color: '#fff',
   },
   weekdayHeader: {
     flexDirection: 'row',
@@ -251,7 +251,7 @@ const styles = StyleSheet.create({
   weekdayText: {
     fontSize: 14,
     fontWeight: '500',
-    color: '#6B7280',
+    color: '#fff',
     width: 40,
     textAlign: 'center',
   },
@@ -269,12 +269,12 @@ const styles = StyleSheet.create({
     position: 'relative',
   },
   selectedDay: {
-    backgroundColor: '#E5E7EB',
+    backgroundColor: '#333',
     borderRadius: 20,
   },
   dayText: {
     fontSize: 16,
-    color: '#000',
+    color: '#fff',
   },
   selectedDayText: {
     fontWeight: 'bold',
@@ -287,7 +287,7 @@ const styles = StyleSheet.create({
     fontWeight: '500',
   },
   weightInfoContainer: {
-    backgroundColor: '#F8F9FF',
+    backgroundColor: '#1a1a1a',
     borderRadius: 12,
     padding: 20,
     marginBottom: 20,
@@ -301,7 +301,7 @@ const styles = StyleSheet.create({
   selectedDateText: {
     fontSize: 16,
     fontWeight: '500',
-    color: '#000',
+    color: '#fff',
   },
   connectButton: {
     backgroundColor: '#8B5CF6',
@@ -320,14 +320,14 @@ const styles = StyleSheet.create({
   weightValue: {
     fontSize: 48,
     fontWeight: 'bold',
-    color: '#000',
+    color: '#fff',
     marginBottom: 20,
   },
   weightScale: {
     width: '100%',
     height: 20,
     position: 'relative',
-    backgroundColor: '#E5E7EB',
+    backgroundColor: '#333',
     borderRadius: 10,
   },
   scaleLine: {
@@ -336,7 +336,7 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     height: 2,
-    backgroundColor: '#D1D5DB',
+    backgroundColor: '#666',
   },
   weightIndicator: {
     position: 'absolute',
@@ -364,7 +364,7 @@ const styles = StyleSheet.create({
     color: '#fff',
   },
   detailButton: {
-    backgroundColor: '#fff',
+    backgroundColor: '#1a1a1a',
     paddingVertical: 16,
     borderRadius: 12,
     alignItems: 'center',
